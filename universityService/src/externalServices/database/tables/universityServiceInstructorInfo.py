@@ -33,15 +33,15 @@ class InstructorInfo(Database.get_db().Model):
         Database.get_db().Index('UniversityServiceInstructorInfoIndex', InstructorID, DepartmentID),
     )
 
-    def __init__(self, instructor_id, instructor_name, department_id):
-        self.InstructorID = instructor_id
+    def __init__(self, instructor_name, department_id):
         self.InstructorName = instructor_name
         self.DepartmentID = department_id
 
     @staticmethod
-    def save(instructor_id, instructor_name, department_id):
-        course_info = InstructorInfo(instructor_id, instructor_name, department_id)
-        course_info._create()
+    def save(instructor_name, department_id):
+        instructor_info = InstructorInfo(instructor_name, department_id)
+        instructor_info._create()
+        return instructor_info
 
     def _create(self):
         try:
@@ -49,6 +49,19 @@ class InstructorInfo(Database.get_db().Model):
                 session.add(self)
         except Exception:
             print(f"[DB] Failed to create in: {self.__tablename__}")
+
+    @staticmethod
+    def delete_all():
+        """
+        https://docs.sqlalchemy.org/en/14/orm/session_basics.html#orm-expression-update-delete
+        :return:
+        """
+
+        try:
+            with Database.session_manager() as session:
+                session.query(InstructorInfo).delete()
+        except Exception:
+            print(f"[DB] Failed to clear Instructor information from table")
 
     @staticmethod
     def init_app():

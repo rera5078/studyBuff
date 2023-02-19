@@ -1,15 +1,12 @@
-import pandas as pd
-
-
 class FetchCoursesConstants:
     LINK_PD_COLUMNS = ['Courses', 'links', 'full_links']
     GET_COURSE_DETAILS_PD_COLUMNS = ['Courses', 'full_links']
     DEPARTMENT_PD_COLUMNS = ['department_id', 'department_name']
-    COURSES_DESC_PD_COLUMNS = pd.DataFrame(columns=['courses_id', 'course_name', 'department_id'])
+    COURSES_DESC_PD_COLUMNS = ['courses_id', 'course_name', 'department_id']
 
-    DOMAIN = ''
-    URL = 'https://catalog.colorado.edu/courses-a-z/'
-    FILETYPE = '.parquet'
+    COURSE_CATALOG_URL = "https://catalog.colorado.edu/courses-a-z/"
+    COURSE_INFO_URL = "https://classes.colorado.edu/api/?page=fose&route=search"
+    COURSE_DESCRIPTION_URL = "https://classes.colorado.edu/api/?page=fose&route=details"
     COURSE_CATALOG = ["Accounting (ACCT)", "Advertising, PR and Media Design (APRD)", "Aerospace Engineering (ASEN)",
                       "Air Force Aerospace Studies - ROTC (AIRR)", "Anthropology (ANTH)", "Applied Math (APPM)",
                       "Arabic Languages (ARAB)", "Architectural Engineering (AREN)", "Architecture (ARCH)",
