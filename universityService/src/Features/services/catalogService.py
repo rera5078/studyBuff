@@ -20,7 +20,7 @@ class CatalogService:
     COURSES_DESC_PD = pd.DataFrame(columns=FetchCoursesConstants.COURSES_DESC_PD_COLUMNS)
 
     @classmethod
-    def fetch(cls):
+    def fetch(cls) -> set:
         cls.get_courses_cub_catalog()
         cls.format_department_info()
         cls.save_department_info()
@@ -31,7 +31,7 @@ class CatalogService:
         return cls.get_unique_course_ids(course_info_dictionary)
 
     @classmethod
-    def get_courses_cub_catalog(cls):
+    def get_courses_cub_catalog(cls) -> None:
         index = 1
         for link in cls.get_soup(FetchCoursesConstants.COURSE_CATALOG_URL).find_all('a'):
             file_link = link.get('href')
@@ -40,22 +40,22 @@ class CatalogService:
                 index += 1
 
     @classmethod
-    def get_soup(cls, url):
+    def get_soup(cls, url) -> bs:
         return bs(requests.get(url).text, 'html.parser')
 
     @classmethod
-    def format_department_info(cls):
+    def format_department_info(cls) -> None:
         cls.DEPARTMENT_PD['department_name'] = cls.LINK_PD["Courses"].str.split("(", n=1, expand=True)[0]
         cls.DEPARTMENT_PD['department_id'] = cls.LINK_PD["Courses"].str.split("(", n=1, expand=True)[1]. \
             str.split(")", n=1, expand=True)[0]
 
     @classmethod
-    def save_department_info(cls):
+    def save_department_info(cls) -> None:
         department_info_dict = cls.DEPARTMENT_PD.to_dict('records')
         DepartmentInfo.bulk_save(department_info_dict)
 
     @classmethod
-    def retrevie_course_ids(cls):
+    def retrevie_course_ids(cls) -> None:
         current_course_counter = 0
 
         for i in range(1, cls.LINK_PD.shape[0] + 1):
@@ -73,7 +73,7 @@ class CatalogService:
         print(f"Fetched {current_course_counter} Courses Success !!!")
 
     @classmethod
-    def format_course_ids(cls):
+    def format_course_ids(cls) -> list:
         cls.COURSES_DESC_PD['courses_id'] = cls.GET_COURSE_DETAILS_PD['Courses']. \
             str.split(' ', n=1, expand=True)[0].replace(u'\xa0', u' ')
         cls.COURSES_DESC_PD['course_name'] = cls.GET_COURSE_DETAILS_PD["Courses"]. \
@@ -85,7 +85,7 @@ class CatalogService:
         return cls.COURSES_DESC_PD.to_dict('records')
 
     @classmethod
-    def get_unique_course_ids(cls, course_info_dictionary):
+    def get_unique_course_ids(cls, course_info_dictionary) -> set:
         unique_course = set()
 
         for course_info in course_info_dictionary:

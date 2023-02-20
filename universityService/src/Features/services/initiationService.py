@@ -19,12 +19,12 @@ class InitiationService:
     """
 
     @classmethod
-    def get_course_details(cls, clear_flag: bool):
+    def get_course_details(cls, clear_flag: bool, srcDB: str) -> None:
         start_time = datetime.now()
         if clear_flag:
             cls.clear_course_info()
         course_list = CatalogService.fetch()
-        CourseInfoService.fetch(course_list)
+        CourseInfoService.fetch(course_list, srcDB)
         CourseDetailsService.fetch()
         end_time = datetime.now()
         print("*********************************************************")
@@ -32,7 +32,7 @@ class InitiationService:
         print("*********************************************************")
 
     @classmethod
-    def clear_course_info(cls):
+    def clear_course_info(cls) -> None:
         DepartmentInfo.delete_all_department_data()
         InstructorInfo.delete_all()
         CourseInfo.delete_all()
