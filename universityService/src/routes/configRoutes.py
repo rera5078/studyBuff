@@ -1,4 +1,4 @@
-from universityService.src.Features.routes.fetchCoursesRoute import FetchCoursesRoute
+from universityService.src.features.featchAndStoreCourseDetails.routes.fetchCoursesRoute import FetchCoursesRoute
 
 
 def load_config_routes(app):

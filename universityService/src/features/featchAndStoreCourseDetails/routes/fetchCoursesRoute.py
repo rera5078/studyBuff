@@ -1,7 +1,7 @@
 from flask.views import MethodView
 from flask import jsonify, request
 
-from universityService.src.Features.services.initiationService import InitiationService
+from universityService.src.features.featchAndStoreCourseDetails.services.initiationService import InitiationService
 
 
 class FetchCoursesRoute(MethodView):
