@@ -4,7 +4,7 @@ from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
 from flask import Flask
 from contextlib import contextmanager
-from src.externalServices.database.services.decorators import bind_app_context
+from .decorators import bind_app_context
 
 
 class App:
