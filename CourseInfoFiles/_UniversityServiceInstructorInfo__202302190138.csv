@@ -1,0 +1,4265 @@
+"InstructorID","InstructorName","DepartmentID"
+45,J. Falke,BCHM
+46,R. Hodgkinson,ASEN
+47,H. Kim,APRD
+48,T. Hopp,APRD
+49,K. Scornavacco,EDUC
+50,L. Bohl,EDUC
+51,N. Kress,EDUC
+52,V. Schick,EDUC
+53,A. Van Hoye,LIBR
+54,A. Gilbert,HUMN
+55,K. Auvinen,HUMN
+56,P. Clark,CMDP
+57,N. Shech,CMDP
+58,K. Kernan,CMDP
+59,K. Hoth,CMDP
+60,M. Kim,CMDP
+61,N. Pieplow,WRTG
+62,A. Fobes,WRTG
+63,R. Norgaard,WRTG
+64,P. Schaberg,WRTG
+65,P. Wenger,WRTG
+66,A. Osipova,RUSS
+67,J. Meiss,APPM
+68,A. Kelsie,COMM
+69,H. Kalisman,HIST
+70,R. Hildreth,LEAD
+71,W. Srubar,CVEN
+72,Bickers/Pedersen,PSCI
+73,C. Jorde,PSCI
+74,K. Bickers,PSCI
+75,W. Glenn,EDUC
+76,T. Laurenzo Coronel,CMDP
+77,T. Clark,ASEN
+78,W. Van Atten,EMEN
+79,N. Guild,MCDB
+80,M. Peffer,MCDB
+81,J. Martin,MCDB
+82,A. Barnett,THTR
+83,Kearney/Slingluff,THTR
+84,T. Meneghini-Stalker,THTR
+85,C. Higashida,ENGL
+86,N. Wright,ENGL
+87,D. Nakassis,CLAS
+88,F. Barnes,ECEN
+89,J. Dupre,ATLS
+90,Dragavon/Tay,BCHM
+91,L. Watkins,NRSC
+92,S. Molas Casacuberta,NRSC
+93,G. Lewis,PMUS
+94,G. Gentry,PMUS
+95,M. Roeder,PMUS
+96,D. McKinney,PMUS
+97,E. Swanson,PMUS
+98,M. Dockendorf,PMUS
+99,J. Cumalat,PHYS
+100,Ye/Ritzwoller,PHYS
+101,L. Radzihovsky,PHYS
+102,M. Peddle,COEN
+103,Davis/Fuentes Munoz,ASEN
+104,L. Winkiel,ENGL
+105,R. Kocher,ENGL
+106,M. Kimball,ECON
+107,J. Levin,PHIL
+108,Z. Kopeikin,PHIL
+109,Team,PHIL
+110,E. Lee,PHIL
+111,M. Kitts,PHIL
+112,D. Carr,PHIL
+113,J. Dabove,SPAN
+114,T. Rodgers,MBAX
+115,O. Gerland,THTR
+116,M. Osnes,THTR
+117,C. Pang,THTR
+118,C. Persons,THTR
+119,K. Rich,THTR
+120,M. Steuernagel,THTR
+121,M. Dabbagh,AREN
+122,M. Rast,ASTR
+123,P. Romaine,EMUS
+124,Gunther/Romaine,EMUS
+125,Fluri/Corbett,GEOG
+126,A. Ranjbar,GEOG
+127,D. Henze,MCEN
+128,K. Driscoll,EDUC
+129,S. Nogueron-Liu,EDUC
+130,E. Johns-O'Leary,EDUC
+131,J. Hughes,ECON
+132,W. Werner,INBU
+133,J. Nytch,MUSC
+134,R. Larsen,PACS
+135,T. Keyworth,PACS
+136,Palo/Morton,ASEN
+137,Akos/Sternovsky,ASEN
+138,Meyers/Harmon,SLHS
+139,A. Wingo,PHIL
+140,B. Talbot,PHIL
+141,D. Moorer,EMEN
+142,R. Duren,EMEN
+143,L. Hosek,ANTH
+144,J. Porter,HUMN
+145,M. Mader,PSCI
+146,Boykoff/Stasny,THTR
+147,C. Nava,PSCI
+148,M. Kanner,PSCI
+149,A. Burgos-Rivera,PSCI
+150,B. Cochran,ENGL
+151,C. Cummings,ENGL
+152,B. Gonzalez,ENGL
+153,K. Sweet,CMDP
+154,G. Cao,GEOG
+155,B. Vahedi Torghabeh,GEOG
+156,K. Anseth,CHEN
+157,C. Bowman,CHEN
+158,S. Bryant,CHEN
+159,J. Cha,CHEN
+160,A. Chatterjee,CHEN
+161,R. Davis,CHEN
+162,J. Fox,CHEN
+163,A. Goodwin,CHEN
+164,A. Gupta,CHEN
+165,R. Hayward,CHEN
+166,H. Heinz,CHEN
+167,L. Hind,CHEN
+168,A. Holewinski,CHEN
+169,C. Hrenya,CHEN
+170,J. Kaar,CHEN
+171,S. Marder,CHEN
+172,M. McGehee,CHEN
+173,J. Medlin,CHEN
+174,C. Musgrave,CHEN
+175,T. Randolph,CHEN
+176,D. Schwartz,CHEN
+177,C. Shields,CHEN
+178,M. Shirts,CHEN
+179,W. Smith,CHEN
+180,K. Sprenger,CHEN
+181,J. Stansbury,CHEN
+182,M. Toney,CHEN
+183,A. Weimer,CHEN
+184,T. White,CHEN
+185,T. Whitehead,CHEN
+186,R. Bay,CHEN
+187,L. Devendorf,INFO
+188,T. Olorunsogo,INFO
+189,M. Friske,INFO
+190,S. Cook,INFO
+191,T. Harris,INFO
+192,A. Roncone,CSCI
+193,S. Sankaranarayanan,CSCI
+194,J. Izraelevitz,CSCI
+195,E. Keller,CSCI
+196,M. Gross,CSCI
+197,D. Acuna,CSCI
+198,Y. Chen,CSCI
+199,C. Heckman,CSCI
+200,T. Lehman,CSCI
+201,Clauset/Larremore,CSCI
+202,H. Tufo,CSCI
+203,A. Palmer,CSCI
+204,S. Runnels,CSCI
+205,G. Kaki,CSCI
+206,D. Larremore,CSCI
+207,M. Alistar,CSCI
+208,Colunga/Kann,CSCI
+209,C. Herman,CSCI
+210,P. Yeh,CSCI
+211,A. Trivedi,CSCI
+212,Calabrese/Echchaibi,MDST
+213,Z. Wang,ATOC
+214,D. Toohey,ATOC
+215,E. Corona,APPM
+216,J. Cassano,ATOC
+217,P. DiNezio,ATOC
+218,K. Friedrich,ATOC
+219,D. Giglio,ATOC
+220,W. Han,ATOC
+221,A. Jahn,ATOC
+222,K. Karnauskas,ATOC
+223,J. Kay,ATOC
+224,J. Lenaerts,ATOC
+225,N. Lovenduski,ATOC
+226,J. Lundquist,ATOC
+227,J. Moriarty,ATOC
+228,P. Pilewskie,ATOC
+229,C. Randall,ATOC
+230,S. Schmidt,ATOC
+231,A. Subramanian,ATOC
+232,O. Toon,ATOC
+233,J. Weiss,ATOC
+234,A. Winters,ATOC
+235,M. Fathman,MUSC
+236,N. McNeill,MCEN
+237,S. Ruben,MCEN
+238,X. Yin,MCEN
+239,J. Hertzberg,MCEN
+240,J. Pellegrino,MCEN
+241,J. Steinbrenner,MCEN
+242,D. Reamon,MCEN
+243,Y. Lee,MCEN
+244,V. Ferguson,MCEN
+245,R. Yang,MCEN
+246,C. Neu,MCEN
+247,D. Riffell,MCEN
+248,D. Kotys,MCEN
+249,F. Vernerey,MCEN
+250,G. Whiting,MCEN
+251,J. Tsai,MCEN
+252,Y. Ding,MCEN
+253,C. Bruns,MCEN
+254,P. Hamlington,MCEN
+255,M. Hannigan,MCEN
+256,J. Knutsen,MCEN
+257,S. Lee,MCEN
+258,N. Vriend,MCEN
+259,J. Segil,MCEN
+260,T. Murray,MCEN
+261,R. Raj,MCEN
+262,M. Rentschler,MCEN
+263,R. Long,MCEN
+264,W. Tan,MCEN
+265,M. Borden,MCEN
+266,J. Xiao,MCEN
+267,C. Pacheco-Borden,MCEN
+268,S. Miller,MCEN
+269,M. Lynch,MCEN
+270,K. Regner,MCEN
+271,D. Mukherjee,MCEN
+272,F. Castro,MCEN
+273,L. Cooper,MCEN
+274,A. Ahmed,MCEN
+275,R. Mac Curdy,MCEN
+276,C. BAN,MCEN
+277,S. Calve,MCEN
+278,F. Barthelat,MCEN
+279,K. Jayaram,MCEN
+280,C. Stoldt,MCEN
+281,O. Vasilyev,MCEN
+282,J. Labrecque,APRD
+283,Templeton/Peak,GEOL
+284,Vanderheiden/Hoose,PSCI
+285,S. Vanderheiden,PSCI
+286,A. Cool,ANTH
+287,O. Gurantz,EDUC
+288,M. Braaten,EDUC
+289,N. Moore,WGST
+290,E. Irvin,WGST
+291,R. Fuster Aguilera,MATH
+292,B. Fernandez,LAWS
+293,L. Heil,TMUS
+294,B. Catlos,RLST
+295,N. Plagmann,RUSS
+296,D. Maksimovic,ECEN
+297,M. Barlow,CINE
+298,S. Negri,CINE
+299,J. Peck,MDST
+300,Lambert/Williams,EBIO
+301,K. Williams,EBIO
+302,T. Halward,EBIO
+303,C. Comstock,FARR
+304,J. Swanson,ATLS
+305,R. Saxton,ARTS
+306,S. Livengood,MBAX
+307,A. Chong,ARTS
+308,A. Alhadeff,ARTH
+309,c. nelson,ARTH
+310,R. Nauman,ARTH
+311,Goldfarb/Fladd,ANTH
+312,Villanea Guevara/Zneimer,ANTH
+313,Villanea Guevara/Opack,ANTH
+314,Villanea Guevara/Naumenko,ANTH
+315,Villanea Guevara/Dalton,ANTH
+316,Villanea Guevara/Thomas,ANTH
+317,C. Roseman,ASEN
+318,C. Dana,MDST
+319,D. Wagner,MDST
+320,M. Tracey,MDST
+321,R. Enoka,IPHY
+322,C. Link,IPHY
+323,A. Sepulveda,SOCY
+324,A. Eisenberg,ATLS
+325,Y. Do,ATLS
+326,D. Leithinger,ATLS
+327,D. Szafir,ATLS
+328,R. Roque,ATLS
+329,J. Gitlin,ATLS
+330,W. Penuel,ATLS
+331,G. Leslie,ATLS
+332,K. Lininger,GEOL
+333,T. Johaneman,GEOL
+334,R. Anderson,GEOL
+335,Anderson/Cochran,GEOL
+336,M. Burge,JPNS
+337,S. Moya,PSCI
+338,E. Ortega-Guzman,SPAN
+339,P. Elmore,SPAN
+340,J. Boardman,SOCY
+341,A. Grix,ARTS
+342,N. Black,ARTS
+343,E. Wolcott,ARTS
+344,A. Graef,ARTS
+345,D. Briggs,EDUC
+346,C. Seno,ITAL
+347,B. Park,PSCI
+348,H. McNamara,PSCI
+349,C. Spaenjers,MBAX
+350,R. Allen,BADM
+351,C. Lau,BADM
+352,A. Gutiérrez Lorenzo,LING
+353,R. Flowers,GEOL
+354,Z. Schwartz,EBIO
+355,C. Howell,EBIO
+356,Hernandez/Ghayour,EBIO
+357,Ghayour/Hernandez,EBIO
+358,A. Del Simone,EBIO
+359,Basey/Hernandez,EBIO
+360,A. Ghayour,EBIO
+361,S. Talder,EBIO
+362,K. Hernandez,EBIO
+363,C. Ikudaisi,EBIO
+364,S. Lynch,EBIO
+365,S. Kollipara,EBIO
+366,X. Yu,EBIO
+367,V. Verma,EBIO
+368,R. Taware,EBIO
+369,J. Dean,EBIO
+370,G. Vagle,EBIO
+371,M. Zabinski,EBIO
+372,Quispe Pilco/Cannon,EBIO
+373,A. Solon,EBIO
+374,R. Quispe Pilco,EBIO
+375,L. Cannon,EBIO
+376,J. Li,EBIO
+377,I. Alam,EBIO
+378,Lynch/Li,EBIO
+379,H. Kennedy,MBAX
+380,J. Gladstone,ENGL
+381,D. Schaal,ATLS
+382,H. Kramer,ATLS
+383,Rogers/Weltman,SOCY
+384,T. Kirkland,SOCY
+385,E. Sacks,RLST
+386,L. Biernacki,RLST
+387,T. Kleeman,RLST
+388,H. Gayley,RLST
+389,A. Ali,RLST
+390,D. Whitehead,RLST
+391,S. Boyd,RLST
+392,R. Wartell,HIST
+393,W. Loayza,LAMS
+394,C. Lyu,MGMT
+395,K. Glynn,MGMT
+396,J. Burdick,CHEN
+397,A. Schaetzel,IPHY
+398,L. Saul,IPHY
+399,R. Heisler,IPHY
+400,B. Amadei,CVEN
+401,A. Stewart,SOCY
+402,A. Feldman,HONR
+403,J. Reger,PMUS
+404,M. Moteki,PMUS
+405,P. Ziemann,CHEM
+406,P. Nelson,MUSC
+407,J. Keller,EDUC
+408,J. Knight,EDUC
+409,J. Zax,ECON
+410,L. DeLuca,ANTH
+411,B. Duhe,ANTH
+412,K. Drybread,ANTH
+413,F. McClean,ANTH
+414,A. Joyce,ANTH
+415,W. Taylor,ANTH
+416,G. Gutierrez,ANTH
+417,T. Webmoor,ANTH
+418,J. Liotta,CINE
+419,M. Marshak,CHEM
+420,O. Luca,CHEM
+421,D. Bamforth,ANTH
+422,S. Gill,RLST
+423,V. Sama,JRNL
+424,C. White,COMM
+425,U. Putri,COMM
+426,M. Zagrodzki,CSCI
+427,M. Tran,CSCI
+428,J. Francis,LAWS
+429,M. Squillace,LAWS
+430,C. Rogers,PHYS
+431,S. Mehta,JWST
+432,D. Keyes,WGST
+433,J. Pugh,WGST
+434,M. Klages,WGST
+435,S. Nath,CSCI
+436,S. Manikonda Keshavaiah Naidu,CSCI
+437,M. Schincariol,PORT
+438,Kaminski/Armstrong,EMUS
+439,Armstrong/Kaminski,EMUS
+440,T. Lansford,ARTH
+441,K. Ambrose,ARTH
+442,E. Lopez,EDUC
+443,I. Koster,LATN
+444,A. Dougherty,APPM
+445,F. Meyer,APPM
+446,N. Walcott,FNCE
+447,D. Brown,FNCE
+448,P. Mohr,FNCE
+449,D. Gross,FNCE
+450,I. Obreja,FNCE
+451,E. Burnes,FNCE
+452,P. Johnson,EBIO
+453,J. Adler,GEOG
+454,E. Kennedy,GEOG
+455,R. Isaacs,GEOG
+456,N. Neureiter,LAWS
+457,Oldenkamp/Graves,MUSC
+458,J. Kallen-Brown,CSCI
+459,A. Margaret,ATLS
+460,J. Stevens,MDST
+461,S. Lesinski,MDST
+462,C. Perold,MDST
+463,N. Schneider,MDST
+464,J. Kasprzyk,CVEN
+465,L. Gomez,LAMS
+466,R. Farrelly,LING
+467,B. Keegan,INFO
+468,A. Clark,GEOL
+469,P. Kan,SLHS
+470,K. Arehart,SLHS
+471,A. Sharma,SLHS
+472,C. Lacerenza,MBAC
+473,R. Cropanzano,MBAC
+474,L. Chapello,MBAC
+475,A. Dyrness,EDUC
+476,B. Bergner,THTR
+477,J. Spencer,THTR
+478,J. Feeler,THTR
+479,T. Stark,THTR
+480,M. Henry,THTR
+481,L. Maerz,THTR
+482,B. Coleman,THTR
+483,S. Vasconez,AREN
+484,K. Tobey,EMEN
+485,A. Le Moine,ASEN
+486,T. Matsuo,ASEN
+487,Y. Huang,APPM
+488,A. Pisano,BUSM
+489,D. Hekman,BUSM
+490,A. Papuzza,BUSM
+491,T. Jennings,BUSM
+492,T. Knight,CMDP
+493,B. Biggs,CMDP
+494,R. Auguiste,CMDP
+495,A. Young,CMDP
+496,C. Hammons,CMDP
+497,A. Black,CMDP
+498,T. Trimpop,CMDP
+499,R. Sylvester,CMDP
+500,E. Espelie,CMDP
+501,T. Rueb,CMDP
+502,E. Coombs Esmail,CMDP
+503,J. Sanford,CMDP
+504,S. Leyk,GEOG
+505,C. McShane,GEOG
+506,Youkey/McCabe,PHIL
+507,S. Skene,PHIL
+508,D. Youkey,PHIL
+509,E. Brown,PHIL
+510,A. Nordvig,IAFS
+511,Farrelly/Gutiérrez Lorenzo,LING
+512,K. Luger,BCHM
+513,A. Sajadi,ECEN
+514,A. Cloud,DNCE
+515,M. Ellsworth,DNCE
+516,D. Mejia,DNCE
+517,E. Randall,DNCE
+518,L. Southall,DNCE
+519,H. Wilkins,DNCE
+520,K. Bashore,DNCE
+521,L. Beale,DNCE
+522,N. Sowah,DNCE
+523,L. Harris,DNCE
+524,S. Bhagat,FNCE
+525,R. Donchez,FNCE
+526,C. Stephenson,FNCE
+527,Bell/Lammon,MDST
+528,E. Reckwerdt,CSPB
+529,E. Stade,CSPB
+530,N. Stob,IPHY
+531,A. Angiolillo,IPHY
+532,D. Louie,IPHY
+533,J. Pieper,IPHY
+534,S. Brown,IPHY
+535,S. Seal,IPHY
+536,H. Brady,IPHY
+537,Alistar/Quigley,CSCI
+538,M. Kurdi,CSCI
+539,A. Raza,CSCI
+540,C. Adejoro,CSCI
+541,D. French,CSCI
+542,M. Martin,CSCI
+543,M. Bickman,ENGL
+544,N. Goodman,ENGL
+545,J. Walker,NRLN
+546,Ho/Popham,ETHN
+547,R. Avalos,ETHN
+548,Grant/Naylor,SOCY
+549,A. Hatch,SOCY
+550,J. Kaufman,SOCY
+551,Cilia/Lefkowitz,SOCY
+552,A. Blinkhorn,SOCY
+553,K. Mercer,SOCY
+554,J. Buenviaje,SOCY
+555,R. Rogers,SOCY
+556,C. Sue,SOCY
+557,R. Garcea,MCDB
+558,C. Harris,DNCE
+559,V. Elmore,SPAN
+560,K. Malcolm,SPAN
+561,E. Huard,SPAN
+562,M. Herland,SPAN
+563,Y. Abdala Mesa,SPAN
+564,T. Quan,SPAN
+565,A. Cabeza,SPAN
+566,S. Hallstead,SPAN
+567,R. Pritchard,SPAN
+568,T. Weston,HIST
+569,E. Johnson,APRD
+570,W. Holden,APRD
+571,C. Caballero,MUSC
+572,C. Senseney,CVEN
+573,Boulden/Hartmann,CVEN
+574,S. Bhatti,INFO
+575,A. Iyasele,INFO
+576,L. Palen,INFO
+577,A. Voida,INFO
+578,B. Christensen,MKTG
+579,J. Seesholtz,MUSC
+580,J. Tir,PSCI
+581,S. CHAUDHARY,ECEN
+582,D. Korevaar,MUSC
+583,Berta-Thompson/Stottlemyer,ASTR
+584,R. Stottlemyer,ASTR
+585,A. Blum,ECEN
+586,S. Shaheen,ECEN
+587,J. Combes,ECEN
+588,B. McLeod,ECEN
+589,A. Walters,CESR
+590,J. Dobrow,CESR
+591,E. Bloomfield,FREN
+592,M. Ehringer,IPHY
+593,J. Lynge,ATLS
+594,Wingate/Glusman,ASEN
+595,Glusman/Knudsen,ASEN
+596,A. Mickelson,ECEN
+597,O. Peleg,CSCI
+598,T. Wilson,EDUC
+599,E. Bogatin,ECEN
+600,J. Fitzgerald,BMEN
+601,S. Pless,MBAX
+602,M. Lladser,APPM
+603,L. Collins,ASIA
+604,Z. Lefkowitz,WGST
+605,A. McKoy,EDUC
+606,A. Cortez,EDUC
+607,E. Meyer,EDUC
+608,C. Brooks,ENVS
+609,C. Osborn,CINE
+610,S. Huang,CHEM
+611,S. Murray,MCEN
+612,S. Ritner,PSCI
+613,C. Koehler,ASEN
+614,N. Schuman,GRMN
+615,J. O'Loughlin,GEOG
+616,E. Dusinberre,ARTH
+617,H. Donovan,ARTH
+618,C. Hook,ARTH
+619,K. Goode,ARTH
+620,A. Rivadeneira,ARTH
+621,D. Webb,EDUC
+622,E. Williams,THTR
+623,M. Kadia,HIST
+624,T. Wood,HIST
+625,M. Sauther,ANTH
+626,N. Billica,PSCI
+627,K. Harbison,MUSC
+628,D. Ferris,HUMN
+629,S. Cranmer,ASTR
+630,S. Toliver,EDUC
+631,M. Marsella,ARTS
+632,T. Alpern,ARTS
+633,S. Hemmat,ARTS
+634,M. Job,ARTS
+635,P. Rohde,ARTS
+636,J. Olafson,LAWS
+637,M. Alomar,WGST
+638,N. Surhio,ARAB
+639,R. Maloy,MUSC
+640,A. Norcross,PHIL
+641,A. Gore,AREN
+642,R. Baiduc,SLHS
+643,J. Hatch,HIST
+644,C. Znerold,APRD
+645,Arch/Grotzinger,PSYC
+646,P. Xu,ENVD
+647,L. Pao,MCEN
+648,M. Mellenthin,ECEN
+649,I. Fauziyah,INDO
+650,L. Perigo,CSCI
+651,G. Henze,AREN
+652,M. Likins White,AREN
+653,S. Saurini,ITAL
+654,E. Harrington,ENGL
+655,D. Boromisza-Habashi,COMM
+656,A. Bielefeldt,GEEN
+657,D. Beardmore,GEEN
+658,K. Ramos,GEEN
+659,J. Glusman,GEEN
+660,P. Kooros,GEEN
+661,S. Kern,GEEN
+662,K. Crofton,GEEN
+663,J. Tisdale,GEEN
+664,M. Davis,GEEN
+665,M. Soltys,GEEN
+666,M. McGuinn,GEEN
+667,S. Ristovska,MDST
+668,A. Tyler,MDST
+669,D. Dorari,MDST
+670,B. Baker,MDST
+671,H. Ahmad,MDST
+672,R. Balaji,CVEN
+673,C. Detweiler,MCDB
+674,Z. Donaldson,MCDB
+675,M. Stowell,MCDB
+676,R. Dowell-Deen,MCDB
+677,M. Klymkowsky,MCDB
+678,S. Copley,MCDB
+679,M. Han,MCDB
+680,A. Hoenger,MCDB
+681,T. Cech,MCDB
+682,J. Kralj,MCDB
+683,K. Krauter,MCDB
+684,L. Leinwand,MCDB
+685,L. Niswander,MCDB
+686,C. Odorizzi,MCDB
+687,B. Olwin,MCDB
+688,S. Park,MCDB
+689,S. Sawyer,MCDB
+690,J. Shen,MCDB
+691,R. Singh,MCDB
+692,T. Su,MCDB
+693,G. Voeltz,MCDB
+694,D. Xue,MCDB
+695,J. Orth,MCDB
+696,J. Vanblerkom,MCDB
+697,B. DeDecker,MCDB
+698,C. Fillman,MCDB
+699,P. Harvey,MCDB
+700,N. Arnoult,MCDB
+701,J. Brumbaugh,MCDB
+702,E. Chuong,MCDB
+703,T. Perkins,MCDB
+704,C. Lowry,MCDB
+705,S. Kuznetsov,STAT
+706,M. Zarske,GEEN
+707,A. Wiese,HUMN
+708,T. Foley,IPHY
+709,T. Maldonado,IPHY
+710,D. Gin,CHEM
+711,S. Madabhushi,CVEN
+712,L. Barker,INFO
+713,C. Fiesler,INFO
+714,S. Voida,INFO
+715,R. Burke,INFO
+716,J. Brubaker,INFO
+717,B. Semaan,INFO
+718,J. Stempien,GEOL
+719,Stempien/Pomeroy,GEOL
+720,Stempien/Pinkham,GEOL
+721,S. Ge,GEOL
+722,Ge/Tellez,GEOL
+723,Ge/Chambers,GEOL
+724,J. Hendricks,LAWS
+725,B. Hynek,ASTR
+726,Abbott/Gutoski,GEOL
+727,Abbott/Peak,GEOL
+728,L. Arthurs,GEOL
+729,D. Aldama,ARSC
+730,L. Teeters,ARSC
+731,D. Pesce,ARSC
+732,T. Oakes,GEOG
+733,N. Shrikant,COMM
+734,M. Koschmann,COMM
+735,J. Skerski,COMM
+736,J. Simpson,COMM
+737,T. Striphas,COMM
+738,L. Flores,COMM
+739,B. McIntosh,EDUC
+740,McIntosh/Rexroth,EDUC
+741,B. Marotta,ASEN
+742,J. Voss,ASEN
+743,S. Palo,ASEN
+744,S. Tozer,ASEN
+745,Y. Morton,ASEN
+746,B. Plotkin,LAWS
+747,M. Christie,ARTS
+748,K. Swihart,IPHY
+749,M. Fleshner,IPHY
+750,J. Shi,IPHY
+751,P. D'Esposito,MGMT
+752,M. ElHelbawy,ECEN
+753,E. Wustrow,ECEN
+754,M. Loewenstein,LAWS
+755,M. Piras,SPAN
+756,M. Long,SPAN
+757,G. Macaluso,MSBC
+758,H. Potter,ETHN
+759,J. McGee,ETHN
+760,J. Lewon,SLHS
+761,J. Corcoran,STAT
+762,F. Somenzi,CSCI
+763,J. Lacy,MKTG
+764,K. McMahon,MKTG
+765,M. Piket-May,ECEN
+766,Acevedo-Munoz/Sellers,CINE
+767,T. Brylowe,ENGL
+768,A. Moriarty,ARTS
+769,D. Wasserman,ARTS
+770,J. Marden,ECEN
+771,W. Park,ECEN
+772,J. Potter,PHIL
+773,M. Lee,PHIL
+774,P. McKee,MUSC
+775,W. Mertens,ECON
+776,A. Drolet,ANTH
+777,S. Lim,HIST
+778,T. Von Der Nuell,WRTG
+779,C. Shoemaker,EDUC
+780,A. Becher,SPAN
+781,A. Berbel Viudez,SPAN
+782,K. Copeland,SPAN
+783,M. Elson,SPAN
+784,J. Toledano,SPAN
+785,K. Noe,SPAN
+786,S. Ortiz Valencia,SPAN
+787,S. Spanbauer,SPAN
+788,C. Fross,SPAN
+789,C. Dunne,SPAN
+790,U. Adamska,SPAN
+791,E. Hodby,PHYS
+792,A. Patterson,PHYS
+793,J. Kruse,PHYS
+794,C. Cash,PHYS
+795,T. Baker,PHYS
+796,R. Marcarelli,PHYS
+797,C. West,PHYS
+798,R. Flores,EDUC
+799,T. Warkentin,EDUC
+800,M. Boyko,IPHY
+801,L. Durkee,SLHS
+802,A. Gates,STAT
+803,V. Dukic,STAT
+804,S. Chang,APPM
+805,A. Lawson,CINE
+806,A. Lawrence-Sanders,HIST
+807,J. Lambert,ENVS
+808,M. Burgess,ENVS
+809,D. Ciplet,ENVS
+810,L. Dilling,ENVS
+811,Little/Martinez,JWST
+812,J. Charles,ENGL
+813,J. Arp,EPOD
+814,S. VanGenderen,ENVD
+815,V. Henao Cano,ENVD
+816,S. Tabatabaie,ENVD
+817,J. Hersey,ENVD
+818,J. Anderson,ENVD
+819,D. Shirk,ENVD
+820,J. Saxby,ENGL
+821,K. Krumrie,ENGL
+822,B. Robertson,ENGL
+823,K. Mattar,ENGL
+824,A. Hurtado,ENGL
+825,M. Karimzadeh,SOCY
+826,Y. Roth,ARTS
+827,E. Greenwood,LAND
+828,D. Knox,CSPB
+829,H. Glick,SLHS
+830,C. Lillie,RLST
+831,T. Denton,RLST
+832,A. Burba,HUMN
+833,E. Keyvani Someh,CHEN
+834,S. McMahon,BUSM
+835,J. Neil,BUSM
+836,G. Stafford,BSLW
+837,B. Steinmetz,EMUS
+838,J. Rudolph,ATOC
+839,L. Lawhon,OREC
+840,Z. Jacobson-Weaver,ATLS
+841,K. Hinton,NAVR
+842,A. Curtiss,CSCI
+843,J. Miao,CSCI
+844,S. Kim,CSCI
+845,M. Kallam,CSCI
+846,M. Yamashita,FREN
+847,E. Rivlin,HEBR
+848,J. Leeker,EMEN
+849,C. Jacobs,APPM
+850,C. Fulton,APPM
+851,K. Boden,APPM
+852,A. McCurdy,APPM
+853,T. Jensen,APPM
+854,Roof/Kasynski,PRLC
+855,Shepherd/Kasynski,PRLC
+856,J. Kasynski,PRLC
+857,J. Shepherd,PRLC
+858,M. Smith,SOCY
+859,W. Riordan,HIST
+860,K. Dickey,ARTS
+861,S. Chamberlin,ARTS
+862,D. Sun,ATOC
+863,H. Suh,KREN
+864,Y. Huh,KREN
+865,A. Socolofsky,MUSC
+866,E. Hutchinson,HIST
+867,J. Gunther,MUSC
+868,L. Downey,SOCY
+869,M. Rafi,ASEN
+870,J. Nabity,ASEN
+871,T. Minton,ASEN
+872,S. Perez-Pamies,SPAN
+873,S. George,CHEM
+874,B. Hodge,ECEN
+875,D. Walter,EMUS
+876,C. Dixon,EMUS
+877,J. Song,CVEN
+878,M. Hubler,CVEN
+879,G. Hearn,CVEN
+880,A. Liel,CVEN
+881,V. Saouma,CVEN
+882,K. Porter,CVEN
+883,B. Wham,CVEN
+884,Y. Xi,CVEN
+885,R. Corotis,CVEN
+886,R. Wobbekind,MBAC
+887,N. Echchaibi,MDST
+888,S. Moon,MSBX
+889,A. Celoza,AREN
+890,A. Mukherjee,ATOC
+891,J. de Gouw,ATOC
+892,C. Cunningham,BADM
+893,A. Glaws,EDUC
+894,G. Griffin,APRD
+895,M. Young,APRD
+896,T. Vossler,APRD
+897,P. Perbawani,APRD
+898,G. Van Der Heide,ANTH
+899,J. Polizzi,ENVD
+900,Polizzi/Gordillo,ENVD
+901,Polizzi/Friday,ENVD
+902,Polizzi/Wettergreen,ENVD
+903,Polizzi/Hurley,ENVD
+904,Polizzi/Watkins,ENVD
+905,Polizzi/Villarreal,ENVD
+906,Polizzi/Davis,ENVD
+907,Q. Lv,CSCI
+908,D. Grant,MATH
+909,Southall/Tyndall,DNCE
+910,T. Tellez,GEOL
+911,S. Tkacik,GEOL
+912,A. Manaster,GEOL
+913,A. Steckel,GEOL
+914,E. Chaves,GEOL
+915,H. Bennett,GEOL
+916,C. Cochran,GEOL
+917,H. Brumberger,GEOL
+918,C. Diaz,GEOL
+919,Abbott/Glass,GEOL
+920,Abbott/Steckel,GEOL
+921,Abbott/Diaz,GEOL
+922,Abbott/Tkacik,GEOL
+923,Abbott/Hibner,GEOL
+924,Abbott/Cochran,GEOL
+925,Abbott/Corona,GEOL
+926,Abbott/Chaves,GEOL
+927,Abbott/Chon,GEOL
+928,Abbott/Davis,GEOL
+929,Abbott/Bennett,GEOL
+930,Abbott/Brumberger,GEOL
+931,F. Scott,ASEN
+932,R. Gough,CHEM
+933,I. Fileva,PHIL
+934,J. Korak,EVEN
+935,P. Blanken,ENVS
+936,S. Collinge,ENVS
+937,J. Neff,ENVS
+938,E. Hinckley,ENVS
+939,P. Newton,ENVS
+940,D. McKnight,ENVS
+941,B. Hale,ENVS
+942,K. Andersson,ENVS
+943,M. Boykoff,ENVS
+944,N. Flores,ENVS
+945,W. Travis,ENVS
+946,A. Carrico,ENVS
+947,K. Krizek,ENVS
+948,M. Williams,ENVS
+949,M. Zimmerman,ENVS
+950,D. Crow,ENVS
+951,L. Sprain,COMM
+952,Sprain/Varela,COMM
+953,Sprain/Lynch,COMM
+954,Q. Lynch,COMM
+955,T. Hickman,COMM
+956,W. Wei,HIST
+957,W. Kleiber,STAT
+958,J. Brody,MUSC
+959,D. Glimp,ENGL
+960,Ortega Bañales/Gallardo,EMUS
+961,E. Ramos,MKTG
+962,A. Bhatia,ECON
+963,D. Wilkerson,PHYS
+964,S. Winters,CMDP
+965,M. Itasaka,EMUS
+966,I. Lasmawan,EMUS
+967,M. Mensah,EMUS
+968,Z. Cupec,EMUS
+969,T. Malloy,PSCI
+970,J. Crimaldi,CVEN
+971,B. Livneh,CVEN
+972,E. Zagona,CVEN
+973,M. Gooseff,CVEN
+974,R. Neupauer,CVEN
+975,B. Tracy,CMDP
+976,M. Hoefer,APPM
+977,P. Hunt,GREK
+978,J. Gibert,GREK
+979,T. Ito,PSYC
+980,Schibli/Lu,JPNS
+981,J. Kneeland,EDUC
+982,G. Drinkwater,HIST
+983,Z. Herz,LATN
+984,R. Callier,LATN
+985,Calkins/Beale,PHYS
+986,J. Farrell,PHYS
+987,O. French,PHYS
+988,J. Ligon,APRD
+989,V. Baird,PSCI
+990,S. Parinandi,PSCI
+991,J. Strayhorn,PSCI
+992,J. Griffin,PSCI
+993,A. Sokhey,PSCI
+994,J. Wolak,PSCI
+995,E. Adler,PSCI
+996,J. Maes,EDUC
+997,S. Smith,EBIO
+998,D. Spencer,LAWS
+999,C. Samuelson,FREN
+1000,T. Wadsworth,SOCY
+1001,G. Walden,SOCY
+1002,L. Rychecky,SOCY
+1003,M. Bravo,SOCY
+1004,S. Harris,SOCY
+1005,A. Fay,SOCY
+1006,E. Watterworth,SOCY
+1007,L. Cilia,SOCY
+1008,A. Fitzgerald,SOCY
+1009,M. Nicotra,ECEN
+1010,R. Erickson,ECEN
+1011,R. Frongillo,CSCI
+1012,M. Kay,LAWS
+1013,J. Coyle,LAWS
+1014,J. Fero,LAWS
+1015,M. Hart,LAWS
+1016,J. Lawson,WGST
+1017,S. Jamieson,WGST
+1018,S. Leone,WGST
+1019,Bosanac/Mc Mahon,ASEN
+1020,Mc Mahon/Bosanac,ASEN
+1021,Heidrich/Moretto,ASEN
+1022,P. Pezzullo,COMM
+1023,W. Cook,COMM
+1024,N. Rontu Carlon,CHEM
+1025,B. Knutson,CHEM
+1026,A. O'brien,CHEM
+1027,B. Bishop,CHEM
+1028,D. Nguyen,CHEM
+1029,M. Liester,CHEM
+1030,S. Hammoodi,CHEM
+1031,D. Jayashankar,CHEM
+1032,M. Sands,CHEM
+1033,E. Crann,CHEM
+1034,S. Rezaie Kouhestani,CHEM
+1035,M. San Soucie,CHEM
+1036,M. Northway,CHEM
+1037,Z. Krajnak,CHEM
+1038,A. StJean,CHEM
+1039,O. Akinbami,CHEM
+1040,K. Levine,CHEM
+1041,L. Mortensen,CHEM
+1042,K. Tyner,CHEM
+1043,R. Cardenas,CHEM
+1044,L. Akh,CHEM
+1045,E. Broering,CHEM
+1046,A. Sarino,CHEM
+1047,B. Hohman,CHEM
+1048,N. Liu,CHEM
+1049,O. Hassan,CHEM
+1050,A. Saltzman,CHEM
+1051,G. Evenson,CHEM
+1052,J. Winetrout,CHEM
+1053,C. Rivera,CHEM
+1054,M. Wang,CHEM
+1055,J. Speregen,CHEM
+1056,S. Coates,CHEM
+1057,S. Hendrickson,CHEM
+1058,L. Cahya,CHEM
+1059,V. Martinez,CHEM
+1060,A. Parish,CHEM
+1061,A. Sau,CHEM
+1062,J. Elwood,CHEM
+1063,R. Patel,CHEM
+1064,B. Odunaro,CHEM
+1065,M. Ochoa,CHEM
+1066,C. Lu,CHEM
+1067,R. Cruz Simbron,CHEM
+1068,Q. Xu,CHEM
+1069,B. Knierim,CHEM
+1070,P. Holland,CHEM
+1071,K. Johnson,CHEM
+1072,S. Frankel,CHEM
+1073,K. Elswick,CHEM
+1074,M. Muse,CHEM
+1075,M. Klumb,CHEM
+1076,E. Zabor,CHEM
+1077,M. Wise,CHEM
+1078,A. Montoya Castillo,CHEM
+1079,D. Stock,EBIO
+1080,W. Cox,EBIO
+1081,L. Orozco,EBIO
+1082,V. Gashi,EBIO
+1083,A. Paulson,EBIO
+1084,N. Friedman,PSYC
+1085,T. Sumner,PSYC
+1086,A. Leonardi,CHEM
+1087,S. Bhattacharyya,CHEM
+1088,L. Terry,CHEM
+1089,Leonardi/Terry,CHEM
+1090,T. Fredrickson,SLHS
+1091,K. Sommerfeldt,SLHS
+1092,A. Bonino,SLHS
+1093,S. D'Mello,PSYC
+1094,D. Chu,CLAS
+1095,E. Imadali,JRNL
+1096,K. Plotner,JRNL
+1097,D. Dupler,ENVS
+1098,C. Vodehnal,ENVS
+1099,D. Miller,ENVS
+1100,G. Lang,ENVS
+1101,F. Lopez Jimenez,ASEN
+1102,N. Jobin,HIST
+1103,A. Tyska,HIST
+1104,A. Martin,HIST
+1105,T. Rupp,HIST
+1106,M. Gerber,HIST
+1107,C. Bachman,ARTH
+1108,M. Hough,ARTH
+1109,K. Bertram,ARTH
+1110,L. Peterson,ARTH
+1111,E. Berkes,ARTH
+1112,S. Simmons,ARTH
+1113,A. Davidson,ARTH
+1114,L. Hooten,ARTH
+1115,J. Ghormley,ARTS
+1116,N. Rodriguez,EDUC
+1117,J. Green,ENGL
+1118,M. Fantalis,ENVD
+1119,M. Saddoris,NRSC
+1120,R. Bachtell,NRSC
+1121,R. Spencer,NRSC
+1122,A. Miyake,NRSC
+1123,M. Banich,NRSC
+1124,M. Stallings,NRSC
+1125,D. Root,NRSC
+1126,S. Campeau,NRSC
+1127,J. Rudy,NRSC
+1128,T. Curran,NRSC
+1129,M. Jones,NRSC
+1130,S. Maier,NRSC
+1131,M. Baratta,NRSC
+1132,D. Barth,NRSC
+1133,A. Vigers,NRSC
+1134,R. Parker,NRSC
+1135,D. Bennett,MBAX
+1136,Knight/Hannigan,MCEN
+1137,D. Knight,MCEN
+1138,H. Kelley,THTR
+1139,J. Johnson,THTR
+1140,Kelley/Bryant,THTR
+1141,S. Collier,THTR
+1142,J. Harrison,GEOG
+1143,S. DiLeonardo,APPM
+1144,B. Estudillo,APPM
+1145,N. Coloma Carphio,APPM
+1146,G. Kellogg,APPM
+1147,D. Taylor,JRNL
+1148,S. Sharma,CHEM
+1149,A. Bhaskar,CVEN
+1150,A. Mc Cluskey,EMEN
+1151,S. Thomas,MUSC
+1152,D. Walba,CHEM
+1153,J. Greenwood,CHEM
+1154,E. Miller,CHEM
+1155,Doak/Mehrabi,ENVS
+1156,T. Nuckols,ENVS
+1157,C. Sales,ENVS
+1158,K. Sullivan,ENVS
+1159,C. Smith,ENVS
+1160,M. Stephens,ENVS
+1161,J. Osborne-Gowey,ENVS
+1162,K. Bailey,ENVS
+1163,N. OReilly,ENVS
+1164,J. Smith,INFO
+1165,Y. Zhang,CVEN
+1166,N. Mendoza Gutierrez,HIST
+1167,T. Degrand,PHYS
+1168,E. Schomer,EDUC
+1169,A. Strusz,EDUC
+1170,G. Jutte,EDUC
+1171,M. Calkins,PHYS
+1172,S. Liechty,PHYS
+1173,A. Harris,PHYS
+1174,J. Haines,ECEN
+1175,L. Evans,EBIO
+1176,A. Moss,BCOR
+1177,A. Pawliczek,BCOR
+1178,J. Contreras,BCOR
+1179,Z. Donohew,MBAC
+1180,L. Chester,HIST
+1181,P. Hammer,HIST
+1182,V. Hulden,HIST
+1183,D. Paradis,HIST
+1184,M. Mukherjee,HIST
+1185,D. Elliston,APRD
+1186,M. Schanno,JRNL
+1187,J. Rivas Rodriguez,SPAN
+1188,B. Levin,LAWS
+1189,E. French,CLAS
+1190,W. Motte,FREN
+1191,Davis/Bowman,CHEN
+1192,M. Eryuzlu,MATH
+1193,F. Thiem,MATH
+1194,C. Farsi,MATH
+1195,A. Beaudry,MATH
+1196,K. Moore,DNCE
+1197,J. Atwell,WRTG
+1198,M. Henningsen,WRTG
+1199,D. Colley,WRTG
+1200,G. Siarheichyk,RUSS
+1201,D. Ponomareva,RUSS
+1202,M. Scarlett,RUSS
+1203,A. Romanov,RUSS
+1204,A. Cain,CLAS
+1205,N. Lenski,CLAS
+1206,H. Fnu,RLST
+1207,B. Fnu,RLST
+1208,E. Eckert,PMUS
+1209,N. Ahmed,ASEN
+1210,D. Akos,ASEN
+1211,H. Ali,ASEN
+1212,A. Anderson,ASEN
+1213,B. Argrow,ASEN
+1214,P. Axelrad,ASEN
+1215,X. Chu,ASEN
+1216,A. Doostan,ASEN
+1217,J. Evans,ASEN
+1218,J. Farnsworth,ASEN
+1219,E. Frew,ASEN
+1220,M. Holzinger,ASEN
+1221,J. Humbert,ASEN
+1222,M. Hussein,ASEN
+1223,K. Jansen,ASEN
+1224,D. Klaus,ASEN
+1225,D. Knipp,ASEN
+1226,M. Lahijanian,ASEN
+1227,K. Larson,ASEN
+1228,D. Lawrence,ASEN
+1229,X. Li,ASEN
+1230,R. Macdonald,ASEN
+1231,D. Marshall,ASEN
+1232,R. Marshall,ASEN
+1233,J. Maslanik,ASEN
+1234,K. Maute,ASEN
+1235,J. Mc Mahon,ASEN
+1236,S. Neogi,ASEN
+1237,R. Nerem,ASEN
+1238,H. Schaub,ASEN
+1239,D. Scheeres,ASEN
+1240,T. Schwartz,ASEN
+1241,J. Thayer,ASEN
+1242,P. Poundstone,AIRR
+1243,Poundstone/Collazo,AIRR
+1244,S. Berggreen,MDST
+1245,M. LeBourgeois,ARSC
+1246,A. Bradley,ARSC
+1247,R. Safran,ARSC
+1248,P. Mclean,ARSC
+1249,G. Rivera,ARSC
+1250,Ferrand/Wainscott,SLHS
+1251,Hilger/Hardin,SLHS
+1252,K. Reilly,WRTG
+1253,J. Knowlton,WRTG
+1254,A. Abiragi,WRTG
+1255,P. Fernbach,MKTG
+1256,S. Shriver,MKTG
+1257,H. Dupre,MKTG
+1258,N. Skievaski,ENVD
+1259,M. Alghamdi,ENVD
+1260,J. Reuer,MGMT
+1261,J. Bercovitz,MGMT
+1262,A. Becker,PHYS
+1263,M. Hermele,PHYS
+1264,J. Brown,JPNS
+1265,D. Sweetman,PACS
+1266,Mancini/Hardin,SLHS
+1267,M. Pentzer,CLAS
+1268,Davis/Thurston,CHEM
+1269,Irvine/LaPuma,SOCY
+1270,J. Jupille,EDUC
+1271,K. Boyd,SLHS
+1272,P. Hawkins,SLHS
+1273,C. Hoots,CSCI
+1274,A. Abderezaei,CSCI
+1275,N. Bhattacharya,CSCI
+1276,S. Nayak,CSCI
+1277,C. Godley,CSCI
+1278,S. Dhawaskar Sathyanarayana,CSCI
+1279,H. Lim,CSCI
+1280,S. Pathare,CSCI
+1281,T. Kim,CSCI
+1282,G. Kanugo,CSCI
+1283,Zagrodzki/Grunwald,CSCI
+1284,J. Oh,CSCI
+1285,N. Silleras-Fernandez,SPAN
+1286,J. Krauel,SPAN
+1287,A. Aydin,PSCI
+1288,Sowah/Bertram,DNCE
+1289,M. Arnold,BUSM
+1290,B. Daniels,COMM
+1291,C. Walizer,COMM
+1292,N. Evers,ARCH
+1293,J. Drumheller,MUSC
+1294,A. Shin,PSCI
+1295,S. Kindick,WGST
+1296,C. Pann,MUSC
+1297,P. Brandhuber,CVEN
+1298,V. Sinha,EDUC
+1299,Pfeffer/Senseney,CVEN
+1300,R. Regueiro,CVEN
+1301,R. Pollard,SLHS
+1302,N. Molotch,GEOG
+1303,T. Upton,HIST
+1304,W. Schreuder,CSCI
+1305,E. Upczak,CINE
+1306,G. Marslett,CINE
+1307,R. Kuchta,BCHM
+1308,J. Norris,APPM
+1309,J. Arehart,AREN
+1310,K. Kahl,SOCY
+1311,M. Lofquist,CSCI
+1312,N. Bosanac,ASEN
+1313,J. Brasseur,ASEN
+1314,I. Boyd,ASEN
+1315,W. Emery,ASEN
+1316,J. Forbes,ASEN
+1317,L. Kantha,ASEN
+1318,R. Leben,ASEN
+1319,Z. Sternovsky,ASEN
+1320,L. Stodieck,ASEN
+1321,Z. Sunberg,ASEN
+1322,M. Ruzzene,ASEN
+1323,M. Shakiba,ASEN
+1324,C. Williams,ASEN
+1325,M. Freedman,PSYC
+1326,K. Hill,PSYC
+1327,J. Gruber,PSYC
+1328,C. Pierotti,PSYC
+1329,K. Carston,PSYC
+1330,A. Mahaffey,PSYC
+1331,R. Mueller,PSYC
+1332,N. Smutzler,PSYC
+1333,M. Whisman,PSYC
+1334,S. Shukri,MBAC
+1335,B. Woolf,MBAX
+1336,L. Osterman,RUSS
+1337,T. Martuscelli,PORT
+1338,G. Wilson,ATLS
+1339,J. Browsh,ETHN
+1340,J. Manzo,ETHN
+1341,R. Guerrero,ETHN
+1342,J. Vasquez Zarate,ETHN
+1343,A. Portillos,ETHN
+1344,M. Gee,ETHN
+1345,N. Villanueva,ETHN
+1346,B. Smolky,SLHS
+1347,R. Carston,CSCI
+1348,R. Mazzeo,IPHY
+1349,T. Gleeson,IPHY
+1350,C. Vetter,IPHY
+1351,R. Moore,IPHY
+1352,F. Bentley,IPHY
+1353,C. DeSouza,IPHY
+1354,M. Opp,IPHY
+1355,D. Seals,IPHY
+1356,R. Kram,IPHY
+1357,K. Wright,IPHY
+1358,J. Broussard,IPHY
+1359,M. McQueen,IPHY
+1360,T. Alderete,IPHY
+1361,D. Craighead,IPHY
+1362,M. Floriano,IPHY
+1363,P. Tsai,IPHY
+1364,J. Stitzel,IPHY
+1365,T. Johnson,IPHY
+1366,C. Hoeffer,IPHY
+1367,S. Hobbs,IPHY
+1368,K. Lopez,IPHY
+1369,V. Brunt,IPHY
+1370,R. Rowe,IPHY
+1371,E. Mc Carty,IPHY
+1372,H. Bustamante,IPHY
+1373,J. Casagrand,IPHY
+1374,M. Rossman,IPHY
+1375,A. Grabowski,IPHY
+1376,A. Bryan,IPHY
+1377,A. Bohr,IPHY
+1378,J. Harsh,IPHY
+1379,C. Depner,IPHY
+1380,A. Tan,IPHY
+1381,B. Byrnes,IPHY
+1382,D. Sherwood,IPHY
+1383,A. Bekoff,IPHY
+1384,D. Bielinski,IPHY
+1385,J. Morse,IPHY
+1386,C. Gattas,IPHY
+1387,K. Kebach,IPHY
+1388,T. LA Rocca,IPHY
+1389,Yilmaz/Urrea Castano,OPIM
+1390,A. Jensen,PSCI
+1391,Ceko/Martin,CSCI
+1392,E. Willcutt,PSYC
+1393,V. Kaufmann,PSYC
+1394,D. King,PSYC
+1395,J. Arch,PSYC
+1396,J. Schwartz,PSYC
+1397,K. Sriramesh,APRD
+1398,K. Weaver,APRD
+1399,A. Khanal,CHEM
+1400,R. Parson,CHEM
+1401,P. Zeller,GRMN
+1402,U. Jany,GRMN
+1403,K. Jacobs,ENGL
+1404,R. Kuchenrither,CVEN
+1405,J. Herrero-Senes,SPAN
+1406,R. Batey,BCHM
+1407,S. Swanson,ECON
+1408,L. Ladenburger,ECON
+1409,D. Malaspina,ASTR
+1410,D. Brain,ASTR
+1411,Z. Berta-Thompson,ASTR
+1412,J. Steffen,SLHS
+1413,J. Martins,EDUC
+1414,M. Lopez,EDUC
+1415,M. Belleau,EDUC
+1416,A. Gasiewski,ECEN
+1417,S. Speck,ACCT
+1418,C. Jennings,PMUS
+1419,B. Weber,JWST
+1420,J. Malin,JWST
+1421,T. Pegelow Kaplan,JWST
+1422,A. Chuang,JRNL
+1423,J. Weddle,LAWS
+1424,Reed/Hatfield,CYBR
+1425,B. Goode,EMUS
+1426,M. Rhode,ASEN
+1427,J. Ellis,WRTG
+1428,A. Heintzman,WRTG
+1429,L. Bayard de Volo,PSCI
+1430,M. Engel,EDUC
+1431,S. Avila Forcada,ECON
+1432,L. Corwin,EBIO
+1433,H. Kapteyn,PHYS
+1434,W. Young,CHEN
+1435,A. Kalika,JRNL
+1436,S. Bhowmik,JRNL
+1437,F. Humayun,JRNL
+1438,C. Ryan,GEOG
+1439,J. DiCarlo,GEOG
+1440,D. Gerren,ASEN
+1441,C. Torres-Machi,CVEN
+1442,M. Bentley,EVEN
+1443,K. Sears,CINE
+1444,A. Nguyen,MUSC
+1445,J. Zender,MSBC
+1446,J. Andre,FREN
+1447,H. Hecht,FREN
+1448,J. Catel,FREN
+1449,S. Vandermarliere,FREN
+1450,L. Rech,FREN
+1451,M. Paikowski,FREN
+1452,D. Bilot,LAND
+1453,J. Stillman,EDUC
+1454,V. Schwarz,EDUC
+1455,D. Dobolyi,MSBX
+1456,A. Okigbo,MUSC
+1457,R. Shay,MUSC
+1458,A. Gillman,APPM
+1459,S. Natesh,APPM
+1460,A. Rolls,MUSC
+1461,S. Bahauddin,ASTR
+1462,A. Dancer,ENVS
+1463,D. Allen,PSYC
+1464,L. Chun,PSYC
+1465,K. Brown,PSYC
+1466,J. Stratford,PSYC
+1467,K. Siletti,PSYC
+1468,Mitchell/Jackson,ENGL
+1469,J. Scheib,AREN
+1470,S. Frost,MDST
+1471,J. Roberts,MDST
+1472,A. Gregorio,ARTS
+1473,M. Womack,ARTS
+1474,Case/Skievaski,PLAN
+1475,F. Pourahmadian,CVEN
+1476,P. Falk,EMUS
+1477,N. Clark,PHYS
+1478,Clark/Ni,PHYS
+1479,O. Forbes,PHIL
+1480,C. Pickard,PHIL
+1481,M. Bevan,PHIL
+1482,M. Wennemann,PHIL
+1483,T. Rebello,PHIL
+1484,M. Sechman,PHIL
+1485,E. Shear,PHIL
+1486,J. Staffel,PHIL
+1487,A. Ajalloeian,PHIL
+1488,Z. Kieser,PHIL
+1489,S. Rhee,PSYC
+1490,E. Loizeaux,GEOG
+1491,Hazarika/Kothapally,GEOG
+1492,M. Goldman,GEOG
+1493,N. Shaban,GEOG
+1494,A. Kothapally,GEOG
+1495,P. Mukerjee,GEOG
+1496,A. Hickcox,GEOG
+1497,P. Gurung,GEOG
+1498,H. Ragin,MUSC
+1499,H. Briggs,CHEN
+1500,Bolhari/Becker,CVEN
+1501,L. Barnhart,APPM
+1502,A. Hirschmann,APPM
+1503,Ramirez/Semsar,ARSC
+1504,K. Pattisapu Allen,ARSC
+1505,K. Kearnes,MATH
+1506,Park/Orth,MCDB
+1507,Orth/Park,MCDB
+1508,S. Gering,EBIO
+1509,S. Liu,EBIO
+1510,E. Stallard-Olivera,EBIO
+1511,M. Shaulsky,EBIO
+1512,Bilinski/Liu,EBIO
+1513,L. Spurlock,GRMN
+1514,T. Kenny,GRMN
+1515,A. Koch,GRMN
+1516,A. Sellers,GRMN
+1517,E. Riga,GRMN
+1518,G. Bredeson,PHIL
+1519,K. Snell,GEOL
+1520,B. Killip,ENVD
+1521,D. Hemsi,ENVD
+1522,M. Felderman,ENVD
+1523,B. Kultgen,PHIL
+1524,H. Kang,PHIL
+1525,C. Salvinelli,CVEN
+1526,L. Poole,COMM
+1527,P. Mitrano,MCEN
+1528,J. Herdman,MCEN
+1529,H. Michelsen,MCEN
+1530,K. Sholtes,MCEN
+1531,D. Fernandes,ENVS
+1532,K. Lee,ENVS
+1533,L. Desmond,IPHY
+1534,T. Kelley,IPHY
+1535,L. Weinman,IPHY
+1536,S. Aki,IPHY
+1537,R. Morgenthaler,IPHY
+1538,C. Udovich,IPHY
+1539,T. Hembree,IPHY
+1540,H. Fandl,IPHY
+1541,R. Tubbs,MATH
+1542,B. Chang,CSCI
+1543,A. Purushothama,CSCI
+1544,S. Wilson,CSCI
+1545,A. Dong,CSCI
+1546,C. Fontenot,CSCI
+1547,A. Vijayasri Mohan kumar,CSCI
+1548,K. Nielsen,CSCI
+1549,K. Watanabe,CSCI
+1550,P. Prahladan,CSCI
+1551,Arehart/Scheib,AREN
+1552,D. Reid,PMUS
+1553,M. LaGrenade,ENGL
+1554,K. Ten,ENGL
+1555,A. Sardanis,ENGL
+1556,J. Mayer,ENGL
+1557,I. Phelps,ENGL
+1558,J. Schaefer,ENGL
+1559,J. Harriman,CMDP
+1560,J. Gnerre,CMDP
+1561,A. Meyer,CSCI
+1562,Qi/Beltrame,CHIN
+1563,S. Classen,EDUC
+1564,D. Filipovic,ECEN
+1565,Y. Liu,ECEN
+1566,E. Kuester,ECEN
+1567,T. Barton,ECEN
+1568,D. Psychogiou,ECEN
+1569,G. Moddel,ECEN
+1570,S. Mishra,ECEN
+1571,K. Wagner,ECEN
+1572,N. Correll,ECEN
+1573,J. Gopinath,ECEN
+1574,J. Hauser,ECEN
+1575,M. Lightner,ECEN
+1576,P. Mathys,ECEN
+1577,R. Piestun,ECEN
+1578,M. Popovic,ECEN
+1579,Z. Popovic,ECEN
+1580,B. Van Zeghbroeck,ECEN
+1581,M. Varanasi,ECEN
+1582,K. Afridi,ECEN
+1583,K. Baker,ECEN
+1584,D. Grunwald,ECEN
+1585,L. Shang,ECEN
+1586,A. Pleszkun,ECEN
+1587,A. Satwani,CSCI
+1588,C. Paik,CSCI
+1589,S. Sriram,CSCI
+1590,N. Kakkayur Palliyil,CSCI
+1591,J. Stevenson,ENGL
+1592,M. English,PACS
+1593,A. Bhattacharya,FYSM
+1594,L. Stone,FYSM
+1595,B. Brown,ASTR
+1596,E. Sepulveda,ETHN
+1597,N. Avalos,ETHN
+1598,L. Malaver,ETHN
+1599,C. Plunkett,JRNL
+1600,J. Harris,EBIO
+1601,M. Pflaum,MATH
+1602,M. Sponheimer,ANTH
+1603,S. Skinner-Thompson,LAWS
+1604,P. Rauker,AIRR
+1605,Grant/Nakajima,SOCY
+1606,M. Seefeldt,ATOC
+1607,Matthews/Dziwulski,NAVR
+1608,J. Matthews,NAVR
+1609,S. Dziwulski,NAVR
+1610,S. Sokhey,PSCI
+1611,Y. Trnka-Amrhein,GREK
+1612,A. Ashraf,CSCI
+1613,C. Wade,CSCI
+1614,N. Mysore Keshavaprakash,CSCI
+1615,S. Chakraborty,CSCI
+1616,J. Sun,CSCI
+1617,H. Jain,CSCI
+1618,F. Hu,CSCI
+1619,M. Rudra,CSCI
+1620,S. Savanoor Ravindra,CSCI
+1621,U. Gupta,CSCI
+1622,S. Pabbineedi,CSCI
+1623,A. Marashian Saraei,CSCI
+1624,J. Luther,CSCI
+1625,A. Johry,CSCI
+1626,M. Sharma,CSCI
+1627,A. Sheehan,ASTR
+1628,K. Campbell,MBAC
+1629,R. Hill,EMUS
+1630,H. Starn,FNCE
+1631,J. Bryan,GEOG
+1632,S. Jagadeesh,GEOG
+1633,Procita/Nikoonazari,GEOG
+1634,A. Kellems,MUSC
+1635,B. Clawson,MUSC
+1636,M. Arnett,MUSC
+1637,K. Buer,MUSC
+1638,Hekman/Volpone,ORMG
+1639,G. MacGregor,ENVS
+1640,K. Gildersleeve,PSYC
+1641,S. Ketels,PSYC
+1642,D. Martichuski,PSYC
+1643,R. Curtis,PSYC
+1644,C. Bidwell,PSYC
+1645,G. Hampson,MCEN
+1646,L. Dembowitz,ENGL
+1647,J. Park,CHEM
+1648,M. Berg,TMUS
+1649,C. Mansfeldt,EVEN
+1650,G. Bernardini,HUMN
+1651,D. Powell,ATLS
+1652,J. Ryan,EVEN
+1653,S. Latiff,INVS
+1654,S. Malveaux,LAWS
+1655,D. Oest,BUSM
+1656,B. Block,BUSM
+1657,C. Church,MUSC
+1658,E. Alston,FNCE
+1659,M. Osborne,HIST
+1660,C. Campbell,COMM
+1661,D. Soibelman,COMM
+1662,Floriano/Gadou,IPHY
+1663,R. Scarborough,LING
+1664,A. Reed,ENVS
+1665,J. Balch,ENVS
+1666,T. Thibodeau,ENVS
+1667,D. Doak,ENVS
+1668,J. Litt,ENVS
+1669,R. Pielke,ENVS
+1670,J. Zietz,INFO
+1671,C. Crouse,ENVM
+1672,Hendricks/Hartter,ENVM
+1673,J. Figueroa Serrano,ENVM
+1674,J. Radoff,ENVM
+1675,C. Ageton,ENVM
+1676,D. Huttner,ENVM
+1677,D. Thompson,ENVM
+1678,C. Scanlan Lyons,ENVM
+1679,F. Emmad,ENVM
+1680,Westbrook/Knoff,ENVM
+1681,Lunt/Meidhof,ENVM
+1682,S. Webb,ENVM
+1683,N. Ooi,ENVM
+1684,G. Follingstad,ENVM
+1685,P. Rosenthal,ATLS
+1686,R. Morrison,CSCI
+1687,F. Mannan,CSCI
+1688,P. Knierim,APRD
+1689,C. Trowbridge,APRD
+1690,J. Dvorak,APRD
+1691,J. Foust,APRD
+1692,J. Ordaz,ETHN
+1693,S. Douglass,EHON
+1694,E. Meyers Bass,COMM
+1695,D. Martinez,COMM
+1696,D. Trone,COMM
+1697,S. Newbolt,COMM
+1698,K. Love,COMM
+1699,A. Barber,COMM
+1700,K. Sisson,COMM
+1701,D. Janda,COMM
+1702,J. Marras Tate,COMM
+1703,D. Yannacito,CINE
+1704,H. Demarest,PHIL
+1705,S. Hill,PHIL
+1706,C. Cleland,PHIL
+1707,B. Ager-Hart,PHIL
+1708,J. Wilson,PHIL
+1709,K. Dorst,PHIL
+1710,M. Zerella,PHIL
+1711,P. Windyga,CYBR
+1712,R. Pyatt,ARCH
+1713,R. Barney,ARCH
+1714,S. Atkinson Glenn,ARCH
+1715,R. Epstein,ARCH
+1716,F. Antman,ECON
+1717,O. Baranov,ECON
+1718,T. Barham,ECON
+1719,M. Boileau,ECON
+1720,C. Burr,ECON
+1721,B. Cadena,ECON
+1722,J. Carballo,ECON
+1723,C. De Bartolome,ECON
+1724,F. Iyigun,ECON
+1725,T. Jaworski,ECON
+1726,D. Kaffine,ECON
+1727,W. Keller,ECON
+1728,J. Kim,ECON
+1729,J. Klein,ECON
+1730,X. Liu,ECON
+1731,R. Mansfield,ECON
+1732,C. Martins-Filho,ECON
+1733,K. Maskus,ECON
+1734,A. Mc Closkey,ECON
+1735,T. McKinnish-Harllee,ECON
+1736,E. Morey,ECON
+1737,D. Moss,ECON
+1738,S. Nigai,ECON
+1739,A. Peri,ECON
+1740,K. Platikanova-Gross,ECON
+1741,S. Savage,ECON
+1742,C. Shiue,ECON
+1743,S. Zhang,ECON
+1744,Y. Song,ECON
+1745,A. Riegelman,ENVD
+1746,T. Mustin,JRNL
+1747,L. Beuken,ECEN
+1748,T. Santos,ECEN
+1749,C. Newlands,LATN
+1750,J. Farmer,CINE
+1751,L. Patterson,SOCY
+1752,B. Wagner,SOCY
+1753,L. Novack,SOCY
+1754,M. Carpenter,EDUC
+1755,M. Readey,EMEN
+1756,J. Thomas,EMEN
+1757,F. Jones,CSPB
+1758,Bhatti/Sreenan,INFO
+1759,S. Ortman,ANTH
+1760,M. Ferguson,PSCI
+1761,Ferguson/Sours,PSCI
+1762,Ferguson/Fite,PSCI
+1763,Ferguson/Taylor,PSCI
+1764,Ferguson/Moss,PSCI
+1765,J. Chadwick,PSCI
+1766,Vanderheiden/Tellis,PSCI
+1767,Vanderheiden/Taylor,PSCI
+1768,Vanderheiden/Sours,PSCI
+1769,Vanderheiden/Moss,PSCI
+1770,B. Michael,AIRR
+1771,K. France,ASTR
+1772,P. Diduch,ENES
+1773,R. Layer,CSCI
+1774,S. Magnanini,ITAL
+1775,R. Bledsoe,MDST
+1776,E. Lawrence,MDST
+1777,P. Weimer,GEOL
+1778,C. Snyder,JRNL
+1779,M. Vance,MCEN
+1780,W. Zuo,MCEN
+1781,V. Bright,MCEN
+1782,G. Rieker,MCEN
+1783,X. Ding,MCEN
+1784,L. Cui,MCEN
+1785,C. Keplinger,MCEN
+1786,N. Labbe,MCEN
+1787,N. Bottenus,MCEN
+1788,C. Welker,MCEN
+1789,K. Linden,MCEN
+1790,O. Koc,INBU
+1791,S. Roudbari,PLAN
+1792,J. Rinn,BCHM
+1793,D. Anderson,PHYS
+1794,J. Aumentado,PHYS
+1795,D. Baker,PHYS
+1796,M. Betterton,PHYS
+1797,J. Bohn,PHYS
+1798,J. Cary,PHYS
+1799,C. Chou,PHYS
+1800,I. Coddington,PHYS
+1801,E. Cornell,PHYS
+1802,D. Dessau,PHYS
+1803,O. DeWolfe,PHYS
+1804,S. Diddams,PHYS
+1805,J. Dincao,PHYS
+1806,E. Donley,PHYS
+1807,N. Figueroa Morales,PHYS
+1808,N. Finkelstein,PHYS
+1809,S. Glancy,PHYS
+1810,M. Glaser,PHYS
+1811,R. Simmonds,PHYS
+1812,V. Gorokhovsky,PHYS
+1813,V. Gurarie,PHYS
+1814,N. Halverson,PHYS
+1815,A. Hamilton,PHYS
+1816,A. Hasenfratz,PHYS
+1817,M. Holland,PHYS
+1818,M. Horanyi,PHYS
+1819,L. Hough,PHYS
+1820,A. Jaron-Becker,PHYS
+1821,A. Kaufman,PHYS
+1822,S. Kempf,PHYS
+1823,E. Kinney,PHYS
+1824,J. Kitching,PHYS
+1825,E. Knill,PHYS
+1826,K. Lehnert,PHYS
+1827,D. Leibfried,PHYS
+1828,D. Leibrandt,PHYS
+1829,H. Lewandowski,PHYS
+1830,B. Li,PHYS
+1831,M. Litos,PHYS
+1832,A. Lucas,PHYS
+1833,A. Ludlow,PHYS
+1834,J. Maclennan,PHYS
+1835,A. Marino,PHYS
+1836,A. Mascarenhas,PHYS
+1837,T. Munsat,PHYS
+1838,M. Murnane,PHYS
+1839,J. Nagle,PHYS
+1840,S. Nam,PHYS
+1841,R. Nandkishore,PHYS
+1842,E. Neil,PHYS
+1843,S. Papp,PHYS
+1844,D. Nesbitt,PHYS
+1845,D. Pappas,PHYS
+1846,S. Parker,PHYS
+1847,D. Perepelitsa,PHYS
+1848,S. Pollock,PHYS
+1849,M. Raschke,PHYS
+1850,C. Regal,PHYS
+1851,A. Rey,PHYS
+1852,D. Reznik,PHYS
+1853,M. Ritzwoller,PHYS
+1854,P. Romatschke,PHYS
+1855,T. Schibli,PHYS
+1856,L. Shalm,PHYS
+1857,D. Slichter,PHYS
+1858,I. Smalyukh,PHYS
+1859,G. Smith,PHYS
+1860,K. Stenson,PHYS
+1861,S. Sun,PHYS
+1862,J. Teufel,PHYS
+1863,J. Thompson,PHYS
+1864,J. Ullom,PHYS
+1865,K. Ulmer,PHYS
+1866,D. Uzdensky,PHYS
+1867,S. Wagner,PHYS
+1868,B. Wilcox,PHYS
+1869,A. Wilson,PHYS
+1870,J. Ye,PHYS
+1871,S. Zhong,PHYS
+1872,E. Zimmerman,PHYS
+1873,R. Nest,MATH
+1874,R. Deeley,MATH
+1875,T. Vossen,BUSM
+1876,N. Zikmund,MGMT
+1877,D. Lacek,MGMT
+1878,O. Hersh,WRTG
+1879,M. Albert,WRTG
+1880,S. Barkin,WRTG
+1881,D. Doyle,WRTG
+1882,L. Pearce,WRTG
+1883,E. Acevedo-Munoz,ARTH
+1884,J. Keister,MUEL
+1885,C. Wofford,MUEL
+1886,I. Johnson,MUEL
+1887,Y. Min,WRTG
+1888,P. Kratzke,WRTG
+1889,S. Green,WRTG
+1890,S. Jech,EBIO
+1891,K. Metwally,EBIO
+1892,J. Rush,EBIO
+1893,M. Amaral,EBIO
+1894,C. Garfinkel,EBIO
+1895,M. Dietrich,COMM
+1896,D. Khedekar,COMM
+1897,J. Ackerman,COMM
+1898,D. Wu,CLAS
+1899,K. Schaub,BCOR
+1900,J. Blacklock,MCEN
+1901,P. Himpsel,MCEN
+1902,Himpsel/Kotys,MCEN
+1903,E. Artale,MCEN
+1904,G. Vanderbeek,MCEN
+1905,X. Wang,BCHM
+1906,D. Yi,BCHM
+1907,R. Jing,BCHM
+1908,L. Gries,WRTG
+1909,E. Klinger,WRTG
+1910,A. Gyenis,ECEN
+1911,E. Dall'anese,ECEN
+1912,C. Myers,ECEN
+1913,T. McMaken,PHYS
+1914,K. Ryan,JRNL
+1915,J. Hayghe,MUSC
+1916,J. Svoboda,EMEN
+1917,M. Theodore,MUSC
+1918,J. Fry,ECON
+1919,A. Butler,ECON
+1920,N. Choi,ECON
+1921,S. Narasimhan,ECON
+1922,J. Hwang,ECON
+1923,W. Meng,ECON
+1924,Y. Choi,ECON
+1925,S. Hall,MBAX
+1926,Kasinath/Wuttke,BCHM
+1927,Bouwman/Dominic,CHEM
+1928,A. Davis-DeLaria,COEN
+1929,B. Higgins,MKTG
+1930,S. Hansen,MKTG
+1931,Hodge/Markovic,ECEN
+1932,L. Moore,EDUC
+1933,D. LeFebre,EDUC
+1934,Budd/Trower,GEOL
+1935,L. Roberts,CHEM
+1936,J. Kurian,CHEM
+1937,S. Yelishala,CHEM
+1938,H. Cardwell,CHEM
+1939,I. Her Many Horses,EDUC
+1940,A. Latif,ECEN
+1941,D. Doty,APRD
+1942,Doty/Agarwal,APRD
+1943,Doty/Anderson-Reinhardt,APRD
+1944,Doty/Perbawani,APRD
+1945,Doty/Wright,APRD
+1946,Doty/Friedel,APRD
+1947,Doty/Caulfield,APRD
+1948,K. Botwe,APRD
+1949,K. Harris,APRD
+1950,M. Pickett,APRD
+1951,E. Ozelkan,MDST
+1952,A. Leshnick,MDST
+1953,T. Aygun,MDST
+1954,L. Blood,ENVM
+1955,P. Hayne,ASTR
+1956,M. Kazachenko,ASTR
+1957,J. Darling,ASTR
+1958,R. Ergun,ASTR
+1959,J. Bally,ASTR
+1960,D. Harrington,ASTR
+1961,M. Begelman,ASTR
+1962,J. Dexter,ASTR
+1963,L. Esposito,ASTR
+1964,J. Toomre,ASTR
+1965,F. Bagenal,ASTR
+1966,J. Burns,ASTR
+1967,J. Comerford,ASTR
+1968,E. Nelson,ASTR
+1969,A. Kowalski,ASTR
+1970,G. Stewart,ASTR
+1971,E. Ellingson,ASTR
+1972,B. Jakosky,ASTR
+1973,A. Madigan,ASTR
+1974,M. MacGregor,ASTR
+1975,B. Fleming,ASTR
+1976,K. Reardon,ASTR
+1977,P. Armitage,ASTR
+1978,W. Cash,ASTR
+1979,J. Glenn,ASTR
+1980,L. Blum,ASTR
+1981,K. Alexander,CHIN
+1982,J. Maurice,ARTS
+1983,A. Treher,ARTS
+1984,L. Valdovino,ARTS
+1985,B. Teitelbaum,IAFS
+1986,D. Snyder,IAFS
+1987,A. Howard,IAFS
+1988,S. Beard,IAFS
+1989,R. Vanukuru,ATLS
+1990,A. Lemke,SLHS
+1991,M. Schrimper,ENGL
+1992,R. Hasan,ENGL
+1993,J. Pelzer,ENGL
+1994,Giglio/Quirk,GEOL
+1995,C. Hager,GEOL
+1996,T. Marchitto,GEOL
+1997,M. Windell,ENGL
+1998,H. Muller-Sievers,GRMN
+1999,B. VanHorssen,ATLS
+2000,Schaal/Seltzer,ATLS
+2001,D. Rankin,ATLS
+2002,S. Rezvani,ATLS
+2003,J. Gallagher,ATLS
+2004,C. Hult,ATLS
+2005,E. Granzotto Llagostera,ATLS
+2006,M. Nova,ATLS
+2007,A. Pinter,ATLS
+2008,G. Molnar,ATLS
+2009,A. Merritt,GRMN
+2010,R. Simonetta,ENGL
+2011,A. Philips,PSCI
+2012,S. Zamore,ATLS
+2013,D. Kong,MBAX
+2014,M. Yazzie,ARTS
+2015,M. Russo,ARTS
+2016,C. Espinosa,ARTS
+2017,J. Quinn,ARTS
+2018,F. Duresse-Stimilli,ARTS
+2019,W. Rumley,ARTS
+2020,S. Johnson,ARTS
+2021,A. Sweetman,ARTS
+2022,Wiese/Johnson,HUMN
+2023,N. Eichmann,DHUM
+2024,N. Bahrehmand,CMDP
+2025,T. Peiu,CMDP
+2026,S. O'Neal,ETHN
+2027,J. Popham,ETHN
+2028,A. Torres Carrasquillo,ETHN
+2029,W. Kuskin,ENES
+2030,Sieber/Dino,ENES
+2031,C. Butcher,DNCE
+2032,C. Sampson,APPM
+2033,A. Schein,APPM
+2034,A. Hilger,SLHS
+2035,M. McGee,MSBC
+2036,H. Rhodes,PMUS
+2037,C. Wetherbee,PMUS
+2038,D. Gonzalez,PMUS
+2039,K. Schranz,PMUS
+2040,F. Gearhart,PMUS
+2041,A. Bronstein,MATH
+2042,A. Richter,CHIN
+2043,Y. Matsunaga,JPNS
+2044,K. Kaur,PSCI
+2045,R. Tomiko,EDUC
+2046,G. Platais,CVEN
+2047,E. Thomas,CVEN
+2048,Burge/Emery,JPNS
+2049,Burge/Hooper,JPNS
+2050,M. Krarti,AREN
+2051,Brennan/Reichel,SLHS
+2052,K. You,CHIN
+2053,B. Steele,PSYC
+2054,K. Clark,IPHY
+2055,L. Kessler,IPHY
+2056,B. Needles,IPHY
+2057,O. Onyejekwe,STAT
+2058,H. Day,NRSC
+2059,A. Cremaschi,MUSC
+2060,J. Koch,MCEN
+2061,A. Folkesson,IPHY
+2062,S. Allen,IPHY
+2063,Z. Colvin,IPHY
+2064,A. Bogard,IPHY
+2065,V. Vaida,CHEM
+2066,Z. Zhai,AREN
+2067,H. Walton,MUEL
+2068,A. Orco-Zerpa,MUEL
+2069,K. Waters,MUEL
+2070,B. Birsoy,MCDB
+2071,M. Greening,MCDB
+2072,H. Junge,MCDB
+2073,T. Rowland,MCDB
+2074,M. Winey,MCDB
+2075,T. Blumenthal,MCDB
+2076,A. Bernstein,ECEN
+2077,F. Bumbaca,MKTG
+2078,S. Ventura,MKTG
+2079,M. Winter,MKTG
+2080,A. Bhattacharjee,MKTG
+2081,J. Ploumitsakos,MKTG
+2082,J. Cookson,MSBC
+2083,M. Quilliam,MUEL
+2084,M. Mazari Armida,MATH
+2085,S. Casalaina-Martin,MATH
+2086,M. Rose,ENVM
+2087,T. Arnett,APRD
+2088,A. Priou,ENES
+2089,H. Fredricksmeyer,ENES
+2090,A. Lange,ENES
+2091,A. Kowalchuk,ENES
+2092,Young/Hind,CHEN
+2093,N. Arya,HIND
+2094,M. Walczak,CHEM
+2095,M. Coppock,IPHY
+2096,G. Archer,IPHY
+2097,R. Venkatasubramanian,IPHY
+2098,K. Koger,IPHY
+2099,S. Darvish,IPHY
+2100,L. DeVries,ENGL
+2101,S. Ramsey,ENGL
+2102,A. Escanuela,ENGL
+2103,H. Blanning,ENGL
+2104,D. Leamen,ENGL
+2105,T. Nugent,ENGL
+2106,R. Bartlett,ENGL
+2107,D. Faulkner,SPAN
+2108,Fitzgerald/Shields,BMEN
+2109,Shields/Fitzgerald,BMEN
+2110,K. Schuetz,CESR
+2111,U. Diaz,FYXP
+2112,J. Drelles,FYXP
+2113,B. Albrecht,FYXP
+2114,M. Brooks,FYXP
+2115,C. Pruiett,FYXP
+2116,L. Brown,FYXP
+2117,T. Allen-Gaines,FYXP
+2118,D. Moritz,MATH
+2119,K. Nzinga,EDUC
+2120,D. Ikenberry,MBAX
+2121,V. McKenzie,EBIO
+2122,P. Daugherty,JRNL
+2123,J. Heydt-Stevenson,COML
+2124,E. White,COML
+2125,M. Leiderman,COML
+2126,V. Ferme,COML
+2127,P. Gordon,COML
+2128,J. Rivers,COML
+2129,C. Braider,COML
+2130,P. Greaney,COML
+2131,P. Kroll,COML
+2132,R. Landeira,COML
+2133,A. Bauer,LAWS
+2134,N. Orian Peer,LAWS
+2135,D. Deforest,LAWS
+2136,N. Trethewey,LAWS
+2137,G. Young,PSCI
+2138,D. Yerger,FNCE
+2139,D. Gardner,FNCE
+2140,D. Quigley,CSCI
+2141,Immerman/Ajalloeian,PHIL
+2142,Bailey/Arends,PHIL
+2143,Saucedo Ceballos/Porter,PHIL
+2144,Rupert/Massey,PHIL
+2145,R. Hickerson,COMM
+2146,J. Brunelle,COMM
+2147,A. Davlyn,COMM
+2148,H. Ward,COMM
+2149,P. Young,HIST
+2150,B. Neely,CAMW
+2151,J. Hanson,CAMW
+2152,C. He,MGMT
+2153,G. Ravishankar,MGMT
+2154,K. Murphy,FREN
+2155,D. Silver,PMUS
+2156,E. Edwards,MKTG
+2157,M. Myers,MKTG
+2158,Gumina/Dougherty,EDUC
+2159,A. McGrath,EDUC
+2160,E. Almanza DE Schonewise,EDUC
+2161,A. Scully,PMUS
+2162,M. Barbosa,PMUS
+2163,K. Peykarzadeh,PMUS
+2164,Frew/Sunberg,ASEN
+2165,Sunberg/Frew,ASEN
+2166,Rafi/Lahijanian,ASEN
+2167,J. Clelland,MATH
+2168,J. Carpenter,EBIO
+2169,S. Renfrow,EBIO
+2170,S. Higgins,LAWS
+2171,A. Fields,MILR
+2172,H. Truong,CSPB
+2173,Tsai/Wolenski,MCEN
+2174,C. Kohlmeier,CHEN
+2175,M. Mahoney,CHEN
+2176,C. Nuttelman,CHEN
+2177,C. Norton,ARTS
+2178,M. Funk,LAWS
+2179,K. Chin,GEOL
+2180,Chin/Jorn,GEOL
+2181,J. Shepperd,MDST
+2182,K. Garcia,LAWS
+2183,L. Conway,CINE
+2184,M. Barnett,MUEL
+2185,B. Cefkin,MUEL
+2186,E. Anderman,ENGL
+2187,Klages/Johnson,ENGL
+2188,Klages/Sellers,ENGL
+2189,D. Medeiros,EBIO
+2190,C. McCain,EBIO
+2191,D. Bowers,EBIO
+2192,S. Taylor,EBIO
+2193,K. Davies,EBIO
+2194,B. Demmig-Adams,EBIO
+2195,L. Dee,EBIO
+2196,W. Sconiers,EBIO
+2197,N. Fierer,EBIO
+2198,E. Tripp,EBIO
+2199,N. Emery,EBIO
+2200,N. Kane,EBIO
+2201,A. Kamath,EBIO
+2202,I. Blair,PSYC
+2203,M. Keller,PSYC
+2204,E. Colunga,PSYC
+2205,A. Healy,PSYC
+2206,T. Hernandez,PSYC
+2207,C. Judd,PSYC
+2208,R. O'Reilly,PSYC
+2209,Y. Munakata,PSYC
+2210,A. Kim,PSYC
+2211,R. Olson,PSYC
+2212,S. Patterson,PSYC
+2213,T. Wager,PSYC
+2214,L. Van Boven,PSYC
+2215,K. Hutchison,PSYC
+2216,J. Correll,PSYC
+2217,E. Burger,WRTG
+2218,M. Tirado,WRTG
+2219,J. Law,STAT
+2220,B. Zaharatos,STAT
+2221,J. Englander,STAT
+2222,G. Hamburger,APRD
+2223,C. LaPage,MUSC
+2224,M. Zamani,CSCI
+2225,J. Bird-Arvidsson,MUSC
+2226,R. Zhang,MSBC
+2227,A. Detch,HIST
+2228,C. Sears,REAL
+2229,J. Starbuck,REAL
+2230,M. Gasta,OREC
+2231,C. Maxwell,ACCT
+2232,C. Biegelsen,REAL
+2233,Srubar/Zhai,AREN
+2234,N. Nguyen,IAFS
+2235,J. Goodrich,BCHM
+2236,K. Roy,BCHM
+2237,A. Hein,ATLS
+2238,A. Pierce,ATLS
+2239,D. Lobser,ATLS
+2240,I. Hales,ATLS
+2241,M. Bethancourt,ATLS
+2242,O. Vasile,ITAL
+2243,C. Torriani,ITAL
+2244,Leyk/Barrett,GEOG
+2245,B. St. John,APRD
+2246,K. Stange,MATH
+2247,D. Chen,LING
+2248,C. Nelson,DNCE
+2249,M. Ware,ARTS
+2250,W. Martin,EMEN
+2251,M. Miranda,MUSC
+2252,K. Hall,LING
+2253,C. O'Neil,LAWS
+2254,V. Kasinath,MCDB
+2255,J. Cameron,MCDB
+2256,S. Spencer,MCDB
+2257,D. Taatjes,MCDB
+2258,A. Whiteley,MCDB
+2259,D. Wuttke,MCDB
+2260,Moschetti/Ward,ENVM
+2261,Schimmel/Wilson,SLHS
+2262,T. Bilinski,EBIO
+2263,S. Ahler,EBIO
+2264,K. Thomas,SOCY
+2265,E. Weltman,SOCY
+2266,S. Kazmi,APRD
+2267,E. Mueller,EMEN
+2268,D. Sweeney,EBIO
+2269,W. Adams,EBIO
+2270,J. Gorski,EBIO
+2271,P. Littman,EBIO
+2272,D. Oliveras,EBIO
+2273,R. Buchwald,EBIO
+2274,C. Kelly,EBIO
+2275,L. Wolfe,EBIO
+2276,S. Burke,BCOR
+2277,D. Lichtenstein,BCOR
+2278,A. Barasch,BCOR
+2279,R. Pak,CVEN
+2280,S. Dashti,CVEN
+2281,W. Pfeffer,CVEN
+2282,D. Znidarcic,CVEN
+2283,M. Oscamou,CSCI
+2284,M. Cox,CSCI
+2285,M. Llerandi,CSCI
+2286,J. Escobar,ENVD
+2287,M. Holbert,ENVD
+2288,A. Brunet,LAWS
+2289,A. Aldama,ETHN
+2290,J. Sturgeon,LAWS
+2291,G. Grobmeier,JWST
+2292,R. Pasnau,PHIL
+2293,V. Perez,PMUS
+2294,W. Gazur,LAWS
+2295,F. Wilmer,PSCI
+2296,J. Plagmann,RUSS
+2297,J. Fluri,GEOG
+2298,T. Mohan,GEOG
+2299,D. Reeves,PHIL
+2300,C. Kianpour,PHIL
+2301,J. Webb,PHIL
+2302,M. Chamorro,PHIL
+2303,D. Hughes,PHIL
+2304,E. Greetis,PHIL
+2305,J. Bacus,ATLS
+2306,T. Beechy,ENGL
+2307,L. Wayment,CHEM
+2308,L. Gardner,CHEM
+2309,K. Fisch,CHEM
+2310,H. Koltunski,CHEM
+2311,T. Davis,CHEM
+2312,L. Bodkin,CHEM
+2313,.. Kajal,CHEM
+2314,B. Langmack,CHEM
+2315,K. Culley,CHEM
+2316,H. Chen,CHEM
+2317,J. Stankiewiz,CHEM
+2318,Begelman/Echiburu,ASTR
+2319,K. Long,ASTR
+2320,Crichlow/Greenwood,ENVD
+2321,G. Crichlow,ENVD
+2322,A. Saunders,ENVD
+2323,J. Wagner,NAVR
+2324,L. Pedersen-Gallegos,SOCY
+2325,E. Lievanos Medina,SOCY
+2326,M. Pellegrino,ENVS
+2327,M. Duncan,APRD
+2328,J. Nunziato,MBAX
+2329,J. Grochow,CSCI
+2330,M. Serreze,GEOG
+2331,S. Welter,GEOG
+2332,S. Anderson,GEOL
+2333,J. Lause,MUSC
+2334,I. Blanck,MUSC
+2335,J. Silverstein,CVEN
+2336,F. Rosario-Ortiz,CVEN
+2337,A. Javernick-Will,CVEN
+2338,M. Hallowell,CVEN
+2339,J. Milford,CVEN
+2340,M. Hernandez,CVEN
+2341,S. Summers,CVEN
+2342,K. Molenaar,CVEN
+2343,P. Chinowsky,CVEN
+2344,A. Straub,CVEN
+2345,R. Klees,CVEN
+2346,M. Jongewaard,CVEN
+2347,C. Beamer,CVEN
+2348,M. Morris,CVEN
+2349,A. Bolhari,CVEN
+2350,S. Masters,CVEN
+2351,M. Walker,CVEN
+2352,J. Sholtes,CVEN
+2353,U. Techera Rocha,CVEN
+2354,D. Kaufman,PHIL
+2355,M. Lewis,BASE
+2356,M. Jennings,BASE
+2357,N. Chapple,BASE
+2358,K. Orton,BASE
+2359,Bone/Lewis,BASE
+2360,Lacy/Carbone,BASE
+2361,Lewis/Bone,BASE
+2362,Swisher/Livengood,BASE
+2363,Kennedy/Auslander,BASE
+2364,Jennings/Lionberger,BASE
+2365,Lionberger/Jennings,BASE
+2366,Chapple/Shukri,BASE
+2367,Orton/Smith,BASE
+2368,Ploumitsakos/Shukri,BASE
+2369,Lacy/Auslander,BASE
+2370,Rodgers/Bone,BASE
+2371,T. Tsepak,TBTN
+2372,S. John,MATH
+2373,J. Timmer,MATH
+2374,L. Lorenzo,MATH
+2375,W. Lindsay,EDUC
+2376,D. Godrick,GEEN
+2377,C. Douglass,CHEM
+2378,S. Kopf,GEOL
+2379,Lynch/Duran-Sandoval,SLHS
+2380,K. Lynch,SLHS
+2381,Meyers/Duran-Sandoval,SLHS
+2382,D. Bottan,ECON
+2383,J. Eaves,CHEM
+2384,L. Michaelis-Cummings,LING
+2385,C. Larson,APRD
+2386,B. Stasny,THTR
+2387,A. Pillot,DNCE
+2388,C. Brennan,SLHS
+2389,A. Mansouri,LING
+2390,J. Desjardins,LING
+2391,P. Das,LING
+2392,J. Cowell,LING
+2393,S. Sullivan,LING
+2394,N. Grothues,LING
+2395,J. Elliott,LATN
+2396,A. de Stecher,ARTH
+2397,Gallagher/Winters,ATLS
+2398,K. McGuire,WRTG
+2399,S. Couey,WRTG
+2400,V. Stout,WRTG
+2401,E. Stillwaggon Swan,WRTG
+2402,S. Myers,WRTG
+2403,N. Brown,WRTG
+2404,R. Lee,WRTG
+2405,E. Newsom,WRTG
+2406,M. Hsiao,WRTG
+2407,M. Gurule,WRTG
+2408,J. Stewart,WRTG
+2409,C. Eagen,WRTG
+2410,S. Holman,WRTG
+2411,T. Ferrell,WRTG
+2412,C. Kunce,WRTG
+2413,N. Mc Manus,WRTG
+2414,M. Miyamoto,WRTG
+2415,E. Beam,WRTG
+2416,J. Lagapa,WRTG
+2417,J. Khlifat,WRTG
+2418,C. Eisert,WRTG
+2419,C. Ostro,WRTG
+2420,G. Adamson,WRTG
+2421,V. Khoo,WRTG
+2422,E. Knight,NRSC
+2423,R. Kaiser,NRSC
+2424,D. Jonas,CHEM
+2425,Bortz/Mao,APPM
+2426,Grooms/Mao,APPM
+2427,Beylkin/Mao,APPM
+2428,J. Van Horne,ENVD
+2429,M. Aravena Gutierrez,ENVD
+2430,S. Anaya,LAWS
+2431,L. Intrater,APPM
+2432,E. Galvin,APPM
+2433,Z. Sajevic,APPM
+2434,B. Kawaguchi,MILR
+2435,D. Bolton,PHYS
+2436,I. Zane,PHYS
+2437,M. Mazur,PHYS
+2438,M. Wu,PHYS
+2439,J. Friduss,PHYS
+2440,K. Finger,PHYS
+2441,Y. Hong,PHYS
+2442,T. Sterling,PHYS
+2443,S. Han,PHYS
+2444,E. Katz,PHYS
+2445,M. Dubson,PHYS
+2446,B. Freid,PHYS
+2447,E. Fang,PHYS
+2448,M. Griston,PHYS
+2449,J. Plueger,PHYS
+2450,C. Yoke,PHYS
+2451,K. Higginbotham,PHYS
+2452,S. Grable,PHYS
+2453,L. Varekamp,PHYS
+2454,K. Wong,PHYS
+2455,N. Luna,PHYS
+2456,C. Yin,PHYS
+2457,N. Shitara,PHYS
+2458,M. Okyay,PHYS
+2459,A. Turner,ENES
+2460,L. Szentkiralyi,ENES
+2461,L. DE Alwis,ENES
+2462,D. Sieber,ENES
+2463,S. Stanford-Mcintyre,ENES
+2464,A. Dino,ENES
+2465,Kotys/Steinbrenner,MCEN
+2466,B. Greenwood,IPHY
+2467,B. Reid,LAWS
+2468,L. Seward,MBAC
+2469,A. Phillips,ARSC
+2470,K. Goldfarb,ARSC
+2471,L. Christoff,CESR
+2472,K. Kale,LING
+2473,K. Arnold-Murray,LING
+2474,A. Schlagenhauf,LING
+2475,S. Dimidjian,PSYC
+2476,J. Hewitt,PSYC
+2477,D. Miklowitz,PSYC
+2478,E. Pedersen,PSYC
+2479,G. Cohen,PSYC
+2480,S. Vrieze,PSYC
+2481,D. Cooper,PSYC
+2482,V. Mittal,PSYC
+2483,C. Loersch,PSYC
+2484,Kohlmeier/Kaar,CHEN
+2485,Nelson/Bishop,ASTR
+2486,T. Bishop,ASTR
+2487,T. Culman,ASTR
+2488,M. Kalscheur,ASTR
+2489,H. Shell,CINE
+2490,N. Reinholtz,MSBX
+2491,J. Quah,MUEL
+2492,C. Seay-Fleming,SOCY
+2493,J. Stith,SLHS
+2494,Godley/Hoenigman,CSCI
+2495,J. Dykes,CSCI
+2496,T. Hainsworth,CSCI
+2497,N. Damrauer,CHEM
+2498,K. Peterson,CSPB
+2499,A. Carter,JRNL
+2500,W. Anderson,EBIO
+2501,C. Kutscher,MCEN
+2502,M. Spencer,GEOG
+2503,B. Prado,GEOG
+2504,R. Yilangai,GEOG
+2505,M. Helmberger,GEOG
+2506,S. Posner,GEOG
+2507,J. Zhou,GEOG
+2508,J. Zapf,PHIL
+2509,R. Bodisch,NAVR
+2510,T. Dodds,NAVR
+2511,M. De Lange,ARCH
+2512,K. Gebhardt,ENVM
+2513,J. Pittman-Wagers,PSYC
+2514,N. Aggarwal,SOCY
+2515,S. Munoz-Jones,SOCY
+2516,M. Villarreal,SOCY
+2517,I. Beeman,ENGL
+2518,J. Davis,ENGL
+2519,B. Farris,ENGL
+2520,B. Fortune,ENGL
+2521,A. Praznik,ENGL
+2522,I. Rowlingson,ENGL
+2523,A. Sheffer,ENGL
+2524,E. Smith,ENGL
+2525,L. Rothman,ENGL
+2526,A. Ravi,ENGL
+2527,M. Kerr,ENGL
+2528,B. Marathe,ENGL
+2529,R. Wood,ENGL
+2530,K. Dorsey,ENGL
+2531,C. Ramsey,LAWS
+2532,S. Kenney,COMM
+2533,Nugent/Christensen,ENGL
+2534,M. Case,ENGL
+2535,D. Garcia,FNCE
+2536,Davies/Moon,FNCE
+2537,S. Powell,MUSC
+2538,A. Duray,CLAS
+2539,H. Sachs,HIST
+2540,J. Fell,HIST
+2541,D. Sheflin,HIST
+2542,S. Morley,ACCT
+2543,P. Ferrucci,JRNL
+2544,E. Skewes,JRNL
+2545,M. Dmukhovskaya,JRNL
+2546,M. McDevitt,JRNL
+2547,H. Rosner,JRNL
+2548,T. Yulsman,JRNL
+2549,M. Brady,BADM
+2550,J. Carr,ENGL
+2551,Bahauddin/Sripennem,ASTR
+2552,Burgess/Strunk,ECON
+2553,Butts/Brown,ECON
+2554,J. Kociolek,MUSM
+2555,H. Saska,MUSM
+2556,J. Shannon,MUSM
+2557,S. Fladd,MUSM
+2558,Ferrucci/Weaver,JRNL
+2559,W. Shutkin,ENVM
+2560,A. Vanbuskirk,INVS
+2561,S. Guinn-Chipman,HIST
+2562,Nguyen/Noyes,MUSC
+2563,M. Tolbert,CHEM
+2564,S. Massey-Warren,WRTG
+2565,S. Byrd,WRTG
+2566,C. Carroll,ETHN
+2567,D. Bruder,MBAX
+2568,J. Rickards,MATH
+2569,S. Ih,MATH
+2570,R. Green,MATH
+2571,K. Manley,MATH
+2572,H. Stalvey,MATH
+2573,R. Kauffman,NAVR
+2574,C. King,PSYC
+2575,J. Basey,EBIO
+2576,S. Mayer,EBIO
+2577,Sconiers/Martin,EBIO
+2578,Sweeney/Sconiers,EBIO
+2579,S. Nelson,EBIO
+2580,P. Neimann,ENGL
+2581,N. Moyen,MBAX
+2582,A. Kilbane,FREN
+2583,E. Kostoglodova,RUSS
+2584,B. Autin,ARTS
+2585,A. DiLallo,ARTS
+2586,C. Boulding,PSCI
+2587,K. Eo,KREN
+2588,T. Larsen,SCAN
+2589,S. Butvilofsky,EDUC
+2590,S. Leigh,ANTH
+2591,H. Williams,ANTH
+2592,J. O Brien,ANTH
+2593,Molotch/Musselman,GEOG
+2594,Musselman/Molotch,GEOG
+2595,B. Potter,JRNL
+2596,M. Settipalli,CHEM
+2597,A. Mateo,CHEM
+2598,M. Upmanu,CHEM
+2599,E. Kite,CHEM
+2600,A. Jin,CHEM
+2601,L. Romanetz,CHEM
+2602,S. Eyolfson,CHEM
+2603,A. Kroll,CHEM
+2604,C. Henson,CHEM
+2605,L. Lin,CHEM
+2606,J. Simmons,IPHY
+2607,S. Hintz,GRMN
+2608,Edwards-Capen/Grega,SOCY
+2609,T. Edwards-Capen,SOCY
+2610,R. Scott,SOCY
+2611,E. Orie,IPHY
+2612,S. Kluaiphanngam,IPHY
+2613,L. Burnley,IPHY
+2614,B. Latham,GREK
+2615,G. Deriso,MBAX
+2616,H. Hauser,LAWS
+2617,J. Poveda,ECEN
+2618,S. Siewert,ECEN
+2619,K. Graham,ECEN
+2620,C. Scarborough,ECEN
+2621,L. Corradini,ECEN
+2622,J. Hartter,ENVS
+2623,S. Bullington,INVS
+2624,D. Bostick,APRD
+2625,Resasco/Ramsey,EBIO
+2626,B. Karns,ESBM
+2627,Ewer/Austin,MUSC
+2628,W. Weintraub,MKTG
+2629,D. Mitchell,ENGL
+2630,K. Fischer,ARSC
+2631,K. Ramirez,ARSC
+2632,V. Dumitru Margarint,MATH
+2633,I. Fisher,APRD
+2634,Garnett/Ryan,CYBR
+2635,Ryan/Garnett,CYBR
+2636,N. Bjarke,CVEN
+2637,Y. Ishikawa,PMUS
+2638,S. Steinmo,PSCI
+2639,K. Ashcraft,COMM
+2640,C. Conzelman,ANTH
+2641,B. Zackary,ANTH
+2642,G. Urland,PSYC
+2643,V. Hand,EDUC
+2644,K. Laszlo,MGMT
+2645,A. Garofolo,MGMT
+2646,A. Bell,GEOL
+2647,Bell/Zeigler,GEOL
+2648,Flowers/Zeigler,GEOL
+2649,M. Attwa,ARAB
+2650,M. Smiley,MUSC
+2651,N. Pena,EDUC
+2652,A. Boardman,EDUC
+2653,A. Carlos,ECON
+2654,D. Waldman,ECON
+2655,M. Clark,JRNL
+2656,S. Crawley,EDUC
+2657,Erickson/White,ECEN
+2658,S. Kurnick,ANTH
+2659,Holman/Reger,PMUS
+2660,R. Shapiro,ATLS
+2661,Alam/Dean,EBIO
+2662,S. Garcia,EBIO
+2663,K. Schutz,EBIO
+2664,J. Collins,EBIO
+2665,T. Desai,EBIO
+2666,S. Rothberg,EBIO
+2667,M. Brasher,EBIO
+2668,B. Goldstein,PLAN
+2669,M. Laguna,MGMT
+2670,S. Hallowell,MATH
+2671,Y. Carvajal-Bakke,MATH
+2672,Chellis/Johnson,PMUS
+2673,D. Cook-Martín,SOCY
+2674,M. Desan,SOCY
+2675,L. Hunter,SOCY
+2676,L. Irvine,SOCY
+2677,J. Jacobs,SOCY
+2678,R. Masters,SOCY
+2679,J. Menken,SOCY
+2680,S. Mojola,SOCY
+2681,S. Bailey Mollborn,SOCY
+2682,F. Pampel,SOCY
+2683,L. Peek,SOCY
+2684,D. Pyrooz,SOCY
+2685,M. Radelet,SOCY
+2686,R. Rinaldo,SOCY
+2687,A. Stevenson,SOCY
+2688,K. Tierney,SOCY
+2689,K. Lott,DNCE
+2690,L. Cayko,ENVD
+2691,Muldrow/Wingate,ASEN
+2692,E. Knudsen,ASEN
+2693,J. Mah,ASEN
+2694,H. Barnard,GEOG
+2695,E. Yeh,GEOG
+2696,B. Shear,EDUC
+2697,K. McClure,EDUC
+2698,Komarek/Sebulsky,MCEN
+2699,A. Raggio,SCAN
+2700,B. Trejo,LEAD
+2701,E. Nocito,ENVS
+2702,Y. Bhat,APPM
+2703,Barnard/Fluri,GEOG
+2704,L. Glidewell,EDUC
+2705,K. O'Connor,EDUC
+2706,Hallstead/Dabove,SPAN
+2707,C. Osgood,JRNL
+2708,J. Heckman,ENVM
+2709,A. Siegel,PSCI
+2710,M. Contreras,SOCY
+2711,K. Larsen,BAIM
+2712,A. Rukhotskiy,BAIM
+2713,D. Tonini,LAWS
+2714,J. Lansford,ECEN
+2715,J. Resasco,EBIO
+2716,Stowell/Hazlett,MCDB
+2717,B. Valente-Quinn,FREN
+2718,J. Allwein,ECEN
+2719,D. Davis,APRD
+2720,B. Anderson,APRD
+2721,D. Slayden,APRD
+2722,S. Sanchez,ATOC
+2723,Dupris/Gutiérrez Lorenzo,LING
+2724,H. Haynie,LING
+2725,N. Redl,JRNL
+2726,R. Al Namara,JRNL
+2727,M. Wadud,JRNL
+2728,J. Wise,MATH
+2729,R. Chaiser,MATH
+2730,B. Kuo,MATH
+2731,P. Wynne,MATH
+2732,R. Rossetti,MATH
+2733,A. Modile,SOCY
+2734,B. Mark,SOCY
+2735,N. Toor,SOCY
+2736,K. Christoffersen,SOCY
+2737,K. Hoyt,SOCY
+2738,J. Downing,SOCY
+2739,H. Lyden,SOCY
+2740,S. James,ARTH
+2741,M. Robbins,NAVR
+2742,M. Shannon,PSCI
+2743,S. Chan,PSCI
+2744,S. Kelly,GEOG
+2745,J. Donavan,PSCI
+2746,M. Mc Donald,MUSC
+2747,A. Mohraz,LAWS
+2748,X. Chen,ECEN
+2749,Patterson/Craig,SOCY
+2750,C. Ferraro,MBAX
+2751,C. Pearce,CINE
+2752,J. Weber,CHEM
+2753,Vodehnal/Newton,ENVS
+2754,N. Bennett,ENVS
+2755,D. Reynolds,ENVS
+2756,Miller/Vodehnal,ENVS
+2757,J. Smilack,EDUC
+2758,T. O'Brien,ESBM
+2759,S. Khoshsokhan,ESBM
+2760,E. Poskanzer,ESBM
+2761,H. Leenders,ESBM
+2762,E. Taylor,EDUC
+2763,A. Calabrese,MDST
+2764,S. Bhandari,CVEN
+2765,Hall/Glynn,LAWS
+2766,E. Coles-Harris,LING
+2767,J. Bai,LING
+2768,A. Templeton,GEOL
+2769,C. Crow,GEOL
+2770,B. Markle,GEOL
+2771,B. Wing,GEOL
+2772,D. Strong,SLHS
+2773,A. Hoecker,GRMN
+2774,V. Mastantuno,ECON
+2775,P. Schoonover,ECON
+2776,A. Gruber,ECON
+2777,Fillman/Guild,MCDB
+2778,R. Gessner,MCDB
+2779,E. Kareus,MCDB
+2780,C. Sempeck,MCDB
+2781,A. Fiorenza,MCDB
+2782,Guild/Fillman,MCDB
+2783,T. Hutama,MCDB
+2784,J. Cordova,ARTH
+2785,R. Lavine,ENVD
+2786,D. Rozin,ENVD
+2787,C. Lindberg,ENVD
+2788,B. Burghart,ENVD
+2789,D. Bacalzo,ENVD
+2790,D. Kemp,ENVD
+2791,C. Kipfer,ENVD
+2792,G. Cantu,ENVD
+2793,R. Komarek,MCEN
+2794,P. Ampuero,APRD
+2795,Masters/Simon,SOCY
+2796,Holland/Beckey,PHYS
+2797,A. Schwartz,LAWS
+2798,A. Morgan,OREC
+2799,C. Allard,ASEN
+2800,Thurber/Snow,LAWS
+2801,J. Elliff,LAWS
+2802,A. Jones,LAWS
+2803,A. Contreras,LEAD
+2804,England/Robinson,LAWS
+2805,A. Greene,LAWS
+2806,C. Robinson,LAWS
+2807,E. Willis,APRD
+2808,K. Reid,APRD
+2809,E. Kinsey,APRD
+2810,J. Foster,SCAN
+2811,A. Blauvelt,SCAN
+2812,S. Bongers,SCAN
+2813,M. Douglas,ENGL
+2814,C. Boyd,CHEM
+2815,S. Adelani,CHEM
+2816,M. Kwan,CHEM
+2817,N. Silver,CHEM
+2818,T. Colleran,CHEM
+2819,B. Rich,CHEM
+2820,S. Dutta,CHEM
+2821,Y. Zhou,CHEM
+2822,W. Chace,CHEM
+2823,P. Zayka,CHEM
+2824,S. Doty,CHEM
+2825,S. An,CHEM
+2826,B. Clayville,CHEM
+2827,Z. Wiethorn,CHEM
+2828,M. Huemer,PHIL
+2829,G. Insinger,ASTR
+2830,V. Meyerhoff,ASTR
+2831,L. Zuckerman,ASTR
+2832,A. Kumar,ASTR
+2833,J. Wang,ASTR
+2834,M. Nehring,ASTR
+2835,K. Laughton,ASTR
+2836,N. Dang,ASTR
+2837,A. Verniani,ASTR
+2838,K. Kim,HIST
+2839,Jones/Harrison,GEOL
+2840,S. Yazdi,MSEN
+2841,A. Perkins,EDUC
+2842,Markle/Bennett,GEOL
+2843,L. Barlow,GEOL
+2844,E. Caasi,EDUC
+2845,H. Baynum,EDUC
+2846,M. Zander,INFO
+2847,M. Pike,PHIL
+2848,D. Kingsmill,ATOC
+2849,M. Chellis,PMUS
+2850,A. Nims,PMUS
+2851,A. Garland,PMUS
+2852,B. Boskoff,PMUS
+2853,P. Wolf,PMUS
+2854,M. Lubecke,PMUS
+2855,T. Bocchi,PMUS
+2856,S. Tack,PMUS
+2857,J. DeDominici,PMUS
+2858,E. English,PMUS
+2859,S. Scott,PMUS
+2860,E. Van Wesep,FNCE
+2861,G. Dukovic,CHEM
+2862,J. Michl,CHEM
+2863,J. Jimenez,CHEM
+2864,W. Zhang,CHEM
+2865,R. Volkamer,CHEM
+2866,Weimer/Young,CHEN
+2867,B. Spriggs,ECEN
+2868,C. Wright,MBAX
+2869,A. Grotzinger,PSYC
+2870,S. Adams,WGST
+2871,K. Davis,ASEN
+2872,J. Head,MILR
+2873,A. Padilla-Chavez,EDUC
+2874,I. Pradhan,EDUC
+2875,K. Baca,EDUC
+2876,S. Stolte,PHIL
+2877,K. Nagy,PHIL
+2878,R. Fyfe,PHIL
+2879,Jacobson/Campbell,PHIL
+2880,E. Frook,PHIL
+2881,W. Hardaker,PHIL
+2882,C. Heathwood,PHIL
+2883,Sechman/Webb,PHIL
+2884,C. Roberts,PHIL
+2885,J. Leach,JRNL
+2886,B. Thiers,MUSM
+2887,Y. Kim,PHIL
+2888,G. Oddie,PHIL
+2889,M. Haffey,SOCY
+2890,A. Metzroth,MUSC
+2891,S. Bruns,MUSC
+2892,J. Santos,ECEN
+2893,T. Kittel,EBIO
+2894,T. Chapman,EBIO
+2895,D. Niyogi,EBIO
+2896,N. Patin,ENVD
+2897,W. Yacoub,MATH
+2898,Z. Khalifa,MATH
+2899,B. Balentine,MATH
+2900,X. Yang,MATH
+2901,Z. Saad,MATH
+2902,I. Kraus,MATH
+2903,D. Shaulis,MATH
+2904,D. Eby,MATH
+2905,P. Berrizbeitia,MATH
+2906,E. Scott-Janda,MATH
+2907,B. Gillett,MATH
+2908,C. Aquinto,MATH
+2909,P. Newberry,MATH
+2910,P. Stephens,GEOL
+2911,K. Mueller,GEOL
+2912,A. Lester,GEOL
+2913,W. Shinevar,GEOL
+2914,D. Gurari,CSCI
+2915,T. Burnham,LAWS
+2916,L. Pandit,ECEN
+2917,M. Atterbury,WGST
+2918,P. Almeida Guerra,CVEN
+2919,E. Vance,APPM
+2920,S. Becker,APPM
+2921,I. Grooms,APPM
+2922,J. Curry,APPM
+2923,M. Simpson,WGST
+2924,D. Molchanova,RUSS
+2925,L. Yuan,PSYC
+2926,S. Hornstein,ASTR
+2927,E. Minnick,APRD
+2928,G. Pellman,APRD
+2929,G. Miller,SPAN
+2930,J. Guerra,SPAN
+2931,B. Berjano,SPAN
+2932,B. DeLong,SPAN
+2933,M. Vazquez,SPAN
+2934,J. Garcia Fernandez,SPAN
+2935,S. Ngo Nyeck,ETHN
+2936,E. Palmer,ATLS
+2937,J. Steele,CMDP
+2938,C. Bozic,EMEN
+2939,K. Egan,EMEN
+2940,E. Halverson,CLAS
+2941,J. Horton,CLAS
+2942,H. Hungerford,CLAS
+2943,E. Ramsey,CLAS
+2944,C. Ley,CVEN
+2945,J. Manno,DNCE
+2946,Han/Verniani,ATOC
+2947,S. Clarke,PSCI
+2948,A. Liu,PSCI
+2949,S. Lavertu,PSCI
+2950,A. Baker,PSCI
+2951,J. Harden,PSCI
+2952,J. Caulfield,APRD
+2953,E. diFalco,ARTS
+2954,C. Taylor,ARTS
+2955,S. McAuliffe,ARTS
+2956,J. Burney,ARTS
+2957,B. Hernstrom,ARTS
+2958,G. Buehlmann,PHYS
+2959,C. Hurrell,PHYS
+2960,H. Hensley,PHYS
+2961,Y. Li,PHYS
+2962,J. Copenhaver,PHYS
+2963,S. Ma,PHYS
+2964,I. Fogarty Florang,PHYS
+2965,S. Gaur,PHYS
+2966,J. Liu,PHYS
+2967,M. Herrmann,PHYS
+2968,G. Golba,PHYS
+2969,P. Morgan,PHYS
+2970,T. Kieft,PHYS
+2971,T. Yuan,PHYS
+2972,B. Larsen,PHYS
+2973,C. Klein,PHYS
+2974,T. Geerdts,PHYS
+2975,B. Lee,PHYS
+2976,A. Sokolik,PHYS
+2977,J. Nicoski,PHYS
+2978,T. Oliver,PHYS
+2979,L. Williams,PHYS
+2980,E. Wickenden,PHYS
+2981,J. Sitison,PHYS
+2982,D. Chaparro,PHYS
+2983,M. Schefferstein,PHYS
+2984,Mangum/Weiner,LAWS
+2985,A. Schemel Ramella,COEN
+2986,C. Winkley,CLAS
+2987,L. Reitzammer,WGST
+2988,R. Culver,EMEN
+2989,D. Assad,EMEN
+2990,S. Su,ARTH
+2991,E. Goodrich,LING
+2992,A. Ting,LING
+2993,M. Church,LING
+2994,V. Grove,RUSS
+2995,L. Abbott,GEOL
+2996,J. Black,CSCI
+2997,M. Yonemoto,HIST
+2998,I. Krad,ECEN
+2999,J. Talley,MUSC
+3000,K. Pruitt,STAT
+3001,Bhatti/Paup,INFO
+3002,C. McGranahan,ANTH
+3003,T. Doty,THTR
+3004,Baker/Burgos-Rivera,PSCI
+3005,Baker/Banerjee,PSCI
+3006,Baker/Nadarevic,PSCI
+3007,Baker/Osborn,PSCI
+3008,Baker/Bensreiti,PSCI
+3009,Baker/Cohen,PSCI
+3010,S. Derderyan,PSCI
+3011,Baker/Arayssi,PSCI
+3012,Baker/Rezwanul Haque Masud,PSCI
+3013,M. Leonhardt-Lupa,SWED
+3014,J. Eberle,MUSM
+3015,C. Simpson,MUSM
+3016,Sokhey/Schauer,PSCI
+3017,Jones/Farmer,GEOL
+3018,Gerland/Stasny,THTR
+3019,D. Probert,ACCT
+3020,P. Corbett,GEOG
+3021,A. Procita,GEOG
+3022,D. Melo,GEOG
+3023,M. Leahy,ATLS
+3024,A. Clauset,CSCI
+3025,J. Ogden,HIST
+3026,C. Reid,GEOG
+3027,M. Dougherty,LAWS
+3028,H. Adams,BAIM
+3029,T. Zeiler,HIST
+3030,J. Cooper,ENGL
+3031,M. Freeman,PHYS
+3032,T. Rojo,PHYS
+3033,R. Planalp,PHYS
+3034,J. Delgado,PHYS
+3035,J. Guo,PHYS
+3036,X. Huang,PHYS
+3037,T. Budde,SCAN
+3038,T. Andrews,HIST
+3039,D. Ciarlo,HIST
+3040,C. Dauverd,HIST
+3041,E. Fenn,HIST
+3042,S. Gautam,HIST
+3043,H. Lovejoy,HIST
+3044,P. Sutter,HIST
+3045,J. Willis,HIST
+3046,J. DE Shell,ENGL
+3047,K. Little,ENGL
+3048,C. Labio,ENGL
+3049,T. Blanchet,LING
+3050,E. Bornheimer,LING
+3051,F. Stuart,LING
+3052,M. Kosse,LING
+3053,C. Raymond,LING
+3054,N. Banda,EDUC
+3055,A. Affrunti,ECEN
+3056,S. Fischer,FREN
+3057,C. Monteleoni,CSCI
+3058,J. Bertram,DNCE
+3059,A. Tyndall,DNCE
+3060,J. Munoz,DNCE
+3061,R. Mc Namara,APPM
+3062,C. Carley,APPM
+3063,C. Brown,ECON
+3064,J. Shin,ECON
+3065,Y. Cho,ECON
+3066,T. Anderson,ECON
+3067,M. Karas,ECON
+3068,A. Chakrabarti,ECON
+3069,J. Katz,ECON
+3070,V. Appasamy,ECON
+3071,D. Zuchegno,ECON
+3072,M. Valkovci,ECON
+3073,J. Yu,ECON
+3074,H. Park,ECON
+3075,S. Truesdale,ECON
+3076,X. Zhao,ECON
+3077,F. Zhang,ECON
+3078,B. Flaxman,ECON
+3079,P. Megenhardt,ECON
+3080,J. Novak,ECON
+3081,M. Szurop,ECON
+3082,R. Akino,ECON
+3083,A. Rachmanto,ECON
+3084,C. Weinstein,ECON
+3085,C. Jareb,ECON
+3086,R. Saxena,ECON
+3087,A. Li,ECON
+3088,P. Chen,ECON
+3089,S. Chung,ECON
+3090,W. Sun,ECON
+3091,A. Truax,ECON
+3092,G. Webster,ECON
+3093,P. Li,ECON
+3094,A. Bentz,ECON
+3095,B. Zhang,ECON
+3096,C. Jones,GEOL
+3097,Y. Takahashi,ASEN
+3098,J. Lucero Lorca,APPM
+3099,E. Thaler,APPM
+3100,S. Nixon,APPM
+3101,J. Kish,APPM
+3102,E. Nelluvelil,APPM
+3103,H. Cihak,APPM
+3104,A. Grigorian,APPM
+3105,Z. Wiens,APPM
+3106,K. Parvanov,APPM
+3107,M. LeDuc,APPM
+3108,T. Eberts,APPM
+3109,F. Seidl,APPM
+3110,Raynes/Dougherty,LAWS
+3111,J. Ehly,EPOD
+3112,G. Krutz,PSCI
+3113,D. Mather,SOCY
+3114,M. Chisty,SOCY
+3115,G. Nakajima,SOCY
+3116,H. Edwards,SOCY
+3117,J. Harper,ENVM
+3118,Hayne/Landis,GEOL
+3119,J. Andryauskas,CVEN
+3120,L. Benson,ARTS
+3121,M. Lissoni,GEOG
+3122,R. Johnson,GEOG
+3123,H. Surden,LAWS
+3124,B. Fox,LING
+3125,Z. Frajzyngier,LING
+3126,B. Narasimhan,LING
+3127,M. Palmer,LING
+3128,D. Rood,LING
+3129,M. Thomas-Ruzic,LING
+3130,L. Menn,LING
+3131,M. Hulden,LING
+3132,J. Calder,LING
+3133,B. Huibregtse,PSYC
+3134,A. Kahan,CWCV
+3135,R. Langendorf,ENVS
+3136,E. Waddle,ENVS
+3137,Strayhorn/Sohn,PSCI
+3138,D. Dorr,PSCI
+3139,S. Rajabi,MDST
+3140,N. Ahn,CHEM
+3141,M. Caruthers,CHEM
+3142,T. Cuk,CHEM
+3143,R. Jimenez,CHEM
+3144,R. Knight,CHEM
+3145,T. Koch,CHEM
+3146,C. Koval,CHEM
+3147,W. Lineberger,CHEM
+3148,C. McHenry,CHEM
+3149,A. Nozik,CHEM
+3150,A. Pardi,CHEM
+3151,G. Rumbles,CHEM
+3152,T. Sammakia,CHEM
+3153,R. Sievers,CHEM
+3154,R. Skodje,CHEM
+3155,M. Sousa,CHEM
+3156,Z. Tan,CHEM
+3157,E. Browne,CHEM
+3158,R. Gill,CHEM
+3159,D. Helmig,CHEM
+3160,Murnane/Kapteyn,CHEM
+3161,P. Nagpal,CHEM
+3162,W. Old,CHEM
+3163,G. Petron,CHEM
+3164,V. Bierbaum,CHEM
+3165,G. Miyake,CHEM
+3166,A. Jayaraman,CHEM
+3167,Kapteyn/Murnane,CHEM
+3168,G. Ellison,CHEM
+3169,D. Feldheim,CHEM
+3170,J. Hynes,CHEM
+3171,H. Yin,CHEM
+3172,M. Stoykovich,CHEM
+3173,Pedersen/Friedman,PSYC
+3174,C. Morrison,PSYC
+3175,L. Finkelstein,PSYC
+3176,L. Shi,ARCH
+3177,G. Uitto,ARCH
+3178,S. Dike,HIST
+3179,P. Lander,ENVM
+3180,S. Qu,ECON
+3181,E. Sorensen Montoya,ECON
+3182,C. Simmons,ECON
+3183,B. Yu,ECON
+3184,M. Evers,ECON
+3185,M. Zhang,ECON
+3186,P. Cumming,GEOG
+3187,C. Fogel,GEOG
+3188,D. Mondragon,GEOG
+3189,M. White,GEOG
+3190,M. Diaz,GEOG
+3191,J. Taylor,GEOG
+3192,M. Murray,GEOG
+3193,Sorey/Milbourn,EMUS
+3194,N. Murarka,CSCI
+3195,A. Abhyankar,CSCI
+3196,S. Ganesan,CSCI
+3197,A. Chopra,ATLS
+3198,Bernthal/Foley,LAWS
+3199,D. Marlett,LAWS
+3200,E. Gleason,EDUC
+3201,O. Ochieng,COMM
+3202,D. Goldstein,ANTH
+3203,E. Bradley,CSCI
+3204,F. Rethore,FREN
+3205,A. Van Nelson,FREN
+3206,E. Martin,FREN
+3207,Van Nelson/Ahmad,FREN
+3208,K. Friedel,APRD
+3209,L. Sampsel,MUSC
+3210,H. Norton,LAWS
+3211,P. Craven,ITAL
+3212,S. Bray,GRMN
+3213,W. Newhall,ECEN
+3214,Z. Schiffman,CHEM
+3215,M. Rutherford,CHEM
+3216,G. Symonds,CHEM
+3217,R. Nez,EDUC
+3218,D. Wayand,RLST
+3219,G. Holleman,RLST
+3220,K. Holmes,RLST
+3221,K. Butts,ECON
+3222,P. Suh,ECON
+3223,K. Starnes,ECON
+3224,S. Alexandra,ARTS
+3225,Guild/Martin,MCDB
+3226,Martin/Guild,MCDB
+3227,M. Bjerke,MCDB
+3228,T. Burkhardt,PHIL
+3229,P. Lomelino,PHIL
+3230,M. Tate,PHIL
+3231,M. Rossi,JRNL
+3232,T. Bonn,CLAS
+3233,T. McCabe,ENVS
+3234,D. Kenney,ENVS
+3235,W. Boyd,ENVS
+3236,S. Gripne,ENVS
+3237,S. Lawrence,ENVS
+3238,J. White,ENVS
+3239,P. Komor,ENVS
+3240,A. Aceves,ANTH
+3241,E. Jurado,ANTH
+3242,G. Perry,ANTH
+3243,N. Puente,ANTH
+3244,J. Brzezinski,ANTH
+3245,C. Ryder,ANTH
+3246,O. Paine,ANTH
+3247,C. Emerson,ANTH
+3248,M. Ardizzoni,MDST
+3249,Pedersen-Gallegos/Edwards-Capen,SOCY
+3250,Alexander/Bond,CHIN
+3251,Alexander/Luo,CHIN
+3252,E. Shih,CHIN
+3253,A. Stocker,MATH
+3254,E. Hong,MATH
+3255,C. Whitehead,MATH
+3256,S. Murphy,NAVR
+3257,Van Nelson/Vandermarliere,FREN
+3258,M. Raissi,APPM
+3259,M. Salzman,INFO
+3260,S. Cowan,BCOR
+3261,S. Edgar,BCOR
+3262,M. Kwaramba,BCOR
+3263,M. Van Portfliet,BCOR
+3264,E. Estrada,BCOR
+3265,B. Reznicek,BCOR
+3266,O. Anduaga Bocanegra,LAWS
+3267,C. Barnes,CMCI
+3268,R. Ernstes,CMCI
+3269,M. Ali,CMCI
+3270,A. Prakash,ANTH
+3271,P. McKenzie,ANTH
+3272,C. Tippin,ANTH
+3273,S. Zhaxi,ANTH
+3274,K. Darcy,ANTH
+3275,G. Butcher,ANTH
+3276,W. Thompson,ANTH
+3277,J. Mankamyer,MBAX
+3278,R. Gavira Dominguez,SPAN
+3279,D. Berjano Rodríguez,SPAN
+3280,N. Bocanegra,SPAN
+3281,A. Perez-Lopez,SPAN
+3282,M. Guenther,BADM
+3283,C. Rosser,BADM
+3284,H. Hulse,BADM
+3285,A. Cummings,BADM
+3286,C. McNiece,BADM
+3287,S. Thompson,BADM
+3288,Orozco/Guenther,BADM
+3289,Cisneros/Moore,BADM
+3290,C. Renegar,BADM
+3291,D. Barday,BADM
+3292,Wall/Prochaska,BADM
+3293,D. Zechman,BADM
+3294,Kornish/Stevens,BADM
+3295,B. Lloyd,BADM
+3296,D. Young,BADM
+3297,A. Hansen,BADM
+3298,Z. Johnson,BADM
+3299,Duffin/Wells,BADM
+3300,T. Tripathi,ECEN
+3301,Tung/West,ECEN
+3302,C. Montoya,WGST
+3303,A. Keasley,HONR
+3304,N. Jones,ENVD
+3305,D. Bearce,PSCI
+3306,J. Van DE Kamp,EBIO
+3307,Moyes/England,LAWS
+3308,S. Schwartz,SLHS
+3309,D. Maggiore,MATH
+3310,N. Matteo,MATH
+3311,Moritz/Pass,MATH
+3312,M. Pass,MATH
+3313,M. Rooney,MATH
+3314,M. Noyes,MATH
+3315,R. Qi,CHIN
+3316,G. Ragsdale,MUSC
+3317,P. White,GEOG
+3318,C. Cote,ANTH
+3319,K. Hoppes,ANTH
+3320,S. Buckser,ANTH
+3321,J. Dunn,MUSC
+3322,D. Requiro,MUSC
+3323,Carthy/Moteki,MUSC
+3324,W. Stanley,MUSC
+3325,D. Sluiter,ECEN
+3326,J. Morales Espejo,MCEN
+3327,E. Richardson,PSYC
+3328,M. Blackmon,PSYC
+3329,G. Carey,PSYC
+3330,H. Siegel,JRNL
+3331,E. Rowe,JRNL
+3332,A. Adams,ETHN
+3333,J. Dupris,ETHN
+3334,K. White,ETHN
+3335,A. Watkins,ARTH
+3336,Asano/Ren,JPNS
+3337,Asano/Stebbins,JPNS
+3338,M. Husby,JPNS
+3339,Asano/Knowles,JPNS
+3340,K. Kawakami,JPNS
+3341,Y. Asano,JPNS
+3342,B. Noyes,MUSC
+3343,C. Maurer,COMM
+3344,J. Jahn,COMM
+3345,K. Kafer,JRNL
+3346,K. Nguyen,COEN
+3347,M. Pisaneschi,COEN
+3348,A. Voorhees,COEN
+3349,K. Luh,MATH
+3350,N. Conant,ASTR
+3351,A. Giguere,THTR
+3352,A. Hawk,MGMT
+3353,N. Marshall,BCOR
+3354,T. Mukhopadhyay,BCOR
+3355,C. Lane,THTR
+3356,E. Simpson,INFO
+3357,C. Kelley,INFO
+3358,K. Weathington,INFO
+3359,Mc Donald/Nguyen,MUSC
+3360,R. Collazo,AIRR
+3361,Brain/Dang,ASTR
+3362,S. Latimer,ASTR
+3363,M. Huber,ASTR
+3364,J. Avery,ASTR
+3365,Hynek/Crow,GEOL
+3366,Wynne/Robertson,MATH
+3367,Orvis/Rodriguez,MATH
+3368,Graf/Robertson,MATH
+3369,Bronstein/Tallana,MATH
+3370,Deans/Willson,MATH
+3371,Shortt/Rodriguez,MATH
+3372,Bronstein/Robertson,MATH
+3373,Doumont/Tallana,MATH
+3374,Graf/LaJeunesse,MATH
+3375,Carpenter/Woodcock,MATH
+3376,Meier/Woodcock,MATH
+3377,Jones/LaJeunesse,MATH
+3378,Jenkins/Kim,MATH
+3379,Jackson/Haag,MATH
+3380,Quartin/Kim,MATH
+3381,Gensler/Haag,MATH
+3382,Miller/Willson,MATH
+3383,Scott-Janda/Oh,MATH
+3384,Jones/Moreno,MATH
+3385,Meier/Kim,MATH
+3386,Meier/Oh,MATH
+3387,Jones/El Sai,MATH
+3388,Scott-Janda/Rodriguez,MATH
+3389,Jamesson/Oh,MATH
+3390,Graf/McCranie,MATH
+3391,Graf/Tallana,MATH
+3392,Christoffersen/Rodriguez,MATH
+3393,Scott-Janda/McCranie,MATH
+3394,Ebadi/El Sai,MATH
+3395,Graf/Rodriguez,MATH
+3396,A. Shor,MATH
+3397,Bronstein/Haag,MATH
+3398,S. Gerard,ENGL
+3399,S. Lamos,WRTG
+3400,P. Goodrum,CVEN
+3401,D. Bailey,PHIL
+3402,T. Scherr,ECEN
+3403,S. Dunbar,ECEN
+3404,J. Peshut,REAL
+3405,D. Ritchie,LAWS
+3406,V. Carson,MGMT
+3407,B. Aguirre Ortega,EDUC
+3408,Napier/Venechuk,BADM
+3409,A. Guidero,PACS
+3410,T. Lundy,CINE
+3411,P. O Rourke,LAWS
+3412,Y. Skoretz,ARSC
+3413,L. Rader,NRSC
+3414,A. Kartik Narayan,NRSC
+3415,K. Lauridsen,NRSC
+3416,E. Woodruff,NRSC
+3417,A. Handler,BAIM
+3418,M. Conran,JRNL
+3419,P. Tashakori,APRD
+3420,S. Moore,PHYS
+3421,D. Blumin,PHYS
+3422,J. Monahan,PHYS
+3423,N. Yegovtsev,PHYS
+3424,D. Zhang,MSBX
+3425,M. Rosario,ASTR
+3426,K. Cline,ASTR
+3427,Parinandi/Hoose,PSCI
+3428,Parinandi/Register,PSCI
+3429,Parinandi/O'Neal,PSCI
+3430,Parinandi/Perez,PSCI
+3431,Philips/Roberts,PSCI
+3432,Philips/Register,PSCI
+3433,Philips/Van De Laarschot,PSCI
+3434,Philips/Perez,PSCI
+3435,M. Stoyanova,CMDP
+3436,J. Polman,EDUC
+3437,K. Soares,ENGL
+3438,L. LA Ganga,MBAC
+3439,A. Sumler,PHIL
+3440,P. Massey,PHIL
+3441,C. Huber,PHIL
+3442,K. Odinenu,CMCI
+3443,Rajabi/Dorari,CMCI
+3444,D. Medic,CMCI
+3445,D. Correa de Castro e Martini,CMCI
+3446,B. Wen,CMCI
+3447,A. DeRoche,HIST
+3448,C. Wang,ACCT
+3449,D. Hirschhorn,FNCE
+3450,T. Sample,FNCE
+3451,G. LeDonne,IAFS
+3452,S. Van De Laarschot,IAFS
+3453,A. McLeer,IAFS
+3454,V. Burlew,IAFS
+3455,K. Stallman,IAFS
+3456,E. Swertfeger,IAFS
+3457,W. Holsclaw,IAFS
+3458,T. Egerton,HIST
+3459,M. Greenlee,HIST
+3460,J. Zarske,AREN
+3461,D. Nottoli,APRD
+3462,M. Honald,APRD
+3463,Y. Cao,MUEL
+3464,A. Wilder,MUEL
+3465,E. Langer,SLHS
+3466,S. Melnitzer,PHIL
+3467,J. Andrew,PHIL
+3468,J. Widoff,LAWS
+3469,D. Lopez-Rogina,SOCY
+3470,J. Jansen,ANTH
+3471,B. Montgomery,CSCI
+3472,J. Fanikos,CLAS
+3473,Q. Andre,MBAC
+3474,Salvinelli/Thomas,EVEN
+3475,M. Wolpert,MUEL
+3476,Billica/Leszczynski,PSCI
+3477,Bickers/O'Neal,PSCI
+3478,H. Sohn,PSCI
+3479,B. Banaei,DNCE
+3480,R. Benhalim,LAWS
+3481,N. Chhabildas,PSYC
+3482,A. Jurow,EDUC
+3483,N. Lazzeri,ACCT
+3484,Scheib/Baker,AREN
+3485,S. Foredyce,PSCI
+3486,M. Richter,CHIN
+3487,N. Flyer,APPM
+3488,G. Beylkin,APPM
+3489,D. Bortz,APPM
+3490,B. Fornberg,APPM
+3491,K. Julien,APPM
+3492,Z. Kilpatrick,APPM
+3493,J. Restrepo,APPM
+3494,N. Bunn,APPM
+3495,H. Segur,APPM
+3496,M. Ablowitz,APPM
+3497,N. Barger,EBIO
+3498,J. Marson Parker,SLHS
+3499,Malpass/Bertram,DNCE
+3500,L. Malpass,DNCE
+3501,Southall/Munoz,DNCE
+3502,Barker/Das,INFO
+3503,D. Das,INFO
+3504,E. Lobato,CSCI
+3505,Axelrad/Rafi,ASEN
+3506,M. Maciszewski,BCOR
+3507,A. Prieto,SPAN
+3508,Haffey/Mark,SOCY
+3509,I. Whalen,SOCY
+3510,R. White,CSCI
+3511,O'Neal/White,ETHN
+3512,Trower/Wing,GEOL
+3513,A. Sedey,SLHS
+3514,D. Johnson,MUSC
+3515,D. Campbell,MDST
+3516,C. Mitchell,APPM
+3517,J. Belcher,APPM
+3518,A. Tran,APPM
+3519,L. Crowder,APPM
+3520,S. Tro,APPM
+3521,W. Wang,APPM
+3522,A. Granquist,APPM
+3523,M. Yerlanov,APPM
+3524,Y. Mao,APPM
+3525,B. Hindman,APPM
+3526,Z. Malik,APPM
+3527,C. Renaud,APPM
+3528,H. Aydin,BCHM
+3529,J. Kugel,BCHM
+3530,P. Hosseinzadeh,BCHM
+3531,N. Campbell,ASEN
+3532,Y. Wang,ASEN
+3533,E. Culler,GEOG
+3534,S. Hopewell,EDUC
+3535,M. Rivera,ATLS
+3536,J. Robblee,THTR
+3537,K. Nabors,THTR
+3538,J. Dresch,THTR
+3539,C. Carruth,INFO
+3540,H. Batan,INFO
+3541,L. Jones,INFO
+3542,K. Lewers,INFO
+3543,M. Nicholson,INFO
+3544,J. Paup,INFO
+3545,E. Sandoval,INFO
+3546,K. Simone,CMCI
+3547,J. Shapiro,CMCI
+3548,Hildreth/Garcia Trujillo,EDUC
+3549,M. Gazarik,EMEN
+3550,E. Braker,MUSM
+3551,Balentine/DeLand,MATH
+3552,Stalvey/Christoffersen,MATH
+3553,Scott-Janda/DeLand,MATH
+3554,Yang/Christoffersen,MATH
+3555,Rock/DeLand,MATH
+3556,Bronstein/Quartin,MATH
+3557,Moreno/Macula,MATH
+3558,Campbell/Gensler,MATH
+3559,Scott-Janda/Gensler,MATH
+3560,Timmer/Christoffersen,MATH
+3561,Kuo/Macula,MATH
+3562,Meadors/Gensler,MATH
+3563,Wheeler/Macula,MATH
+3564,Yang/Gensler,MATH
+3565,Graf/Montelius,MATH
+3566,Wheeler/Moreno,MATH
+3567,Muro/Montelius,MATH
+3568,Deans/Carpenter,MATH
+3569,Yang/Montelius,MATH
+3570,Yang/Carpenter,MATH
+3571,Graf/Rock,MATH
+3572,Yang/Watson,MATH
+3573,Meadors/Watson,MATH
+3574,Campbell/Carpenter,MATH
+3575,Macula/Watson,MATH
+3576,L. Powers,FREN
+3577,J. Nguyen,DNCE
+3578,M. Kaminski,LAWS
+3579,H. Laurion,MBAC
+3580,R. Lanning,MCEN
+3581,R. Monaco,MILR
+3582,Schaetzel/Heisler,IPHY
+3583,S. Gwozdz,ESBM
+3584,J. Wills,APRD
+3585,Dockendorf/Steinmetz,EMUS
+3586,B. Check,CHEM
+3587,M. Stodolka,CHEM
+3588,J. Richardson,CHEM
+3589,T. Minger,CHEM
+3590,C. Rasmussen,MCEN
+3591,G. Tucker,GEOL
+3592,Tucker/Bennett,GEOL
+3593,A. Davis,MCEN
+3594,Kennedy/Strunk,ECON
+3595,Webster/Yang,ECON
+3596,N. Upadhyay,ETHN
+3597,K. Stueve,GEOG
+3598,C. Hester,GEOG
+3599,H. Roth,GEOG
+3600,F. Naylor,GEOG
+3601,Sauther/Thomas,ANTH
+3602,Sauther/Dalton,ANTH
+3603,Sauther/Naumenko,ANTH
+3604,Sauther/Simeonoff,ANTH
+3605,Sauther/Opack,ANTH
+3606,Sauther/Zneimer,ANTH
+3607,D. Naumenko,ANTH
+3608,S. Zneimer,ANTH
+3609,J. Cox,HUMN
+3610,C. McNulty,NRSC
+3611,D. Dokuru,NRSC
+3612,A. Maciejewski,LAWS
+3613,P. Anderson,LAWS
+3614,W. Becker,CVEN
+3615,J. Jeong,ECEN
+3616,A. Brannon,ECEN
+3617,G. Tang,ECEN
+3618,H. Le,ECEN
+3619,C. Cogswell,ECEN
+3620,G. Lasser,ECEN
+3621,U. Herzfeld,ECEN
+3622,D. Hirshberg,RLST
+3623,P. Sen,ECEN
+3624,E. Furtak,EDUC
+3625,Aydin/Whiteley,BCHM
+3626,R. Spalding,ECEN
+3627,Engel/McClure,EDUC
+3628,D. Prinster,MKTG
+3629,Neogi/Knudsen,ASEN
+3630,Argrow/Knudsen,ASEN
+3631,Fillman/Knight,MCDB
+3632,Fillman/Niswander,MCDB
+3633,C. Pinzone,MCDB
+3634,I. Chechushkov,ANTH
+3635,F. Villanea Guevara,ANTH
+3636,C. Lanning,ANTH
+3637,C. Paillot,ANTH
+3638,O. Ackley,ANTH
+3639,Roubion/Ackley,ANTH
+3640,J. Roubion,ANTH
+3641,E. Hite,ANTH
+3642,T. Hanson,ANTH
+3643,M. Hadi,ECEN
+3644,F. Trane,PSYC
+3645,R. Loria,PSYC
+3646,E. Pietri,PSYC
+3647,M. Puretz,PSYC
+3648,E. Kramer,PSYC
+3649,T. Stafford,LAWS
+3650,Gilliland/Armstrong,EMUS
+3651,G. Linsenbard,PHIL
+3652,Acevedo De La Torre/Hardaker,PHIL
+3653,A. Loeffelholz,PHIL
+3654,W. Xu,PHIL
+3655,K. York,PHIL
+3656,M. Steup,PHIL
+3657,S. Case,PHIL
+3658,I. Odeyemi,PHIL
+3659,Goodwin/Holewinski,CHEN
+3660,B. Leonardi,EDUC
+3661,D. Walkes,ECEN
+3662,D. Aizenman,MBAX
+3663,G. Spitz,EBIO
+3664,A. Chiono,EBIO
+3665,S. Tang,BCOR
+3666,M. Chari,BCOR
+3667,X. Bei,BCOR
+3668,D. Misri,WGST
+3669,F. Li,GEOG
+3670,L. Zea,MCDB
+3671,S. Rock,ACCT
+3672,B. Schonberger,ACCT
+3673,E. Shoup,CINE
+3674,J. Gluckstern,CINE
+3675,M. Plumley,CINE
+3676,K. Shively,CINE
+3677,Zimmerman/Tortorici,PHYS
+3678,Litos/Tortorici,PHYS
+3679,C. Kilimnik,PSYC
+3680,Shannon/Peterson,PSCI
+3681,Shannon/Jackson,PSCI
+3682,Shannon/Kowalski,PSCI
+3683,Shannon/Foredyce,PSCI
+3684,Shannon/Anderson,PSCI
+3685,Shannon/Philippidis,PSCI
+3686,Park/Burgos-Rivera,PSCI
+3687,Park/Kowalski,PSCI
+3688,Park/Anderson,PSCI
+3689,Park/Philippidis,PSCI
+3690,Park/Peterson,PSCI
+3691,D. Maeda,ETHN
+3692,J. Belknap,ETHN
+3693,R. Rabaka,ETHN
+3694,S. Sohi,ETHN
+3695,P. Chang,MUSC
+3696,A. Paradise,CSCI
+3697,D. Lindsey,APPM
+3698,L. Wong,APPM
+3699,W. Mcdaniel,PHIL
+3700,D. Boonin,PHIL
+3701,E. Slome,PHIL
+3702,J. Straight,PHIL
+3703,C. Ray,ENVS
+3704,P. Limerick,ENVS
+3705,D. Hodge,COMM
+3706,R. Linares,EDUC
+3707,M. Gort,EDUC
+3708,D. Gumina,EDUC
+3709,A. Vaidis,RLST
+3710,C. Kennedy,RLST
+3711,J. Robinson,CMDP
+3712,M. Hariri Ardebili,CVEN
+3713,B. Bartels,EDUC
+3714,J. Bristol,EDUC
+3715,A. Salvador-Jones,EDUC
+3716,A. Noble,EDUC
+3717,K. Kulick,EDUC
+3718,T. Donoghue,EDUC
+3719,M. Palomar,EDUC
+3720,H. Vatch,EDUC
+3721,E. Yerkes,EDUC
+3722,M. Frierson,EDUC
+3723,T. Tanksley,EDUC
+3724,Pedersen-Gallegos/Gutierrez,SOCY
+3725,V. Hanasoge Nataraja,ATOC
+3726,Nugent/Nevins,ENGL
+3727,Cloud/Manno,DNCE
+3728,M. Echeverria,CVEN
+3729,D. Reiter,APRD
+3730,Mckeon/Galko,APRD
+3731,A. Parsons,LAWS
+3732,Z. Chen,MCDB
+3733,Olwin/Stowell,BCHM
+3734,D. Drake,MBAC
+3735,Jimenez/Ziemann,CHEM
+3736,J. Bone,BCOR
+3737,B. Auslander,BCOR
+3738,E. Lionberger,BCOR
+3739,K. Swisher,BCOR
+3740,C. Carbone,BCOR
+3741,P. Kennemer,EDUC
+3742,S. Daneshgar Asl,IPHY
+3743,T. Tvrdy,IPHY
+3744,C. Wessman,ENVS
+3745,B. Muller,ENVS
+3746,R. Benim,APPM
+3747,A. Hineman,APPM
+3748,J. McCombs,APPM
+3749,J. Homan,APPM
+3750,E. Obermayer,APPM
+3751,D. Armendariz,APPM
+3752,N. Parks,APPM
+3753,M. Reynolds,APPM
+3754,J. Morris,MUEL
+3755,Glimp/Simonetta,ENGL
+3756,V. Dimaggio,ITAL
+3757,W. Reed,EBIO
+3758,Spiers/Barthell,EBIO
+3759,Barthell/Spiers,EBIO
+3760,M. Hayden,EBIO
+3761,M. Seaver,EBIO
+3762,J. Seabaugh,EBIO
+3763,A. Kaiser,EBIO
+3764,Webb/Schutz,EBIO
+3765,H. Webb,EBIO
+3766,A. Ennis,EBIO
+3767,S. Streich,EBIO
+3768,Brylowe/Hodges,ENGL
+3769,A. Rose,EBIO
+3770,K. Suding,EBIO
+3771,M. Gil,EBIO
+3772,Moore/Drown,MCDB
+3773,Moore/Sine,MCDB
+3774,Moore/O'Connor,MCDB
+3775,Moore/McCright,MCDB
+3776,Moore/Flint,MCDB
+3777,Moore/MacMillan,MCDB
+3778,D. Shanahan,APRD
+3779,P. McGraw,MKTG
+3780,R. Stephen,BCHM
+3781,A. Quandt,EBIO
+3782,Schwabe/Vergara,EBIO
+3783,Vergara/Schwabe,EBIO
+3784,S. Dalal,INFO
+3785,Dougherty/Sweeney,EBIO
+3786,L. Dougherty,EBIO
+3787,N. Cowit,INFO
+3788,K. Mahan,GEOL
+3789,Mahan/Chon,GEOL
+3790,Mahan/Sheehan,GEOL
+3791,D. Rickels,MUSC
+3792,T. Kuhn,COMM
+3793,S. Staley,EDUC
+3794,M. Sebulsky,MUSC
+3795,A. Loewenstein,LAWS
+3796,K. Stenzel,LING
+3797,O. Zhou,APRD
+3798,P. Agarwal,APRD
+3799,H. Ugwu,APRD
+3800,S. McKee,ENVM
+3801,A. Mertens,PSYC
+3802,R. Gillette,LAWS
+3803,K. Kopsick,EDUC
+3804,W. Allen,PSCI
+3805,A. Elnicki,LAWS
+3806,Klein/Song,ECON
+3807,McKinnish-Harllee/Song,ECON
+3808,M. Babicz,HIST
+3809,J. Damico,SLHS
+3810,P. Campos,LAWS
+3811,P. Shankman,ANTH
+3812,V. Avila Luvsangenden,MUSC
+3813,S. Mullen,LING
+3814,B. Herzog,SOCY
+3815,Zhao/Bates,BMEN
+3816,Browne/LeMessurier,CHEM
+3817,D. Katz,CHEM
+3818,Ordaz/Aguilar,ETHN
+3819,E. Jensen,CVEN
+3820,D. Hamm,LAWS
+3821,S. Talanki Sreenivasa Murthy,CSCI
+3822,J. Jarzemsky,CSCI
+3823,A. Zavei-Boroda,CSCI
+3824,J. Garrity,ENGL
+3825,K. Hurley,ENGL
+3826,D. Bosley,MATH
+3827,T. Herrmann,GEOG
+3828,Haffey/Wagner,SOCY
+3829,Downey/Contreras,SOCY
+3830,A. Iacobucci,SOCY
+3831,A. Gutierrez,SOCY
+3832,J. Sanchez,SOCY
+3833,A. Stephan,ACCT
+3834,S. Zechman,ACCT
+3835,Le Moine/Rafi,ASEN
+3836,J. Katsirubas,CHEM
+3837,H. Petersen,CHEM
+3838,C. Mueller,LAWS
+3839,F. Bloom,LAWS
+3840,J. Supanick,CMDP
+3841,G. Greenstreet,ATLS
+3842,R. Rupert,PHIL
+3843,J. Skinner-Thompson,LAWS
+3844,Delprete/Covrigaru,REAL
+3845,C. Leach,MBAX
+3846,E. Gallagher,REAL
+3847,P. Simonson,COMM
+3848,A. Femrite,ECEN
+3849,E. Rozner,ECEN
+3850,L. Jackson,FYXP
+3851,S. Bradfield,FYXP
+3852,S. Molinari,STAT
+3853,Bernstein/Lewis,FNCE
+3854,Sturt/Rowe,CMCI
+3855,J. Helmers,MBAC
+3856,L. Fanucchi,MATH
+3857,E. Grulke,MATH
+3858,S. Williams,MATH
+3859,M. Roy,MATH
+3860,Z. Garvey,MATH
+3861,B. Momken,MATH
+3862,A. Nita,MATH
+3863,L. Palasti,GEOG
+3864,V. Huilinir Curio,GEOG
+3865,P. Farastu,GEOG
+3866,D. Bachrach,GEOG
+3867,T. Bruce,LAWS
+3868,L. Ferracane,APRD
+3869,G. Weinberger,FNCE
+3870,M. Thompson,FNCE
+3871,Barlow/Saint-Oyant,CINE
+3872,L. Moroco,COMM
+3873,T. Campbell,COMM
+3874,S. Kazi,COMM
+3875,L. Emerson,IAWP
+3876,M. Amerika,IAWP
+3877,J. Perkins,LATN
+3878,L. Zizka,COMM
+3879,S. De Los Santos,COMM
+3880,Jahn/Hamilton,COMM
+3881,Jahn/Turner,COMM
+3882,Jahn/De Los Santos,COMM
+3883,Jahn/Chen,COMM
+3884,Jahn/Zizka,COMM
+3885,Jahn/McGee,COMM
+3886,M. Mason,COMM
+3887,G. VanHorssen,COMM
+3888,B. Hamilton,COMM
+3889,R. McGee,COMM
+3890,G. Berger,CSCI
+3891,Manley/Jordan,MATH
+3892,Hong/Muro,MATH
+3893,Ebadi/Hauf,MATH
+3894,Manley/Muro,MATH
+3895,Manley/Hauf,MATH
+3896,Ebadi/Knutsen,MATH
+3897,Montelius/Knutsen,MATH
+3898,Hong/McCranie,MATH
+3899,Khalifa/Knutsen,MATH
+3900,Manley/Shortt,MATH
+3901,Hong/Reardon,MATH
+3902,K. Winterhalt,HIST
+3903,R. O'Neal,PSCI
+3904,Mah/Clark,ASEN
+3905,J. Ferguson,ARCH
+3906,M. Rodgers,MCEN
+3907,T. Ward,ENVM
+3908,Hartter/Scanlan Lyons,ENVM
+3909,N. Wobus,ENVM
+3910,D. Fehrer,ENVM
+3911,J. Asher,ENVM
+3912,D. Bertram,ENVM
+3913,Darius/Fleming,FNCE
+3914,A. Shrestha,CSCI
+3915,E. Small Tilton,GEOL
+3916,Small Tilton/White,GEOL
+3917,S. Hoover,MDST
+3918,N. Alaqabawy,JRNL
+3919,S. Ghosh,JRNL
+3920,W. Lei,JRNL
+3921,K. Killen,PSCI
+3922,Y. Ren,GEOG
+3923,B. Waters,FNCE
+3924,Whiteley/Aydin,BCHM
+3925,R. Kimbrough,JPNS
+3926,M. Suh,ARTS
+3927,A. Newberry,ARTS
+3928,A. Bamford,MDST
+3929,S. Novack,PHYS
+3930,S. Stephens,PHYS
+3931,D. Mulhern,ANTH
+3932,T. Bryan,ENVM
+3933,S. Ouellette,EMEN
+3934,D. Norris,IPHY
+3935,B. Hayes,MCEN
+3936,A. Greenberg,MCEN
+3937,F. Kreith,MCEN
+3938,G. Pawlas,MCEN
+3939,H. Qi,MCEN
+3940,R. Shandas,MCEN
+3941,J. Zable,MCEN
+3942,S. Shwiff,ENVM
+3943,Pollard/Rodriguez,SLHS
+3944,L. Sollenberger,EDUC
+3945,A. McAdam,EBIO
+3946,K. Cohen,LING
+3947,J. Gadlin,ARSC
+3948,B. Melbourne,EBIO
+3949,M. Kassianidou,ARTS
+3950,R. Sapkota,PHYS
+3951,L. Zhou,PHYS
+3952,D. Quiroz,PHYS
+3953,F. Fairooz,PHYS
+3954,E. Salim,COMM
+3955,E. Delgadillo,COMM
+3956,N. Ngwu,COMM
+3957,K. Brownlee,COMM
+3958,H. Bangert,LAWS
+3959,Burk/Collazo,AIRR
+3960,Zehner/Walsh,CVEN
+3961,Medlin/Bay,CHEN
+3962,A. Ybarra,PSYC
+3963,E. Peterson,PSYC
+3964,Schmidt/Xie,ATOC
+3965,Cassano/Michael,ATOC
+3966,J. Forrest,ATOC
+3967,Hager/Chamberlain,ATOC
+3968,Z. Michael,ATOC
+3969,A. Chamberlain,ATOC
+3970,C. Reiher,ATOC
+3971,M. Gruber,LAWS
+3972,Chayet/Trujillo,LAWS
+3973,R. Atkins,CVEN
+3974,D. Kiernan-Johnson,LAWS
+3975,Scott-Janda/Robertson,MATH
+3976,Davenport/Robertson,MATH
+3977,Crotwell/Eblen,MATH
+3978,Powers/Maher,MATH
+3979,Neff/Robertson,MATH
+3980,Shearer/Maher,MATH
+3981,Noyes/Woodcock,MATH
+3982,Lyness/Maher,MATH
+3983,Orvis/Woodcock,MATH
+3984,Hauf/LaJeunesse,MATH
+3985,Noyes/LaJeunesse,MATH
+3986,Kitchen/LaJeunesse,MATH
+3987,C. Meredith,MATH
+3988,Jackson/Powers,MATH
+3989,Miller/Kim,MATH
+3990,Jenkins/Haag,MATH
+3991,Davenport/Powers,MATH
+3992,Graf/Oh,MATH
+3993,Stalvey/Eblen,MATH
+3994,Shearer/Powers,MATH
+3995,Watson/Neff,MATH
+3996,Stalvey/Oh,MATH
+3997,Reardon/Oh,MATH
+3998,Meier/Haag,MATH
+3999,Jones/Kim,MATH
+4000,Crotwell/Haag,MATH
+4001,Nita/Neff,MATH
+4002,Jamesson/El Sai,MATH
+4003,Kitchen/Maher,MATH
+4004,Nita/El Sai,MATH
+4005,M. Moon,MATH
+4006,M. Watson,MATH
+4007,J. Portilla,BAIM
+4008,G. Brinkley,ATOC
+4009,W. Bertrand,ATOC
+4010,C. Brabec,ATOC
+4011,T. Higgins,ATOC
+4012,J. Shaw,ATOC
+4013,E. Wein,ATOC
+4014,S. Kramer,ATOC
+4015,S. Leister,ATOC
+4016,L. Magliozzi,ATOC
+4017,S. Zhou,ECON
+4018,M. Ko,ECON
+4019,M. Hall,LAWS
+4020,Zhou/Shi,FNCE
+4021,Baca/Lynch,COEN
+4022,M. Ewer,MUSC
+4023,P. Kadam,PSYC
+4024,M. Choy,PSYC
+4025,R. Rychecky,PSYC
+4026,C. Agrawal,PSYC
+4027,R. Mohan Kumar,PSYC
+4028,S. Tremblay,PSYC
+4029,M. Chen,PSYC
+4030,E. Goulden,PSYC
+4031,A. Flores,PSYC
+4032,A. Guy,MCEN
+4033,M. Bower,IPHY
+4034,C. Schaefer,IPHY
+4035,T. Akonom,IPHY
+4036,C. Knobloch,IPHY
+4037,N. Merryman,IPHY
+4038,B. Thrower,IPHY
+4039,A. Costa,FREN
+4040,L. Hoffman,FREN
+4041,B. Yunis,COMM
+4042,E. Loker,COMM
+4043,A. Engelmann,COMM
+4044,Holman/Carthy,PMUS
+4045,S. Bush,GEOG
+4046,Vasile/Dimaggio,ITAL
+4047,G. Urrea Castano,BCOR
+4048,O. Yilmaz,BCOR
+4049,H. Zhang,BCOR
+4050,V. Marrero Trujillo,BCOR
+4051,Z. Moss,PSCI
+4052,Moteki/Carthy,MUSC
+4053,O. Bird,CHEM
+4054,A. Trudeau Munoz,CHEM
+4055,B. Morales,CHEM
+4056,A. Lemon,ARTS
+4057,C. Nagesh,CSCI
+4058,C. Lin,CSCI
+4059,A. Sreenivas,CSCI
+4060,G. Kardes,CSCI
+4061,D. Albin,CSCI
+4062,R. Wajid,CSCI
+4063,C. Ojukwu,CSCI
+4064,A. Forrest,CSCI
+4065,A. Ebrahimi,CSCI
+4066,E. Nueve,CSCI
+4067,A. McManus,APPM
+4068,L. Korre,APPM
+4069,W. Magrogan,APPM
+4070,N. Rummel,APPM
+4071,A. Buhayh,INFO
+4072,J. Ghosh,INFO
+4073,J. Berry,ENVS
+4074,Stevens/Estlick,MDST
+4075,M. Reiswig,ATLS
+4076,J. Desautels-Stein,LAWS
+4077,L. Witt,LAWS
+4078,A. Abdullah,LAWS
+4079,L. Frankel-Goldwater,ENVS
+4080,A. Pollet,IPHY
+4081,R. Courter,IPHY
+4082,G. Maurer,IPHY
+4083,M. Brewster,IPHY
+4084,L. Morata Moreno,IPHY
+4085,M. Pickard,MDST
+4086,B. Troutman,MDST
+4087,D. Colby,MDST
+4088,K. Semsar,ARSC
+4089,M. Fritz-Mauer,LAWS
+4090,M. Kostoff,ENVD
+4091,J. Austin,MUSC
+4092,E. Massey,LAWS
+4093,M. Jungclaus,CVEN
+4094,J. Estlick,MDST
+4095,E. Dutro,EDUC
+4096,Steinbrenner/Pickens McConnell,MCEN
+4097,K. Noonan,FYXP
+4098,K. Agler,FYXP
+4099,S. Hickory,FYXP
+4100,E. Cunningham,FYXP
+4101,T. Virden,FYXP
+4102,A. Metzger,FYXP
+4103,M. Flaherty,FYXP
+4104,T. Salata,FYXP
+4105,A. Hemming,FYXP
+4106,P. Sellery,PSYC
+4107,J. DeRosa,PSYC
+4108,E. Bansemer,PSYC
+4109,S. Coffin,PSYC
+4110,A. Rogers,PSYC
+4111,L. Smith,PSYC
+4112,A. Schmelkin,PSYC
+4113,S. Aikawa,PSYC
+4114,O. Nosarzewska,PSYC
+4115,B. Whelan,PSYC
+4116,S. Ibonie,PSYC
+4117,S. Reilly,PSYC
+4118,H. Denker,PSYC
+4119,A. Benefield,EBIO
+4120,K. Kariatsumari,EBIO
+4121,K. Cook,ATLS
+4122,E. Sheffield,ENGL
+4123,W. Morgan,LEAD
+4124,C. Hackett,LEAD
+4125,J. Korbelik,LEAD
+4126,A. Deese,LEAD
+4127,L. Intolubbe-Chmil,LEAD
+4128,J. Abeloe,LEAD
+4129,K. Pasquesi,LEAD
+4130,J. DeFries,PSYC
+4131,P. Constantine,CSCI
+4132,K. Carpenter,LAWS
+4133,V. Geranpayeh,GRMN
+4134,J. Arnold,GRMN
+4135,P. Sertic,GRMN
+4136,Griffin/Pedersen,PSCI
+4137,Griffin/Sevin,PSCI
+4138,Griffin/Leszczynski,PSCI
+4139,Griffin/Glenn,PSCI
+4140,Griffin/Osborn,PSCI
+4141,Griffin/Byrd,PSCI
+4142,Donavan/Jensen,PSCI
+4143,Donavan/Tellis,PSCI
+4144,Donavan/Hughes,PSCI
+4145,Donavan/Garrett,PSCI
+4146,Donavan/Sevin,PSCI
+4147,Donavan/Byrd,PSCI
+4148,Donavan/Glenn,PSCI
+4149,J. Lynch,MKTG
+4150,R. Fitzgerald,AREN
+4151,Rieker/Mathews,MCEN
+4152,T. Porter,PHIL
+4153,B. Donnelly,PHIL
+4154,A. Wolf-Root,PHIL
+4155,M. Torres,COMM
+4156,J. York,MGMT
+4157,W. Tong,MGMT
+4158,S. Volpone,MGMT
+4159,S. Blackwood,APPM
+4160,D. Goldhamer,ENVS
+4161,L. McClure,ECEN
+4162,L. Liu,MSBC
+4163,P. Ramos,FYXP
+4164,N. Driscoll,FYXP
+4165,N. LaRocque,FYXP
+4166,M. Simmons,FYXP
+4167,G. Laing,FYXP
+4168,K. Kruchen,FYXP
+4169,P. Epstein,FYXP
+4170,M. Easter,FYXP
+4171,Y. Dar-Dychovsky,FYXP
+4172,C. Eagan,FYXP
+4173,B. Sweet,FYXP
+4174,A. Finau-Starkey,FYXP
+4175,S. Ponton DE Dutton,FYXP
+4176,Ponton DE Dutton/Noonan,FYXP
+4177,J. McMahan,FYXP
+4178,J. Tarr,FYXP
+4179,N. Castro,FYXP
+4180,B. Grabham,FYXP
+4181,M. Larsen,FYXP
+4182,C. Gustavson,FYXP
+4183,A. Sanchez,FYXP
+4184,O. Barrow,FYXP
+4185,Barrow/Schwartz,FYXP
+4186,Diaz/Hartman,FYXP
+4187,Tir/Jackson,PSCI
+4188,P. McDonald,EMEN
+4189,G. Angel,EMEN
+4190,O. Fuentes Munoz,ASEN
+4191,A. Bargmann,CHEM
+4192,C. Boronski,CHEM
+4193,J. Krywicki,WRTG
+4194,C. Macdonald,WRTG
+4195,D. Long,WRTG
+4196,R. Dickson,WRTG
+4197,K. Hessel,WRTG
+4198,R. Jones,MATH
+4199,M. Czubak,MATH
+4200,P. Elliott,MATH
+4201,A. Gorokhovsky,MATH
+4202,K. Gustafson,MATH
+4203,P. Mayr,MATH
+4204,S. O'Rourke,MATH
+4205,J. Jesudason,MATH
+4206,A. Szendrei,MATH
+4207,M. Walter,MATH
+4208,T. Xu,MATH
+4209,Stewart/LaPuma,SOCY
+4210,S. Sasnett-Martichuski,SOCY
+4211,N. Bates,BMEN
+4212,R. Boswell,MCDB
+4213,Davis/Sprenger,CHEN
+4214,D. Chiszar,PSYC
+4215,L. Harvey,PSYC
+4216,Yang/Ho,ECON
+4217,Ko/Ho,ECON
+4218,A. Daigle,WRTG
+4219,L. Jacobs,WRTG
+4220,N. Stohlman,WRTG
+4221,D. Levine,WRTG
+4222,L. Donovan,WRTG
+4223,Knowlton/Hersh,WRTG
+4224,G. Rios,WRTG
+4225,N. Hazarika,GEOG
+4226,M. Rezwanul Haque Masud,PSCI
+4227,M. Duvall Kalinski,ESLG
+4228,K. Tivaringe,EDUC
+4229,C. Meyers,SLHS
+4230,A. Biever,SLHS
+4231,K. Knapp,REAL
+4232,C. Lopez,JRNL
+4233,G. Miranda,OREC
+4234,A. Copens,APRD
+4235,S. Standish,HIST
+4236,K. Jackson,HIST
+4237,B. Clingman,HIST
+4238,J. Cho,HIST
+4239,A. Moreno,HIST
+4240,A. Haines,HIST
+4241,G. Allen,CMDP
+4242,E. Piper-Burket,CMDP
+4243,T. Austin,CMDP
+4244,P. van Horne,CMDP
+4245,E. Ertl,CMDP
+4246,B. Ngoe,COMM
+4247,J. Daily,MCEN
+4248,E. Cooper,FYXP
+4249,E. Hesse,FYXP
+4250,A. Lemberg,FYXP
+4251,F. Gandhi,MSBC
+4252,Shaheen/Barsic,ECEN
+4253,Glidewell/Karanevich,EDUC
+4254,Karanevich/Glidewell,EDUC
+4255,T. Rousseau,IAFS
+4256,S. Simeonoff,ANTH
+4257,S. Engle,ANTH
+4258,Asano/Yoshinaga,JPNS
+4259,D. Mapel,PSCI
+4260,Covert/O Brien,ANTH
+4261,E. Stern,PSYC
+4262,A. Master,PSYC
+4263,G. Gorti,PSCI
+4264,E. Drasin,CMDP
+4265,K. Bianca,CMDP
+4266,B. Vann,CMDP
+4267,Carson/Darnell,BUSM
+4268,D. Cass,BUSM
+4269,Carson/Colina,BUSM
+4270,D. Appelo,APPM
+4271,S. Elkington,APPM
+4272,H. Thompson,COMM
+4273,Roudbari/Bilot,ENVD
+4274,B. Kirshner,LEAD
+4275,S. Sideris,LEAD
+4276,E. Verveer,LEAD
+4277,Schield/Safran,EBIO
+4278,C. McQuade,MUSM
+4279,J. Bouwman,CHEM
+4280,M. Foley,LAWS
+4281,M. Byers,CSCI
+4282,O. Bhalerao,CSCI
+4283,C. Park,CSCI
+4284,E. Tate,CSCI
+4285,B. Crockett,CSCI
+4286,E. Rice,CSCI
+4287,M. Valentini,CSCI
+4288,J. Kaur,CSCI
+4289,L. Jayne,CSCI
+4290,M. Ramsahoye,CSCI
+4291,X. Sun,CSCI
+4292,N. Sannidhi,CSCI
+4293,Z. Atkins,CSCI
+4294,T. Tran,CSCI
+4295,A. Chandra,CSCI
+4296,M. Kankara,CSCI
+4297,K. Ruvane,CSCI
+4298,A. Venkatesh,CSCI
+4299,T. Lhamo,GEOG
+4300,F. Popov,GEOG
+4301,D. Gadou,GEOG
+4302,J. Ramirez,GEOG
+4303,K. Mason,GEOG
+4304,E. Trower,GEOL
+4305,S. Sommer,INVS
+4306,Saucedo Ceballos/Pasnau,PHIL
+4307,Pasnau/Saucedo Ceballos,PHIL
+4308,T. Hoffmann,ENVD

@@ -61,8 +61,7 @@ class DepartmentInfo(Database.get_db().Model):
 
         try:
             with Database.session_manager() as session:
-                session.query(DepartmentInfo) \
-                    .delete(synchronize_session="fetch")
+                session.query(DepartmentInfo).delete()
         except Exception:
             print(f"[DB] Failed to clear department information from table")
 
