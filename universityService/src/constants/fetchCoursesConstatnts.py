@@ -9,7 +9,7 @@ class FetchCoursesConstants:
     COURSE_DESCRIPTION_URL = "https://classes.colorado.edu/api/?page=fose&route=details"
     COURSE_CATALOG = ["Accounting (ACCT)", "Advertising, PR and Media Design (APRD)", "Aerospace Engineering (ASEN)",
                       "Air Force Aerospace Studies - ROTC (AIRR)", "Anthropology (ANTH)", "Applied Math (APPM)",
-                      "Arabic Languages (ARAB)", "Architectural Engineering (AREN)", "Architecture (ARCH)",
+                      "Arabic Languages (ARAB)", "Architectural Engineering (AREN)", "architectureDiagrams (ARCH)",
                       "Art Film Studies (ARTF)", "Art History (ARTH)", "Arts and Sciences Courses (ARSC)",
                       "Art Studio and Non-Studio (ARTS)", "Asian Studies (ASIA)",
                       "Astrophysical and Planetary Sciences (ASTR)", "ATLAS (ATLS)",
@@ -47,7 +47,7 @@ class FetchCoursesConstants:
                       "Integrative Physiology (IPHY)", "Intermedia Art, Writing and Performance (IAWP)",
                       "International Affairs (IAFS)", "International Business (INBU)", "INVST Community Studies (INVS)",
                       "Italian (ITAL)", "Japanese (JPNS)", "Jewish Studies (JWST)", "Journalism (JRNL)",
-                      "Korean (KREN)", "Landscape Architecture (LAND)", "Language Technology (LGTC)",
+                      "Korean (KREN)", "Landscape architectureDiagrams (LAND)", "Language Technology (LGTC)",
                       "Latin American Studies (LAMS)", "Latin Language (LATN)", "Law School (LAWS)",
                       "Leadership Minor (LEAD)", "Lesbian, Gay and Bisexual Studies (LGBT)",
                       "Libby Residential Academic Program (LIBB)", "Libraries (LIBR)", "Linguistics (LING)",
