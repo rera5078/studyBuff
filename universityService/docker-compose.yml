@@ -1,0 +1,11 @@
+version: '3'
+services:
+  universityservice:
+    container_name: universityservice
+    image: university-service:local
+    build: .
+    ports:
+      - "8005:8005"
+    environment:
+      PORT: 8005
+      DATABASE_URL: postgresql://postgres:postgres@host.docker.internal:32768/postgres
