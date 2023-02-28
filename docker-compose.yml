@@ -54,9 +54,9 @@ services:
     build:
       context: universityService
     ports:
-      - "8001:8000"
+      - "3001:3001"
     environment:
-      PORT: 8001
+      PORT: 3001
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
     depends_on:
       - "postgres"

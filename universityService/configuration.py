@@ -3,7 +3,7 @@ from os import environ
 
 class FlaskConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    PORT = 15000
+    PORT = environ.get("PORT", "15000")
     HOST = "0.0.0.0"
 
 
