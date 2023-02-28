@@ -6,10 +6,8 @@ RUN pip install --upgrade pip
 COPY requirements.txt ./
 RUN pip3 install -r requirements.txt
 
-ENV PYTHONPATH "${PYTHONPATH}:/app:/app/universityService"
+ENV PYTHONPATH "${PYTHONPATH}:/app:/app"
 
-COPY . ./universityService
+COPY . ./
 
-CMD ls
-
-CMD python ./universityService/main.py
+CMD python ./main.py

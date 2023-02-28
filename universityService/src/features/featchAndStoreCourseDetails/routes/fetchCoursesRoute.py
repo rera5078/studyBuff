@@ -1,10 +1,10 @@
 from flask.views import MethodView
 from flask import jsonify, request
 
-from universityService.src.features.featchAndStoreCourseDetails.services.initiationService import InitiationService
-
+from src.features.featchAndStoreCourseDetails.services.initiationService import InitiationService
 
 class FetchCoursesRoute(MethodView):
+
     def get(self):
         print(f"Received Fetch Course Request ")
         try:

@@ -5,8 +5,8 @@ import urllib
 import urllib.request
 import unicodedata
 
-from universityService.src.constants.fetchCoursesConstatnts import FetchCoursesConstants
-from universityService.src.externalServices.database.tables.universityServiceDepartmentInfo import DepartmentInfo
+from src.constants.fetchCoursesConstatnts import FetchCoursesConstants
+from src.externalServices.database.tables.universityServiceDepartmentInfo import DepartmentInfo
 
 
 class CatalogService:

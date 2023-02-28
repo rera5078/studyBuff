@@ -1,9 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
-from universityService.src.externalServices.database import tables
-from universityService.src.externalServices.database.services.database import Database
-from universityService.src import routes
-from universityService.src import services
+from .externalServices.database import tables
+from .externalServices.database.services.database import Database
+from . import routes
+from . import services
 
 
 def create_app(config):
