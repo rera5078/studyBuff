@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
+
 from .externalServices.database import tables
 from .externalServices.database.services.database import Database
 from . import routes

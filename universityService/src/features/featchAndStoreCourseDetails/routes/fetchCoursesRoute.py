@@ -3,6 +3,7 @@ from flask import jsonify, request
 
 from src.features.featchAndStoreCourseDetails.services.initiationService import InitiationService
 
+
 class FetchCoursesRoute(MethodView):
 
     def get(self):

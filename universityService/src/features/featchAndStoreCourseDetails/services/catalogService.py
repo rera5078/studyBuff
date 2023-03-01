@@ -6,7 +6,7 @@ import urllib.request
 import unicodedata
 
 from src.constants.fetchCoursesConstatnts import FetchCoursesConstants
-from src.externalServices.database.tables.universityServiceDepartmentInfo import DepartmentInfo
+from src.externalServices.database.tables import DepartmentInfo
 
 
 class CatalogService:

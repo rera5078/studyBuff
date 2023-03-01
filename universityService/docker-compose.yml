@@ -5,7 +5,7 @@ services:
     image: university-service:local
     build: .
     ports:
-      - "15000:15000"
+      - "3001:3001"
     environment:
-      PORT: 15000
+      PORT: 3001
       DATABASE_URL: postgresql://postgres:postgres@host.docker.internal:32768/postgres
