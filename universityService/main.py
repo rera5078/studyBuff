@@ -1,5 +1,5 @@
 from configuration import DevelopmentConfig
-from universityService import create_app
+from src import create_app
 
 app = create_app(DevelopmentConfig)
 

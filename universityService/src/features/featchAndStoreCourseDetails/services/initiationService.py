@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from universityService.src.externalServices.database.tables import DepartmentInfo, InstructorInfo, CourseInfo
+from src.externalServices.database.tables import DepartmentInfo, InstructorInfo, CourseInfo
 from .catalogService import CatalogService
 from .courseDetailsService import CourseDetailsService
 from .courseInfoService import CourseInfoService

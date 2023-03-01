@@ -1,7 +1,7 @@
 import requests
 import json
 
-from universityService.src.constants.fetchCoursesConstatnts import FetchCoursesConstants
+from src.constants.fetchCoursesConstatnts import FetchCoursesConstants
 
 
 class CourseInfoService:
