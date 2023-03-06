@@ -1,0 +1,3 @@
+interface CreateUserDBResponse {
+  UserID: number;
+}
