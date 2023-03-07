@@ -8,4 +8,4 @@ services:
       - "3001:3001"
     environment:
       PORT: 3001
-      DATABASE_URL: postgresql://postgres:postgres@host.docker.internal:32768/postgres
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
