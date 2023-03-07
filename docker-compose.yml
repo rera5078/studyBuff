@@ -63,5 +63,21 @@ services:
     networks:
       study_buff_service_local_net:
 
+  buffUserInfoService:
+    hostname: study-buff-user-info-service
+    image: study-buff-user-info:local
+    build:
+      context: userInfoService
+    ports:
+      - "8080:8080"
+    command: [ "npm", "run", "serve" ]
+    environment:
+      MESSAGEQ_URL: amqp://guest:guest@rabbitmq
+      SQL_DB_URI: postgresql://postgres:postgres@postgres:5432/postgres
+    depends_on:
+      - "postgres"
+    networks:
+      study_buff_service_local_net:
+
 networks:
   study_buff_service_local_net:
