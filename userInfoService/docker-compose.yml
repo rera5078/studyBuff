@@ -1,0 +1,13 @@
+version: "3"
+services:
+  UserInfoService:
+    container_name: BuffUserInfoService
+    image: buff-user-service-info:local
+    build: 
+      context: .
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: 8080
+      MESSAGEQ_URL: amqp://guest:guest@0.0.0.0:5672
+      SQL_DB_URI: postgresql://postgres:postgres@postgres:5432/postgres

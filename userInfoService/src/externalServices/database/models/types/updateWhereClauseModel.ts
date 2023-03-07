@@ -1,0 +1,3 @@
+interface UpdateWhereClauseModel {
+    UserID: string;
+}
