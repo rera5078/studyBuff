@@ -47,7 +47,30 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     networks:
       study_buff_service_local_net:
-
+      
+  elasticsearch:
+    container_name: elastic-container
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.4
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    networks:
+      study_buff_service_local_net:
+    ports: 
+      - 9200:9200
+  
+  kibana:
+    container_name: kibana-container
+    image: docker.elastic.co/kibana/kibana:7.13.4
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elastic-container:9200
+    networks:
+      study_buff_service_local_net:
+    depends_on:
+      - elasticsearch
+    ports:
+      - 5601:5601 
+      
   universityservice:
     hostname: study-buff-university-service
     image: university-service:local
