@@ -104,3 +104,4 @@ services:
 
 networks:
   study_buff_service_local_net:
+    driver: bridge
