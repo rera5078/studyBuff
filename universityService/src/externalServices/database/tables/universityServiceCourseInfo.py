@@ -132,5 +132,12 @@ class CourseInfo(Database.get_db().Model):
             print(f"[DB] Failed to clear course information from table")
 
     @staticmethod
+    def get_all_course_details():
+        with Database.session_manager() as session:
+            course_list = session.query(CourseInfo).all()
+            session.expunge_all()
+            return course_list
+
+    @staticmethod
     def init_app():
         print("[DB] Course Info Table initialisation done")
