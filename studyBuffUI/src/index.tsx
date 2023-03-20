@@ -8,7 +8,7 @@ import SearchPage from './SearchPage/SearchPage'
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import NavBar from "./NavBar/NavBar";
 
 const root = ReactDOM.createRoot(

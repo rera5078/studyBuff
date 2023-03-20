@@ -1,12 +1,8 @@
 #cover {
-    position: absolute;
     top: 50%;
-    left: -300px;
-    right: 0;
     width: 5px;
     margin-top: 1000px;
     padding: 35px;
-    margin: -83px auto 0 auto;
     background-color: #ffffff;
     border-radius: 100px !important;
     box-shadow: 0 10px 40px #ffffff, 0 0 0 20px #ffffffeb;
@@ -14,58 +10,35 @@
     text-align: center;
     justify-content: center;
 }
-.round {
-    width: 100%;
-    border-radius: 20px;
-    border: 1px solid;
-    border-color: #000000;
-    padding: 5px 5px 5px 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-}
 
-.custom-search {
-    position: relative;
-    width: 300px;
-}
 .custom-search-input {
-    width: 50%;
     border: 1px solid #8f8f8f;
     padding: 10px 100px 10px 20px;
     line-height: 1;
     box-sizing: border-box;
     outline: none;
-    width: 350px;
+    width:600px;
     height: 45px;
-    font-size:30px;
-    display: inline;
+    display: block;
     font-family: 'Roboto' , sans-serif;
-    font-size:20px;
+    font-size:18px;
     border-color: #cfcece
 }
 .custom-search-input::placeholder{
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 } 
 .custom-search-button {
     border: 0;
     background: #12204F;
     color: #fff;
     outline: none;
-    margin: 0;
     z-index: 2;
-    width: 200px;
-    height: 45px;
+    width: 140px;
+    height: 37px;
+    border-radius: 10px;
     font-size:20px;
     font-family: 'Roboto', sans-serif;
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-}
-
-.custom-select{
-    width: 150px;
-    height: 45px;
-    border-radius: 0px;
 }
 
