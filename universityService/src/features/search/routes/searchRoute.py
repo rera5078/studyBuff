@@ -11,7 +11,7 @@ class SearchRoute(MethodView):
         try:
             query_params = request.args.get('query', default="")
             guid = InitiateSearch.start(query_params)
-            return jsonify({guid: guid}), 200
+            return jsonify({"guid": guid}), 200
         except Exception:
-            print(f"[ROUTES] Search failed with an exception")
+            print(f"[SearchRoute] Search failed with an exception")
             return jsonify({"message": "Search Failed"}), 400
