@@ -4,8 +4,8 @@ import './NavBar.css';
 interface NavBarProps {}
 
 const NavBar: FC<NavBarProps> = () => (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top d-flex">
-        <a className="navbar-brand ms-3" href="#">Study Buff</a>
+    <nav className="navbar navbar-expand-lg navbar-light fixed-top d-flex custom-nav">
+        <a className="navbar-brand ms-3 custom-a" href="#">Study Buff</a>
         <div className="collapse navbar-collapse d-flex" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
                 <form className={"form-inline my-2 my-lg-0 px-2"}>
