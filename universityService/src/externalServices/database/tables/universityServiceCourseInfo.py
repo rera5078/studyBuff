@@ -133,10 +133,29 @@ class CourseInfo(Database.get_db().Model):
 
     @staticmethod
     def get_all_course_details():
-        with Database.session_manager() as session:
-            course_list = session.query(CourseInfo).all()
-            session.expunge_all()
-            return course_list
+        print("Database get_all_course_details")
+        try:
+            with Database.session_manager() as session:
+                course_list = session.query(CourseInfo).all()
+                session.expunge_all()
+                return {'Course List': list(x.json() for x in course_list)}
+        except Exception:
+            print(f"[DB] Course  Fetch Failed")
+
+    def json(self):
+        return {
+            "Key": self.Key,
+            "CourseID": self.CourseID,
+            "CourseName": self.CourseName,
+            "DepartmentID": self.DepartmentID,
+            "CrnID": self.CrnID,
+            "Books": self.Books,
+            "Notes": self.Notes,
+            "RestrictedInfo": self.RestrictedInfo,
+            "Description": self.Description,
+            "SectionInfo": self.SectionInfo,
+            "InstructionMode": self.InstructionMode
+        }
 
     @staticmethod
     def init_app():

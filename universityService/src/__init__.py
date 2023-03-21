@@ -6,6 +6,8 @@ from .externalServices.database.services.database import Database
 from . import routes
 from . import services
 
+from . import Producer
+from . import Consumer
 
 def create_app(config):
 
@@ -22,5 +24,11 @@ def create_app(config):
     print("VIEW INITIALIZED")
     routes.init_app(app)
     print("ROUTES INITIALISED")
+
+    # Adding producer and consumer initialization code
+    Producer.init_app(app)
+    print("Producer INITIALISED")
+    Consumer.init_app(app)
+    print("Consumer INITIALISED")
 
     return app
