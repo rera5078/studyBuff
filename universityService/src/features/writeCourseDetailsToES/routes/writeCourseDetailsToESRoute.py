@@ -1,17 +1,19 @@
 from flask.views import MethodView
-from flask import jsonify, request
+from flask import jsonify
 
 from src.features.writeCourseDetailsToES.services.writeCourseDetailsToES import WriteCourseDetailsToES
+# from src.views.courseInfoView import CourseInfoSchema
+
+# course_info_load = CourseInfoSchema()
 
 
 class WriteCourseDetailsToESRoute(MethodView):
 
-    def post(self):
+    def get(self):
         print(f"Received Write Course Details To ES Request")
         try:
-            # query_params = request.args.get('query', default="")
-            WriteCourseDetailsToES.initiate()
-            return jsonify({"message": "Wrote Course Details To ES Successfully"}), 200
+            course_list = WriteCourseDetailsToES.initiate()
+            return jsonify(course_list), 200
         except Exception:
             print(f"[WriteCourseDetailsToESRoute] failed with an exception")
             return jsonify({"message": "Write Course Details To ES Failed"}), 400
