@@ -1,10 +1,12 @@
 .App {
-    text-align: left;
+    text-align: justify-all;
+    overflow: hidden;
 }
 
 .gradient-background{
-    background: rgb(7, 15, 45);
+    background-color: rgb(7, 15, 45);
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .App-logo {
@@ -29,7 +31,6 @@
     min-height: calc(100vh + 600px);
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
     font-size: 150px;
     color: transparent;
@@ -51,7 +52,7 @@
     color: rgba(255, 255, 255, 0.86);
     /*font-style: italic;*/
     /*font-weight: bold;*/
-    font-size: 25px;
+    overflow: hidden;
 
 }
 
@@ -87,19 +88,16 @@
     }
 }
 
-.button {
-    position: absolute;
-    top: 70%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+.cb2 {
     background-color: #ffffff;
     color: #000000;
     border: none;
-    padding: 10px 20px;
+    /*padding: 10px 20px;*/
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
-    width: 300px;
+    /*width: 500px;*/
+    /*height: 50px;*/
 
 }
 
@@ -136,8 +134,45 @@ nav li a:hover {
 }
 
 .footer {
-    background-color: #333;
+    background-color: #9f9e9e;
     color: #fff;
     text-align: center;
     padding: 10px;
+    position: fixed;
 }
+
+.photo {
+    height: 40px;
+    width: 45px;
+}
+.center {
+    padding: 70px 0;
+}
+
+.list {
+    line-height: 1em;
+}
+
+.item {
+    line-height: 1em;
+}
+
+.item2{
+    line-height: 1.5em;
+    font-size: 18pt;
+    margin: 30px;
+    color:#ffffff
+}
+
+.cb {
+    background-color: rgb(7,15,45);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 125px;
+    height: 30px;
+}
+

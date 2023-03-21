@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "89ef5640-1ee9-4622-bf85-0b1ff08da940",
+		"name": "StudyBuff",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24763599"
+	},
+	"item": [
+		{
+			"name": "universityService",
+			"item": [
+				{
+					"name": "fetchStoreCourseDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "0.0.0.0:3001/api/v1/university/fetchCourses",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"university",
+								"fetchCourses"
+							],
+							"query": [
+								{
+									"key": "clearFlag",
+									"value": "True",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "writeCourseDetailsToES",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:15000/api/v1/universityService/writeCourseDetailsToES",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "15000",
+							"path": [
+								"api",
+								"v1",
+								"universityService",
+								"writeCourseDetailsToES"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:15000/api/v1/universityService/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "15000",
+							"path": [
+								"api",
+								"v1",
+								"universityService",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

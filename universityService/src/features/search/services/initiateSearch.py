@@ -6,7 +6,8 @@ class InitiateSearch:
 
     """
 
-    def start(self, query_params):
+    @classmethod
+    def start(cls, query_params):
         """
         TODO: publish kafka message
         """
