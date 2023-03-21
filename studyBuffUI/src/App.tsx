@@ -1,17 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Start from "./StartPage/Start";
 import SearchPage from "./SearchPage/SearchPage";
 import LoginPage from "./LoginPage/LoginPage"
-import NavBar from "./NavBar/NavBar";
-//import { useNavigate } from 'react-router-dom';
-import { render } from '@testing-library/react';
 
 function App() {
     return(
     <React.Fragment>
+        <meta name={"viewport"} content={"width=device-widt, initial scale=0.1"}></meta>
                 <BrowserRouter>
                     <React.Fragment>
                         <Switch>
