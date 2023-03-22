@@ -1,6 +1,5 @@
 from src.externalServices.database.tables import CourseInfo
 
-
 class WriteCourseDetailsToES:
 
     @classmethod
