@@ -45,6 +45,14 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_MESSAGE_MAX_BYTES: 10485760
+      KAFKA_SOCKET_REQUEST_MAX_BYTES: 100001200
+    restart: always
     networks:
       study_buff_service_local_net:
 
@@ -67,13 +75,16 @@ services:
     volumes:
     - elastic_data:/usr/share/elasticsearch/data/
     environment:
-      discovery.type: single-node    
+      - xpack.security.enabled=true
+      - xpack.security.audit.enabled=true
+      - ELASTIC_PASSWORD=12312jkhfwdeldncxmfndsa67890wfndsvmdcs
+      - "discovery.type=single-node"   
     ports:
     - '9200:9200'
     - '9300:9300'
     networks:
       study_buff_service_local_net:
-
+  
   Kibana:
     image: kibana:7.16.2
     container_name: kibana
@@ -82,11 +93,13 @@ services:
     - '5601:5601'
     environment:
       - ELASTICSEARCH_URL=http://elasticsearch:9200  
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=12312jkhfwdeldncxmfndsa67890wfndsvmdcs
     depends_on:
       - Elasticsearch  
     networks:
       study_buff_service_local_net:
-      
+
   universityservice:
     hostname: study-buff-university-service
     image: university-service:local
@@ -123,3 +136,4 @@ volumes:
 
 networks:
   study_buff_service_local_net:
+    driver: bridge

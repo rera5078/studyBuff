@@ -1,4 +1,4 @@
-import requests, json, os
+import requests, json
 from elasticsearch import Elasticsearch 
 
 mapping = {
@@ -43,13 +43,9 @@ data = json.load(f)
 
 idx = 1  
 #iterate over JSON file and load it into Elasticsearch
-print(data['course_list'][0])
-es.index(index="study_buff", id=1, document=data['course_list'][0])
-
-#for i in data['course_list']:
-    #print(i)
-    #es.index(index="study_buff", id=idx, document=i)
-    #idx+=1
+for i in data['course_list']:
+    es.index(index="study_buff", id=idx, document=i)
+    idx+=1
 
 # Closing file
 f.close()
