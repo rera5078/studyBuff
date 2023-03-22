@@ -6,8 +6,12 @@ from .externalServices.database.services.database import Database
 from . import routes
 from . import services
 
+#Kafka addition
+from kafka import KafkaProducer, KafkaConsumer
+import threading
+
 #from . import Producer
-from . import Consumer
+#from . import Consumer
 
 def create_app(config):
 
@@ -30,5 +34,9 @@ def create_app(config):
     print("Producer INITIALISED")
     Consumer.init_app(app)
     print("Consumer INITIALISED")
+
+    ready = threading.Event()
+    app.config["SETUP_OK"] = ready
+
 
     return app
