@@ -7,41 +7,49 @@ from . import routes
 from . import services
 
 # Kafka addition
-from kafka import KafkaProducer, KafkaConsumer
 from multiprocessing import JoinableQueue
 import threading
+from confluent_kafka import Producer, Consumer
+import json
 
-
-# from . import Producer
-# from . import Consumer
 
 # Kafka producer thread
-class ProducerThread(threading.Thread):
-    def __init__(self, kafka_topic, kafka_server, message_queue):
-        threading.Thread.__init__(self)
-        self.kafka_topic = kafka_topic
-        self.kafka_server = kafka_server
-        self.message_queue = message_queue
+def produce(topic, message):
+    producer = Producer({'bootstrap.servers': 'localhost:9092'})
 
-    def run(self):
-        producer = KafkaProducer(bootstrap_servers=self.kafka_server)
-        while True:
-            message = self.message_queue.get()
-            producer.send(self.kafka_topic, message)
-            self.message_queue.task_done()
+    def delivery_report(err, msg):
+        if err is not None:
+            print('Message delivery failed: {}'.format(err))
+        else:
+            print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
+
+    producer.produce(topic, message, callback=delivery_report)
+
+    # Wait for any outstanding messages to be delivered and delivery reports to be received
+    producer.flush()
 
 
-# Kafka consumer thread
-class ConsumerThread(threading.Thread):
-    def __init__(self, kafka_topic, kafka_server):
-        threading.Thread.__init__(self)
-        self.kafka_topic = kafka_topic
-        self.kafka_server = kafka_server
+def consume(topic):
+    consumer = Consumer({
+        'bootstrap.servers': 'localhost:9092',
+        'group.id': 'my-group',
+        'auto.offset.reset': 'earliest'
+    })
 
-    def run(self):
-        consumer = KafkaConsumer(self.kafka_topic, bootstrap_servers=self.kafka_server)
-        for message in consumer:
-            print(message.value)  # Replace with your own consumer code
+    consumer.subscribe([topic])
+
+    while True:
+        msg = consumer.poll(1.0)
+
+        if msg is None:
+            continue
+        if msg.error():
+            print("Consumer error: {}".format(msg.error()))
+            continue
+
+        print('Received message: {}'.format(json.loads(msg.value())))
+
+    consumer.close()
 
 
 def create_app(config):
@@ -69,15 +77,17 @@ def create_app(config):
     internal_publish_queue = JoinableQueue()
     print("internal_publish_queue created.")
 
-    # Start Kafka producer and consumer threads
-    kafka_topic = 'test_topic'
-    kafka_server = 'localhost:9092'
-    producer_thread = ProducerThread(kafka_topic, kafka_server, internal_publish_queue)
-    consumer_thread = ConsumerThread(kafka_topic, kafka_server)
-    producer_thread.start()
-    consumer_thread.start()
-
     ready = threading.Event()
     app.config["SETUP_OK"] = ready
+
+    # Create and start the producer thread
+    producer_thread = threading.Thread(target=produce, args=('my-topic', b'my-message'))
+    producer_thread.start()
+
+    # Create and start the consumer thread
+    consumer_thread = threading.Thread(target=consume, args=('my-topic',))
+    consumer_thread.start()
+
+
 
     return app
