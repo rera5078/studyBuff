@@ -1,3 +1,5 @@
+Commands to run if having issues connecting kibana with elasticsearch. Additionally, make sure there is atleast 5GB of memory allocated in resources in docker.
+
 sudo firewall-cmd --add-port=9200/tcp --permanent
 sudo firewall-cmd --add-port=5601/tcp --permanent
 sudo firewall-cmd --add-port=9600/tcp --permanent
