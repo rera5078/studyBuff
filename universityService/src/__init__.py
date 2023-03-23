@@ -15,7 +15,7 @@ import json
 
 # Kafka producer thread
 def produce(topic, message):
-    producer = Producer({'bootstrap.servers': 'localhost:9092'})
+    producer = Producer({'bootstrap.servers': 'kafka:9092'})
 
     def delivery_report(err, msg):
         if err is not None:
@@ -31,7 +31,7 @@ def produce(topic, message):
 
 def consume(topic):
     consumer = Consumer({
-        'bootstrap.servers': 'localhost:9092',
+        'bootstrap.servers': 'kafka:9092',
         'group.id': 'my-group',
         'auto.offset.reset': 'earliest'
     })
@@ -87,7 +87,5 @@ def create_app(config):
     # Create and start the consumer thread
     consumer_thread = threading.Thread(target=consume, args=('my-topic',))
     consumer_thread.start()
-
-
 
     return app
