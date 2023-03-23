@@ -23,53 +23,50 @@ services:
       study_buff_service_local_net:
 
   zookeeper:
-    image: confluentinc/cp-zookeeper:latest
-    environment:
-      ZOOKEEPER_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
+    image: zookeeper:3.4.9
+    hostname: zookeeper
     ports:
-      - "22181:2181"
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_PORT: 2181
+      ZOO_SERVERS: server.1=zookeeper:2888:3888
+    volumes:
+      - ./data/zookeeper/data:/data
+      - ./data/zookeeper/datalog:/datalog
     networks:
       study_buff_service_local_net:
 
-  kafka:
-    image: confluentinc/cp-kafka:latest
+  kafka1:
+    image: confluentinc/cp-kafka:5.3.0
+    hostname: kafka1
+    ports:
+      - "9091:9091"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: LISTENER_DOCKER_INTERNAL://kafka1:19091,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9091
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: LISTENER_DOCKER_INTERNAL:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
+      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+      KAFKA_BROKER_ID: 1
+    volumes:
+      - ./data/kafka1/data:/var/lib/kafka/data
     depends_on:
       - zookeeper
-    ports:
-      - "29092:29092"
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092 #Internal 9092 and external 29092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
-      KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
-      #KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-      #KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      #KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-      #KAFKA_MESSAGE_MAX_BYTES: 10485760
-      #KAFKA_SOCKET_REQUEST_MAX_BYTES: 100001200
-    restart: always
     networks:
       study_buff_service_local_net:
 
   kafdrop:
-    image: obsidiandynamics/kafdrop:latest
-    #restart: "no"
+    image: obsidiandynamics/kafdrop
+    restart: "no"
     ports:
-      - "19000:9000" #"9002:9002"
+      - "9000:9000"
     environment:
-      KAFKA_BROKERCONNECT: "kafka:9092"
-      JVM_OPTS: "-Xms16M -Xmx48M -Xss180K -XX:-TieredCompilation -XX:+UseStringDeduplication -noverify"
+      KAFKA_BROKERCONNECT: "kafka1:19091"
     depends_on:
-      - "kafka"
-    restart: unless-stopped
+      - kafka1
     networks:
       study_buff_service_local_net:
-      
+
   Elasticsearch:
     image: elasticsearch:7.16.2
     container_name: elasticsearch
