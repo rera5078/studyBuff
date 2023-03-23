@@ -80,12 +80,16 @@ def create_app(config):
     ready = threading.Event()
     app.config["SETUP_OK"] = ready
 
+    message = {'name': 'John Doe', 'age': 30}
+
+    # Convert message to JSON
+    json_message = json.dumps(message)
     # Create and start the producer thread
-    producer_thread = threading.Thread(target=produce, args=('my-topic', b'my-message'))
+    producer_thread = threading.Thread(target=produce, args=('my-topic_1', json_message)) #b'my-message'))
     producer_thread.start()
 
     # Create and start the consumer thread
-    consumer_thread = threading.Thread(target=consume, args=('my-topic',))
+    consumer_thread = threading.Thread(target=consume, args=('my-topic_1',))
     consumer_thread.start()
 
     return app
