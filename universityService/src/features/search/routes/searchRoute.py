@@ -3,7 +3,6 @@ from flask import jsonify, request
 from elasticsearch import Elasticsearch 
 from src.features.search.services.initiateSearch import InitiateSearch
 
-
 class SearchRoute(MethodView):
 
     def get(self):
@@ -18,11 +17,11 @@ class SearchRoute(MethodView):
 
 class SearchES(MethodView):
     
-    def post(self):
+    def get(self):
         print(f"Searching Elasticsearch")
         try:
             query = request.args.get('query', default="") 
-            es = Elasticsearch([{'host': 'localhost', 'port': 9200, 'scheme': 'http'}])
+            es = Elasticsearch(hosts="http://elastic:12312jkhfwdeldncxmfndsa67890wfndsvmdcs@localhost:9200/")
             res = es.search(index="study_buff", body=query)
             return [result['_source'] for result in res['hits']['hits']]    
         
