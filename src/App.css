@@ -1,0 +1,143 @@
+.App {
+    text-align: left;
+}
+
+.gradient-background{
+    background: rgb(7, 15, 45);
+    background-attachment: fixed;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.icon {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    /*background-color: #282c34;*/
+    /*background: linear-gradient(to bottom, rgb(255, 255, 255), #132050);*/
+    min-height: calc(100vh + 600px);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-size: 150px;
+    color: transparent;
+    font-weight: bold;
+    font-style: italic;
+
+    margin-top: -400px;
+    margin-left: 60px;
+
+    -webkit-text-stroke: 3px #ffffff;
+    text-stroke: 1px #ffffff;
+
+}
+.App-body{
+    /*background: linear-gradient(to bottom, rgb(255, 255, 255), #132050);*/
+    margin-top: -830px;
+    min-height: calc(100vh + 600px);
+    margin-left: 700px;
+    color: rgba(255, 255, 255, 0.86);
+    /*font-style: italic;*/
+    /*font-weight: bold;*/
+    font-size: 25px;
+
+}
+
+/*.App-sub-title{*/
+/*  margin-top: -900px;*/
+/*  min-height: calc(100vh + 600px);*/
+/*  margin-left: 60px;*/
+/*  color: rgba(255, 255, 255, 0.86);*/
+/*  font-style: italic;*/
+/*  font-weight: bold;*/
+/*  font-size: 30px;*/
+/*}*/
+
+.App-sub-body{
+    margin-top: -1200px;
+    min-height: calc(100vh + 600px);
+    margin-left: 700px;
+    color: rgba(255, 255, 255, 0.86);
+    /*font-style: italic;*/
+    /*font-weight: bold;*/
+    font-size: 25px;
+}
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.button {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 300px;
+
+}
+
+nav {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

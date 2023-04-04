@@ -1,0 +1,112 @@
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.jumbo{
+    position: absolute;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top:28%;
+    left: 55% ;
+    background-color: #070f2d;
+    float: right;
+    padding: 80px;
+    width: 38%;
+    height: 40%;
+}
+.background{
+    margin: 0;
+    padding: 80px;
+    height: 100vh;
+    background: #e4e4e7;
+}
+
+.All{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    -webkit-text-stroke: 1px #ffffff;
+    opacity: 80%;
+}
+.Welcome{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    font-size: 80px;
+    color: transparent;
+    font-weight: bold;
+    font-style: italic;
+    -webkit-text-stroke: 1px #03103f;
+    opacity: 80%;
+
+}
+
+.Study{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    font-size: 100px;
+    color: #061041;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.user{
+    position:absolute;
+    top: 25%;
+    left: 11%;
+    width: 78%;
+    color:#e4e4e7;
+}
+
+.pass{
+    position:absolute;
+    top: 45%;
+    left: 11%;
+    width: 78%;
+    color:#e4e4e7;
+
+}
+
+.LoginButton{
+    position:absolute;
+    top: 73%;
+    left: 40%;
+    width: 30%;
+}
+
+.login{
+    position: absolute;
+    top: 10%;
+    left: 11%;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    opacity: 60%;
+}
+
+.CreateAccount{
+    position: absolute;
+    top: 88%;
+    left: 26%;
+    opacity: 50%;
+}
