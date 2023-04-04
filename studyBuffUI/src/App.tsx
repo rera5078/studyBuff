@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Start from "./StartPage/Start";
 import SearchPage from "./SearchPage/SearchPage";
 import LoginPage from "./LoginPage/LoginPage"
+import CreateAccountPage from "./CreateAccountPage/CreateAccountPage";
 
 function App() {
     return(
@@ -15,6 +16,7 @@ function App() {
                             <Route exact path="/" component={Start}/>
                             <Route path="/search" component={SearchPage}/>
                             <Route path="/login" component={LoginPage}/>
+                            <Route path="/createAccount" component={CreateAccountPage}/>
                         </Switch>
                     </React.Fragment>
                 </BrowserRouter>

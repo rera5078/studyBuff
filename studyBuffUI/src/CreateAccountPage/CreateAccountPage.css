@@ -16,22 +16,23 @@ input[type=password] {
     border-radius: 5px;
 }
 
-.jumbo{
+.jumbotron{
     position: absolute;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    top:28%;
+    top:15%;
     left: 55% ;
     background-color: #070f2d;
     float: right;
     padding: 80px;
-    width: 38%;
-    height: 40%;
+    width: 40%;
+    height: 70%;
+
 }
-.background{
+.gradient-background{
     margin: 0;
     padding: 80px;
     height: 100vh;
-    background: #e4e4e7;
+    background: linear-gradient(to bottom, #e4e4e7, rgba(31, 35, 68, 0.68), #0b0f31, #030615);
 }
 
 .All{
@@ -45,68 +46,77 @@ input[type=password] {
     -webkit-text-stroke: 1px #ffffff;
     opacity: 80%;
 }
-.Welcome{
+.Free{
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 5%;
-    font-size: 80px;
+    font-size: 70px;
     color: transparent;
     font-weight: bold;
     font-style: italic;
-    -webkit-text-stroke: 1px #03103f;
+    -webkit-text-stroke: 1px #ffffff;
     opacity: 80%;
 
 }
 
-.Study{
+.Sign{
     position: absolute;
-    top: 45%;
-    left: 5%;
-    font-size: 100px;
-    color: #061041;
-    font-weight: bold;
-    font-style: italic;
-}
-
-
-.user{
-    position:absolute;
-    top: 25%;
+    top: 8%;
     left: 11%;
-    width: 78%;
-    color:#e4e4e7;
-}
-
-.pass{
-    position:absolute;
-    top: 45%;
-    left: 11%;
-    width: 78%;
-    color:#e4e4e7;
-
-}
-
-.LoginButton{
-    position:absolute;
-    top: 73%;
-    left: 40%;
-    width: 30%;
-}
-
-.login{
-    position: absolute;
-    top: 10%;
-    left: 11%;
-    font-size: 25px;
+    font-size: 30px;
     color: white;
     font-weight: bold;
     font-style: italic;
     opacity: 60%;
 }
 
-.CreateAccount{
+
+
+.first{
+    position:absolute;
+    top: 18%;
+    left: 11%;
+    width: 35%;
+}
+
+.last{
+    position:absolute;
+    top: 18%;
+    left: 50%;
+    width: 39%;
+}
+
+.email{
+    position:absolute;
+    top: 32%;
+    left: 11%;
+    width: 78%;
+}
+
+.username{
+    position:absolute;
+    top: 46%;
+    left: 11%;
+    width: 78%;
+}
+
+.password{
+    position:absolute;
+    top: 60%;
+    left: 11%;
+    width: 78%;
+}
+
+.CreateButton{
+    position:absolute;
+    top: 77%;
+    left: 25%;
+    width: 50%;
+}
+
+.Login{
     position: absolute;
-    top: 88%;
-    left: 26%;
+    top: 90%;
+    left: 28%;
     opacity: 50%;
 }

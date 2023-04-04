@@ -6,21 +6,32 @@ interface LoginPageProps {}
 const LoginPage: FC<LoginPageProps> = () => (
     <React.Fragment>
         <NavBar></NavBar>
-        <div className={'container h-100 align-items-center justify-content-center'} style={{width:"500px"}}>
-            <div className="jumbotron text-center">
-                <h2 className={'display-4'} style={{color:"#ffffff"}}>Login</h2>
-                <form>
-                    <div className="container w-100 mt-3">
-                        <input type="text" placeholder="Enter Username" name="uname" required></input>
-                    </div>
-                    <div className="container mt-3 w-100">
-                        <input type="password" placeholder="Enter Password" name="pass" required></input>
-                    </div>
-                    <div className="container mt-5 w-100">
-                        <button className={'btn in w-75'} type={'submit'} style={{backgroundColor:"whitesmoke", color:'rgb(7,14,45)', fontSize:'18px', fontWeight:'bold'}}>Log In</button>
-                    </div>
-                </form>
+
+        <div className='background'>
+            <h2 className='Welcome'>Welcome back to</h2>
+            <h2 className = 'Study'> STUDY BUFF</h2>
+
+            <div className="jumbo">
+                <h2 className="login"> Login here.</h2>
+                <div className="user">
+                    <input type="text" placeholder="Username" name="username" required></input>
+                </div>
+
+                <div className="pass">
+                    <input type="password" placeholder="Password" name="password" required></input>
+                </div>
+
+                <div className="LoginButton">
+                    <button className={'btn in w-75'} type={'submit'} style={{backgroundColor:"whitesmoke", color:'rgb(7,14,45)', fontSize:'18px', fontWeight:'bold'}}>Login</button>
+                </div>
+
+                <div className="CreateAccount">
+                    <a href="/createAccount">
+                        <text style={{color: "white", fontStyle: "italic",textDecoration: "underline" }}>Don't have an account? Create one here! </text>
+                    </a>
+                </div>
             </div>
+
         </div>
         <div className="footer fixed-bottom">
             <div className='container mt-2'>
