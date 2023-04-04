@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "a0ca44da-d998-4cae-80cf-1b257c4f7ddb",
+		"name": "StudyBuff - CUB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8720452"
+	},
+	"item": [
+		{
+			"name": "NER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": \"Should i consider courses similar to CSCI 5210 or courses from Department of Accounting ?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/studybuff/ner",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"studybuff",
+						"ner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REC",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": [\"Big Data\", \"machine learning\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/studybuff/rec",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"studybuff",
+						"rec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": \"Should I consider CSCI 4593 or consider courses like OLD ENGLISH???\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/studybuff/find",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"studybuff",
+						"find"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
