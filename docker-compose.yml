@@ -57,7 +57,7 @@ services:
 
   kafdrop:
     image: obsidiandynamics/kafdrop
-    restart: "no"
+    restart: "always"
     ports:
       - "9000:9000"
     environment:

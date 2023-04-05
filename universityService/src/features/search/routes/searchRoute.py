@@ -1,8 +1,8 @@
 from flask.views import MethodView
 from flask import jsonify, request
-from elasticsearch import Elasticsearch 
+from elasticsearch import Elasticsearch
 from src.features.search.services.initiateSearch import InitiateSearch
-
+# from src.features.search.services import InitiateSearch
 class SearchRoute(MethodView):
 
     def get(self):
