@@ -5,6 +5,7 @@ import Start from "./StartPage/Start";
 import SearchPage from "./SearchPage/SearchPage";
 import LoginPage from "./LoginPage/LoginPage"
 import CreateAccountPage from "./CreateAccountPage/CreateAccountPage";
+import Recommendation from './RecommendationPage/Recommendation';
 
 function App() {
     return(
@@ -17,6 +18,7 @@ function App() {
                             <Route path="/search" component={SearchPage}/>
                             <Route path="/login" component={LoginPage}/>
                             <Route path="/createAccount" component={CreateAccountPage}/>
+                            <Route path="/recommendation" component={Recommendation}/>
                         </Switch>
                     </React.Fragment>
                 </BrowserRouter>

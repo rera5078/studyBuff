@@ -1,0 +1,14 @@
+.container {
+    margin-top: 88px;
+    margin-left: 24px;
+    display: flex;
+    
+}
+
+.tabel{
+    margin-top: 24px;
+    margin-bottom: 56px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}

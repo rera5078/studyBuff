@@ -1,7 +1,4 @@
-import React from 'react';
-import logo from './logo.svg';
 import './Start.css';
-import SearchPage from "../SearchPage/SearchPage";
 import {Link} from "react-router-dom";
 import buff from '../buff.png'
 
@@ -34,13 +31,6 @@ function Start() {
                 </ul>
             </div>
             </div>
-
-            {/*<div className="App-sub-title">*/}
-            {/*    <p>ABOUT STUDY BUFF*/}
-            {/*    </p>*/}
-            {/*</div>*/}
-
-
             <nav className="navbar navbar-expand-lg navbar-light fixed-top d-flex">
                 <img src={buff} className='photo ms-4 mt-2'></img>
         <div className="collapse navbar-collapse d-flex" id="navbarSupportedContent">
