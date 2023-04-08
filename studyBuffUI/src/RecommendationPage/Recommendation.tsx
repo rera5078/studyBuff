@@ -78,12 +78,12 @@ function Row(props: { row: ReturnType<typeof createData> }) {
         <StyledTableCell component="th" scope="row">
           {row.courseID}
         </StyledTableCell>
-        <StyledTableCell align="right">{row.courseName}</StyledTableCell>
-        <StyledTableCell align="right">{row.departmentID}</StyledTableCell>
-        <StyledTableCell align="right">{row.instructionMode}</StyledTableCell>
-        <StyledTableCell align="right">{row.books}</StyledTableCell>
-        <StyledTableCell align="right">{row.notes}</StyledTableCell>
-        <StyledTableCell align="right">{row.restrictedInfo}</StyledTableCell>
+        <StyledTableCell align="center">{row.courseName}</StyledTableCell>
+        <StyledTableCell align="center">{row.departmentID}</StyledTableCell>
+        <StyledTableCell align="center">{row.instructionMode}</StyledTableCell>
+        <StyledTableCell align="center">{row.books}</StyledTableCell>
+        <StyledTableCell align="center">{row.notes}</StyledTableCell>
+        <StyledTableCell align="center">{row.restrictedInfo}</StyledTableCell>
         <StyledTableCell>
           <IconButton aria-label="delete">
             <DeleteIcon />
@@ -196,12 +196,12 @@ function Recommendation() {
                     <StyledTableRow>
                       <StyledTableCell />
                       <StyledTableCell>Course ID</StyledTableCell>
-                      <StyledTableCell align="right">Course Name</StyledTableCell>
-                      <StyledTableCell align="right">Department ID</StyledTableCell>
-                      <StyledTableCell align="right">Instruction Mode</StyledTableCell>
-                      <StyledTableCell align="right">Course Materials</StyledTableCell>
-                      <StyledTableCell align="right">Notes</StyledTableCell>
-                      <StyledTableCell align="right">Restricted Info</StyledTableCell>
+                      <StyledTableCell align="center">Course Name</StyledTableCell>
+                      <StyledTableCell align="center">Department ID</StyledTableCell>
+                      <StyledTableCell align="center">Instruction Mode</StyledTableCell>
+                      <StyledTableCell align="center">Course Materials</StyledTableCell>
+                      <StyledTableCell align="center">Notes</StyledTableCell>
+                      <StyledTableCell align="center">Restricted Info</StyledTableCell>
                       <StyledTableCell />
                     </StyledTableRow>
                   </TableHead>
