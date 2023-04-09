@@ -29,6 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "docker-build": "docker build . -t studybufffrontend:latest",
+    "docker-run": "docker run -it --rm -d -p 3001:80/tcp --name web studybufffrontend",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

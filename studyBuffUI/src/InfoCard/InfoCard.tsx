@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import './InfoCard.css';
 
 function InfoCard() {

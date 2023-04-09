@@ -46,7 +46,8 @@ function createData(
   books: string,
   notes: string,
   restrictedInfo: string,
-  sectionInfo: any[]
+  sectionInfo: any[],
+  isAdded: boolean = false
 ) {
   return {
     courseID,
@@ -56,7 +57,8 @@ function createData(
     books,
     notes,
     restrictedInfo,
-    sectionInfo
+    sectionInfo,
+    isAdded
   };
 }
 
@@ -131,7 +133,7 @@ const rows = [
       sectionId: "001",
       instructor: "N. Wright",
       schedule: "Th 9:30a-12p"
-    }
+    },
   ]),
   createData("ECEN 5341", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
     {

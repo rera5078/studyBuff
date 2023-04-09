@@ -98,6 +98,23 @@ services:
       - Elasticsearch  
     networks:
       study_buff_service_local_net:
+  
+
+  studybufffrontend:
+    hostname: studybuff-frontend
+    image: studybufffrontend:latest
+    build:
+      context: studyBuffUI
+    ports:
+      - "12345:80"
+    networks:
+      study_buff_service_local_net:
+    deploy:
+      resources:
+        limits:
+          memory: 126M
+        reservations:
+          memory: 50M
 
   universityservice:
     hostname: study-buff-university-service
