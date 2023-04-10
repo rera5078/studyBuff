@@ -1,6 +1,7 @@
 export interface IUserDBModel {
     CustomerId: string;
-    Name: string;
+    FirstName: string;
+    LastName: string;
     Email: string;
     Password: string;
 }
@@ -8,13 +9,15 @@ export interface IUserDBModel {
 
 export default class UserModelDTO {
     userId: string;
-    name: string;
+    firstName: string;
+    lastName: string;
     email: string;
     password: string;
   
     constructor(customer: IUserDBModel) {
         this.userId = customer.CustomerId;
-        this.name = customer.Name;
+        this.firstName = customer.FirstName;
+        this.lastName = customer.LastName;
         this.email = customer.Email;
         this.password = customer.Password;
     }

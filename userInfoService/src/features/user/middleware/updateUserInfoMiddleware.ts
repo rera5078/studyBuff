@@ -10,7 +10,8 @@ class UpdateUserInfoMiddleware{
       console.log(request.body)
         const input: UpdateUserModel = {
           userId: request.params.userId,
-          name: request.body?.name,
+          firstName: request.body?.firstName,
+          lastName: request.body?.lastName,
           email: request.body?.email,
           password: request.body?.password
         };
@@ -18,7 +19,8 @@ class UpdateUserInfoMiddleware{
         try {
           new UpdateUserInfoValidator(input)
           .validateUserId()
-          .validateName()
+          .validateLastName()
+          .validateFirstName()
           .validateEmail()
           .validatePassword()
           

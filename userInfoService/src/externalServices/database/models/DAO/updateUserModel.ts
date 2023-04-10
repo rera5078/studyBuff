@@ -1,5 +1,6 @@
 export interface UpdateUserModel {
-    Name: string| undefined;
+    FirstName: string| undefined;
+    LastName: string| undefined;
     Email: string| undefined;
     Password: string| undefined;
 }

@@ -8,7 +8,8 @@ class CreateUserInfoMiddleware {
   public validateRequest(request: Request, response: Response, next: NextFunction) {
     const input: CreateUserModel = {
       userId: request.body.email,
-      name: request.body.name,
+      firstName: request.body.firstName,
+      lastName: request.body.lastName,
       email: request.body.email,
       password: request.body.password,
     };
@@ -16,7 +17,8 @@ class CreateUserInfoMiddleware {
     try {
       new CreateUserValidator(input)
         .validateUserId()
-        .validateName()
+        .validateLastName()
+        .validateFirstName()
         .validateEmail()
         .validatePassword()
 

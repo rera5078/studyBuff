@@ -8,7 +8,8 @@ class UpdateUserService {
     async update(userId: string, customerInfo: UpdateUserModel) : Promise<UpdateUserResponseModel> {
         try {
             const updateCustomerValues = {
-                Name: customerInfo.name,
+                FirstName: customerInfo.firstName,
+                LastName: customerInfo.lastName,
                 Email: customerInfo.email,
                 Password: customerInfo.password,
             }

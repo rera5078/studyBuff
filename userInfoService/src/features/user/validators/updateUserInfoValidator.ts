@@ -16,10 +16,17 @@ export class UpdateUserInfoValidator {
     return this;
   }
 
-  validateName() {
+  validateFirstName() {
+    if (!commonValidators.checkIsValidASCII(this.input.firstName)) {
+      throw new Error("[VALIDATION] First Name undefined/ not ASCII");
+    }
 
-    if (this.input.name != undefined && !commonValidators.checkIsValidASCII(this.input.name)) {
-      throw new Error("[VALIDATION] name undefined/ not ASCII");
+    return this;
+  }
+
+  validateLastName() {
+    if (!commonValidators.checkIsValidASCII(this.input.lastName)) {
+      throw new Error("[VALIDATION] Last Name undefined/ not ASCII");
     }
 
     return this;

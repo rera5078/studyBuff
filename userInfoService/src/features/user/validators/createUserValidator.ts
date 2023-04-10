@@ -16,9 +16,17 @@ export class CreateUserValidator {
     return this;
   }
 
-  validateName() {
-    if (!commonValidators.checkIsValidASCII(this.input.name)) {
-      throw new Error("[VALIDATION] customer ID undefined/ not ASCII");
+  validateFirstName() {
+    if (!commonValidators.checkIsValidASCII(this.input.firstName)) {
+      throw new Error("[VALIDATION] First Name undefined/ not ASCII");
+    }
+
+    return this;
+  }
+
+  validateLastName() {
+    if (!commonValidators.checkIsValidASCII(this.input.lastName)) {
+      throw new Error("[VALIDATION] Last Name undefined/ not ASCII");
     }
 
     return this;

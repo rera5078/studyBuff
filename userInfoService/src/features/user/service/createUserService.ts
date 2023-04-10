@@ -9,7 +9,8 @@ class CreateUserService {
             const result = await createCustomerCommand.execute(
                 {
                     UserID: customerInfo.userId,
-                    Name: customerInfo.name,
+                    FirstName: customerInfo.firstName,
+                    LastName: customerInfo.lastName,
                     Email: customerInfo.email,
                     Password: customerInfo.password,
                 });

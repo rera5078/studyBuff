@@ -1,6 +1,7 @@
 export interface UpdateUserModel {
     userId: string;
-    name?: string;
+    firstName?: string;
+    lastName?: string;
     email?: string;
     password?: string;
 }

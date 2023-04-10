@@ -135,21 +135,21 @@ const rows = [
       schedule: "Th 9:30a-12p"
     },
   ]),
-  createData("ECEN 5341", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
+  createData("ECEN 5342", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
     {
       sectionId: "001",
       instructor: "N. Wright",
       schedule: "Th 9:30a-12p"
     }
   ]),
-  createData("ECEN 5341", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
+  createData("ECEN 5343", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
     {
       sectionId: "001",
       instructor: "N. Wright",
       schedule: "Th 9:30a-12p"
     }
   ]),
-  createData("ECEN 5341", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
+  createData("ECEN 5344", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
     {
       sectionId: "001",
       instructor: "N. Wright",
@@ -157,6 +157,8 @@ const rows = [
     }
   ]),
 ];
+
+const table_rows = []
 
 
 function Recommendation() {
