@@ -38,9 +38,9 @@ const CreateAccountPage: FC<CreateAccountPageProps> = () => (
                             </div>
 
                         <div className="Login">
-                        <a href="/login">
+                        <Link to="/login">
                             <text style={{color: "white", fontStyle: "italic",textDecoration: "underline" }}>Already have an account? Login here! </text>
-                        </a>
+                        </Link>
                         </div>
                     </div>
 

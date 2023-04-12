@@ -18,6 +18,7 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import React from "react";
+import Loading from "../Loading/Loading";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -176,6 +177,7 @@ function Recommendation() {
 
   return (
     <div>
+      {loading ? <Loading /> : undefined}
       <NavBar></NavBar>
       <div className="footer fixed-bottom">
         <div className='container mt-2'>

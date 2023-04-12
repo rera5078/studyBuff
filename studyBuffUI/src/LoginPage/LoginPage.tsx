@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import './LoginPage.css';
 import NavBar from "../NavBar/NavBar";
+import { Link } from 'react-router-dom';
 interface LoginPageProps {}
 
 const LoginPage: FC<LoginPageProps> = () => (
@@ -26,9 +27,9 @@ const LoginPage: FC<LoginPageProps> = () => (
                 </div>
 
                 <div className="CreateAccount">
-                    <a href="/createAccount">
+                    <Link to="/createAccount">
                         <text style={{color: "white", fontStyle: "italic",textDecoration: "underline" }}>Don't have an account? Create one here! </text>
-                    </a>
+                    </Link>
                 </div>
             </div>
 

@@ -6,11 +6,12 @@ import SearchPage from "./SearchPage/SearchPage";
 import LoginPage from "./LoginPage/LoginPage"
 import CreateAccountPage from "./CreateAccountPage/CreateAccountPage";
 import Recommendation from './RecommendationPage/Recommendation';
+import Loading from "./Loading/Loading";
 
 function App() {
     return(
     <React.Fragment>
-        <meta name={"viewport"} content={"width=device-widt, initial scale=0.1"}></meta>
+        <meta name={"viewport"} content={"width=device-width, initial scale=0.1"}></meta>
                 <BrowserRouter>
                     <React.Fragment>
                         <Switch>
@@ -19,6 +20,7 @@ function App() {
                             <Route path="/login" component={LoginPage}/>
                             <Route path="/createAccount" component={CreateAccountPage}/>
                             <Route path="/recommendation" component={Recommendation}/>
+                            <Route path="/loading" component={Loading}/>
                         </Switch>
                     </React.Fragment>
                 </BrowserRouter>
