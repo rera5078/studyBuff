@@ -107,6 +107,7 @@ class RECSYSTEM:
         top_results = np.argpartition(-cos_scores, range(top_k))[0:top_k].numpy()
 
         # IR
+        # ConfidenceScore -- cosine similarity score in percentage
         ranked_df = data[data.index.isin(top_results)]
         ranked_df.loc[top_results, "ConfidenceScore"] = [cos_scores[idx]*100.0 for idx in top_results]  # % sim scores
         ranked_df = ranked_df.sort_values(by=['ConfidenceScore'], ascending=False)

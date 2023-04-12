@@ -1,38 +1,65 @@
-# ------------------------------------------------------------------------------------------------------------------------ #
 # API 1:
-# ------------------------------------------------------------------------------------------------------------------------ #
+- Accepts any STRING or list of STRING which is typically a short query.
+- Runs the NER Engine.
+- Returns list of extracted entities in JSON.
 
-- endpoint: /studybuff/ner
-- methods = POST
-- payload-type: JSON
-- payload: 
-            {
-                "query": "<<__TEXT__OR__LIST_OF_TEXTS__>>"
-            }
-- response:
-            {
-                "entities": [ <<__LIST_OF_ENTITIES__>> ]
-            }
+```yaml
+endpoint: /studybuff/ner
+methods = POST
+payload-type: JSON
+payload: 
+    {
+        "query": "<<__TEXT__OR__LIST_OF_TEXTS__>>"
+    }
+response:
+    {
+        "entities": [<<__LIST_OF_ENTITIES__>>]
+    }
+            
+    :: Response ::
+    {
+        "entities": [
+            [
+                EXTRACTED_COURSE_ID,
+                EXTRACTED_COURSE_ID_START_TEXT,
+                EXTRACTED_COURSE_ID_END_TEXT,
+                "COURSE_ID"
+            ],
+            [
+                EXTRACTED_DEPARTMENT,
+                EXTRACTED_DEPARTMENT_START_TEXT,
+                EXTRACTED_DEPARTMENT_END_TEXT,
+                "COURSE_DEPT"
+            ]
+            [
+                EXTRACTED_COURSE_NAME,
+                EXTRACTED_COURSE_NAME_START_TEXT,
+                EXTRACTED_COURSE_NAME_END_TEXT,
+                "COURSE_NAME"
+            ]
+        ]
+    }
+```
+  
 
-##################################################
+***
 Example:
-##################################################
+***
 
-##########
-URL
-##########
+##### URL
+```yaml
 http://127.0.0.1:5000/studybuff/ner
+```
    
-###########
-PAYLOAD
-##########
+##### PAYLOAD
+```yaml
 {
     "query": "Should i consider courses similar to CSCI 5210 or courses from Department of Accounting ?"
 }
+```
 
-###########
-RESPONSE
-##########
+##### RESPONSE
+```yaml
 {
     "entities": [
         [
@@ -49,29 +76,37 @@ RESPONSE
         ]
     ]
 }
+```
 
 
-
-# ------------------------------------------------------------------------------------------------------------------------ #
 # API 2:
-# ------------------------------------------------------------------------------------------------------------------------ #
-
-- endpoint: /studybuff/rec
-- methods = POST
-- payload-type: JSON
-- payload: 
-            {
-                "query": "<<__TEXT__OR__LIST_OF_TEXTS__>>"
-            }
-- response:
-            {
-                "platform": <<__LIST_OF_QUERY_INFERRED_MODE__>>,
-                "top_similar_count": <<__COUNT_OF_RECOMMENDATIONS__>>,
-                "top_similar_courses": <<__JSONIFY_DATAFRAME__>>
-            }
+- Accepts a STRING or list of STRINGS which is basically a Course ID, Name or a Department.
+- Runs the Recommender Engine
+- Returns list of similar courses along with metadata in JSON.
 
 
-        ::  __JSONIFY_DATAFRAME__ ::  
+```yaml
+endpoint: /studybuff/rec
+methods = POST
+payload-type: JSON
+payload: 
+    {
+        "query": "<<__TEXT__OR__LIST_OF_TEXTS__>>"
+    }
+response:
+    {
+        "platform": <<__LIST_OF_QUERY_INFERRED_MODE__>>,
+        "top_similar_count": <<__COUNT_OF_RECOMMENDATIONS__>>,
+        "top_similar_courses": <<__JSONIFY_DATAFRAME__>>
+    }
+  
+    :: Response ::
+    {
+        "platform": [
+            TYPE_OF_PLATFORM ("Online" -OR- "Prerequisites" -OR- "Person")
+        ],
+        "top_similar_count": COUNT_OF_RETURNED_SIMILAR_COURSES
+        "top_similar_courses": "
         [
             {
                 'CourseId'                  :   COURSE-ID,
@@ -85,29 +120,35 @@ RESPONSE
                 'CourseKeyPhrases'          :   EXTRACTED IMPORTANT 2-3 WORD PHRASES,
                 'CourseSummary'             :   EXTRACTIVE SUMMARY OF COURSE DESC,
                 'CourseDifficulty'          :   LEVEL OF DIFFICULTY TO COMPLETE COURSE (between 0.0 - 1.0)
-                'CourseDifficultyBand'      :   LEVEL OF DIFFICULTY TO COMPLETE COURSE ONE FROM (Very Easy, Easy, Medium, Difficult, Very Difficult)
-            }
+                'CourseDifficultyBand'      :   LEVEL OF DIFFICULTY TO COMPLETE COURSE ONE FROM (Very Easy, Easy, Medium, Difficult, Very Difficult),
+                'ConfidenceScore'           :   COSINE SIMILARITY SCORE IN PERCENTAGE
+            },
+            {
+                ...
+            },
+            {...}
         ]
+    }
+```
 
-##################################################
+***
 Example:
-##################################################
+***
 
-##########
-URL
-##########
+##### URL
+```yaml
 http://127.0.0.1:5000/studybuff/rec
+```
    
-###########
-PAYLOAD
-##########
+##### PAYLOAD
+```yaml
 {
     "query": ["Big Data", "machine learning"]
 }
+```
 
-###########
-RESPONSE
-##########
+##### RESPONSE
+```yaml
 {
     "platform": [
         "Person"
@@ -237,32 +278,60 @@ RESPONSE
         }
     ]
 }
+```
 
-
-
-
-
-# ------------------------------------------------------------------------------------------------------------------------ #
 # API 3:
-# ------------------------------------------------------------------------------------------------------------------------ #
+- Accepts any STRING or list of STRINGS which is typically a short query.
+- Runs the NER Engine first, extract entities such as Course ID, Name or Department as specified in the user query.
+- Runs the Recommender engine using the extracted entities.
+- Returns list of similar courses along with metadata in JSON.
 
-- endpoint: /studybuff/find
-- methods = POST
-- payload-type: JSON
-- payload: 
-            {
-                "query": "<<__TEXT__OR__LIST_OF_TEXTS__>>"
-            }
-- response:
-            {
-                "query": <<__ORIGINAL_QUERY_GIVEN_BY_USER__>>,
-                "ner": <<__LIST_OF_ENTITIES_EXTRACTED__>>,
-                "platform": <<__LIST_OF_QUERY_INFERRED_MODE__>>,
-                "top_similar_count": <<__COUNT_OF_RECOMMENDATIONS__>>,
-                "top_similar_courses": <<__JSONIFY_DATAFRAME__>>
-            }
+```yaml
+endpoint: /studybuff/find
+methods = POST
+payload-type: JSON
+payload: 
+    {
+        "query": "<<__TEXT__OR__LIST_OF_TEXTS__>>"
+    }
+response:
+    {
+        "query": <<__ORIGINAL_QUERY_GIVEN_BY_USER__>>,
+        "ner": <<__LIST_OF_ENTITIES_EXTRACTED__>>,
+        "platform": <<__LIST_OF_QUERY_INFERRED_MODE__>>,
+        "top_similar_count": <<__COUNT_OF_RECOMMENDATIONS__>>,
+        "top_similar_courses": <<__JSONIFY_DATAFRAME__>>
+    }
 
-        ::  __JSONIFY_DATAFRAME__ ::  
+    :: Response ::
+    {
+        "query": STRING OR LIST OF STRING
+        "ner": 
+          [
+            [
+                EXTRACTED_COURSE_ID,
+                EXTRACTED_COURSE_ID_START_TEXT,
+                EXTRACTED_COURSE_ID_END_TEXT,
+                "COURSE_ID"
+            ],
+            [
+                EXTRACTED_DEPARTMENT,
+                EXTRACTED_DEPARTMENT_START_TEXT,
+                EXTRACTED_DEPARTMENT_END_TEXT,
+                "COURSE_DEPT"
+            ]
+            [
+                EXTRACTED_COURSE_NAME,
+                EXTRACTED_COURSE_NAME_START_TEXT,
+                EXTRACTED_COURSE_NAME_END_TEXT,
+                "COURSE_NAME"
+            ]
+        ],
+        "platform": [
+            TYPE_OF_PLATFORM ("Online" -OR- "Prerequisites" -OR- "Person")
+        ],
+        "top_similar_count": COUNT_OF_RETURNED_SIMILAR_COURSES
+        "top_similar_courses": "
         [
             {
                 'CourseId'                  :   COURSE-ID,
@@ -276,29 +345,35 @@ RESPONSE
                 'CourseKeyPhrases'          :   EXTRACTED IMPORTANT 2-3 WORD PHRASES,
                 'CourseSummary'             :   EXTRACTIVE SUMMARY OF COURSE DESC,
                 'CourseDifficulty'          :   LEVEL OF DIFFICULTY TO COMPLETE COURSE (between 0.0 - 1.0)
-                'CourseDifficultyBand'      :   LEVEL OF DIFFICULTY TO COMPLETE COURSE ONE FROM (Very Easy, Easy, Medium, Difficult, Very Difficult)
-            }
+                'CourseDifficultyBand'      :   LEVEL OF DIFFICULTY TO COMPLETE COURSE ONE FROM (Very Easy, Easy, Medium, Difficult, Very Difficult),
+                'ConfidenceScore'           :   COSINE SIMILARITY SCORE IN PERCENTAGE
+            },
+            {
+                ...
+            },
+            {...}
         ]
+    }
+```
 
-##################################################
+***
 Example:
-##################################################
+***
 
-##########
-URL
-##########
+##### URL
+``` yaml
 http://127.0.0.1:5000/studybuff/find
+```
    
-###########
-PAYLOAD
-##########
+##### PAYLOAD
+```yaml
 {
     "query": "Should I consider CSCI 4593 or consider courses like OLD ENGLISH???"
 }
+```
 
-###########
-RESPONSE
-##########
+##### RESPONSE
+```yaml
 {
     "query": "Should I consider CSCI 4593 or consider courses like OLD ENGLISH???",
     "ner": [
@@ -443,3 +518,7 @@ RESPONSE
         }
     ]"
 }
+```
+
+****
+****
