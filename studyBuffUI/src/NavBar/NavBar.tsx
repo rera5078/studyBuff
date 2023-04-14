@@ -10,9 +10,9 @@ interface NavBarProps {}
 
 const NavBar: FC<NavBarProps> = () => (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top d-flex custom-nav">
-        <a href="/">
+        <Link to="/">
             <img src={buff} className="photo" />
-        </a>
+        </Link>
         <div className="collapse navbar-collapse d-flex" id="navbarSupportedContent">
         </div>
         <div className={"justify-content-end"}>

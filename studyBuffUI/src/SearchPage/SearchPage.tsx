@@ -13,7 +13,7 @@ const SearchPage: FC<SearchPageProps> = () => (
     <img src={buff} height={200}></img>
 </div>
 <form>
-<div className="input-group mx-auto mt-5" style={{width:'35%'}}>
+<div className="input-group mx-auto mt-5" style={{width:'45%'}}>
   <input type="search" className="form-control rounded w-75" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
   <Link to = "/recommendation" className="custom-search-button w-25">
   <button type="submit" className="custom-search-button w-100 mt-1">Search</button>
