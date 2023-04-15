@@ -25,7 +25,7 @@ input[type=password] {
     float: right;
     padding: 80px;
     width: 40%;
-    height: 70%;
+    height: 74%;
 
 }
 .gradient-background{
@@ -74,50 +74,66 @@ input[type=password] {
 
 .first{
     position:absolute;
-    top: 18%;
+    top: 22%;
     left: 11%;
     width: 35%;
 }
 
 .last{
     position:absolute;
-    top: 18%;
+    top: 22%;
     left: 50%;
     width: 39%;
 }
 
 .email{
     position:absolute;
-    top: 32%;
+    top: 36%;
     left: 11%;
     width: 78%;
 }
 
 .username{
     position:absolute;
-    top: 46%;
+    top: 50%;
     left: 11%;
     width: 78%;
 }
 
 .password{
     position:absolute;
-    top: 60%;
+    top: 64%;
     left: 11%;
     width: 78%;
 }
 
 .CreateButton{
     position:absolute;
-    top: 77%;
+    top: 81%;
     left: 25%;
     width: 50%;
 }
 
 .Login{
     position: absolute;
-    top: 90%;
+    top: 94%;
     left: 28%;
     opacity: 50%;
     right: 25%
+}
+
+.errorContainer{
+    background-color: rgb(68, 0, 0);
+    position: absolute;
+    top: 15%;
+    left: 11%;
+    width: 78%;
+    height: 36px;
+    padding-top: 8px;
+    padding-left: 32px;
+    border-radius: 4px;
+}
+
+.errorText{
+    color: white;
 }

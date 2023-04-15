@@ -1,5 +1,7 @@
+import e from "cors";
 import { Request, Response } from "express";
 import HttpStatus from "http-status-codes";
+import { Operation } from "../../../externalServices/database/enums/operation";
 import { checkAuthorizationService } from "../service/checkAuthorizationService";
 import { createUserService } from "../service/createUserService";
 import { getUserService } from "../service/getUserService";
@@ -9,8 +11,13 @@ class UserInfoController {
     async addUser(req: Request, res: Response) {
         console.log("[Controller] Add User", { input: req.body });
         req.body.userId = req.body.email
-        const result = await createUserService.create(req.body)
-        res.status(HttpStatus.OK);
+        const result = await createUserService.create(req.body);
+        if(result.status === Operation.AlreadyExists){
+            result.status = HttpStatus.CONFLICT;
+        } else if (result.status == Operation.Error){
+            result.status = HttpStatus.BAD_REQUEST;
+        }
+        res.status(result.status);
         res.send(result);
     }
 

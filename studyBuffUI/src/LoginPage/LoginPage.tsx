@@ -3,6 +3,8 @@ import './LoginPage.css';
 import NavBar from "../NavBar/NavBar";
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
+
 interface LoginPageProps { }
 
 interface LoginData {
@@ -11,8 +13,9 @@ interface LoginData {
 }
 
 const LoginPage: FC<LoginPageProps> = () => {
-
     const [loginData, setLoginData] = useState<LoginData>({ username: '', password: '' });
+    const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setLoginData({ ...loginData, username: event.target.value });
@@ -23,7 +26,6 @@ const LoginPage: FC<LoginPageProps> = () => {
     };
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        console.log("Submit", loginData)
         event.preventDefault();
 
         try {
@@ -36,8 +38,12 @@ const LoginPage: FC<LoginPageProps> = () => {
             });
 
             if (response.ok) {
+                setErrorMessage("");
                 console.log('Login successful');
+                navigate('/recommendation');
+
             } else {
+                setErrorMessage("Username and Password didn't Match. Try Again");
                 console.log('Login failed');
             }
         } catch (error) {
@@ -48,13 +54,14 @@ const LoginPage: FC<LoginPageProps> = () => {
     return (
         <React.Fragment>
             <NavBar></NavBar>
-
             <div className='background'>
                 <h2 className='Welcome'>Welcome back to</h2>
                 <h2 className='Study'> STUDY BUFF</h2>
-
                 <div className="jumbo">
-                    <h2 className="login"> Login here.</h2>
+                    {errorMessage && <div className='errorContainer'>
+                        <p className='errorText'>Username and Password didn't Match. Try Again</p>
+                    </div>}
+                    <h2 className="login"> Login here</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="user">
                             <input
@@ -90,7 +97,6 @@ const LoginPage: FC<LoginPageProps> = () => {
                             </Button>
                         </div>
                     </form>
-
                     <div className="CreateAccount">
                         <Link to="/createAccount">
                             <text style={{ color: "white", fontStyle: "italic", textDecoration: "underline" }}>Don't have an account? Create one here! </text>

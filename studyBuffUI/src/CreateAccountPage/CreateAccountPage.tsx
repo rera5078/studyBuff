@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import './CreateAccountPage.css';
 import NavBar from "../NavBar/NavBar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
 interface CreateAccountPageProps { }
 
@@ -14,6 +14,9 @@ interface SigninData {
 }
 
 const CreateAccountPage: FC<CreateAccountPageProps> = () => {
+    const navigate = useNavigate();
+    const [errorMessage, setErrorMessage] = useState('');
+
     const [signinData, setLoginData] = useState<SigninData>(
         {
             email: '',
@@ -56,13 +59,24 @@ const CreateAccountPage: FC<CreateAccountPageProps> = () => {
                 body: JSON.stringify(signinData),
             });
 
+            console.log("response", response);
+
             if (response.ok) {
                 console.log('Created successful');
-            } else {
+                navigate('/login');
+                setErrorMessage("")    
+            } 
+            else if(response.status == 409){
                 console.log('Creation failed');
+                setErrorMessage("Username already exists!!") 
+            }
+            else {
+                console.log('Creation failed');
+                setErrorMessage("Create Account Failed Please Come Back later!!")
             }
         } catch (error) {
             console.error('API call failed', error);
+            setErrorMessage("Create Account Failed Please Come Back later!!")
         }
     };
 
@@ -75,6 +89,10 @@ const CreateAccountPage: FC<CreateAccountPageProps> = () => {
 
                 <div className="jumbotron text-center">
                     <h2 className="Sign"> Sign up here.</h2>
+                    {errorMessage && <div className='errorContainer'>
+                        <p className='errorText'>{errorMessage}</p>
+                    </div>}
+
                     <form onSubmit={handleSubmit}>
                         <div className="email">
                             <input

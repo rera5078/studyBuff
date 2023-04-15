@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Start from "./StartPage/Start";
 import SearchPage from "./SearchPage/SearchPage";
 import LoginPage from "./LoginPage/LoginPage"
@@ -14,14 +14,14 @@ function App() {
         <meta name={"viewport"} content={"width=device-width, initial scale=0.1"}></meta>
                 <BrowserRouter>
                     <React.Fragment>
-                        <Switch>
-                            <Route exact path="/" component={Start}/>
-                            <Route path="/search" component={SearchPage}/>
-                            <Route path="/login" component={LoginPage}/>
-                            <Route path="/createAccount" component={CreateAccountPage}/>
-                            <Route path="/recommendation" component={Recommendation}/>
-                            <Route path="/loading" component={Loading}/>
-                        </Switch>
+                        <Routes>
+                            <Route path="/" Component={Start}/>
+                            <Route path="/search" Component={SearchPage}/>
+                            <Route path="/login" Component={LoginPage}/>
+                            <Route path="/createAccount" Component={CreateAccountPage}/>
+                            <Route path="/recommendation" Component={Recommendation}/>
+                            <Route path="/loading" Component={Loading}/>
+                        </Routes>
                     </React.Fragment>
                 </BrowserRouter>
     </React.Fragment>
