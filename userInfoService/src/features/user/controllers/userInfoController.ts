@@ -12,9 +12,12 @@ class UserInfoController {
         console.log("[Controller] Add User", { input: req.body });
         req.body.userId = req.body.email
         const result = await createUserService.create(req.body);
+        console.log("result", result, result.status === Operation.Success);
         if(result.status === Operation.AlreadyExists){
             result.status = HttpStatus.CONFLICT;
-        } else if (result.status == Operation.Error){
+        } else if (result.status === Operation.Success){
+            result.status = HttpStatus.OK;
+        } else{
             result.status = HttpStatus.BAD_REQUEST;
         }
         res.status(result.status);
