@@ -34,17 +34,7 @@ input[type=password] {
     background: #e4e4e7;
 }
 
-.All{
-    position: absolute;
-    top: 35%;
-    left: 5%;
-    font-size: 70px;
-    color: white;
-    font-weight: bold;
-    font-style: italic;
-    -webkit-text-stroke: 1px #ffffff;
-    opacity: 80%;
-}
+
 .Welcome{
     position: absolute;
     top: 35%;
@@ -74,6 +64,7 @@ input[type=password] {
     top: 25%;
     left: 11%;
     width: 78%;
+    height: 54px;
     color:#e4e4e7;
 }
 
@@ -82,6 +73,7 @@ input[type=password] {
     top: 45%;
     left: 11%;
     width: 78%;
+    height: 54px;
     color:#e4e4e7;
 
 }
@@ -109,4 +101,23 @@ input[type=password] {
     top: 88%;
     left: 26%;
     opacity: 50%;
+}
+
+.continer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.submitButton {
+    margin-top: 16px;
+}
+
+.newUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
 }

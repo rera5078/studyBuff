@@ -29,8 +29,8 @@ class UserInfoController {
     }
 
     async checkAuthorization(req: Request, res: Response) {
-        console.log("[Controller] Check Authorization", { input: {userId: req.params.userId} })
-        const result = await checkAuthorizationService.getCustomerInfoIfAuthorized(req.params.userId, req.query.password as string)
+        console.log("[Controller] Check Authorization", { input: req.body })
+        const result = await checkAuthorizationService.getCustomerInfoIfAuthorized(req.body.username, req.body.password as string)
         res.status(result.status);
         res.send(result.data);
     }

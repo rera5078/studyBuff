@@ -1,45 +1,111 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import './LoginPage.css';
 import NavBar from "../NavBar/NavBar";
 import { Link } from 'react-router-dom';
-interface LoginPageProps {}
+import Button from '@mui/material/Button';
+interface LoginPageProps { }
 
-const LoginPage: FC<LoginPageProps> = () => (
-    <React.Fragment>
-        <NavBar></NavBar>
+interface LoginData {
+    username: string;
+    password: string;
+}
 
-        <div className='background'>
-            <h2 className='Welcome'>Welcome back to</h2>
-            <h2 className = 'Study'> STUDY BUFF</h2>
+const LoginPage: FC<LoginPageProps> = () => {
 
-            <div className="jumbo">
-                <h2 className="login"> Login here.</h2>
-                <div className="user">
-                    <input type="text" placeholder="Username" name="username" required></input>
+    const [loginData, setLoginData] = useState<LoginData>({ username: '', password: '' });
+
+    const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setLoginData({ ...loginData, username: event.target.value });
+    };
+
+    const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setLoginData({ ...loginData, password: event.target.value });
+    };
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        console.log("Submit", loginData)
+        event.preventDefault();
+
+        try {
+            const response = await fetch('http://localhost:8080/api/v1/userinfo/isAuthorized', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(loginData),
+            });
+
+            if (response.ok) {
+                console.log('Login successful');
+            } else {
+                console.log('Login failed');
+            }
+        } catch (error) {
+            console.error('API call failed', error);
+        }
+    };
+
+    return (
+        <React.Fragment>
+            <NavBar></NavBar>
+
+            <div className='background'>
+                <h2 className='Welcome'>Welcome back to</h2>
+                <h2 className='Study'> STUDY BUFF</h2>
+
+                <div className="jumbo">
+                    <h2 className="login"> Login here.</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className="user">
+                            <input
+                                placeholder="Username"
+                                name="username"
+                                type="text"
+                                value={loginData.username}
+                                onChange={handleUsernameChange}
+                                style={{ backgroundColor: "whitesmoke", color: 'rgb(7,14,45)', fontWeight: 'bold' }}
+                            />
+                        </div>
+                        <div className="pass">
+                            <input
+                                placeholder="Password"
+                                name="password"
+                                type="password"
+                                value={loginData.password}
+                                onChange={handlePasswordChange}
+                                style={{ backgroundColor: "whitesmoke", color: 'rgb(7,14,45)', fontWeight: 'bold' }}
+                            />
+                        </div>
+                        <div className="LoginButton">
+                            <Button
+                                type="submit"
+                                variant="contained"
+                                color="primary"
+                                disabled={!loginData.username || !loginData.password}
+                                fullWidth
+                                data-testid={"Login"}
+                                style={{ backgroundColor: "whitesmoke", color: 'rgb(7,14,45)', fontSize: '18px', fontWeight: 'bold' }}
+                            >
+                                Login
+                            </Button>
+                        </div>
+                    </form>
+
+                    <div className="CreateAccount">
+                        <Link to="/createAccount">
+                            <text style={{ color: "white", fontStyle: "italic", textDecoration: "underline" }}>Don't have an account? Create one here! </text>
+                        </Link>
+                    </div>
                 </div>
 
-                <div className="pass">
-                    <input type="password" placeholder="Password" name="password" required></input>
-                </div>
-
-                <div className="LoginButton">
-                    <button className={'btn in w-75'} type={'submit'} style={{backgroundColor:"whitesmoke", color:'rgb(7,14,45)', fontSize:'18px', fontWeight:'bold'}}>Login</button>
-                </div>
-
-                <div className="CreateAccount">
-                    <Link to="/createAccount">
-                        <text style={{color: "white", fontStyle: "italic",textDecoration: "underline" }}>Don't have an account? Create one here! </text>
-                    </Link>
+            </div>
+            <div className="footer fixed-bottom">
+                <div className='container mt-2'>
+                    <p> Copyright &copy; 2023 University of Colorado Boulder. All rights reserved.</p>
                 </div>
             </div>
-
-        </div>
-        <div className="footer fixed-bottom">
-            <div className='container mt-2'>
-                <p> Copyright &copy; 2023 University of Colorado Boulder. All rights reserved.</p>
-            </div>
-        </div>
-    </React.Fragment>
-);
+        </React.Fragment>
+    )
+}
 
 export default LoginPage;

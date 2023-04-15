@@ -25,8 +25,8 @@ userInfoRoutes.put(
     userInfoController.updateUser
 );
 
-userInfoRoutes.get(
-    "/api/v1/userinfo/isAuthorized/:customerId",
+userInfoRoutes.post(
+    "/api/v1/userinfo/isAuthorized",
     checkAuthorizationMiddleware.validateRequest,
     userInfoController.checkAuthorization
 );
