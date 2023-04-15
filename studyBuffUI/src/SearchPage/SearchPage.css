@@ -17,8 +17,6 @@
     line-height: 1;
     box-sizing: border-box;
     outline: none;
-    /*width:600px;*/
-    /*height: 45px;*/
     display: block;
     font-family: 'Roboto' , sans-serif;
     font-size:18px;
@@ -34,8 +32,6 @@
     color: #fff;
     outline: none;
     z-index: 2;
-    /*width: 140px;*/
-    /*height: 37px;*/
     border-radius: 10px;
     font-size:20px;
     font-family: 'Roboto', sans-serif;

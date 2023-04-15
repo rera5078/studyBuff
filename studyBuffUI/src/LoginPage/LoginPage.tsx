@@ -40,7 +40,7 @@ const LoginPage: FC<LoginPageProps> = () => {
             if (response.ok) {
                 setErrorMessage("");
                 console.log('Login successful');
-                navigate('/recommendation');
+                navigate('/search');
 
             } else {
                 setErrorMessage("Username and Password didn't Match. Try Again");

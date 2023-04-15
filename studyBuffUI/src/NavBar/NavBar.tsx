@@ -15,13 +15,13 @@ const NavBar: FC<NavBarProps> = () => (
         </Link>
         <div className="collapse navbar-collapse d-flex" id="navbarSupportedContent">
         </div>
-        <div className={"justify-content-end"}>
+        {/* <div className={"justify-content-end"}>
             <ul className="navbar-nav mr-auto">
             <li className="nav-item me-3">
                 <a className="nav-link" href="#" style={{color:'#ffffff'}}>Account</a>
             </li>
             </ul>
-        </div>
+        </div> */}
     </nav>
       );
 

@@ -19,6 +19,11 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import React from "react";
 import Loading from "../Loading/Loading";
+import { SearchResult } from "./api";
+
+interface DashboardProps {
+  results: SearchResult[];
+}
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -162,7 +167,10 @@ const rows = [
 const table_rows = []
 
 
-function Recommendation() {
+function Recommendation({ results }: DashboardProps) {
+
+  console.log("Recommendation Page results", results);
+
   const [users, setUsers] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
   useEffect(() => {

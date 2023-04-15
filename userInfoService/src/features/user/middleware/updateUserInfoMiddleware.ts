@@ -6,8 +6,6 @@ import { UpdateUserInfoValidator } from "../validators/updateUserInfoValidator";
 
 class UpdateUserInfoMiddleware{
     public validateRequest(request: Request, response: Response, next: NextFunction) {
-      console.log(request.params)
-      console.log(request.body)
         const input: UpdateUserModel = {
           userId: request.params.userId,
           firstName: request.body?.firstName,

@@ -14,13 +14,13 @@ userInfoRoutes.post(
 );
 
 userInfoRoutes.get(
-    "/api/v1/userinfo/user/:customerId",
+    "/api/v1/userinfo/user/:userId",
     getUserInfoMiddleware.validateRequest,
     userInfoController.getUserInfo
 );
 
 userInfoRoutes.put(
-    "/api/v1/userinfo/updateuser/:customerId",
+    "/api/v1/userinfo/updateuser/:userId",
     updateUserInfoMiddleware.validateRequest,
     userInfoController.updateUser
 );
