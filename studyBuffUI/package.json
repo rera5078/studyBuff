@@ -23,18 +23,22 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.9",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "rimraf": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rimraf build && react-scripts build",
     "test": "react-scripts test",
-    "docker-build": "docker build . -t studybufffrontend:latest",
-    "docker-run": "docker run -it --rm -d -p 3001:80/tcp --name web studybufffrontend",
+    "rimraf": "./node_modules/rimraf/bin.js",
+    "docker-gcp": "docker buildx build --platform linux/amd64 -t  study-buff-frontend .",
+    "docker-gcp-run": "docker run -p 4200:80 study-buff-frontend",
+    "docker-gcp-tag": "docker tag study-buff-frontend gcr.io/bigdataarchitecture-383804/study-buff-frontend",
+    "docker-gcp-push": "docker push gcr.io/bigdataarchitecture-383804/study-buff-frontend",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
+    "extends": [ 
       "react-app",
       "react-app/jest"
     ]

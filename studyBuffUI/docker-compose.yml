@@ -1,0 +1,15 @@
+version: "3"
+services:
+  studybufffrontend:
+    hostname: studybuff-frontend
+    image: buff-ui:latest
+    build:
+      context: .
+    ports:
+      - "12345:80"
+    deploy:
+      resources:
+        limits:
+          memory: 126M
+        reservations:
+          memory: 50M
