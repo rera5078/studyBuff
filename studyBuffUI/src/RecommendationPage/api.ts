@@ -9,6 +9,6 @@ export interface SearchResult {
 }
 
 export async function search(query: string): Promise<SearchResult[]> {
-  const response = await axios.get<SearchResult[]>('http://localhost:8080/api/v1/userinfo/user/a', { params: { query } });
+  const response = await axios.get<SearchResult[]>(`${process.env.REACT_APP_SEARCH_BASE_URL}`, { params: { query } });
   return response.data;
 }

@@ -51,7 +51,7 @@ const CreateAccountPage: FC<CreateAccountPageProps> = () => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:8080/api/v1/userinfo/adduser', {
+            const response = await fetch(`${process.env.REACT_APP_CREATE_ACCOUNT_BASE_URL}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

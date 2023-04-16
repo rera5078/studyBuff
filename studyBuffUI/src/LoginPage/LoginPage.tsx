@@ -27,9 +27,10 @@ const LoginPage: FC<LoginPageProps> = () => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        console.log("ggg", process.env.REACT_APP_LOGIN_BASE_URL)
 
         try {
-            const response = await fetch('http://localhost:8080/api/v1/userinfo/isAuthorized', {
+            const response = await fetch(`${process.env.REACT_APP_LOGIN_BASE_URL}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
