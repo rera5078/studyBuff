@@ -105,8 +105,11 @@ services:
     image: studybufffrontend:latest
     build:
       context: studyBuffUI
+    depends_on:
+      - universityservice
+      - buffUserInfoService 
     ports:
-      - "12345:80"
+      - "4200:80"
     networks:
       study_buff_service_local_net:
     deploy:

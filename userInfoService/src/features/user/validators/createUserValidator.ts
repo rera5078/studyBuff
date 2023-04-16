@@ -10,7 +10,7 @@ export class CreateUserValidator {
 
   validateUserId() {
     if (!commonValidators.checkIsValidASCII(this.input.userId)) {
-      throw new Error("[VALIDATION] customer ID undefined/ not ASCII");
+      throw new Error("[VALIDATION] user ID undefined/ not ASCII");
     }
 
     return this;
