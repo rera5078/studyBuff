@@ -10,7 +10,6 @@ import { updateUserService } from "../service/updateUserService";
 class UserInfoController {
     async addUser(req: Request, res: Response) {
         console.log("[Controller] Add User", { input: req.body });
-        req.body.userId = req.body.email
         const result = await createUserService.create(req.body);
         console.log("result", result, result.status === Operation.Success);
         if(result.status === Operation.AlreadyExists){
