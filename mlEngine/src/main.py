@@ -39,7 +39,7 @@ def load_config(config_fp, platform='dev'):
         :param:     platform: str - deployment env {dev, qa, qa1, prod}
         :return:    config: dict - loaded config file in dictionary format
     """
-
+    print(2)
     config = configparser.ConfigParser()
     config.read(config_fp)
     config = dict(config[platform])
@@ -57,7 +57,7 @@ def load_config(config_fp, platform='dev'):
         if config_key.endswith("bool") or config_key.endswith("num"):
             config[config_key] = ast.literal_eval(config.get(config_key))
     ####### configure ######
-
+    print(3)
     logger.info("config loaded.")
     return config
 
@@ -68,7 +68,7 @@ def load_resources(config):
         :param:     config: dict - loaded config dict
         :return:    :msc: - loaded objects/files/models in memory
     """
-
+    print(2)
     # init load resources module
     resources = loadResourcesConfig(config)
 
@@ -231,10 +231,13 @@ def generate_results():
 ### START ENGINE ###
 if __name__ == '__main__':
     logger.info("Starting app now...")
-
+    print(1)
+    print(os.listdir("."))
     # load configuration
-    config_fp = "./studybuff_ml_engine_config.ini"
+    config_fp = "src/studybuff_ml_engine_config.ini"
     config = load_config(config_fp)    # default: dev env
+
+    print(1)
 
     # load static resources
     nlp_resources_fp, nlp, course_nlp, assym_model, ssym_model, assym_corpus_embeddings, \
@@ -250,7 +253,8 @@ if __name__ == '__main__':
 
     print("*" * 50)
     host_name = "127.0.0.1"
-    port_name = "5000"
+    #host_name = "0.0.0.0"
+    port_name = "5050"
     print("App running now\tHost: {}\tPort: {}".format(host_name, port_name))
     print("*" * 50, "\n")
     app.run(host=host_name, port=port_name, debug=False)

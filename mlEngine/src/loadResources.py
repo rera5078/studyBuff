@@ -26,6 +26,7 @@ class loadResourcesConfig:
             return json.load(f)
 
     def load_csv(self, csv_path):
+        print(csv_path)
         return pd.read_csv(csv_path, index_col=False)
 
     def load_excel(self, excel_path):
@@ -73,6 +74,7 @@ class loadResourcesConfig:
         """
             For loading resources like files, models and objects into memory
         """
+        print(5)
         # loadable objects
         nlp_res_fp = self.config.get("nlp_resources_fp")
         spacy_model_fp = self.config.get("spacy_fp")
@@ -83,6 +85,11 @@ class loadResourcesConfig:
         sbert_ssym_corpus_embeddings_fp = self.config.get("ssym_embed_fp")
         allcoursesdata_fp = self.config.get("allcoursesdata_fp")
         synonyms_fp = self.config.get("synonyms_fp")
+
+        ######
+        print(os.path.abspath(__file__))
+
+        print(os.listdir("../"))
 
         # loading all resources in memory
         df_allcoursesdata = self.load_csv(allcoursesdata_fp)
