@@ -173,6 +173,7 @@ function Recommendation({ results }: DashboardProps) {
 
   const [users, setUsers] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
+  const [tableData, setTableData] = useState([]);
   useEffect(() => {
     setLoading(true)
     fetch("https://jsonplaceholder.typicode.com/users")

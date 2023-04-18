@@ -4,6 +4,7 @@ import NavBar from "../NavBar/NavBar";
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import Footer from "../Footer/Footer";
 
 interface LoginPageProps { }
 
@@ -105,11 +106,7 @@ const LoginPage: FC<LoginPageProps> = () => {
                 </div>
 
             </div>
-            <div className="footer fixed-bottom">
-                <div className='container mt-2'>
-                    <p> Copyright &copy; 2023 University of Colorado Boulder. All rights reserved.</p>
-                </div>
-            </div>
+            <Footer></Footer>
         </React.Fragment>
     )
 }

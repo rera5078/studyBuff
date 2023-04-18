@@ -1,6 +1,7 @@
 import './Start.css';
 import {Link} from "react-router-dom";
 import buff from '../buff.png'
+import Footer from "../Footer/Footer"
 
 function Start() {
     return (
@@ -47,12 +48,7 @@ function Start() {
             </ul>
         </div>
     </nav>
-
-            <div className="footer fixed-bottom">
-                <div className='container mt-2'>
-                <p> Copyright &copy; 2023 University of Colorado Boulder. All rights reserved.</p>
-                </div>
-            </div>
+            <Footer></Footer>
 
         </div>
     );

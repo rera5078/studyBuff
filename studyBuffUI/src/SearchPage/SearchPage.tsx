@@ -4,6 +4,7 @@ import NavBar from "../NavBar/NavBar";
 import buff from '../buff.png'
 import { search, SearchResult } from '../RecommendationPage/api';
 import { useNavigate } from 'react-router-dom';
+import Footer from "../Footer/Footer";
 
 interface SearchPageProps { 
   setResults: (results: SearchResult[]) => void;
@@ -53,11 +54,7 @@ function SearchPage({ setResults }: SearchPageProps) {
         </div>
       </form>
       </div>}
-      <div className="footer fixed-bottom">
-        <div className='container mt-2'>
-          <p> Copyright &copy; 2023 University of Colorado Boulder. All rights reserved.</p>
-        </div>
-      </div>
+      <Footer></Footer>
     </div>
 
   );
