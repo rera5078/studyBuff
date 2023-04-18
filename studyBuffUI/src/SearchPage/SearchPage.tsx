@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './SearchPage.css';
 import NavBar from "../NavBar/NavBar";
-import buff from '../buff.png'
+import buff from '../buff.png';
+import white from '../white.png';
 import { search, SearchResult } from '../RecommendationPage/api';
 import { useNavigate } from 'react-router-dom';
 import Footer from "../Footer/Footer";
@@ -37,7 +38,7 @@ function SearchPage({ setResults }: SearchPageProps) {
       {loading && <div>Loading...</div>}
       {!loading && <div>
       <div className={'d-flex justify-content-center'} style={{ marginTop: "10%" }}>
-        <img src={buff} height={200}></img>
+        <img src={white} height={200}></img>
       </div>
       <form onSubmit={handleSubmit}>
         <div className="input-group mx-auto mt-5" style={{ width: '45%' }}>
