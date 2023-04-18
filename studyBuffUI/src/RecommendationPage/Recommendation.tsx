@@ -1,5 +1,6 @@
 import InfoCard from "../InfoCard/InfoCard";
 import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer"
 import './Recommendation.css';
 import { useEffect, useState } from "react";
 import { styled } from '@mui/material/styles';
@@ -173,6 +174,7 @@ function Recommendation({ results }: DashboardProps) {
 
   const [users, setUsers] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
+  const [tableData, setTableData] = useState([]);
   useEffect(() => {
     setLoading(true)
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -187,11 +189,7 @@ function Recommendation({ results }: DashboardProps) {
     <div>
       {loading ? <Loading /> : undefined}
       <NavBar></NavBar>
-      <div className="footer fixed-bottom">
-        <div className='container mt-2'>
-          <p> Copyright &copy; 2023 University of Colorado Boulder. All rights reserved.</p>
-        </div>
-      </div>
+      <Footer></Footer>
       <div className="container">
         <InfoCard></InfoCard>
         <InfoCard></InfoCard>
