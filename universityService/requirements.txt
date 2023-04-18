@@ -16,4 +16,4 @@ beautifulsoup4~=4.11.1
 kafka-python~=2.0.2
 confluent_kafka~=2.1.0
 kibana~=0.7
-Elasticsearch~=8.7.0
+Elasticsearch~=0.7
