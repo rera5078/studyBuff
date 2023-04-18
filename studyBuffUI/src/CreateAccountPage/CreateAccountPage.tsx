@@ -3,6 +3,7 @@ import './CreateAccountPage.css';
 import NavBar from "../NavBar/NavBar";
 import { Link, useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
+import Footer from "../Footer/Footer";
 interface CreateAccountPageProps { }
 
 interface SigninData {
@@ -165,11 +166,7 @@ const CreateAccountPage: FC<CreateAccountPageProps> = () => {
 
             </div>
 
-            <div className="footer fixed-bottom">
-                <div className='container mt-2'>
-                    <p> Copyright &copy; 2023 University of Colorado Boulder. All rights reserved.</p>
-                </div>
-            </div>
+            <Footer></Footer>
         </React.Fragment>
 
     )
