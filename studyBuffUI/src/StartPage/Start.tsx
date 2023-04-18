@@ -2,6 +2,7 @@ import './Start.css';
 import {Link} from "react-router-dom";
 import buff from '../buff.png'
 import React from "react";
+import white from '../white.png'
 import NavBar from "../NavBar/NavBar";
 import Button from "@mui/material/Button";
 import Footer from "../Footer/Footer";
@@ -30,7 +31,7 @@ function Start() {
             </Link></div>
 
             <nav className="navbar navbar-expand-lg navbar-light fixed-top d-flex">
-                <img src={buff} className='photo ms-4 mt-2'></img>
+                <img src={white} className='photo ms-4 mt-2'></img>
                 <div className="collapse navbar-collapse d-flex" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                     </ul>
