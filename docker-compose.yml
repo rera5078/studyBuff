@@ -166,7 +166,6 @@ services:
       study_buff_service_local_net:
 
 
-
 volumes:
   elastic_data: {}
 
