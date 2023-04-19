@@ -14,6 +14,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import SearchIcon from "@mui/icons-material/Search";
 import Button from '@mui/material/Button';
+import debounce from 'lodash.debounce'
 import './SearchPage.css';
 
 interface SearchPageProps {
@@ -46,6 +47,7 @@ function SearchPage({ setResults }: SearchPageProps) {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [loading, setLoading] = useState(false);
+  const [timer, setTimer] = useState(null);
 
   const handleInputChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;
@@ -72,9 +74,23 @@ function SearchPage({ setResults }: SearchPageProps) {
   const showSuggestions = suggestions.length > 0 && !loading;
 
   const fetchSuggestions = async (query: string): Promise<Suggestion[]> => {
-    const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${query}`);
-    const data = await response.json();
-    console.log("data", data)
+    const debouncedFilter = debounce(async () => {
+      console.log('====>', query)
+      const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${query}`);
+      const data = await response.json();
+      console.log("data", data)
+      if (data?.length) {
+        const rec_suggestion: Suggestion[] = data.map((item: string) => {
+          return {
+            name: item
+          }
+        });
+        console.log("rec_suggestion", rec_suggestion);
+        return rec_suggestion;
+      }
+    }, 2000)
+  
+    debouncedFilter()
     return [];
   };
 
@@ -110,10 +126,10 @@ function SearchPage({ setResults }: SearchPageProps) {
           </div>
         </form>
         <div className='sugestionOptions'>
-            <Button className='suggest' variant="outlined">Outlined</Button>
-            <Button className='suggest' variant="outlined">Outlined</Button>
-            <Button className='suggest' variant="outlined">Outlined</Button>
-            <Button className='suggest' variant="outlined">Outlined</Button>
+          <Button className='suggest' variant="outlined">Outlined</Button>
+          <Button className='suggest' variant="outlined">Outlined</Button>
+          <Button className='suggest' variant="outlined">Outlined</Button>
+          <Button className='suggest' variant="outlined">Outlined</Button>
         </div>
       </div>}
       <Footer></Footer>

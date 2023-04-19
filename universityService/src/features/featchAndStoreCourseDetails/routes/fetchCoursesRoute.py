@@ -1,7 +1,5 @@
 from flask.views import MethodView
 from flask import jsonify, request
-import requests, json
-
 from src.features.featchAndStoreCourseDetails.services.initiationService import InitiationService
 
 from elasticsearch import Elasticsearch
