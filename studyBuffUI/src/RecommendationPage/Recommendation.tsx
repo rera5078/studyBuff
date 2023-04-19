@@ -103,8 +103,6 @@ function Recommendation({ results }: DashboardProps) {
   if (results) {
     const top_course = results?.top_similar_courses
 
-    console.log("top_courses", top_course)
-
     for (let i = 0; i < top_course?.length; i++) {
       myMethod(top_course[i]);
     }
@@ -240,7 +238,27 @@ function Recommendation({ results }: DashboardProps) {
 
   const cards = rows.slice(startIndex, startIndex + 4).map((item) => (
     <Grid item xs={4} key={item.id}>
-      <Card>
+      <div className="card">
+        <div className="card-details">
+          <p className="text-title">{item.CourseId}</p>
+          <p className="text-body">
+            {item.CourseDetails[0].description}
+          </p>
+        </div><button className="card-button" onClick={() => handleAddToTable(item)}>ADD</button>
+        <IconButton
+            onClick={handleClickRight}
+            sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
+          >
+            <ChevronRightIcon />
+          </IconButton>
+          <IconButton
+            onClick={handleClickLeft}
+            sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
+          >
+            <ChevronLeftIcon />
+          </IconButton>
+      </div>
+      {/* <Card>
         <CardContent>
           <p className="text-title">{item.CourseId}</p>
           <p className="text-body">
@@ -260,20 +278,9 @@ function Recommendation({ results }: DashboardProps) {
             <ChevronLeftIcon />
           </IconButton>
         </CardContent>
-      </Card>
+      </Card> */}
     </Grid>
   ));
-
-  // const cards = rows.map(
-  //   course => <div className="card">
-  //   <div className="card-details">
-  //     <p className="text-title">{course.CourseId}</p>
-  //     <p className="text-body">
-  //       {course.CourseDetails[0].description}
-  //     </p>
-  //   </div>
-  //   <button className="card-button" onClick={() => handleAddToTable(course)}>ADD</button>
-  // </div>);
 
   function handleAddToTable(course: any): undefined {
     const newTableRows = tableData.concat(course);
