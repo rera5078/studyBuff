@@ -75,6 +75,7 @@ const table_rows: ReturnType<typeof createData>[] = []
 function Recommendation({ results }: DashboardProps) {
 
   const myMethod = (value: any) => {
+    console.log("value", value)
     rows.push(
       createData(
         value.CourseId,
@@ -89,6 +90,7 @@ function Recommendation({ results }: DashboardProps) {
           description: value.Desc
         }]),
     )
+    console.log("row", rows)
   }
 
   if(results){
@@ -103,6 +105,8 @@ function Recommendation({ results }: DashboardProps) {
   else{
     rows = []
   }
+
+  console.log("rows 111 ", rows)
 
   function Row(props: { row: ReturnType<typeof createData> }) {
     const { row } = props;
