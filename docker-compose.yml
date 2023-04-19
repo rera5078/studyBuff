@@ -156,9 +156,9 @@ services:
     build:
       context: mlEngine
     ports:
-      - "5001:5001"
+      - "5050:5050"
     environment:
-      PORT: 5001
+      PORT: 5050
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
     depends_on:
       - "postgres"

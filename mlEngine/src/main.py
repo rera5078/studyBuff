@@ -260,6 +260,6 @@ if __name__ == '__main__':
     port_name = "5050"
     print("App running now\tHost: {}\tPort: {}".format(host_name, port_name))
     print("*" * 50, "\n")
-    app.run(host=host_name, port=port_name, debug=False)
+    app.run(host=host_name, port=port_name, debug=True)
 
 #EOF
