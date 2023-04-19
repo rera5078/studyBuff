@@ -76,7 +76,13 @@ function SearchPage({ setResults }: SearchPageProps) {
     const data = await response.json();
     console.log("data", data)
     if(data?.length){
-      return data
+      const rec_suggestion: Suggestion[] = data.map((item: string) => {
+        return {
+          name: item
+        }
+      });
+      console.log("rec_suggestion", rec_suggestion);
+      return rec_suggestion;
     }
     return [];
   };
