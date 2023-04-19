@@ -1,6 +1,6 @@
 #################################################################
 #   StudyBuff
-#   @version    :   1.0
+#   @version    :   2.1
 #   @date       :   03/20/2023
 #   @author     :   Pranjal Pathak
 #   @python     :   3.8.0
@@ -41,7 +41,6 @@ def load_config(config_fp, platform='dev'):
         :param:     platform: str - deployment env {dev, qa, qa1, prod}
         :return:    config: dict - loaded config file in dictionary format
     """
-    print(2)
     config = configparser.ConfigParser()
     config.read(config_fp)
     config = dict(config[platform])
@@ -59,7 +58,6 @@ def load_config(config_fp, platform='dev'):
         if config_key.endswith("bool") or config_key.endswith("num"):
             config[config_key] = ast.literal_eval(config.get(config_key))
     ####### configure ######
-    print(3)
     logger.info("config loaded.")
     return config
 
@@ -70,7 +68,6 @@ def load_resources(config):
         :param:     config: dict - loaded config dict
         :return:    :msc: - loaded objects/files/models in memory
     """
-    print(2)
     # init load resources module
     resources = loadResourcesConfig(config)
 
@@ -179,13 +176,13 @@ def generate_results():
         if request.method == "POST":
             input_json = request.json
             query = input_json.get("body").get("query")
-            print("/n/n/n", query, input_json)
             if query:
                 logger.info("MAIN QUERY: {}".format(query))
+
                 # executing NER engine
                 entities = ner_model.run(query)
-                print("/n/n/n", entities)
                 logger.info("ner: {}".format(entities))
+
                 # executing REC ENGINE
                 lst_candidates = set()
                 if len(entities) > 0:
@@ -214,13 +211,25 @@ def generate_results():
                         pass
                 else:
                     recommendations = rec_system.run(query, display=False).to_json(orient='records')
+
+                # final response
                 final_output = {
                     "query": query,
                     "ner": entities,
                 }
                 final_output.update(recommendations)
+                #print("\n\n\n", final_output, "\n\n\n")
+
+                # ::: fix string: April 19, 23 :::
                 top_courses_data = final_output.get("top_similar_courses")
-                final_output['top_similar_courses'] = ast.literal_eval(top_courses_data)
+                top_courses_data = ast.literal_eval(top_courses_data)
+                if top_courses_data:
+                    for course_item in top_courses_data:
+                        if course_item:
+                            course_item["CourseKeywords"] = list(map(lambda x: x.capitalize(), ast.literal_eval(course_item.get("CourseKeywords"))))
+                            course_item["Mode"] = list(map(lambda x: x.capitalize(), ast.literal_eval(course_item.get("Mode"))))
+                            course_item["Pre"] = list(map(lambda x: x.capitalize(), ast.literal_eval(course_item.get("Pre"))))
+                final_output['top_similar_courses'] = top_courses_data
                 logger.info("final output : {}".format(final_output))
                 logger.info("\n\n----\n\n")
             else:
@@ -237,15 +246,12 @@ def generate_results():
 ### START ENGINE ###
 if __name__ == '__main__':
     logger.info("Starting app now...")
-    print(1)
-    print(os.listdir("."))
+
     # load configuration
     config_fp = "src/studybuff_ml_engine_config.ini"
     config = load_config(config_fp)    # default: dev env
     cors = CORS(app)
     app.config['CORS_HEADERS'] = 'Content-Type'
-
-    print(1)
 
     # load static resources
     nlp_resources_fp, nlp, course_nlp, assym_model, ssym_model, assym_corpus_embeddings, \
@@ -261,7 +267,6 @@ if __name__ == '__main__':
 
     print("*" * 50)
     host_name = "127.0.0.1"
-    #host_name = "0.0.0.0"
     port_name = "5050"
     print("App running now\tHost: {}\tPort: {}".format(host_name, port_name))
     print("*" * 50, "\n")
