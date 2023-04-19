@@ -1,7 +1,7 @@
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer"
 import './Recommendation.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -45,165 +45,146 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 function createData(
-  courseID: string,
-  courseName: string,
-  departmentID: string,
-  instructionMode: string,
-  books: string,
-  notes: string,
-  restrictedInfo: string,
-  sectionInfo: any[],
-  isAdded: boolean = false
+  CourseId: string,
+  CourseName: string,
+  DepartmentName: string,
+  Mode: string,
+  CourseDifficultyBand: string,
+  CourseDifficulty: string,
+  ConfidenceScore: string,
+  CourseDetails: any[],
 ) {
   return {
-    courseID,
-    courseName,
-    departmentID,
-    instructionMode,
-    books,
-    notes,
-    restrictedInfo,
-    sectionInfo,
-    isAdded
+    CourseId,
+    CourseName,
+    DepartmentName,
+    Mode,
+    CourseDifficulty,
+    CourseDifficultyBand,
+    CourseDetails,
+    ConfidenceScore
   };
 }
 
 
-const rows: any[] = [
-  createData("ECEN 5341", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
-    {
-      sectionId: "001",
-      instructor: "N. Wright",
-      schedule: "Th 9:30a-12p"
-    },
-  ]),
-  createData("ECEN 5342", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
-    {
-      sectionId: "001",
-      instructor: "N. Wright",
-      schedule: "Th 9:30a-12p"
-    }
-  ]),
-  createData("ECEN 5343", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
-    {
-      sectionId: "001",
-      instructor: "N. Wright",
-      schedule: "Th 9:30a-12p"
-    }
-  ]),
-  createData("ECEN 5344", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
-    {
-      sectionId: "001",
-      instructor: "N. Wright",
-      schedule: "Th 9:30a-12p"
-    }
-  ]),
-];
+let rows: any[] = [];
 
 const table_rows: ReturnType<typeof createData>[] = []
 
 
 function Recommendation({ results }: DashboardProps) {
-  console.log("results", results);
-  const top_course = results?.top_similar_courses
-  console.log("top_course", top_course);
+
+  const myMethod = (value: any) => {
+    rows.push(
+      createData(
+        value.CourseId,
+        value.CourseName, 
+        value.DepartmentName,
+        value.Mode,
+        value.CourseDifficulty,
+        value.CourseDifficultyBand,
+        value.ConfidenceScore,
+        [{
+          summary: value.CourseSummary,
+          description: value.Desc
+        }]),
+    )
+  }
+
+  if(results){
+    console.log("results", results);
+    const top_course = results?.top_similar_courses
+    console.log("top_course", top_course);
+  
+    for (let i = 0; i < 4; i++) {
+      myMethod(top_course[i]);
+    }
+  }
+  else{
+    rows = []
+  }
 
   function Row(props: { row: ReturnType<typeof createData> }) {
     const { row } = props;
     const [open, setOpen] = React.useState(false);
-    function handleDeleteRow(id: any){
+    function handleDeleteRow(id: any) {
       const newList = tableData.filter((item) => item.courseID !== id);
       setTableData(newList);
       return undefined;
     }
     return (
-        <React.Fragment>
-          <StyledTableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-            <StyledTableCell>
-              <IconButton
-                  aria-label="expand row"
-                  size="small"
-                  onClick={() => setOpen(!open)}
-              >
-                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-              </IconButton>
-            </StyledTableCell>
-            <StyledTableCell component="th" scope="row">
-              {row.courseID}
-            </StyledTableCell>
-            <StyledTableCell align="center">{row.courseName}</StyledTableCell>
-            <StyledTableCell align="center">{row.departmentID}</StyledTableCell>
-            <StyledTableCell align="center">{row.instructionMode}</StyledTableCell>
-            <StyledTableCell align="center">{row.books}</StyledTableCell>
-            <StyledTableCell align="center">{row.notes}</StyledTableCell>
-            <StyledTableCell align="center">{row.restrictedInfo}</StyledTableCell>
-            <StyledTableCell>
-              <IconButton aria-label="delete" onClick = {() => handleDeleteRow(row.courseID)}>
-                <DeleteIcon />
-              </IconButton>
-            </StyledTableCell>
-          </StyledTableRow>
-          <StyledTableRow>
-            <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-              <Collapse in={open} timeout="auto" unmountOnExit>
-                <Box sx={{ margin: 1 }}>
-                  <Typography variant="h6" gutterBottom component="div">
-                    Sections
-                  </Typography>
-                  <Table size="small" aria-label="purchases">
-                    <TableHead>
+      <React.Fragment>
+        <StyledTableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+          <StyledTableCell>
+            <IconButton
+              aria-label="expand row"
+              size="small"
+              onClick={() => setOpen(!open)}
+            >
+              {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            </IconButton>
+          </StyledTableCell>
+          <StyledTableCell component="th" scope="row">
+            {row.CourseId}
+          </StyledTableCell>
+          <StyledTableCell align="center">{row.CourseName}</StyledTableCell>
+          <StyledTableCell align="center">{row.DepartmentName}</StyledTableCell>
+          <StyledTableCell align="center">{row.Mode}</StyledTableCell>
+          <StyledTableCell align="center">{row.CourseDifficulty}</StyledTableCell>
+          <StyledTableCell align="center">{row.CourseDifficultyBand}</StyledTableCell>
+          <StyledTableCell align="center">{row.ConfidenceScore}</StyledTableCell>
+          <StyledTableCell>
+            <IconButton aria-label="delete" onClick={() => handleDeleteRow(row.CourseId)}>
+              <DeleteIcon />
+            </IconButton>
+          </StyledTableCell>
+        </StyledTableRow>
+        <StyledTableRow>
+          <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <Box sx={{ margin: 1 }}>
+                <Typography variant="h6" gutterBottom component="div">
+                  Sections
+                </Typography>
+                <Table size="small" aria-label="purchases">
+                  <TableHead>
+                    <StyledTableRow>
+                      <StyledTableCell>ID</StyledTableCell>
+                      <StyledTableCell>Instructor</StyledTableCell>
+                      <StyledTableCell>Schedule</StyledTableCell>
+                    </StyledTableRow>
+                  </TableHead>
+                  <TableBody>
+                    {row.CourseDetails.map((sectionRow) => (
                       <StyledTableRow>
-                        <StyledTableCell>ID</StyledTableCell>
-                        <StyledTableCell>Instructor</StyledTableCell>
-                        <StyledTableCell>Schedule</StyledTableCell>
+                        <StyledTableCell>{sectionRow.summary}</StyledTableCell>
+                        <StyledTableCell>{sectionRow.description}</StyledTableCell>
                       </StyledTableRow>
-                    </TableHead>
-                    <TableBody>
-                      {row.sectionInfo.map((sectionRow) => (
-                          <StyledTableRow key={sectionRow.sectionId}>
-                            <StyledTableCell component="th" scope="row">
-                              {sectionRow.sectionId}
-                            </StyledTableCell>
-                            <StyledTableCell>{sectionRow.instructor}</StyledTableCell>
-                            <StyledTableCell>{sectionRow.schedule}</StyledTableCell>
-                          </StyledTableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </Box>
-              </Collapse>
-            </TableCell>
-          </StyledTableRow>
-        </React.Fragment>
+                    ))}
+                  </TableBody>
+                </Table>
+              </Box>
+            </Collapse>
+          </TableCell>
+        </StyledTableRow>
+      </React.Fragment>
     );
   }
-
-
-  /////////
-  /////////
-  /////////
-  console.log("Recommendation Page results", results);
   const [users, setUsers] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
   const [tableData, setTableData] = useState<any[]>([]);
-  useEffect(() => {
-    setLoading(true)
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(json => setUsers(json))
-      .finally(() => {
-        setLoading(false)
-      })
-  }, [])
-const cards = rows.map(course => <div className="card">
-  <div className="card-details">
-    <p className="text-title">{course.courseID}</p>
-    <p className="text-body">
-      Effects of electric and magnetic fields on biological systems are described with applications to therapy and safety. The complexity of biological systems is described to provide a better understanding of the distribution of fields inside the body. Risk analysis is also introduced. Same as ECEN 4341.
-    </p>
-  </div>
-  <button className="card-button" onClick={() => handleAddToTable(course)}>ADD</button>
-</div>);
+
+  const cards = rows.map(
+    course => <div className="card">
+    <div className="card-details">
+      <p className="text-title">{course.CourseId}</p>
+      <p className="text-body">
+        {course.CourseDetails[0].description}
+      </p>
+    </div>
+    <button className="card-button" onClick={() => handleAddToTable(course)}>ADD</button>
+  </div>);
+
   function handleAddToTable(course: any): undefined {
     const newTableRows = tableData.concat(course);
     setTableData(newTableRows);
@@ -231,11 +212,11 @@ const cards = rows.map(course => <div className="card">
                       <StyledTableCell />
                       <StyledTableCell>Course ID</StyledTableCell>
                       <StyledTableCell align="center">Course Name</StyledTableCell>
-                      <StyledTableCell align="center">Department ID</StyledTableCell>
+                      <StyledTableCell align="center">Department Name</StyledTableCell>
                       <StyledTableCell align="center">Instruction Mode</StyledTableCell>
-                      <StyledTableCell align="center">Course Materials</StyledTableCell>
-                      <StyledTableCell align="center">Notes</StyledTableCell>
-                      <StyledTableCell align="center">Restricted Info</StyledTableCell>
+                      <StyledTableCell align="center">Course Difficulty Score</StyledTableCell>
+                      <StyledTableCell align="center">Course Difficulty Level</StyledTableCell>
+                      <StyledTableCell align="center">Confidence Score</StyledTableCell>
                       <StyledTableCell />
                     </StyledTableRow>
                   </TableHead>
