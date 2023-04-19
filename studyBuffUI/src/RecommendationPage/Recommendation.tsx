@@ -103,7 +103,9 @@ function Recommendation({ results }: DashboardProps) {
   if (results) {
     const top_course = results?.top_similar_courses
 
-    for (let i = 0; i < top_course.length; i++) {
+    console.log("top_courses", top_course)
+
+    for (let i = 0; i < top_course?.length; i++) {
       myMethod(top_course[i]);
     }
   }
