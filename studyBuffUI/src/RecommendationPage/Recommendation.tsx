@@ -1,4 +1,3 @@
-import InfoCard from "../InfoCard/InfoCard";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer"
 import './Recommendation.css';
@@ -23,7 +22,7 @@ import Loading from "../Loading/Loading";
 import { SearchResult } from "./api";
 
 interface DashboardProps {
-  results: SearchResult[];
+  results: SearchResult | undefined;
 }
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -105,6 +104,9 @@ const table_rows: ReturnType<typeof createData>[] = []
 
 
 function Recommendation({ results }: DashboardProps) {
+  console.log("results", results);
+  const top_course = results?.top_similar_courses
+  console.log("top_course", top_course);
 
   function Row(props: { row: ReturnType<typeof createData> }) {
     const { row } = props;
@@ -210,16 +212,11 @@ const cards = rows.map(course => <div className="card">
 
   return (
     <div>
-      <span>{results[0].top_similar_courses}</span>
       {loading ? <Loading /> : undefined}
       <NavBar></NavBar>
       <Footer></Footer>
       <div className="container">
         {cards}
-        {/*<InfoCard></InfoCard>*/}
-        {/*<InfoCard></InfoCard>*/}
-        {/*<InfoCard></InfoCard>*/}
-        {/*<InfoCard></InfoCard>*/}
       </div>
       <div className="tabel">
         <div className="App">

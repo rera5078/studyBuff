@@ -11,7 +11,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import axios from 'axios';
 
 interface SearchPageProps {
-  setResults: (results: SearchResult[]) => void;
+  setResults: (results: SearchResult) => void;
 }
 
 interface Option {
@@ -25,8 +25,6 @@ function SearchPage({ setResults }: SearchPageProps) {
   const [open, setOpen] = useState(false);
   const [options, setOptions] = useState<any>([]);
   const [loading, setLoading] = useState(false);
-
-  const getOptionSelected = (option: Option, value: Option) => option.id === value.id;
 
   const getOptionLabel = (option: Option) => option.name;
 

@@ -10,7 +10,7 @@ import Loading from "./Loading/Loading";
 import { SearchResult } from './RecommendationPage/api';
 
 function App() {
-    const [results, setResults] = useState<SearchResult[]>([]);
+    const [results, setResults] = useState<SearchResult>();
     return (
         <React.Fragment>
             <meta name={"viewport"} content={"width=device-width, initial scale=0.1"}></meta>
