@@ -265,3 +265,4 @@ wsproto==1.2.0
 xlrd==2.0.1
 yake @ git+https://github.com/LIAAD/yake@374fc1c1c19eb080d5b6115cbb8d4a4324392e54
 zipp==3.11.0
+flask-cors==3.0.10

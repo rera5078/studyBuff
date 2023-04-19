@@ -10,6 +10,7 @@
 import sys
 import os
 import configparser
+from flask_cors import CORS
 
 # load user defined Classes
 from loadReq import *
@@ -236,6 +237,8 @@ if __name__ == '__main__':
     # load configuration
     config_fp = "src/studybuff_ml_engine_config.ini"
     config = load_config(config_fp)    # default: dev env
+    cors = CORS(app)
+    app.config['CORS_HEADERS'] = 'Content-Type'
 
     print(1)
 

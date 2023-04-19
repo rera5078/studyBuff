@@ -72,6 +72,11 @@ function createData(
 function Row(props: { row: ReturnType<typeof createData> }) {
   const { row } = props;
   const [open, setOpen] = React.useState(false);
+  // function handleDeleteRow(id: any){
+  //   const newList = tableData.filter((item) => item.courseID !== id);
+  //   setTableData(newList);
+  //   return undefined;
+  // }
   return (
     <React.Fragment>
       <StyledTableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
@@ -134,7 +139,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
   );
 }
 
-const rows = [
+const rows: any[] = [
   createData("ECEN 5341", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
     {
       sectionId: "001",
@@ -165,16 +170,15 @@ const rows = [
   ]),
 ];
 
-const table_rows = []
+const table_rows: ReturnType<typeof createData>[] = []
 
 
 function Recommendation({ results }: DashboardProps) {
 
   console.log("Recommendation Page results", results);
-
   const [users, setUsers] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
-  const [tableData, setTableData] = useState([]);
+  const [tableData, setTableData] = useState<any[]>([]);
   useEffect(() => {
     setLoading(true)
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -184,17 +188,31 @@ function Recommendation({ results }: DashboardProps) {
         setLoading(false)
       })
   }, [])
-
+const cards = rows.map(course => <div className="card">
+  <div className="card-details">
+    <p className="text-title">{course.courseID}</p>
+    <p className="text-body">
+      Effects of electric and magnetic fields on biological systems are described with applications to therapy and safety. The complexity of biological systems is described to provide a better understanding of the distribution of fields inside the body. Risk analysis is also introduced. Same as ECEN 4341.
+    </p>
+  </div>
+  <button className="card-button" onClick={() => handleAddToTable(course)}>ADD</button>
+</div>);
+  function handleAddToTable(course: any): undefined {
+    const newTableRows = tableData.concat(course);
+    setTableData(newTableRows);
+    return undefined;
+  }
   return (
     <div>
       {loading ? <Loading /> : undefined}
       <NavBar></NavBar>
       <Footer></Footer>
       <div className="container">
-        <InfoCard></InfoCard>
-        <InfoCard></InfoCard>
-        <InfoCard></InfoCard>
-        <InfoCard></InfoCard>
+        {cards}
+        {/*<InfoCard></InfoCard>*/}
+        {/*<InfoCard></InfoCard>*/}
+        {/*<InfoCard></InfoCard>*/}
+        {/*<InfoCard></InfoCard>*/}
       </div>
       <div className="tabel">
         <div className="App">
@@ -218,7 +236,7 @@ function Recommendation({ results }: DashboardProps) {
                     </StyledTableRow>
                   </TableHead>
                   <TableBody>
-                    {rows.map((row) => (
+                    {tableData.map((row) => (
                       <Row key={row.courseID} row={row} />
                     ))}
                   </TableBody>
