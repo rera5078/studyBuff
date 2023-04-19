@@ -229,7 +229,7 @@ function Recommendation({ results }: DashboardProps) {
   );
 
   const cards = rows.slice(startIndex, startIndex + 4).map((item) => (
-    <Grid item xs={4} key={item.id}>
+    <Grid item xs={4} key={item.id} style={{ minWidth: "100%"} }>
       <div className="card">
         <div className="card-details">
           <p className="text-title">{item.CourseId}</p>
