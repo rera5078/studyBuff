@@ -96,6 +96,7 @@ function Recommendation({ results }: DashboardProps) {
   if(results){
     console.log("results", results);
     const top_course = results?.top_similar_courses
+    JSON.parse(top_course);
     console.log("top_course", top_course);
   
     for (let i = 0; i < 4; i++) {

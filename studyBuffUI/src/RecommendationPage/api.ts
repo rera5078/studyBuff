@@ -5,7 +5,7 @@ export interface SearchResult {
   platform: string[];
   ner: string[][];
   top_similar_count: number;
-  top_similar_courses: string[];
+  top_similar_courses: string;
 }
 
 export interface DropdownOptions {
