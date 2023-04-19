@@ -2,8 +2,11 @@
     margin-top: 88px;
     margin-left: 4px;
     display: flex;
-    width: 100%;
-    
+    min-width: 100%;
+}
+
+.mainContainer{
+    width: 100%
 }
 
 .tabel{
@@ -12,11 +15,12 @@
     padding: 8px;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .card {
-    width: 240px;
-    height: 240px;
+    width: 320px;
+    height: 320px;
     border-radius: 20px;
     background: rgb(7, 15, 45);;
     position: relative;
@@ -29,15 +33,15 @@
 
 .card-details {
     color: rgb(7, 15, 45);
-    height: 100%;
-    gap: .5em;
+    /* height: 100%; */
+    gap: .2em;
     display: grid;
     place-content: center;
 }
 
 .card-button {
     transform: translate(-50%, 125%);
-    width: 60%;
+    width: 75%;
     border-radius: 1rem;
     border: none;
     background-color: rgb(7, 15, 45);

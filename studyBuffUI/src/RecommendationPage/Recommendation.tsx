@@ -139,25 +139,11 @@ function Recommendation({ results }: DashboardProps) {
           <StyledTableCell align="center">{row.CourseName}</StyledTableCell>
           <StyledTableCell align="center">{row.DepartmentName}</StyledTableCell>
           <StyledTableCell align="center">
-            <Paper
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                flexWrap: 'wrap',
-                listStyle: 'none',
-                p: 0.5,
-                m: 0,
-              }}
-              component="ul"
-            >
-              {row.Mode.map((data: any) => {
-                return (
-                  <ListItem>
-                    <Chip label={data.label} color="primary" variant="outlined" />
-                  </ListItem>
-                );
-              })}
-            </Paper>
+            {row.Mode.map((data: any) => {
+              return (
+                <Chip label={data} color="primary" variant="outlined" />
+              );
+            })}
           </StyledTableCell>
           <StyledTableCell align="center">{row.CourseDifficultyBand}</StyledTableCell>
           <StyledTableCell align="center">{row.CourseDifficulty}</StyledTableCell>
@@ -187,25 +173,11 @@ function Recommendation({ results }: DashboardProps) {
                       <StyledTableRow>
                         <StyledTableCell>{sectionRow.summary}</StyledTableCell>
                         <StyledTableCell>
-                          <Paper
-                            sx={{
-                              display: 'flex',
-                              justifyContent: 'center',
-                              flexWrap: 'wrap',
-                              listStyle: 'none',
-                              p: 0.5,
-                              m: 0,
-                            }}
-                            component="ul"
-                          >
-                            {sectionRow.courseKeywords.map((data: any) => {
-                              return (
-                                <ListItem>
-                                  <Chip label={data.label} color="primary" variant="outlined" />
-                                </ListItem>
-                              );
-                            })}
-                          </Paper>
+                          {sectionRow.courseKeywords.map((data: any) => {
+                            return (
+                              <Chip label={data} color="primary" variant="outlined" />
+                            );
+                          })}
                         </StyledTableCell>
                       </StyledTableRow>
                     ))}
@@ -226,13 +198,13 @@ function Recommendation({ results }: DashboardProps) {
 
   const handleClickLeft = () => {
     setStartIndex((prevStartIndex) =>
-      Math.max(0, prevStartIndex - 4)
+      Math.max(0, prevStartIndex - 3)
     );
   };
 
   const handleClickRight = () => {
     setStartIndex((prevStartIndex) =>
-      Math.min(rows.length - 4, prevStartIndex + 4)
+      Math.min(rows.length - 3, prevStartIndex + 3)
     );
   };
 
@@ -256,8 +228,8 @@ function Recommendation({ results }: DashboardProps) {
     </IconButton>
   );
 
-  const cards = rows.slice(startIndex, startIndex + 4).map((item) => (
-    <Grid item xs={4} key={item.id}>
+  const cards = rows.slice(startIndex, startIndex + 3).map((item) => (
+    <Grid item xs={3} key={item.id}>
       <div className="card">
         <div className="card-details">
           <p className="text-title">{item.CourseId}</p>
@@ -288,7 +260,7 @@ function Recommendation({ results }: DashboardProps) {
   }
 
   return (
-    <div>
+    <div className="mainContainer">
       {loading ? <Loading /> : undefined}
       <NavBar></NavBar>
       <Footer></Footer>
