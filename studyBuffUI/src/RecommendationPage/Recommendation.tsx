@@ -69,75 +69,6 @@ function createData(
   };
 }
 
-function Row(props: { row: ReturnType<typeof createData> }) {
-  const { row } = props;
-  const [open, setOpen] = React.useState(false);
-  // function handleDeleteRow(id: any){
-  //   const newList = tableData.filter((item) => item.courseID !== id);
-  //   setTableData(newList);
-  //   return undefined;
-  // }
-  return (
-    <React.Fragment>
-      <StyledTableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-        <StyledTableCell>
-          <IconButton
-            aria-label="expand row"
-            size="small"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-          </IconButton>
-        </StyledTableCell>
-        <StyledTableCell component="th" scope="row">
-          {row.courseID}
-        </StyledTableCell>
-        <StyledTableCell align="center">{row.courseName}</StyledTableCell>
-        <StyledTableCell align="center">{row.departmentID}</StyledTableCell>
-        <StyledTableCell align="center">{row.instructionMode}</StyledTableCell>
-        <StyledTableCell align="center">{row.books}</StyledTableCell>
-        <StyledTableCell align="center">{row.notes}</StyledTableCell>
-        <StyledTableCell align="center">{row.restrictedInfo}</StyledTableCell>
-        <StyledTableCell>
-          <IconButton aria-label="delete">
-            <DeleteIcon />
-          </IconButton>
-        </StyledTableCell>
-      </StyledTableRow>
-      <StyledTableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box sx={{ margin: 1 }}>
-              <Typography variant="h6" gutterBottom component="div">
-                Sections
-              </Typography>
-              <Table size="small" aria-label="purchases">
-                <TableHead>
-                  <StyledTableRow>
-                    <StyledTableCell>ID</StyledTableCell>
-                    <StyledTableCell>Instructor</StyledTableCell>
-                    <StyledTableCell>Schedule</StyledTableCell>
-                  </StyledTableRow>
-                </TableHead>
-                <TableBody>
-                  {row.sectionInfo.map((sectionRow) => (
-                    <StyledTableRow key={sectionRow.sectionId}>
-                      <StyledTableCell component="th" scope="row">
-                        {sectionRow.sectionId}
-                      </StyledTableCell>
-                      <StyledTableCell>{sectionRow.instructor}</StyledTableCell>
-                      <StyledTableCell>{sectionRow.schedule}</StyledTableCell>
-                    </StyledTableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </Box>
-          </Collapse>
-        </TableCell>
-      </StyledTableRow>
-    </React.Fragment>
-  );
-}
 
 const rows: any[] = [
   createData("ECEN 5341", "Bioelectromagnetics", "ECEN", "In Person", "The teacher has not indicated if course materials are required for this course.", "", "Restricted to graduate students only.", [
@@ -175,6 +106,80 @@ const table_rows: ReturnType<typeof createData>[] = []
 
 function Recommendation({ results }: DashboardProps) {
 
+  function Row(props: { row: ReturnType<typeof createData> }) {
+    const { row } = props;
+    const [open, setOpen] = React.useState(false);
+    function handleDeleteRow(id: any){
+      const newList = tableData.filter((item) => item.courseID !== id);
+      setTableData(newList);
+      return undefined;
+    }
+    return (
+        <React.Fragment>
+          <StyledTableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+            <StyledTableCell>
+              <IconButton
+                  aria-label="expand row"
+                  size="small"
+                  onClick={() => setOpen(!open)}
+              >
+                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+              </IconButton>
+            </StyledTableCell>
+            <StyledTableCell component="th" scope="row">
+              {row.courseID}
+            </StyledTableCell>
+            <StyledTableCell align="center">{row.courseName}</StyledTableCell>
+            <StyledTableCell align="center">{row.departmentID}</StyledTableCell>
+            <StyledTableCell align="center">{row.instructionMode}</StyledTableCell>
+            <StyledTableCell align="center">{row.books}</StyledTableCell>
+            <StyledTableCell align="center">{row.notes}</StyledTableCell>
+            <StyledTableCell align="center">{row.restrictedInfo}</StyledTableCell>
+            <StyledTableCell>
+              <IconButton aria-label="delete" onClick = {() => handleDeleteRow(row.courseID)}>
+                <DeleteIcon />
+              </IconButton>
+            </StyledTableCell>
+          </StyledTableRow>
+          <StyledTableRow>
+            <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+              <Collapse in={open} timeout="auto" unmountOnExit>
+                <Box sx={{ margin: 1 }}>
+                  <Typography variant="h6" gutterBottom component="div">
+                    Sections
+                  </Typography>
+                  <Table size="small" aria-label="purchases">
+                    <TableHead>
+                      <StyledTableRow>
+                        <StyledTableCell>ID</StyledTableCell>
+                        <StyledTableCell>Instructor</StyledTableCell>
+                        <StyledTableCell>Schedule</StyledTableCell>
+                      </StyledTableRow>
+                    </TableHead>
+                    <TableBody>
+                      {row.sectionInfo.map((sectionRow) => (
+                          <StyledTableRow key={sectionRow.sectionId}>
+                            <StyledTableCell component="th" scope="row">
+                              {sectionRow.sectionId}
+                            </StyledTableCell>
+                            <StyledTableCell>{sectionRow.instructor}</StyledTableCell>
+                            <StyledTableCell>{sectionRow.schedule}</StyledTableCell>
+                          </StyledTableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </Box>
+              </Collapse>
+            </TableCell>
+          </StyledTableRow>
+        </React.Fragment>
+    );
+  }
+
+
+  /////////
+  /////////
+  /////////
   console.log("Recommendation Page results", results);
   const [users, setUsers] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
@@ -202,6 +207,7 @@ const cards = rows.map(course => <div className="card">
     setTableData(newTableRows);
     return undefined;
   }
+
   return (
     <div>
       {loading ? <Loading /> : undefined}
