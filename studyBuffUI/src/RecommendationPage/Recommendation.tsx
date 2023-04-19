@@ -210,6 +210,7 @@ const cards = rows.map(course => <div className="card">
 
   return (
     <div>
+      <span>{results[0].top_similar_courses}</span>
       {loading ? <Loading /> : undefined}
       <NavBar></NavBar>
       <Footer></Footer>
