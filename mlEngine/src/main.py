@@ -177,11 +177,13 @@ def generate_results():
         # INPUT
         if request.method == "POST":
             input_json = request.json
-            query = input_json.get("query")
+            query = input_json.get("body").get("query")
+            print("/n/n/n", query, input_json)
             if query:
                 logger.info("MAIN QUERY: {}".format(query))
                 # executing NER engine
                 entities = ner_model.run(query)
+                print("/n/n/n", entities)
                 logger.info("ner: {}".format(entities))
                 # executing REC ENGINE
                 lst_candidates = set()
