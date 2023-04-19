@@ -59,6 +59,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash.debounce": "^4.0.7",
     "@types/react-router-dom": "^5.3.3",
     "dotenv": "^16.0.3"
   }

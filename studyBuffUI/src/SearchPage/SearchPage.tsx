@@ -88,7 +88,7 @@ function SearchPage({ setResults }: SearchPageProps) {
         console.log("rec_suggestion", rec_suggestion);
         return rec_suggestion;
       }
-    }, 500)
+    }, 2000)
   
     debouncedFilter()
     return [];
