@@ -27,14 +27,23 @@
     font-size: 20px;
 } 
 .custom-search-button {
-    border: 0;
     background: #12204F;
     color: #fff;
     outline: none;
-    z-index: 2;
-    border-radius: 10px;
-    font-size:20px;
+    border-radius: 0;
+    height: 64px;
     font-family: 'Roboto', sans-serif;
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
+.sugestionOptions{
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggest{
+    margin: 4px;
 }
 

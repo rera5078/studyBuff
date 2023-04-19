@@ -20,6 +20,13 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import React from "react";
 import Loading from "../Loading/Loading";
 import { SearchResult } from "./api";
+import Grid from "@mui/material/Grid";
+import CardContent from "@mui/material/CardContent";
+import Card from "@mui/material/Card";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import Chip from "@mui/material/Chip";
+import ListItem from "@mui/material/ListItem";
 
 interface DashboardProps {
   results: SearchResult | undefined;
@@ -79,7 +86,7 @@ function Recommendation({ results }: DashboardProps) {
     rows.push(
       createData(
         value.CourseId,
-        value.CourseName, 
+        value.CourseName,
         value.DepartmentName,
         value.Mode,
         value.CourseDifficulty,
@@ -93,14 +100,14 @@ function Recommendation({ results }: DashboardProps) {
     )
   }
 
-  if(results){
+  if (results) {
     const top_course = results?.top_similar_courses
-  
-    for (let i = 0; i < 4; i++) {
+
+    for (let i = 0; i < top_course.length; i++) {
       myMethod(top_course[i]);
     }
   }
-  else{
+  else {
     rows = []
   }
 
@@ -159,7 +166,27 @@ function Recommendation({ results }: DashboardProps) {
                     {row.CourseDetails.map((sectionRow) => (
                       <StyledTableRow>
                         <StyledTableCell>{sectionRow.summary}</StyledTableCell>
-                        <StyledTableCell>{sectionRow.courseKeywords}</StyledTableCell>
+                        <StyledTableCell>
+                          <Paper
+                            sx={{
+                              display: 'flex',
+                              justifyContent: 'center',
+                              flexWrap: 'wrap',
+                              listStyle: 'none',
+                              p: 0.5,
+                              m: 0,
+                            }}
+                            component="ul"
+                          >
+                            {sectionRow.courseKeywords.map((data: any) => {
+                              return (
+                                <ListItem>
+                                  <Chip label={data.label} color="primary" variant="outlined" />
+                                </ListItem>
+                              );
+                            })}
+                          </Paper>
+                        </StyledTableCell>
                       </StyledTableRow>
                     ))}
                   </TableBody>
@@ -175,16 +202,76 @@ function Recommendation({ results }: DashboardProps) {
   const [loading, setLoading] = useState(false)
   const [tableData, setTableData] = useState<any[]>([]);
 
-  const cards = rows.map(
-    course => <div className="card">
-    <div className="card-details">
-      <p className="text-title">{course.CourseId}</p>
-      <p className="text-body">
-        {course.CourseDetails[0].description}
-      </p>
-    </div>
-    <button className="card-button" onClick={() => handleAddToTable(course)}>ADD</button>
-  </div>);
+  const [startIndex, setStartIndex] = useState(0);
+
+  const handleClickLeft = () => {
+    setStartIndex((prevStartIndex) =>
+      Math.max(0, prevStartIndex - 4)
+    );
+  };
+
+  const handleClickRight = () => {
+    setStartIndex((prevStartIndex) =>
+      Math.min(rows.length - 4, prevStartIndex + 4)
+    );
+  };
+
+  const leftArrow = (
+    <IconButton
+      disabled={startIndex === 0}
+      onClick={handleClickLeft}
+      sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
+    >
+      <ChevronLeftIcon />
+    </IconButton>
+  );
+
+  const rightArrow = (
+    <IconButton
+      disabled={startIndex >= rows.length - 3}
+      onClick={handleClickRight}
+      sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
+    >
+      <ChevronRightIcon />
+    </IconButton>
+  );
+
+  const cards = rows.slice(startIndex, startIndex + 4).map((item) => (
+    <Grid item xs={4} key={item.id}>
+      <Card>
+        <CardContent>
+          <p className="text-title">{item.CourseId}</p>
+          <p className="text-body">
+            {item.CourseDetails[0].description}
+          </p>
+          <button className="card-button" onClick={() => handleAddToTable(item)}>View Details</button>
+          <IconButton
+            onClick={handleClickRight}
+            sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
+          >
+            <ChevronRightIcon />
+          </IconButton>
+          <IconButton
+            onClick={handleClickLeft}
+            sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
+          >
+            <ChevronLeftIcon />
+          </IconButton>
+        </CardContent>
+      </Card>
+    </Grid>
+  ));
+
+  // const cards = rows.map(
+  //   course => <div className="card">
+  //   <div className="card-details">
+  //     <p className="text-title">{course.CourseId}</p>
+  //     <p className="text-body">
+  //       {course.CourseDetails[0].description}
+  //     </p>
+  //   </div>
+  //   <button className="card-button" onClick={() => handleAddToTable(course)}>ADD</button>
+  // </div>);
 
   function handleAddToTable(course: any): undefined {
     const newTableRows = tableData.concat(course);
@@ -198,7 +285,13 @@ function Recommendation({ results }: DashboardProps) {
       <NavBar></NavBar>
       <Footer></Footer>
       <div className="container">
-        {cards}
+        <div style={{ position: "relative" }}>
+          {leftArrow}
+          <Grid container spacing={2}>
+            {cards}
+          </Grid>
+          {rightArrow}
+        </div>
       </div>
       <div className="tabel">
         <div className="App">
