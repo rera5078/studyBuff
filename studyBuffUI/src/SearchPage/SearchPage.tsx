@@ -75,6 +75,9 @@ function SearchPage({ setResults }: SearchPageProps) {
     const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${query}`);
     const data = await response.json();
     console.log("data", data)
+    if(data?.length){
+      return data
+    }
     return [];
   };
 
