@@ -9,6 +9,7 @@
 # Imports
 import sys
 import os
+import ast
 import configparser
 from flask_cors import CORS
 
@@ -218,6 +219,8 @@ def generate_results():
                     "ner": entities,
                 }
                 final_output.update(recommendations)
+                top_courses_data = final_output.get("top_similar_courses")
+                final_output['top_similar_courses'] = ast.literal_eval(top_courses_data)
                 logger.info("final output : {}".format(final_output))
                 logger.info("\n\n----\n\n")
             else:
