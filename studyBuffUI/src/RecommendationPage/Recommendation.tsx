@@ -55,7 +55,7 @@ function createData(
   CourseId: string,
   CourseName: string,
   DepartmentName: string,
-  Mode: string,
+  Mode: string[],
   CourseDifficultyBand: string,
   CourseDifficulty: string,
   ConfidenceScore: string,
@@ -138,9 +138,29 @@ function Recommendation({ results }: DashboardProps) {
           </StyledTableCell>
           <StyledTableCell align="center">{row.CourseName}</StyledTableCell>
           <StyledTableCell align="center">{row.DepartmentName}</StyledTableCell>
-          <StyledTableCell align="center">{row.Mode}</StyledTableCell>
-          <StyledTableCell align="center">{row.CourseDifficulty}</StyledTableCell>
+          <StyledTableCell align="center">
+            <Paper
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                flexWrap: 'wrap',
+                listStyle: 'none',
+                p: 0.5,
+                m: 0,
+              }}
+              component="ul"
+            >
+              {row.Mode.map((data: any) => {
+                return (
+                  <ListItem>
+                    <Chip label={data.label} color="primary" variant="outlined" />
+                  </ListItem>
+                );
+              })}
+            </Paper>
+          </StyledTableCell>
           <StyledTableCell align="center">{row.CourseDifficultyBand}</StyledTableCell>
+          <StyledTableCell align="center">{row.CourseDifficulty}</StyledTableCell>
           <StyledTableCell align="center">{row.ConfidenceScore}</StyledTableCell>
           <StyledTableCell>
             <IconButton aria-label="delete" onClick={() => handleDeleteRow(row.CourseId)}>
@@ -245,40 +265,19 @@ function Recommendation({ results }: DashboardProps) {
             {item.CourseDetails[0].description}
           </p>
         </div><button className="card-button" onClick={() => handleAddToTable(item)}>ADD</button>
-        <IconButton
-            onClick={handleClickRight}
-            sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
-          >
-            <ChevronRightIcon />
-          </IconButton>
-          <IconButton
-            onClick={handleClickLeft}
-            sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
-          >
-            <ChevronLeftIcon />
-          </IconButton>
       </div>
-      {/* <Card>
-        <CardContent>
-          <p className="text-title">{item.CourseId}</p>
-          <p className="text-body">
-            {item.CourseDetails[0].description}
-          </p>
-          <button className="card-button" onClick={() => handleAddToTable(item)}>View Details</button>
-          <IconButton
-            onClick={handleClickRight}
-            sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
-          >
-            <ChevronRightIcon />
-          </IconButton>
-          <IconButton
-            onClick={handleClickLeft}
-            sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
-          >
-            <ChevronLeftIcon />
-          </IconButton>
-        </CardContent>
-      </Card> */}
+      <IconButton
+        onClick={handleClickRight}
+        sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
+      >
+        <ChevronRightIcon />
+      </IconButton>
+      <IconButton
+        onClick={handleClickLeft}
+        sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
+      >
+        <ChevronLeftIcon />
+      </IconButton>
     </Grid>
   ));
 
