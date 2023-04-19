@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import Footer from "../Footer/Footer";
 import TextField from '@mui/material/TextField';
 import CircularProgress from '@mui/material/CircularProgress';
-import axios from 'axios';
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import { List } from '@mui/icons-material';
@@ -75,7 +74,8 @@ function SearchPage({ setResults }: SearchPageProps) {
   const fetchSuggestions = async (query: string): Promise<Suggestion[]> => {
     const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${query}`);
     const data = await response.json();
-    return data;
+    console.log("data", data)
+    return [];
   };
 
   return (
