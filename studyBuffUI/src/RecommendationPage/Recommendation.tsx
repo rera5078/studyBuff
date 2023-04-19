@@ -87,7 +87,8 @@ function Recommendation({ results }: DashboardProps) {
         value.ConfidenceScore,
         [{
           summary: value.CourseSummary,
-          description: value.CourseKeywords
+          description: value.Desc,
+          courseKeywords: value.CourseKeywords
         }]),
     )
   }
@@ -151,14 +152,14 @@ function Recommendation({ results }: DashboardProps) {
                   <TableHead>
                     <StyledTableRow>
                       <StyledTableCell>Summary</StyledTableCell>
-                      <StyledTableCell>Schedule</StyledTableCell>
+                      <StyledTableCell>Course Keywords</StyledTableCell>
                     </StyledTableRow>
                   </TableHead>
                   <TableBody>
                     {row.CourseDetails.map((sectionRow) => (
                       <StyledTableRow>
                         <StyledTableCell>{sectionRow.summary}</StyledTableCell>
-                        <StyledTableCell>{sectionRow.CourseKeywords}</StyledTableCell>
+                        <StyledTableCell>{sectionRow.courseKeywords}</StyledTableCell>
                       </StyledTableRow>
                     ))}
                   </TableBody>
