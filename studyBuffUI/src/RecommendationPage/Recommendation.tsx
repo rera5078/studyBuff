@@ -198,13 +198,13 @@ function Recommendation({ results }: DashboardProps) {
 
   const handleClickLeft = () => {
     setStartIndex((prevStartIndex) =>
-      Math.max(0, prevStartIndex - 3)
+      Math.max(0, prevStartIndex - 4)
     );
   };
 
   const handleClickRight = () => {
     setStartIndex((prevStartIndex) =>
-      Math.min(rows.length - 3, prevStartIndex + 3)
+      Math.min(rows.length - 4, prevStartIndex + 4)
     );
   };
 
@@ -220,7 +220,7 @@ function Recommendation({ results }: DashboardProps) {
 
   const rightArrow = (
     <IconButton
-      disabled={startIndex >= rows.length - 3}
+      disabled={startIndex >= rows.length - 4}
       onClick={handleClickRight}
       sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
     >
@@ -228,8 +228,8 @@ function Recommendation({ results }: DashboardProps) {
     </IconButton>
   );
 
-  const cards = rows.slice(startIndex, startIndex + 3).map((item) => (
-    <Grid item xs={3} key={item.id}>
+  const cards = rows.slice(startIndex, startIndex + 4).map((item) => (
+    <Grid item xs={4} key={item.id}>
       <div className="card">
         <div className="card-details">
           <p className="text-title">{item.CourseId}</p>

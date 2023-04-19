@@ -33,10 +33,10 @@
 
 .card-details {
     color: rgb(7, 15, 45);
-    /* height: 100%; */
-    gap: .2em;
+    gap: .5em;
     display: grid;
     place-content: center;
+    min-height: 320px;
 }
 
 .card-button {
