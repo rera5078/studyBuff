@@ -61,8 +61,8 @@ function createData(
     Mode,
     CourseDifficulty,
     CourseDifficultyBand,
-    CourseDetails,
-    ConfidenceScore
+    ConfidenceScore,
+    CourseDetails
   };
 }
 
@@ -73,7 +73,7 @@ const table_rows: ReturnType<typeof createData>[] = []
 
 
 function Recommendation({ results }: DashboardProps) {
-
+  rows = []
   const myMethod = (value: any) => {
     console.log("value", value)
     rows.push(
@@ -87,16 +87,13 @@ function Recommendation({ results }: DashboardProps) {
         value.ConfidenceScore,
         [{
           summary: value.CourseSummary,
-          description: value.Desc
+          description: value.CourseKeywords
         }]),
     )
-    console.log("row", rows)
   }
 
   if(results){
-    console.log("results", results);
     const top_course = results?.top_similar_courses
-    console.log("top_course", top_course);
   
     for (let i = 0; i < 4; i++) {
       myMethod(top_course[i]);
@@ -153,8 +150,7 @@ function Recommendation({ results }: DashboardProps) {
                 <Table size="small" aria-label="purchases">
                   <TableHead>
                     <StyledTableRow>
-                      <StyledTableCell>ID</StyledTableCell>
-                      <StyledTableCell>Instructor</StyledTableCell>
+                      <StyledTableCell>Summary</StyledTableCell>
                       <StyledTableCell>Schedule</StyledTableCell>
                     </StyledTableRow>
                   </TableHead>
@@ -162,7 +158,7 @@ function Recommendation({ results }: DashboardProps) {
                     {row.CourseDetails.map((sectionRow) => (
                       <StyledTableRow>
                         <StyledTableCell>{sectionRow.summary}</StyledTableCell>
-                        <StyledTableCell>{sectionRow.description}</StyledTableCell>
+                        <StyledTableCell>{sectionRow.CourseKeywords}</StyledTableCell>
                       </StyledTableRow>
                     ))}
                   </TableBody>
@@ -220,7 +216,7 @@ function Recommendation({ results }: DashboardProps) {
                       <StyledTableCell align="center">Instruction Mode</StyledTableCell>
                       <StyledTableCell align="center">Course Difficulty Score</StyledTableCell>
                       <StyledTableCell align="center">Course Difficulty Level</StyledTableCell>
-                      <StyledTableCell align="center">Confidence Score</StyledTableCell>
+                      <StyledTableCell align="center">Model Performance</StyledTableCell>
                       <StyledTableCell />
                     </StyledTableRow>
                   </TableHead>
