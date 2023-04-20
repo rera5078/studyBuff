@@ -18,17 +18,18 @@
     box-sizing: border-box;
     outline: none;
     display: block;
-    font-family: 'Roboto' , sans-serif;
-    font-size:18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
     border-color: #cfcece
 }
-.custom-search-input::placeholder{
+
+.custom-search-input::placeholder {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-} 
+}
+
 .custom-search-button {
     background: #12204F;
-    color: #fff;
     outline: none;
     border-radius: 0;
     height: 64px;
@@ -36,14 +37,55 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 }
 
-.sugestionOptions{
+.sugestionOptions {
     margin-top: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.suggest{
+.suggest {
     margin: 4px;
 }
 
+.logo-title {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    font-weight: bold;
+    font-style: italic;
+    -webkit-text-stroke: 1.5px #12204F;
+    font-size: 64px;
+}
+
+.shake-on-hover {
+    transition: transform 1s;
+}
+
+.shake-on-hover:hover {
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+      }
+      20% {
+        transform: translate(-10px, 0) rotate(-10deg);
+      }
+      30% {
+        transform: translate(10px, 0) rotate(10deg);
+      }
+      50% {
+        transform: translate(-10px, 0) rotate(-10deg);
+      }
+      60% {
+        transform: translate(10px, 0) rotate(10deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(0);
+      }
+}

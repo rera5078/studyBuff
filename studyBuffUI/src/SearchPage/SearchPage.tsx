@@ -89,7 +89,7 @@ function SearchPage({ setResults }: SearchPageProps) {
         return rec_suggestion;
       }
     }, 2000)
-  
+
     debouncedFilter()
     return [];
   };
@@ -100,10 +100,13 @@ function SearchPage({ setResults }: SearchPageProps) {
       {loading && <div>Loading...</div>}
       {!loading && <div>
         <div className={'d-flex justify-content-center'} style={{ marginTop: "10%" }}>
-          <img src={white} height={200}></img>
+          <img src={white} className="shake-on-hover" height={200}></img>
         </div>
+        <div>
+            <h2 className='logo-title'>STUDY BUFF</h2>
+          </div>
         <form onSubmit={handleSubmit}>
-          <div className="input-group mx-auto mt-5" style={{ width: '75%', display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <div className="input-group mx-auto" style={{ width: '75%', display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Paper sx={{ display: "flex", alignItems: "center", width: "100%" }} className="w-75">
               <TextField
                 id="search"
