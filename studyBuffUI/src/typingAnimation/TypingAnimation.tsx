@@ -40,9 +40,11 @@ const TypingAnimation = ({ sentences }: Props) => {
   }, [currentSentence, currentIndex, isTyping, sentences]);
 
   return (
-    <div className="typing-animation">
+    <div className="type-container">
+      <div className="typing-animation">
       {currentSentence}
       <span className={`typing-cursor ${isTyping ? "visible" : ""}`}>|</span>
+    </div>
     </div>
   );
 };

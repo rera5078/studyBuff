@@ -18,15 +18,11 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import React from "react";
-import Loading from "../Loading/Loading";
 import { SearchResult } from "./api";
 import Grid from "@mui/material/Grid";
-import CardContent from "@mui/material/CardContent";
-import Card from "@mui/material/Card";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Chip from "@mui/material/Chip";
-import ListItem from "@mui/material/ListItem";
 import DelayedContent from "../Loading/Loading";
 
 interface DashboardProps {
@@ -59,7 +55,7 @@ function createData(
   Mode: string[],
   CourseDifficultyBand: number,
   CourseDifficulty: string,
-  ConfidenceScore: string,
+  ConfidenceScore: number,
   CourseDetails: any[],
 ) {
   return {
@@ -92,7 +88,7 @@ function Recommendation({ results }: DashboardProps) {
         value.Mode,
         Math.round(Number(value.CourseDifficulty) * 100),
         value.CourseDifficultyBand,
-        value.ConfidenceScore,
+        Math.round(Number(value.ConfidenceScore)),
         [{
           summary: value.CourseSummary,
           description: value.Desc,
@@ -111,8 +107,6 @@ function Recommendation({ results }: DashboardProps) {
   else {
     rows = []
   }
-
-  console.log("rows 111 ", rows)
 
   function Row(props: { row: ReturnType<typeof createData> }) {
     const { row } = props;
@@ -177,7 +171,7 @@ function Recommendation({ results }: DashboardProps) {
                           <StyledTableCell>
                             {sectionRow.courseKeywords.map((data: any) => {
                               return (
-                                <Chip style={{ margin: "2px" }} label={data} color="primary" variant="outlined" />
+                                <Chip style={{ margin: "2px" }} label={data} color="success" variant="outlined" />
                               );
                             })}
                           </StyledTableCell>
