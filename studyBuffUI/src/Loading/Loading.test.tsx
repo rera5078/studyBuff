@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Loading from './Loading';
+import DelayedContent from './Loading';
 
 describe('<Loading />', () => {
   test('it should mount', () => {
-    render(<Loading />);
+    render(<DelayedContent children={undefined} />);
     
     const loading = screen.getByTestId('Loading');
 

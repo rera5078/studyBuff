@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import Footer from "../Footer/Footer";
+import DelayedContent from '../Loading/Loading';
 
 interface LoginPageProps { }
 
@@ -55,6 +56,7 @@ const LoginPage: FC<LoginPageProps> = () => {
 
     return (
         <React.Fragment>
+            <DelayedContent>
             <NavBar></NavBar>
             <div className='background'>
                 <h2 className='Welcome'>Welcome back to</h2>
@@ -108,6 +110,7 @@ const LoginPage: FC<LoginPageProps> = () => {
 
             </div>
             <Footer></Footer>
+            </DelayedContent>
         </React.Fragment>
     )
 }

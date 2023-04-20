@@ -27,6 +27,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Chip from "@mui/material/Chip";
 import ListItem from "@mui/material/ListItem";
+import DelayedContent from "../Loading/Loading";
 
 interface DashboardProps {
   results: SearchResult | undefined;
@@ -270,50 +271,51 @@ function Recommendation({ results }: DashboardProps) {
 
   return (
     <div className="mainContainer">
-      {loading ? <Loading /> : undefined}
-      <NavBar></NavBar>
-      <Footer></Footer>
-      <div className="cardsContainer">
-        <div style={{ position: "relative" }}>
-          {leftArrow}
-          <Grid spacing={2} className="gridContainer">
-            {cards}
-          </Grid>
-          {rightArrow}
+      <DelayedContent>
+        <NavBar></NavBar>
+        <Footer></Footer>
+        <div className="cardsContainer">
+          <div style={{ position: "relative" }}>
+            {leftArrow}
+            <Grid spacing={2} className="gridContainer">
+              {cards}
+            </Grid>
+            {rightArrow}
+          </div>
         </div>
-      </div>
-      <div className="tabel">
-        <div className="tabelContainer">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <>
-              <TableContainer component={Paper}>
-                <Table aria-label="collapsible table customized table">
-                  <TableHead>
-                    <StyledTableRow>
-                      <StyledTableCell />
-                      <StyledTableCell>Course ID</StyledTableCell>
-                      <StyledTableCell align="center">Course Name</StyledTableCell>
-                      <StyledTableCell align="center">Department Name</StyledTableCell>
-                      <StyledTableCell align="center">Instruction Mode</StyledTableCell>
-                      <StyledTableCell align="center">Course Difficulty Score</StyledTableCell>
-                      <StyledTableCell align="center">Course Difficulty Level</StyledTableCell>
-                      <StyledTableCell align="center">Model Performance</StyledTableCell>
-                      <StyledTableCell />
-                    </StyledTableRow>
-                  </TableHead>
-                  <TableBody>
-                    {tableData.map((row) => (
-                      <Row key={row.courseID} row={row} />
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </>
-          )}
+        <div className="tabel">
+          <div className="tabelContainer">
+            {loading ? (
+              <div>Loading...</div>
+            ) : (
+              <>
+                <TableContainer component={Paper}>
+                  <Table aria-label="collapsible table customized table">
+                    <TableHead>
+                      <StyledTableRow>
+                        <StyledTableCell />
+                        <StyledTableCell>Course ID</StyledTableCell>
+                        <StyledTableCell align="center">Course Name</StyledTableCell>
+                        <StyledTableCell align="center">Department Name</StyledTableCell>
+                        <StyledTableCell align="center">Instruction Mode</StyledTableCell>
+                        <StyledTableCell align="center">Course Difficulty Score</StyledTableCell>
+                        <StyledTableCell align="center">Course Difficulty Level</StyledTableCell>
+                        <StyledTableCell align="center">Model Performance</StyledTableCell>
+                        <StyledTableCell />
+                      </StyledTableRow>
+                    </TableHead>
+                    <TableBody>
+                      {tableData.map((row) => (
+                        <Row key={row.courseID} row={row} />
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </>
+            )}
+          </div>
         </div>
-      </div>
+      </DelayedContent>
     </div>
   );
 }

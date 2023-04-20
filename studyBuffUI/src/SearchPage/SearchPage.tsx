@@ -16,6 +16,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Button from '@mui/material/Button';
 import debounce from 'lodash.debounce'
 import './SearchPage.css';
+import TypingAnimation from '../typingAnimation/TypingAnimation';
 
 interface SearchPageProps {
   setResults: (results: SearchResult) => void;
@@ -94,6 +95,8 @@ function SearchPage({ setResults }: SearchPageProps) {
     return [];
   };
 
+  const text = "Study Buff";
+
   return (
     <div className="SearchPage" data-testid="SearchPage">
       <NavBar></NavBar>
@@ -102,9 +105,13 @@ function SearchPage({ setResults }: SearchPageProps) {
         <div className={'d-flex justify-content-center'} style={{ marginTop: "10%" }}>
           <img src={white} className="shake-on-hover" height={200}></img>
         </div>
-        <div>
-            <h2 className='logo-title'>STUDY BUFF</h2>
-          </div>
+        <div className="animated-text">
+      {[...text].map((char, index) => (
+        <span key={index} className="animated-letter">
+          {char}
+        </span>
+      ))}
+    </div>
         <form onSubmit={handleSubmit}>
           <div className="input-group mx-auto" style={{ width: '75%', display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Paper sx={{ display: "flex", alignItems: "center", width: "100%" }} className="w-75">
@@ -128,11 +135,18 @@ function SearchPage({ setResults }: SearchPageProps) {
             </Paper>
           </div>
         </form>
+        {/* <div className='title'>
+          <h3>Some Queries</h3>
+        </div> */}
         <div className='sugestionOptions'>
-          <Button className='suggest' variant="outlined">Outlined</Button>
-          <Button className='suggest' variant="outlined">Outlined</Button>
-          <Button className='suggest' variant="outlined">Outlined</Button>
-          <Button className='suggest' variant="outlined">Outlined</Button>
+          <TypingAnimation sentences={[
+            "Hey! Recommend some courses similar to machine learning in psychology?",
+            "Okay, Recommend for Textual analysis in business, what are some good choices?",
+            "Provide me a list of coursework related to Big Data ?",
+            "Coursework like WGST 6190",
+            "Coursework from Department of Women's and Gender Studies?",
+            "Top courses from Department of Biology are What?"
+            ]}></TypingAnimation>
         </div>
       </div>}
       <Footer></Footer>

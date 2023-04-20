@@ -1,18 +1,37 @@
-import React, { FC } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Loading.css';
-import NavBar from "../NavBar/NavBar";
-interface LoadingProps {}
+interface Props {
+    children: React.ReactNode;
+}
 
-const Loading: FC<LoadingProps> = () => (
- <React.Fragment>
-     <NavBar></NavBar>
-     <div className="container justify-content-center" style={{marginTop: "20%"}}>
-         <div className="spinner-container">
-             <div className="loading-spinner">
-             </div>
-         </div>
-     </div>
- </React.Fragment>
-);
+const LoadingPage: React.FC = () => {
+    return (
+        <div className="loader-container">
+            <div className="typewriter">
+                <div className="slide"><i></i></div>
+                <div className="paper"></div>
+                <div className="keyboard"></div>
+            </div>
+        </div>
+    );
+};
 
-export default Loading;
+const DelayedContent: React.FC<Props> = ({ children }) => {
+    const [isLoading, setIsLoading] = useState(true);
+    const location = useLocation();
+
+    useEffect(() => {
+        setIsLoading(true);
+
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, [location.pathname]);
+
+    return isLoading ? <LoadingPage /> : <>{children}</>;
+};
+
+export default DelayedContent;

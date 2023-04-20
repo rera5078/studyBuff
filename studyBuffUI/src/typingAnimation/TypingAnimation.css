@@ -1,0 +1,29 @@
+.typing-animation {
+    display: inline-block;
+    font-size: 2rem;
+    color: #333;
+    font-family: sans-serif;
+    margin-right: 0.5rem;
+  }
+  
+  .typing-cursor {
+    opacity: 0;
+    animation: blink 0.7s infinite;
+  }
+  
+  .typing-cursor.visible {
+    opacity: 1;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

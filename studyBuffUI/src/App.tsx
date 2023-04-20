@@ -23,7 +23,7 @@ function App() {
                         <Route path="/login" Component={LoginPage} />
                         <Route path="/createAccount" Component={CreateAccountPage} />
                         <Route path="/recommendation" Component={() => <Recommendation results={results} />} />
-                        <Route path="/loading" Component={Loading} />
+                        {/* <Route path="/loading" Component={Loading} /> */}
                     </Routes>
                 </React.Fragment>
             </BrowserRouter>

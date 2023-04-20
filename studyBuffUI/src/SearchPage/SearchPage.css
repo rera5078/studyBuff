@@ -37,11 +37,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 }
 
+
 .sugestionOptions {
-    margin-top: 24px;
+    margin-top: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 }
 
 .suggest {
@@ -89,3 +91,45 @@
         transform: translate(0, 0) rotate(0);
       }
 }
+
+
+.animated-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    font-weight: bold;
+    font-style: italic;
+    -webkit-text-stroke: 1.5px #12204F;
+    font-size: 64px;
+  }
+  
+  .animated-letter {
+    display: inline-block;
+    margin: 0 8px;
+    color: transparent;
+    font-weight: bold;
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation-delay: calc(0.1s * var(--i));
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes bounce {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+    80% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
