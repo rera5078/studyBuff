@@ -131,6 +131,7 @@ services:
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
     depends_on:
       - "postgres"
+      - Elasticsearch
     networks:
       study_buff_service_local_net:
 

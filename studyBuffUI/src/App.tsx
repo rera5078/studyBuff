@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import favicon from "../public/logotransparent.png"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Start from "./StartPage/Start";
 import SearchPage from "./SearchPage/SearchPage";

@@ -20,6 +20,13 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import React from "react";
 import Loading from "../Loading/Loading";
 import { SearchResult } from "./api";
+import Grid from "@mui/material/Grid";
+import CardContent from "@mui/material/CardContent";
+import Card from "@mui/material/Card";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import Chip from "@mui/material/Chip";
+import ListItem from "@mui/material/ListItem";
 
 interface DashboardProps {
   results: SearchResult | undefined;
@@ -31,7 +38,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
+    fontSize: 13,
   },
 }));
 
@@ -48,9 +55,9 @@ function createData(
   CourseId: string,
   CourseName: string,
   DepartmentName: string,
-  Mode: string,
-  CourseDifficultyBand: string,
-  CourseDifficulty: string,
+  Mode: string[],
+  CourseDifficultyBand: number,
+  CourseDifficulty:  string,
   ConfidenceScore: string,
   CourseDetails: any[],
 ) {
@@ -79,10 +86,10 @@ function Recommendation({ results }: DashboardProps) {
     rows.push(
       createData(
         value.CourseId,
-        value.CourseName, 
+        value.CourseName,
         value.DepartmentName,
         value.Mode,
-        value.CourseDifficulty,
+        Math.round(Number(value.CourseDifficulty) * 100),
         value.CourseDifficultyBand,
         value.ConfidenceScore,
         [{
@@ -93,14 +100,14 @@ function Recommendation({ results }: DashboardProps) {
     )
   }
 
-  if(results){
+  if (results) {
     const top_course = results?.top_similar_courses
-  
-    for (let i = 0; i < 4; i++) {
+
+    for (let i = 0; i < top_course?.length; i++) {
       myMethod(top_course[i]);
     }
   }
-  else{
+  else {
     rows = []
   }
 
@@ -131,9 +138,15 @@ function Recommendation({ results }: DashboardProps) {
           </StyledTableCell>
           <StyledTableCell align="center">{row.CourseName}</StyledTableCell>
           <StyledTableCell align="center">{row.DepartmentName}</StyledTableCell>
-          <StyledTableCell align="center">{row.Mode}</StyledTableCell>
-          <StyledTableCell align="center">{row.CourseDifficulty}</StyledTableCell>
+          <StyledTableCell align="center">
+            {row.Mode.map((data: any) => {
+              return (
+                <Chip style={{ margin : "2px"}} label={data} color="primary" variant="outlined" />
+              );
+            })}
+          </StyledTableCell>
           <StyledTableCell align="center">{row.CourseDifficultyBand}</StyledTableCell>
+          <StyledTableCell align="center">{row.CourseDifficulty}</StyledTableCell>
           <StyledTableCell align="center">{row.ConfidenceScore}</StyledTableCell>
           <StyledTableCell>
             <IconButton aria-label="delete" onClick={() => handleDeleteRow(row.CourseId)}>
@@ -144,26 +157,34 @@ function Recommendation({ results }: DashboardProps) {
         <StyledTableRow>
           <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
             <Collapse in={open} timeout="auto" unmountOnExit>
-              <Box sx={{ margin: 1 }}>
+              <Box sx={{ margin: 2, minWidth: "100%" }}>
                 <Typography variant="h6" gutterBottom component="div">
-                  Sections
+                  More Details
                 </Typography>
-                <Table size="small" aria-label="purchases">
+                <div>
+                <Table size="small" aria-label="purchases" sx={{ margin: 2, minWidth: "100%" }}>
                   <TableHead>
                     <StyledTableRow>
-                      <StyledTableCell>Summary</StyledTableCell>
-                      <StyledTableCell>Course Keywords</StyledTableCell>
+                      <StyledTableCell align="center" >Summary</StyledTableCell>
+                      <StyledTableCell align="center">Course Keywords</StyledTableCell>
                     </StyledTableRow>
                   </TableHead>
                   <TableBody>
                     {row.CourseDetails.map((sectionRow) => (
                       <StyledTableRow>
                         <StyledTableCell>{sectionRow.summary}</StyledTableCell>
-                        <StyledTableCell>{sectionRow.courseKeywords}</StyledTableCell>
+                        <StyledTableCell>
+                          {sectionRow.courseKeywords.map((data: any) => {
+                            return (
+                              <Chip style={{ margin : "2px"}} label={data} color="primary" variant="outlined" />
+                            );
+                          })}
+                        </StyledTableCell>
                       </StyledTableRow>
                     ))}
                   </TableBody>
                 </Table>
+                </div>
               </Box>
             </Collapse>
           </TableCell>
@@ -175,16 +196,64 @@ function Recommendation({ results }: DashboardProps) {
   const [loading, setLoading] = useState(false)
   const [tableData, setTableData] = useState<any[]>([]);
 
-  const cards = rows.map(
-    course => <div className="card">
-    <div className="card-details">
-      <p className="text-title">{course.CourseId}</p>
-      <p className="text-body">
-        {course.CourseDetails[0].description}
-      </p>
-    </div>
-    <button className="card-button" onClick={() => handleAddToTable(course)}>ADD</button>
-  </div>);
+  const [startIndex, setStartIndex] = useState(0);
+
+  const handleClickLeft = () => {
+    setStartIndex((prevStartIndex) =>
+      Math.max(0, prevStartIndex - 3)
+    );
+  };
+
+  const handleClickRight = () => {
+    setStartIndex((prevStartIndex) =>
+      Math.min(rows.length - 3, prevStartIndex + 3)
+    );
+  };
+
+  const leftArrow = (
+    <IconButton
+      disabled={startIndex === 0}
+      onClick={handleClickLeft}
+      sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
+    >
+      <ChevronLeftIcon />
+    </IconButton>
+  );
+
+  const rightArrow = (
+    <IconButton
+      disabled={startIndex >= rows.length - 3}
+      onClick={handleClickRight}
+      sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
+    >
+      <ChevronRightIcon />
+    </IconButton>
+  );
+
+  const cards = rows.slice(startIndex, startIndex + 3).map((item) => (
+    <Grid item xs={3} key={item.id}>
+      <div className="card">
+        <div className="card-details">
+          <p className="text-title">{item.CourseId}</p>
+          <p className="text-body">
+            {item.CourseDetails[0].description}
+          </p>
+        </div><button className="card-button" onClick={() => handleAddToTable(item)}>ADD</button>
+      </div>
+      <IconButton
+        onClick={handleClickRight}
+        sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
+      >
+        <ChevronRightIcon />
+      </IconButton>
+      <IconButton
+        onClick={handleClickLeft}
+        sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
+      >
+        <ChevronLeftIcon />
+      </IconButton>
+    </Grid>
+  ));
 
   function handleAddToTable(course: any): undefined {
     const newTableRows = tableData.concat(course);
@@ -193,15 +262,21 @@ function Recommendation({ results }: DashboardProps) {
   }
 
   return (
-    <div>
+    <div className="mainContainer">
       {loading ? <Loading /> : undefined}
       <NavBar></NavBar>
       <Footer></Footer>
       <div className="container">
-        {cards}
+        <div style={{ position: "relative" }}>
+          {leftArrow}
+          <Grid container spacing={2} className="gridContainer">
+            {cards}
+          </Grid>
+          {rightArrow}
+        </div>
       </div>
       <div className="tabel">
-        <div className="App">
+        <div className="cardContainer">
           {loading ? (
             <div>Loading...</div>
           ) : (

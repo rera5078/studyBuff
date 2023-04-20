@@ -1,4 +1,5 @@
-.NavBar {}
+.NavBar {
+}
 
 .custom-nav{
     background-color: #070f2d;
@@ -9,4 +10,19 @@
     margin-left: 20px;
     height: 40px;
     width: 45px;
+}
+
+.iconText{
+    color: white;
+    font-size: larger;
+    position: relative;
+    top: 4px;
+    font-size:24px;
+    font-family: 'Garamond', Garamond;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
 }

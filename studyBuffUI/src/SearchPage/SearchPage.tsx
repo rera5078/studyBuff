@@ -1,37 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import './SearchPage.css';
+import React, { useState } from 'react';
 import NavBar from "../NavBar/NavBar";
 import white from '../white.png';
 import { search, SearchResult } from '../RecommendationPage/api';
 import { useNavigate } from 'react-router-dom';
 import Footer from "../Footer/Footer";
-import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import CircularProgress from '@mui/material/CircularProgress';
-import axios from 'axios';
+import Paper from '@mui/material/Paper';
+import IconButton from '@mui/material/IconButton';
+import { List } from '@mui/icons-material';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import SearchIcon from "@mui/icons-material/Search";
+import Button from '@mui/material/Button';
+import debounce from 'lodash.debounce'
+import './SearchPage.css';
 
 interface SearchPageProps {
   setResults: (results: SearchResult) => void;
 }
 
-interface Option {
-  id: string;
+interface Suggestion {
+  id: number;
   name: string;
 }
 
 function SearchPage({ setResults }: SearchPageProps) {
-  const [query, setQuery] = useState('');
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
-  const [options, setOptions] = useState<any>([]);
-  const [loading, setLoading] = useState(false);
-
-  const getOptionLabel = (option: Option) => option.name;
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
-
     try {
       console.log("search query", query);
       const results = await search(query);
@@ -45,31 +44,55 @@ function SearchPage({ setResults }: SearchPageProps) {
     }
   }
 
-  useEffect(() => {
-    let timer: any;
-    if (query !== "") {
-      console.log("query", query);
-      timer = setTimeout(async () => {
-        try {
-          const response = await axios.get(`${process.env.REACT_APP_DROP_DOWN_URL}`, { params: { query } });
-          if (response.status === 200) {
-            setOptions(["1"]);
-            console.log("data", response)
-          } else {
-            console.log('failed response', response);
-          }
-          setQuery(query);
-        } catch (error) {
-          console.error('API call failed', error);
-          setQuery(query);
-        }
-      }, 2000);
-    } else {
-      setOptions([]);
-    }
+  const [query, setQuery] = useState("");
+  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [timer, setTimer] = useState(null);
+
+  const handleInputChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const query = event.target.value;
     setQuery(query);
-    return () => clearTimeout(timer);
-  }, [query]);
+    setLoading(true);
+    const newSuggestions = await fetchSuggestions(query);
+    setSuggestions(newSuggestions);
+    setLoading(false);
+  };
+
+  const handleSuggestionSelect = (suggestion: Suggestion) => {
+    setQuery(suggestion.name);
+    setSuggestions([]);
+  };
+
+  const suggestionItems = suggestions.map((suggestion) => (
+    <ListItem key={suggestion.id} disablePadding>
+      <ListItemButton onClick={() => handleSuggestionSelect(suggestion)}>
+        <ListItemText primary={suggestion.name} />
+      </ListItemButton>
+    </ListItem>
+  ));
+
+  const showSuggestions = suggestions.length > 0 && !loading;
+
+  const fetchSuggestions = async (query: string): Promise<Suggestion[]> => {
+    const debouncedFilter = debounce(async () => {
+      console.log('====>', query)
+      const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${query}`);
+      const data = await response.json();
+      console.log("data", data)
+      if (data?.length) {
+        const rec_suggestion: Suggestion[] = data.map((item: string) => {
+          return {
+            name: item
+          }
+        });
+        console.log("rec_suggestion", rec_suggestion);
+        return rec_suggestion;
+      }
+    }, 2000)
+  
+    debouncedFilter()
+    return [];
+  };
 
   return (
     <div className="SearchPage" data-testid="SearchPage">
@@ -80,41 +103,34 @@ function SearchPage({ setResults }: SearchPageProps) {
           <img src={white} height={200}></img>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="input-group mx-auto mt-5" style={{ width: '45%' }}>
-            <Autocomplete
-              className="w-75"
-              id="dropdown"
-              open={open}
-              onOpen={() => setOpen(true)}
-              onClose={() => setOpen(false)}
-              // getOptionSelected={getOptionSelected}
-              getOptionLabel={getOptionLabel}
-              options={options}
-              loading={loading}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  value={query}
-                  label="Search"
-                  variant="outlined"
-                  fullWidth
-                  onChange={(event) => setQuery(event.target.value)}
-                  InputProps={{
-                    ...params.InputProps,
-                    endAdornment: (
-                      <>
-                        {loading ? (
-                          <CircularProgress color="inherit" size={20} />
-                        ) : null}
-                        {params.InputProps.endAdornment}
-                      </>
-                    ),
-                  }}
-                />
+          <div className="input-group mx-auto mt-5" style={{ width: '75%', display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <Paper sx={{ display: "flex", alignItems: "center", width: "100%" }} className="w-75">
+              <TextField
+                id="search"
+                label="Search"
+                value={query}
+                onChange={handleInputChange}
+                fullWidth
+                autoFocus
+              />
+              <IconButton type="submit" sx={{ p: 1 }} aria-label="search" className="custom-search-button">
+                <SearchIcon /><span>Search</span>
+              </IconButton>
+              {loading && <CircularProgress size={20} sx={{ m: 1 }} />}
+              {showSuggestions && (
+                <List sx={{ position: "absolute", zIndex: 1, width: "100%", p: 0 }}>
+                  {suggestionItems}
+                </List>
               )}
-            /><button type="submit" className="custom-search-button">Search</button>
+            </Paper>
           </div>
         </form>
+        <div className='sugestionOptions'>
+          <Button className='suggest' variant="outlined">Outlined</Button>
+          <Button className='suggest' variant="outlined">Outlined</Button>
+          <Button className='suggest' variant="outlined">Outlined</Button>
+          <Button className='suggest' variant="outlined">Outlined</Button>
+        </div>
       </div>}
       <Footer></Footer>
     </div>

@@ -1,8 +1,14 @@
 .container {
     margin-top: 88px;
-    margin-left: 24px;
+    margin-left: 4px;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+
+.mainContainer{
+    width: 100%
 }
 
 .tabel{
@@ -11,11 +17,12 @@
     padding: 8px;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .card {
-    width: 320px;
-    height: 254px;
+    min-width: 320px;
+    min-height: 320px;
     border-radius: 20px;
     background: rgb(7, 15, 45);;
     position: relative;
@@ -23,20 +30,26 @@
     border: 2px solid rgb(7, 15, 45);;
     transition: 0.5s ease-out;
     overflow: visible;
-    margin-left: 8px;
+    margin: auto;
+}
+
+.gridContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-details {
     color: rgb(7, 15, 45);
-    height: 100%;
-    gap: .5em;
+    gap: .1em;
     display: grid;
     place-content: center;
+    min-height: 320px;
 }
 
 .card-button {
     transform: translate(-50%, 125%);
-    width: 60%;
+    width: 75%;
     border-radius: 1rem;
     border: none;
     background-color: rgb(7, 15, 45);
@@ -69,4 +82,12 @@
 .card:hover .card-button {
     transform: translate(-50%, 50%);
     opacity: 1;
+}
+
+.cardContainer{
+    width: 100%;
+}
+
+.Chip{
+    margin: 2px;
 }
