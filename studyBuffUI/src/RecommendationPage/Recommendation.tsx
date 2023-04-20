@@ -24,6 +24,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Chip from "@mui/material/Chip";
 import DelayedContent from "../Loading/Loading";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 interface DashboardProps {
   results: SearchResult | undefined;
@@ -107,6 +108,15 @@ function Recommendation({ results }: DashboardProps) {
   else {
     rows = []
   }
+
+  const [arrowAnimate, setArrowAnimate] = useState(false);
+
+  const handleArrowAnimate = () => {
+    setArrowAnimate(true);
+    setTimeout(() => {
+      setArrowAnimate(false);
+    }, 200);
+  };
 
   function Row(props: { row: ReturnType<typeof createData> }) {
     const { row } = props;
@@ -235,12 +245,17 @@ function Recommendation({ results }: DashboardProps) {
               {item.CourseDetails[0].description}
             </p>
           </div>
-          <div className="flip-card-back">
+          <div className="flip-card-back" onMouseEnter={handleArrowAnimate}>
             <p className="title">{item.CourseName}</p>
-            <p className="details-text">Click Add for more details</p>
+            <p className="details-text">Click for more details</p>
           </div>
         </div>
-        <button className="card-button" onClick={() => handleAddToTable(item)}>ADD</button>
+        <button  className="card-button button-with-arrow" onClick={() => handleAddToTable(item)}  >
+      More Info
+      <ArrowDropDownIcon
+        className={`arrow ${arrowAnimate ? "animate" : ""}`}
+      />
+    </button>
       </div>
       <IconButton
         onClick={handleClickRight}
