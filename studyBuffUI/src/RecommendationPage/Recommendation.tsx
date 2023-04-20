@@ -38,7 +38,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
+    fontSize: 13,
   },
 }));
 
@@ -56,8 +56,8 @@ function createData(
   CourseName: string,
   DepartmentName: string,
   Mode: string[],
-  CourseDifficultyBand: string,
-  CourseDifficulty: string,
+  CourseDifficultyBand: number,
+  CourseDifficulty:  string,
   ConfidenceScore: string,
   CourseDetails: any[],
 ) {
@@ -89,7 +89,7 @@ function Recommendation({ results }: DashboardProps) {
         value.CourseName,
         value.DepartmentName,
         value.Mode,
-        value.CourseDifficulty,
+        Math.round(Number(value.CourseDifficulty) * 100),
         value.CourseDifficultyBand,
         value.ConfidenceScore,
         [{
@@ -141,7 +141,7 @@ function Recommendation({ results }: DashboardProps) {
           <StyledTableCell align="center">
             {row.Mode.map((data: any) => {
               return (
-                <Chip label={data} color="primary" variant="outlined" />
+                <Chip style={{ margin : "2px"}} label={data} color="primary" variant="outlined" />
               );
             })}
           </StyledTableCell>
@@ -157,15 +157,16 @@ function Recommendation({ results }: DashboardProps) {
         <StyledTableRow>
           <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
             <Collapse in={open} timeout="auto" unmountOnExit>
-              <Box sx={{ margin: 1 }}>
+              <Box sx={{ margin: 2, minWidth: "100%" }}>
                 <Typography variant="h6" gutterBottom component="div">
-                  Sections
+                  More Details
                 </Typography>
-                <Table size="small" aria-label="purchases">
+                <div>
+                <Table size="small" aria-label="purchases" sx={{ margin: 2, minWidth: "100%" }}>
                   <TableHead>
                     <StyledTableRow>
-                      <StyledTableCell>Summary</StyledTableCell>
-                      <StyledTableCell>Course Keywords</StyledTableCell>
+                      <StyledTableCell align="center" >Summary</StyledTableCell>
+                      <StyledTableCell align="center">Course Keywords</StyledTableCell>
                     </StyledTableRow>
                   </TableHead>
                   <TableBody>
@@ -175,7 +176,7 @@ function Recommendation({ results }: DashboardProps) {
                         <StyledTableCell>
                           {sectionRow.courseKeywords.map((data: any) => {
                             return (
-                              <Chip label={data} color="primary" variant="outlined" />
+                              <Chip style={{ margin : "2px"}} label={data} color="primary" variant="outlined" />
                             );
                           })}
                         </StyledTableCell>
@@ -183,6 +184,7 @@ function Recommendation({ results }: DashboardProps) {
                     ))}
                   </TableBody>
                 </Table>
+                </div>
               </Box>
             </Collapse>
           </TableCell>
@@ -198,13 +200,13 @@ function Recommendation({ results }: DashboardProps) {
 
   const handleClickLeft = () => {
     setStartIndex((prevStartIndex) =>
-      Math.max(0, prevStartIndex - 4)
+      Math.max(0, prevStartIndex - 3)
     );
   };
 
   const handleClickRight = () => {
     setStartIndex((prevStartIndex) =>
-      Math.min(rows.length - 4, prevStartIndex + 4)
+      Math.min(rows.length - 3, prevStartIndex + 3)
     );
   };
 
@@ -220,7 +222,7 @@ function Recommendation({ results }: DashboardProps) {
 
   const rightArrow = (
     <IconButton
-      disabled={startIndex >= rows.length - 4}
+      disabled={startIndex >= rows.length - 3}
       onClick={handleClickRight}
       sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
     >
@@ -228,8 +230,8 @@ function Recommendation({ results }: DashboardProps) {
     </IconButton>
   );
 
-  const cards = rows.slice(startIndex, startIndex + 4).map((item) => (
-    <Grid item xs={4} key={item.id} style={{ minWidth: "100%"} }>
+  const cards = rows.slice(startIndex, startIndex + 3).map((item) => (
+    <Grid item xs={3} key={item.id}>
       <div className="card">
         <div className="card-details">
           <p className="text-title">{item.CourseId}</p>
@@ -267,14 +269,14 @@ function Recommendation({ results }: DashboardProps) {
       <div className="container">
         <div style={{ position: "relative" }}>
           {leftArrow}
-          <Grid container spacing={2}>
+          <Grid container spacing={2} className="gridContainer">
             {cards}
           </Grid>
           {rightArrow}
         </div>
       </div>
       <div className="tabel">
-        <div className="App">
+        <div className="cardContainer">
           {loading ? (
             <div>Loading...</div>
           ) : (
