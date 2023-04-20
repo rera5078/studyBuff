@@ -57,7 +57,7 @@ function createData(
   DepartmentName: string,
   Mode: string[],
   CourseDifficultyBand: number,
-  CourseDifficulty:  string,
+  CourseDifficulty: string,
   ConfidenceScore: string,
   CourseDetails: any[],
 ) {
@@ -117,7 +117,7 @@ function Recommendation({ results }: DashboardProps) {
     const { row } = props;
     const [open, setOpen] = React.useState(false);
     function handleDeleteRow(id: any) {
-      const newList = tableData.filter((item) => item.courseID !== id);
+      const newList = tableData.filter((item) => item.CourseId !== id);
       setTableData(newList);
       return undefined;
     }
@@ -141,7 +141,7 @@ function Recommendation({ results }: DashboardProps) {
           <StyledTableCell align="center">
             {row.Mode.map((data: any) => {
               return (
-                <Chip style={{ margin : "2px"}} label={data} color="primary" variant="outlined" />
+                <Chip style={{ margin: "2px" }} label={data} color="primary" variant="outlined" />
               );
             })}
           </StyledTableCell>
@@ -162,28 +162,28 @@ function Recommendation({ results }: DashboardProps) {
                   More Details
                 </Typography>
                 <div>
-                <Table size="small" aria-label="purchases" sx={{ margin: 2, minWidth: "100%" }}>
-                  <TableHead>
-                    <StyledTableRow>
-                      <StyledTableCell align="center" >Summary</StyledTableCell>
-                      <StyledTableCell align="center">Course Keywords</StyledTableCell>
-                    </StyledTableRow>
-                  </TableHead>
-                  <TableBody>
-                    {row.CourseDetails.map((sectionRow) => (
+                  <Table size="small" aria-label="purchases" sx={{ margin: 2, minWidth: "100%" }}>
+                    <TableHead>
                       <StyledTableRow>
-                        <StyledTableCell>{sectionRow.summary}</StyledTableCell>
-                        <StyledTableCell>
-                          {sectionRow.courseKeywords.map((data: any) => {
-                            return (
-                              <Chip style={{ margin : "2px"}} label={data} color="primary" variant="outlined" />
-                            );
-                          })}
-                        </StyledTableCell>
+                        <StyledTableCell align="center" >Summary</StyledTableCell>
+                        <StyledTableCell align="center">Course Keywords</StyledTableCell>
                       </StyledTableRow>
-                    ))}
-                  </TableBody>
-                </Table>
+                    </TableHead>
+                    <TableBody>
+                      {row.CourseDetails.map((sectionRow) => (
+                        <StyledTableRow>
+                          <StyledTableCell>{sectionRow.summary}</StyledTableCell>
+                          <StyledTableCell>
+                            {sectionRow.courseKeywords.map((data: any) => {
+                              return (
+                                <Chip style={{ margin: "2px" }} label={data} color="primary" variant="outlined" />
+                              );
+                            })}
+                          </StyledTableCell>
+                        </StyledTableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
                 </div>
               </Box>
             </Collapse>
@@ -232,13 +232,20 @@ function Recommendation({ results }: DashboardProps) {
 
   const cards = rows.slice(startIndex, startIndex + 3).map((item) => (
     <Grid item xs={3} key={item.id}>
-      <div className="card">
-        <div className="card-details">
-          <p className="text-title">{item.CourseId}</p>
-          <p className="text-body">
-            {item.CourseDetails[0].description}
-          </p>
-        </div><button className="card-button" onClick={() => handleAddToTable(item)}>ADD</button>
+      <div className="recommCard flip-card">
+        <div className="flip-card-inner">
+          <div className="card-details flip-card-front">
+            <p className="text-title">{item.CourseId}</p>
+            <p>
+              {item.CourseDetails[0].description}
+            </p>
+          </div>
+          <div className="flip-card-back">
+            <p className="title">{item.CourseName}</p>
+            <p className="details-text">Click Add for more details</p>
+          </div>
+        </div>
+        <button className="card-button" onClick={() => handleAddToTable(item)}>ADD</button>
       </div>
       <IconButton
         onClick={handleClickRight}
@@ -266,17 +273,17 @@ function Recommendation({ results }: DashboardProps) {
       {loading ? <Loading /> : undefined}
       <NavBar></NavBar>
       <Footer></Footer>
-      <div className="container">
+      <div className="cardsContainer">
         <div style={{ position: "relative" }}>
           {leftArrow}
-          <Grid container spacing={2} className="gridContainer">
+          <Grid spacing={2} className="gridContainer">
             {cards}
           </Grid>
           {rightArrow}
         </div>
       </div>
       <div className="tabel">
-        <div className="cardContainer">
+        <div className="tabelContainer">
           {loading ? (
             <div>Loading...</div>
           ) : (
