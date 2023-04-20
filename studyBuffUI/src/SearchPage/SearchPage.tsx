@@ -124,24 +124,29 @@ function SearchPage({ setResults }: SearchPageProps) {
   const fetchSuggestions = async (query: string): Promise<Suggestion[]> => {
     setQuery(query);
     console.log('====>', query)
-    const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${query}`);
-    const data = await response.json();
-    // const data = [
-    //   "top courses from Department of Biology are what?",
-    //   "Provide me a list of coursework related to Big Data ??"
-    // ]
-    console.log("data", data)
-    if (data?.length) {
-      const rec_suggestion: Suggestion[] = data.map((item: string) => {
-        return {
-          value: item,
-          label: item
-        }
-      });
-      console.log("rec_suggestion", rec_suggestion);
-      return rec_suggestion;
+    try {
+      const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${query}`);
+      const data = await response.json();
+      // const data = [
+      //   "top courses from Department of Biology are what?",
+      //   "Provide me a list of coursework related to Big Data ??"
+      // ]
+      console.log("data", data)
+      if (data?.length) {
+        const rec_suggestion: Suggestion[] = data.map((item: string) => {
+          return {
+            value: item,
+            label: item
+          }
+        });
+        console.log("rec_suggestion", rec_suggestion);
+        return rec_suggestion;
+      }
+    } catch (error) {
+      return [];
     }
     return [];
+
   };
 
 
@@ -174,11 +179,11 @@ function SearchPage({ setResults }: SearchPageProps) {
         <form onSubmit={handleSubmit}>
           <div className="input-group mx-auto" style={{ width: '75%', display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Paper sx={{ display: "flex", alignItems: "center", width: "100%" }} className="w-75">
-              <AsyncSelect 
-              className="w-100 search-bar"
-              cacheOptions
-              loadOptions={loadOptions}
-              defaultOptions
+              <AsyncSelect
+                className="w-100 search-bar"
+                cacheOptions
+                loadOptions={loadOptions}
+                defaultOptions
               />
               <IconButton type="submit" sx={{ p: 1 }} aria-label="search" className="custom-search-button">
                 <SearchIcon /><span>Search</span>

@@ -169,6 +169,7 @@
   right: 25%;
   transform: translateY(-50%);
   transition: transform 0.1s ease-in-out;
+  animation-iteration-count: infinite; 
 }
 
 .arrow.animate {
