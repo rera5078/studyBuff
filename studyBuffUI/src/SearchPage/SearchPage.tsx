@@ -159,6 +159,11 @@ function SearchPage({ setResults }: SearchPageProps) {
     }, 1000);
   };
 
+  const queryChange = (userText: any) =>{
+    console.log("hello", userText); // <---- this will be selected object not event
+    setQuery(userText.value);
+  }
+
   const text = "Study Buff";
 
   return (
@@ -184,6 +189,7 @@ function SearchPage({ setResults }: SearchPageProps) {
                 cacheOptions
                 loadOptions={loadOptions}
                 defaultOptions
+                onChange={queryChange}
               />
               <IconButton type="submit" sx={{ p: 1 }} aria-label="search" className="custom-search-button">
                 <SearchIcon /><span>Search</span>
