@@ -164,6 +164,12 @@ function SearchPage({ setResults }: SearchPageProps) {
     setQuery(userText.value);
   }
 
+  const onInputChange = (inputValue: any, event : any) => {
+    if (event.action==='input-change'){
+      setQuery(inputValue)
+    }  
+}
+
   const text = "Study Buff";
 
   return (
@@ -190,6 +196,8 @@ function SearchPage({ setResults }: SearchPageProps) {
                 loadOptions={loadOptions}
                 defaultOptions
                 onChange={queryChange}
+                inputValue={query}
+                onInputChange={onInputChange}
               />
               <IconButton type="submit" sx={{ p: 1 }} aria-label="search" className="custom-search-button">
                 <SearchIcon /><span>Search</span>
