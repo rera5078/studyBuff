@@ -9,8 +9,4 @@ services:
     environment:
       - PORT=3001
       - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/postgres
-      - ES_HOST=elasticsearch
-      - NODE_ENV=local
       - ELASTICSEARCH_NODES=http://elasticsearch:9200
-    depends_on:
-      - "elasticsearch"
