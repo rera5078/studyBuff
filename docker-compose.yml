@@ -67,7 +67,7 @@ services:
 #    networks:
 #      study_buff_service_local_net:
 
-  Elasticsearch:
+  elasticsearch:
     image: elasticsearch:7.16.2
     container_name: elasticsearch
     restart: always
@@ -75,27 +75,27 @@ services:
     - elastic_data:/usr/share/elasticsearch/data/
     environment:
       - xpack.security.enabled=true
-      - xpack.security.audit.enabled=true
-      - ELASTIC_PASSWORD=12312jkhfwdeldncxmfndsa67890wfndsvmdcs
       - "discovery.type=single-node"   
+      - xpack.security.authc.api_key.enabled=true
+      - ELASTIC_PASSWORD=study_buff
     ports:
     - '9200:9200'
     - '9300:9300'
     networks:
       study_buff_service_local_net:
   
-  Kibana:
+  kibana:
     image: kibana:7.16.2
     container_name: kibana
     restart: always       
     ports:
     - '5601:5601'
     environment:
-      - ELASTICSEARCH_URL=http://elasticsearch:9200  
+      - ELASTICSEARCH_URL=http://elasticsearch:9200 
       - ELASTICSEARCH_USERNAME=elastic
-      - ELASTICSEARCH_PASSWORD=12312jkhfwdeldncxmfndsa67890wfndsvmdcs
+      - ELASTICSEARCH_PASSWORD=study_buff
     depends_on:
-      - Elasticsearch  
+      - elasticsearch  
     networks:
       study_buff_service_local_net:
   
@@ -127,11 +127,16 @@ services:
     ports:
       - "3001:3001"
     environment:
-      PORT: 3001
-      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
+      - ES_HOST=elasticsearch
+      - ELASTICSEARCH_NODES=http://elasticsearch:9200
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/postgres
+      - PORT=3001
+      - NODE_ENV=local
     depends_on:
       - "postgres"
-      - Elasticsearch
+      - "elasticsearch"
+    expose:
+      - 3001
     networks:
       study_buff_service_local_net:
 

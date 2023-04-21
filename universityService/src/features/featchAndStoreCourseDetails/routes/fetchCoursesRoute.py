@@ -1,5 +1,6 @@
 from flask.views import MethodView
 from flask import jsonify, request
+import requests
 from src.features.featchAndStoreCourseDetails.services.initiationService import InitiationService
 
 from elasticsearch import Elasticsearch
@@ -8,7 +9,7 @@ class FetchCoursesRoute(MethodView):
     def get(self):
         print(f"Searching Elasticsearch")
         query = request.args.get('query', default="")
-        print("query", query)
+        print("-----------------query", query)
         es_query = {
                 "query": {
                     "match": {
@@ -17,8 +18,12 @@ class FetchCoursesRoute(MethodView):
                     }
             }
         try:
-            es = Elasticsearch(hosts="http://elastic:12312jkhfwdeldncxmfndsa67890wfndsvmdcs@localhost:9200/")
+            print ("-------------------------",)
+            es = Elasticsearch("http://elastic:study_buff@elasticsearch:9200")
+
+            print ("-------------------------",es)
             res = es.search(index="queries_study_buff", body=es_query)
+            print ("--------------------res", res)
             es_res = [result['_source']["Query"] for result in res['hits']['hits']]
             return jsonify(es_res), 200  
 

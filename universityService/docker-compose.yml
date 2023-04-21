@@ -7,5 +7,10 @@ services:
     ports:
       - "3001:3001"
     environment:
-      PORT: 3001
-      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
+      - PORT=3001
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/postgres
+      - ES_HOST=elasticsearch
+      - NODE_ENV=local
+      - ELASTICSEARCH_NODES=http://elasticsearch:9200
+    depends_on:
+      - "elasticsearch"
