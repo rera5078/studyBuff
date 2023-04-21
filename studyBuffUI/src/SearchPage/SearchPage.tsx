@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from "../NavBar/NavBar";
 import white from '../white.png';
-import { search, SearchResult } from '../RecommendationPage/api';
+import { SearchResult } from '../RecommendationPage/api';
 import { useNavigate } from 'react-router-dom';
 import Footer from "../Footer/Footer";
 import Paper from '@mui/material/Paper';
@@ -122,17 +122,17 @@ function SearchPage({ setResults }: SearchPageProps) {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const fetchSuggestions = async (query: string): Promise<Suggestion[]> => {
-    setQuery(query);
-    console.log('====>', query)
+  const fetchSuggestions = async (userInput: string): Promise<Suggestion[]> => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${query}`);
+      if (query.length === 0){
+        setQuery(userInput)
+      }
+      const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${userInput}`);
       const data = await response.json();
       // const data = [
       //   "top courses from Department of Biology are what?",
       //   "Provide me a list of coursework related to Big Data ??"
       // ]
-      console.log("data", data)
       if (data?.length) {
         const rec_suggestion: Suggestion[] = data.map((item: string) => {
           return {
@@ -140,7 +140,6 @@ function SearchPage({ setResults }: SearchPageProps) {
             label: item
           }
         });
-        console.log("rec_suggestion", rec_suggestion);
         return rec_suggestion;
       }
     } catch (error) {
@@ -162,6 +161,7 @@ function SearchPage({ setResults }: SearchPageProps) {
 
 
   const onInputChange = (inputValue: any, event : any) => {
+    console.log("event", event, inputValue)
     if (event.action==='input-change'){
       setQuery(inputValue)
     }  
@@ -186,30 +186,30 @@ function SearchPage({ setResults }: SearchPageProps) {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="input-group mx-auto" style={{ width: '75%', display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <Paper sx={{ display: "flex", alignItems: "center", width: "100%", backgroundColor: "#12204F", borderRadius: "8px" }} className="w-75">
+            <Paper sx={{ display: "flex", alignItems: "center", width: "100%", backgroundColor: "#12204F", borderRadius: "8px" , color: "white"}} className="w-75">
               <AsyncSelect
                 className="w-100 search-bar"
                 cacheOptions
                 loadOptions={loadOptions}
                 defaultOptions
-                // inputValue={query}
+                inputValue={query}
                 onInputChange={onInputChange}
                 placeholder="Search..."
               />
-              <IconButton type="submit" sx={{ p: 1 }} aria-label="search" className="custom-search-button">
-                <SearchIcon /><span>Search</span>
+              <IconButton type="submit" sx={{ p: 1 }} aria-label="search" className="custom-search-button search-text">
+                <SearchIcon /><span className='search-text'>Search</span>
               </IconButton>
             </Paper>
           </div>
         </form>
         <div className='sugestionOptions'>
           <TypingAnimation sentences={[
-            "Hey! Recommend some courses similar to machine learning in psychology?",
-            "Okay, Recommend for Textual analysis in business, what are some good choices?",
-            "Provide me a list of coursework related to Big Data ?",
-            "Coursework like WGST 6190",
-            "Coursework from Department of Women's and Gender Studies?",
-            "Top courses from Department of Biology are What?"
+            "  Hey! Recommend some courses similar to machine learning in psychology?",
+            "  Okay, Recommend for Textual analysis in business, what are some good choices?",
+            "  Provide me a list of coursework related to Big Data ?",
+            "  Coursework like WGST 6190",
+            "  Coursework from Department of Women's and Gender Studies?",
+            "  Top courses from Department of Biology are What?"
           ]}></TypingAnimation>
         </div>
       </div>}

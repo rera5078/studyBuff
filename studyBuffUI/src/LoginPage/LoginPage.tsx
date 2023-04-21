@@ -37,15 +37,13 @@ const LoginPage: FC<LoginPageProps> = () => {
                 setErrorMessage("");
                 const resp: any = response.data;
                 const userInfo = {
-                    name : resp.firstName,
+                    name : resp.firstName + " " + resp.lastName,
                     email: resp.email
                 }
                 localStorage.setItem('userInfo', JSON.stringify(userInfo));
-                console.log('Login successful', userInfo);
                 navigate('/search');
             } else {
                 setErrorMessage("Username and Password didn't Match. Try Again");
-                console.log('Login failed');
             }
         } catch (error) {
             console.error('API call failed', error);

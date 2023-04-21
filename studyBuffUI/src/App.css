@@ -2,10 +2,10 @@
     text-align: left;
 }
 
-.gradient-background{
+/* .gradient-background{
     background: rgb(7, 15, 45);
     background-attachment: fixed;
-}
+} */
 
 .App-logo {
     height: 40vmin;
@@ -129,10 +129,6 @@ nav li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
-
-nav li a:hover {
-    background-color: #111;
 }
 
 .footer {

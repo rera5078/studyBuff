@@ -80,7 +80,6 @@ const table_rows: ReturnType<typeof createData>[] = []
 function Recommendation({ results }: DashboardProps) {
   rows = []
   const myMethod = (value: any) => {
-    console.log("value", value)
     rows.push(
       createData(
         value.CourseId,
@@ -119,8 +118,6 @@ function Recommendation({ results }: DashboardProps) {
       rows = [];
     }
   }
-
-  console.log("row", rows)
 
   const [arrowAnimate, setArrowAnimate] = useState(false);
 

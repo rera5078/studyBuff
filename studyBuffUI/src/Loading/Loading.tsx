@@ -11,8 +11,9 @@ const LoadingPage: React.FC = () => {
         <div className="loader-container">
             <div className='text-container'>
             <TypingAnimation sentences={[
-            "Loading...",
-            "Almost there",
+            " Loading... ",
+            "   ",
+            " Almost there ",
           ]}></TypingAnimation>
             </div>
             <div className="typewriter">
@@ -33,7 +34,7 @@ const DelayedContent: React.FC<Props> = ({ children }) => {
 
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 6000);
+        }, 5000);
 
         return () => clearTimeout(timer);
     }, [location.pathname]);

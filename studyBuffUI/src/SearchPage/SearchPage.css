@@ -14,7 +14,9 @@
 .search-bar{
   line-height: 1;
   height: 36px;
-  padding-left: 12px;
+  margin-left: 12px;
+  background-color: #ffffff;
+  color: #12204F;
 }
 
 .custom-search-input {
@@ -43,6 +45,10 @@
     font-family: 'Roboto', sans-serif;
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     margin-right: 4px;
+}
+
+.search-text{
+  color: #ffffff !important;
 }
 
 

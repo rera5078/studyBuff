@@ -1,11 +1,20 @@
 import React, { FC, useEffect, useState } from 'react';
 import './NavBar.css';
 import blue from "../blue.png"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import {
+    Avatar,
+    Button,
+    Menu,
+    MenuItem,
+} from "@mui/material";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PersonIcon from "@mui/icons-material/Person";
 
 interface NavBarProps { }
 
 const NavBar: FC<NavBarProps> = () => {
+    const navigate = useNavigate();
     const [userInfo, setuserInfo] = useState<any>();
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false)
 
@@ -13,7 +22,6 @@ const NavBar: FC<NavBarProps> = () => {
         const userInfo = localStorage.getItem('userInfo');
 
         if (userInfo) {
-            console.log("userInfo", JSON.parse(userInfo).name);
             setIsLoggedIn(true);
             setuserInfo(JSON.parse(userInfo))
         }
@@ -22,7 +30,18 @@ const NavBar: FC<NavBarProps> = () => {
     function handleLogout() {
         localStorage.removeItem('userInfo');
         setIsLoggedIn(false);
+        navigate('/login');
     }
+
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+    const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+    };
 
     return (<nav className="navbar navbar-expand-lg navbar-light fixed-top d-flex custom-nav">
         <Link to="/">
@@ -32,20 +51,28 @@ const NavBar: FC<NavBarProps> = () => {
         </div>
         <div className={"justify-content-end"}>
             <div className={"justify-content-end"}>
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item me-4 mt-2">
+                <div className="navbar-nav mr-auto">
+                    <div className="nav-item me-4 mt-2">
                         {isLoggedIn ? (
-                            <Link to="/login">
-                                <span className='user-info'>Hi {userInfo?.name} </span>
-                                <button type="button" className="logoutBtn" onClick={handleLogout} >Logout</button>
-                            </Link>
+                            <>
+                                <Button onClick={handleMenuOpen}>
+                                    <Avatar><PersonIcon/></Avatar>
+                                </Button>
+                                <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+                                    <MenuItem>{userInfo?.name}</MenuItem>
+                                    <MenuItem onClick={handleLogout}>
+                                        <span style={{marginRight: "16px"}}>Logout</span>
+                                        <LogoutIcon />
+                                    </MenuItem>
+                                </Menu>
+                            </>
                         ) : (
                             <Link to="/login">
                                 <button type="button" className="loginBtn">Login</button>
                             </Link>
                         )}
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>

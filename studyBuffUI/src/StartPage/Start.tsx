@@ -1,16 +1,50 @@
 import './Start.css';
-import {Link} from "react-router-dom";
-import buff from '../buff.png'
-import React from "react";
+import {Link, useNavigate} from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import white from '../white.png'
-import NavBar from "../NavBar/NavBar";
-import Button from "@mui/material/Button";
 import Footer from "../Footer/Footer";
+import {
+    Avatar,
+    Button,
+    Menu,
+    MenuItem,
+} from "@mui/material";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PersonIcon from "@mui/icons-material/Person";
 
 function Start() {
+    const navigate = useNavigate();
+    const [userInfo, setuserInfo] = useState<any>();
+    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false)
+
+    useEffect(() => {
+        const userInfo = localStorage.getItem('userInfo');
+
+        if (userInfo) {
+            setIsLoggedIn(true);
+            setuserInfo(JSON.parse(userInfo))
+        }
+    }, []);
+
+    function handleLogout() {
+        localStorage.removeItem('userInfo');
+        setIsLoggedIn(false);
+        navigate('/login');
+    }
+
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+    const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+    };
+    
     return (
         <React.Fragment>
-            <div className='gradient-background'>
+            <div className='start-gradient-background'>
                 <h2 className='study'>STUDY</h2>
                 <h2 className='Buff'>BUFF</h2>
             </div>
@@ -23,7 +57,6 @@ function Start() {
                 search results in a user-readable manner. <br/>
                 All you have to do is enter a search and <br/>
                 watch the magic happen!
-
             </div>
 
             <div className='start'><Link to = "/search">
@@ -39,9 +72,24 @@ function Start() {
                 <div className={"justify-content-end"}>
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item me-4 mt-2">
-                            <Link to = "/login">
+                        {isLoggedIn ? (
+                            <>
+                                <Button onClick={handleMenuOpen}>
+                                    <Avatar><PersonIcon/></Avatar>
+                                </Button>
+                                <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+                                    <MenuItem>{userInfo?.name}</MenuItem>
+                                    <MenuItem onClick={handleLogout}>
+                                        <span style={{marginRight: "16px"}}>Logout</span>
+                                        <LogoutIcon />
+                                    </MenuItem>
+                                </Menu>
+                            </>
+                        ) : (
+                            <Link to="/login">
                                 <button type="button" className="cb">Login</button>
                             </Link>
+                        )}
                         </li>
                     </ul>
                 </div>

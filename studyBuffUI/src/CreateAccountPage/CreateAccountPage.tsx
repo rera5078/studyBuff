@@ -48,7 +48,6 @@ const CreateAccountPage: FC<CreateAccountPageProps> = () => {
     };
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        console.log("Submit", signinData)
         event.preventDefault();
 
         try {
@@ -60,23 +59,18 @@ const CreateAccountPage: FC<CreateAccountPageProps> = () => {
                 body: JSON.stringify(signinData),
             });
 
-            console.log("response", response);
 
             if (response.ok) {
-                console.log('Created successful');
                 navigate('/login');
                 setErrorMessage("")    
             } 
             else if(response.status == 409){
-                console.log('Creation failed');
                 setErrorMessage("Username already exists!!") 
             }
             else {
-                console.log('Creation failed');
                 setErrorMessage("Create Account Failed Please Come Back later!!")
             }
         } catch (error) {
-            console.error('API call failed', error);
             setErrorMessage("Create Account Failed Please Come Back later!!")
         }
     };
