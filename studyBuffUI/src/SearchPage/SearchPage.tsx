@@ -160,10 +160,6 @@ function SearchPage({ setResults }: SearchPageProps) {
     }, 1000);
   };
 
-  const queryChange = (userText: any) =>{
-    console.log("hello", userText); // <---- this will be selected object not event
-    setQuery(userText.value);
-  }
 
   const onInputChange = (inputValue: any, event : any) => {
     if (event.action==='input-change'){
@@ -196,8 +192,7 @@ function SearchPage({ setResults }: SearchPageProps) {
                 cacheOptions
                 loadOptions={loadOptions}
                 defaultOptions
-                onChange={queryChange}
-                inputValue={query}
+                // inputValue={query}
                 onInputChange={onInputChange}
                 placeholder="Search..."
               />
