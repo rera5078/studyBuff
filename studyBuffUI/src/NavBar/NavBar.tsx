@@ -11,9 +11,11 @@ import {
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
 
-interface NavBarProps { }
+interface NavBarProps {
+    loginVisible: boolean
+}
 
-const NavBar: FC<NavBarProps> = () => {
+const NavBar = ({ loginVisible }: NavBarProps): JSX.Element => {
     const navigate = useNavigate();
     const [userInfo, setuserInfo] = useState<any>();
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false)
@@ -53,23 +55,24 @@ const NavBar: FC<NavBarProps> = () => {
             <div className={"justify-content-end"}>
                 <div className="navbar-nav mr-auto">
                     <div className="nav-item me-4 mt-2">
-                        {isLoggedIn ? (
-                            <>
-                                <Button onClick={handleMenuOpen}>
-                                    <Avatar><PersonIcon/></Avatar>
-                                </Button>
-                                <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+                        {!isLoggedIn ? (
+                            loginVisible ? (
+                                <Link to="/login">
+                                    <button type="button" className="loginBtn">Login</button>
+                                </Link>
+                            ) : (
+                                    ""
+                            )
+                        ) : (
+                            <><Button onClick={handleMenuOpen}>
+                                <Avatar><PersonIcon /></Avatar>
+                            </Button><Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
                                     <MenuItem>{userInfo?.name}</MenuItem>
                                     <MenuItem onClick={handleLogout}>
-                                        <span style={{marginRight: "16px"}}>Logout</span>
+                                        <span style={{ marginRight: "16px" }}>Logout</span>
                                         <LogoutIcon />
                                     </MenuItem>
-                                </Menu>
-                            </>
-                        ) : (
-                            <Link to="/login">
-                                <button type="button" className="loginBtn">Login</button>
-                            </Link>
+                                </Menu></>
                         )}
                     </div>
                 </div>

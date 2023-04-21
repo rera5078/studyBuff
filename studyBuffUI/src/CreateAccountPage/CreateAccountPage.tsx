@@ -77,7 +77,7 @@ const CreateAccountPage: FC<CreateAccountPageProps> = () => {
 
     return (
         <React.Fragment>
-            <NavBar></NavBar>
+            <NavBar loginVisible={false}></NavBar>
             <div className='gradient-background'>
                 <h2 className='All'>ALL OF STUDY BUFF</h2>
                 <h2 className='Free'> COMPLETELY FREE</h2>

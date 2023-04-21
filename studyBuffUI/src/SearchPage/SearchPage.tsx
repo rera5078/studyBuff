@@ -171,7 +171,7 @@ function SearchPage({ setResults }: SearchPageProps) {
 
   return (
     <div className="SearchPage" data-testid="SearchPage">
-      <NavBar></NavBar>
+      <NavBar loginVisible={true}></NavBar>
       {loading && <div>Loading...</div>}
       {!loading && <div>
         <div className={'d-flex justify-content-center'} style={{ marginTop: "10%" }}>

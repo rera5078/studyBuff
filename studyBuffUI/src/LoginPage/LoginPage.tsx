@@ -52,7 +52,7 @@ const LoginPage: FC<LoginPageProps> = () => {
 
     return (
         <React.Fragment>
-            <NavBar></NavBar>
+            <NavBar loginVisible={false}></NavBar>
             <div className='background'>
                 <h2 className='Welcome'>Welcome back to</h2>
                 <h2 className='Study'> STUDY BUFF</h2>

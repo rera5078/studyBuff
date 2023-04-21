@@ -291,7 +291,7 @@ function Recommendation({ results }: DashboardProps) {
   return (
     <div className="mainContainer">
       <DelayedContent>
-        <NavBar></NavBar>
+        <NavBar loginVisible={true}></NavBar>
         <Footer></Footer>
         <div className="cardsContainer">
           <div style={{ position: "relative" }}>

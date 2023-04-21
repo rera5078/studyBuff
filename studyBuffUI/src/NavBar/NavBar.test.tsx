@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 
 describe('<NavBar />', () => {
   test('it should mount', () => {
-    render(<NavBar />);
+    render(<NavBar loginVisible={true}/>);
     
     const navBar = screen.getByTestId('NavBar');
 
