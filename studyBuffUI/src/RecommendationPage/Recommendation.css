@@ -57,7 +57,7 @@
   padding: .5rem 1rem;
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 10%;
   opacity: 0;
   transition: 0.3s ease-out;
 }
@@ -148,4 +148,30 @@
   background-color: white;
   color: rgb(7, 15, 45);;
   transform: rotateY(180deg);
+}
+
+.button-with-arrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+  transition: transform 0.1s ease-in-out;
+}
+
+.flip-card-back.button-with-arrow:hover {
+  transform: translateY(-2px);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  transform: translateY(-50%);
+  transition: transform 0.1s ease-in-out;
+  animation-iteration-count: infinite; 
+}
+
+.arrow.animate {
+  transform: translateY(-50%) translateY(4px);
 }

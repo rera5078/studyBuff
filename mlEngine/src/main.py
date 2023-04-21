@@ -266,10 +266,12 @@ if __name__ == '__main__':
     rec_system = RECSYSTEM(config, synonyms, assym_model, ssym_model, assym_corpus_embeddings, ssym_corpus_embeddings, df_allcoursesdata)
 
     print("*" * 50)
-    host_name = "127.0.0.1"
-    port_name = "5050"
+    host_name = "0.0.0.0"
+    #host_name = "0.0.0.0"
+    port_name = "9000"
     print("App running now\tHost: {}\tPort: {}".format(host_name, port_name))
     print("*" * 50, "\n")
-    app.run(host=host_name, port=port_name, debug=True)
+    app.run(host=host_name, port=port_name, debug=False)
 
 #EOF
+#gg“In union there is strength."

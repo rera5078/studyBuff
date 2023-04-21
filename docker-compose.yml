@@ -156,20 +156,22 @@ services:
     networks:
       study_buff_service_local_net:
 
-  # mlEngineService:
-  #   hostname: study-buff-ml-engine-service
-  #   image: ml-engine-service:local
-  #   build:
-  #     context: mlEngine
-  #   ports:
-  #     - "5050:5050"
-  #   environment:
-  #     PORT: 5050
-  #     DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
-  #   depends_on:
-  #     - "postgres"
-  #   networks:
-  #     study_buff_service_local_net:
+  mlEngineService:
+    hostname: study-buff-ml-engine-service
+    image: ml-engine-service:local
+    build:
+      context: mlEngine
+    ports:
+      - "9000:9000"
+    expose:
+      - "9000"
+    environment:
+      PORT: 9000
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
+    depends_on:
+      - "postgres"
+    networks:
+      study_buff_service_local_net:
 
 
 volumes:
