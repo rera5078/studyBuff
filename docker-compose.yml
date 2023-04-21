@@ -127,11 +127,9 @@ services:
     ports:
       - "3001:3001"
     environment:
-      - ES_HOST=elasticsearch
       - ELASTICSEARCH_NODES=http://elasticsearch:9200
       - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/postgres
       - PORT=3001
-      - NODE_ENV=local
     depends_on:
       - "postgres"
       - "elasticsearch"
@@ -156,22 +154,22 @@ services:
     networks:
       study_buff_service_local_net:
 
-  mlEngineService:
-    hostname: study-buff-ml-engine-service
-    image: ml-engine-service:local
-    build:
-      context: mlEngine
-    ports:
-      - "9000:9000"
-    expose:
-      - "9000"
-    environment:
-      PORT: 9000
-      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
-    depends_on:
-      - "postgres"
-    networks:
-      study_buff_service_local_net:
+  # mlEngineService:
+  #   hostname: study-buff-ml-engine-service
+  #   image: ml-engine-service:local
+  #   build:
+  #     context: mlEngine
+  #   ports:
+  #     - "9000:9000"
+  #   expose:
+  #     - "9000"
+  #   environment:
+  #     PORT: 9000
+  #     DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
+  #   depends_on:
+  #     - "postgres"
+  #   networks:
+  #     study_buff_service_local_net:
 
 
 volumes:
