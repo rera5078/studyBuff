@@ -189,7 +189,7 @@ function SearchPage({ setResults }: SearchPageProps) {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="input-group mx-auto" style={{ width: '75%', display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <Paper sx={{ display: "flex", alignItems: "center", width: "100%" }} className="w-75">
+            <Paper sx={{ display: "flex", alignItems: "center", width: "100%", backgroundColor: "#12204F", borderRadius: "8px" }} className="w-75">
               <AsyncSelect
                 className="w-100 search-bar"
                 cacheOptions
@@ -198,6 +198,7 @@ function SearchPage({ setResults }: SearchPageProps) {
                 onChange={queryChange}
                 inputValue={query}
                 onInputChange={onInputChange}
+                placeholder="Search..."
               />
               <IconButton type="submit" sx={{ p: 1 }} aria-label="search" className="custom-search-button">
                 <SearchIcon /><span>Search</span>

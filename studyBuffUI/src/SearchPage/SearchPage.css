@@ -38,10 +38,11 @@
     background: #12204F;
     color: white;
     outline: none;
-    border-radius: 0;
+    border-radius: 8px;
     height: 64px;
     font-family: 'Roboto', sans-serif;
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    margin-right: 4px;
 }
 
 
