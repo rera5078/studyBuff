@@ -5,6 +5,8 @@ services:
     image: mlengine-service:local
     build: .
     ports:
-      - "5050:5050"
+      - "9000:9000"
     environment:
-      PORT: 5050
+      PORT: 9000
+    expose:
+      - "9000"
