@@ -26,3 +26,56 @@ a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
 }
+
+.user-info{
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Garamond', Garamond;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    padding-right: 4px;
+}
+
+.loginBtn {
+    background-color: #ffffff;
+    color: rgb(7,15,45);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 125px;
+    height: 42px;
+}
+
+.logoutBtn{
+    background-color: #790000;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 125px;
+    height: 42px;
+}
+
+nav {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}

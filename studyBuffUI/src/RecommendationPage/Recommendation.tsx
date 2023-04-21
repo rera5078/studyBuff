@@ -20,8 +20,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import React from "react";
 import { SearchResult } from "./api";
 import Grid from "@mui/material/Grid";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Chip from "@mui/material/Chip";
 import DelayedContent from "../Loading/Loading";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -106,8 +106,21 @@ function Recommendation({ results }: DashboardProps) {
     }
   }
   else {
-    rows = []
+    const recommendation = localStorage.getItem('Recommendations');
+    if (recommendation) {
+      results = JSON.parse(recommendation)
+      const top_course = results?.top_similar_courses
+
+      for (let i = 0; i < top_course?.length; i++) {
+        myMethod(top_course[i]);
+      }
+    }
+    else {
+      rows = [];
+    }
   }
+
+  console.log("row", rows)
 
   const [arrowAnimate, setArrowAnimate] = useState(false);
 
@@ -219,9 +232,9 @@ function Recommendation({ results }: DashboardProps) {
     <IconButton
       disabled={startIndex === 0}
       onClick={handleClickLeft}
-      sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
+      sx={{ position: "absolute", top: "60%", left: "2%", transform: "translateY(-50%)" }}
     >
-      <ChevronLeftIcon />
+      <ArrowBackIosNewIcon />
     </IconButton>
   );
 
@@ -229,9 +242,9 @@ function Recommendation({ results }: DashboardProps) {
     <IconButton
       disabled={startIndex >= rows.length - 3}
       onClick={handleClickRight}
-      sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
+      sx={{ position: "absolute", top: "60%", right: "2%", transform: "translateY(-50%)" }}
     >
-      <ChevronRightIcon />
+      <ArrowForwardIosIcon />
     </IconButton>
   );
 
@@ -250,24 +263,24 @@ function Recommendation({ results }: DashboardProps) {
             <p className="details-text">Click for more details</p>
           </div>
         </div>
-        <button  className="card-button button-with-arrow" onClick={() => handleAddToTable(item)}  >
-      More Info
-      <ArrowDropDownIcon
-        className={`arrow ${arrowAnimate ? "animate" : ""}`}
-      />
-    </button>
+        <button className="card-button button-with-arrow" onClick={() => handleAddToTable(item)}  >
+          More Info
+          <ArrowDropDownIcon
+            className={`arrow ${arrowAnimate ? "animate" : ""}`}
+          />
+        </button>
       </div>
       <IconButton
         onClick={handleClickRight}
-        sx={{ position: "absolute", top: "50%", right: "2%", transform: "translateY(-50%)" }}
+        sx={{ position: "absolute", top: "60%", right: "2%", transform: "translateY(-50%)" }}
       >
-        <ChevronRightIcon />
+        <ArrowForwardIosIcon />
       </IconButton>
       <IconButton
         onClick={handleClickLeft}
-        sx={{ position: "absolute", top: "50%", left: "2%", transform: "translateY(-50%)" }}
+        sx={{ position: "absolute", top: "60%", left: "2%", transform: "translateY(-50%)" }}
       >
-        <ChevronLeftIcon />
+        <ArrowBackIosNewIcon />
       </IconButton>
     </Grid>
   ));

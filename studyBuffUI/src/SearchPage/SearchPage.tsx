@@ -26,6 +26,7 @@ function SearchPage({ setResults }: SearchPageProps) {
     event.preventDefault();
     setLoading(true);
     try {
+      localStorage.removeItem('Recommendations');
       console.log("search query", query);
       const results = await search(query);
       // const results: SearchResult = {
@@ -110,7 +111,7 @@ function SearchPage({ setResults }: SearchPageProps) {
       // }
       setResults(results);
       setLoading(false);
-      console.log("SearchPage results", results);
+      localStorage.setItem('Recommendations', JSON.stringify(results));
       navigate('/recommendation');
     } catch (error) {
       console.error(error);

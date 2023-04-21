@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import Footer from "../Footer/Footer";
-import DelayedContent from '../Loading/Loading';
+import axios from 'axios';
 
 interface LoginPageProps { }
 
@@ -29,22 +29,20 @@ const LoginPage: FC<LoginPageProps> = () => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log("ggg", process.env.REACT_APP_LOGIN_BASE_URL)
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_LOGIN_BASE_URL}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(loginData),
-            });
+            const response = await axios.post<any>(`${process.env.REACT_APP_LOGIN_BASE_URL}`, loginData);
 
-            if (response.ok) {
+            if (response.status === 200) {
                 setErrorMessage("");
-                console.log('Login successful');
+                const resp: any = response.data;
+                const userInfo = {
+                    name : resp.firstName,
+                    email: resp.email
+                }
+                localStorage.setItem('userInfo', JSON.stringify(userInfo));
+                console.log('Login successful', userInfo);
                 navigate('/search');
-
             } else {
                 setErrorMessage("Username and Password didn't Match. Try Again");
                 console.log('Login failed');
@@ -56,7 +54,6 @@ const LoginPage: FC<LoginPageProps> = () => {
 
     return (
         <React.Fragment>
-            <DelayedContent>
             <NavBar></NavBar>
             <div className='background'>
                 <h2 className='Welcome'>Welcome back to</h2>
@@ -110,7 +107,6 @@ const LoginPage: FC<LoginPageProps> = () => {
 
             </div>
             <Footer></Footer>
-            </DelayedContent>
         </React.Fragment>
     )
 }
