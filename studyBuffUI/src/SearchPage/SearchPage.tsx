@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from "../NavBar/NavBar";
 import white from '../white.png';
-import { SearchResult } from '../RecommendationPage/api';
+import { search, SearchResult } from '../RecommendationPage/api';
 import { useNavigate } from 'react-router-dom';
 import Footer from "../Footer/Footer";
 import Paper from '@mui/material/Paper';
