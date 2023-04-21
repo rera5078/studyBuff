@@ -124,9 +124,7 @@ function SearchPage({ setResults }: SearchPageProps) {
 
   const fetchSuggestions = async (userInput: string): Promise<Suggestion[]> => {
     try {
-      if (query.length === 0){
-        setQuery(userInput)
-      }
+      setQuery(userInput)
       const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${userInput}`);
       const data = await response.json();
       // const data = [

@@ -47,6 +47,7 @@ const LoginPage: FC<LoginPageProps> = () => {
             }
         } catch (error) {
             console.error('API call failed', error);
+            setErrorMessage("Username and Password didn't Match. Try Again");
         }
     };
 
