@@ -100,13 +100,13 @@
 
 .team{
     position: absolute;
-    top: 65%;
+    top: 75%;
     left: 20%;
 }
 
 .start-button {
     position: absolute;
-    top: 55%;
+    top: 62%;
     left: 50%;
     width: 30%;
     background-color: #ffffff;
