@@ -124,13 +124,13 @@ function SearchPage({ setResults }: SearchPageProps) {
 
   const fetchSuggestions = async (userInput: string): Promise<Suggestion[]> => {
     try {
-      setQuery(userInput)
-      const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${userInput}`);
-      const data = await response.json();
-      // const data = [
-      //   "top courses from Department of Biology are what?",
-      //   "Provide me a list of coursework related to Big Data ??"
-      // ]
+      console.log("fetchSuggestions", query)
+      // const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${userInput}`);
+      // const data = await response.json();
+      const data = [
+        "top courses from Department of Biology are what?",
+        "Provide me a list of coursework related to Big Data ??"
+      ]
       if (data?.length) {
         const rec_suggestion: Suggestion[] = data.map((item: string) => {
           return {
@@ -147,23 +147,40 @@ function SearchPage({ setResults }: SearchPageProps) {
 
   };
 
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>();
 
   const loadOptions = (
     inputValue: string,
     callback: (options: Suggestion[]) => void
   ) => {
-    setTimeout(async () => {
-      callback(await fetchSuggestions(inputValue));
-    }, 1000);
+  
+    const handleFetchSuggestions = async () => {
+      const options = await fetchSuggestions(inputValue);
+      callback(options);
+    };
+
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    const newTimeoutId  = setTimeout(handleFetchSuggestions, 1000);
+    setTimeoutId(newTimeoutId);
   };
+  
 
 
-  const onInputChange = (inputValue: any, event : any) => {
-    console.log("event", event, inputValue)
-    if (event.action==='input-change'){
+  const onInputChange = (inputValue: any, event: any) => {
+    if (event.action === 'input-change') {
       setQuery(inputValue)
-    }  
-}
+      console.log("input-change", query)
+    }
+  }
+
+  const handleChange = (selectedOption: any) => {
+    console.log("handleChange", selectedOption)
+    setQuery(selectedOption.value)
+  }
+
 
   const text = "Study Buff";
 
@@ -184,14 +201,14 @@ function SearchPage({ setResults }: SearchPageProps) {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="input-group mx-auto" style={{ width: '75%', display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <Paper sx={{ display: "flex", alignItems: "center", width: "100%", backgroundColor: "#12204F", borderRadius: "8px" , color: "white"}} className="w-75">
+            <Paper sx={{ display: "flex", alignItems: "center", width: "100%", backgroundColor: "#12204F", borderRadius: "8px", color: "white" }} className="w-75">
               <AsyncSelect
                 className="w-100 search-bar"
                 cacheOptions
                 loadOptions={loadOptions}
-                defaultOptions
                 inputValue={query}
                 onInputChange={onInputChange}
+                onChange={handleChange}
                 placeholder="Search..."
               />
               <IconButton type="submit" sx={{ p: 1 }} aria-label="search" className="custom-search-button search-text">
