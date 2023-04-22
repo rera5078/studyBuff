@@ -25,6 +25,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Chip from "@mui/material/Chip";
 import DelayedContent from "../Loading/Loading";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useNavigate } from "react-router-dom";
 
 interface DashboardProps {
   results: SearchResult | undefined;
@@ -79,6 +80,7 @@ const table_rows: ReturnType<typeof createData>[] = []
 
 function Recommendation({ results }: DashboardProps) {
   rows = []
+  const navigate = useNavigate();
   const myMethod = (value: any) => {
     rows.push(
       createData(
@@ -116,6 +118,7 @@ function Recommendation({ results }: DashboardProps) {
     }
     else {
       rows = [];
+      navigate("/zerorecommendation")
     }
   }
 

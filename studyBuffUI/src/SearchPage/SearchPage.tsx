@@ -28,8 +28,9 @@ function SearchPage({ setResults }: SearchPageProps) {
     try {
       localStorage.removeItem('Recommendations');
       console.log("search query", query);
-      const results = await search(query);
-      // const results: SearchResult = {
+      const results: any = await search(query);
+      // const results: any = []
+      // const results: any = {
       //   query: '',
       //   platform: [],
       //   ner: [],
@@ -109,13 +110,20 @@ function SearchPage({ setResults }: SearchPageProps) {
       //     }
       //   ]
       // }
-      setResults(results);
-      setLoading(false);
-      localStorage.setItem('Recommendations', JSON.stringify(results));
-      navigate('/recommendation');
+      if (!results?.top_similar_courses || results?.top_similar_courses?.length === 0) {
+        console.log(results, results?.top_similar_courses, results?.top_similar_courses?.length)
+        navigate("/zerorecommendation");
+      }
+      else {
+        setResults(results);
+        setLoading(false);
+        localStorage.setItem('Recommendations', JSON.stringify(results));
+        navigate('/recommendation');
+      }
     } catch (error) {
       console.error(error);
       setLoading(false);
+      navigate("/zerorecommendation")
     }
   }
 
@@ -125,12 +133,12 @@ function SearchPage({ setResults }: SearchPageProps) {
   const fetchSuggestions = async (userInput: string): Promise<Suggestion[]> => {
     try {
       console.log("fetchSuggestions", query)
-      // const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${userInput}`);
-      // const data = await response.json();
-      const data = [
-        "top courses from Department of Biology are what?",
-        "Provide me a list of coursework related to Big Data ??"
-      ]
+      const response = await fetch(`${process.env.REACT_APP_DROP_DOWN_URL}?query=${userInput}`);
+      const data = await response.json();
+      // const data = [
+      //   "top courses from Department of Biology are what?",
+      //   "Provide me a list of coursework related to Big Data ??"
+      // ]
       if (data?.length) {
         const rec_suggestion: Suggestion[] = data.map((item: string) => {
           return {
@@ -153,7 +161,7 @@ function SearchPage({ setResults }: SearchPageProps) {
     inputValue: string,
     callback: (options: Suggestion[]) => void
   ) => {
-  
+
     const handleFetchSuggestions = async () => {
       const options = await fetchSuggestions(inputValue);
       callback(options);
@@ -163,10 +171,10 @@ function SearchPage({ setResults }: SearchPageProps) {
       clearTimeout(timeoutId);
     }
 
-    const newTimeoutId  = setTimeout(handleFetchSuggestions, 1000);
+    const newTimeoutId = setTimeout(handleFetchSuggestions, 1000);
     setTimeoutId(newTimeoutId);
   };
-  
+
 
 
   const onInputChange = (inputValue: any, event: any) => {

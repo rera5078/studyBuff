@@ -7,8 +7,8 @@ import SearchPage from "./SearchPage/SearchPage";
 import LoginPage from "./LoginPage/LoginPage"
 import CreateAccountPage from "./CreateAccountPage/CreateAccountPage";
 import Recommendation from './RecommendationPage/Recommendation';
-import Loading from "./Loading/Loading";
 import { SearchResult } from './RecommendationPage/api';
+import NoResultsPage from './NoResultsPage/NoResultsPage';
 
 function App() {
     const [results, setResults] = useState<SearchResult>();
@@ -23,7 +23,7 @@ function App() {
                         <Route path="/login" Component={LoginPage} />
                         <Route path="/createAccount" Component={CreateAccountPage} />
                         <Route path="/recommendation" Component={() => <Recommendation results={results} />} />
-                        {/* <Route path="/loading" Component={Loading} /> */}
+                        <Route path="/zerorecommendation" Component={NoResultsPage} />
                     </Routes>
                 </React.Fragment>
             </BrowserRouter>
