@@ -90,10 +90,10 @@ function Start() {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
-                                    width: 120, height: 120 
+                                    width: 120, height: 120
                                 }}
                             >
-                                <Avatar alt={member.name} src={member.imgUrl} sx={{ width: 80, height: 80 }} />
+                                <Avatar alt={member.name} src={member.imgUrl} sx={{ width: 80, height: 80, border: "1px solid white"}} />
                                 <Typography variant="subtitle1" sx={{ marginTop: 1, fontWeight: 700 }}>
                                     {member.name}
                                 </Typography>
